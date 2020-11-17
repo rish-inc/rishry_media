@@ -34,9 +34,22 @@
                     <div class="form_box">
                         <form action="#">
                             <div>
-                                <label for="name">お名前</label>
+                                <label for="name">お名前<span class="mandatory_tag">必須</span></label>
                                 <input type="text" id="name" name="your-name">
                             </div>
+                            <div>
+                                <label for="email">メールアドレス<span class="mandatory_tag">必須</span></label>
+                                <input type="text" id="email" name="your-email">
+                            </div>
+                            <div>
+                                <label for="f_title">題名</label>
+                                <input type="text" id="f_title" name="your-f_title">
+                            </div>
+                            <div>
+                                <label for="message">メッセージ本文<span class="mandatory_tag">必須</span></label>
+                                <textarea name="message" id="your-message"></textarea>
+                            </div>
+                            <input type="submit" class="buttun" value="送信">
                         </form>
                     </div>
                 </div>
