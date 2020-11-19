@@ -16,7 +16,7 @@
                 <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="Rishry ロゴ"></a></h1>
                 <div id="content">
                     <ul class="main-nav">
-                        <li><a href="#">HOME</a></li>
+                        <li><a href="index.html">HOME</a></li>
                         <li><a href="#">ABOUT</a></li>
                         <li><a href="#">NEWS</a></li>
                         <li><a href="#">BRAND</a></li>
@@ -27,11 +27,31 @@
                 </div>
             </nav>
         </div>
-        <div id="main_visual"><img src="images/dummy.jpg" alt="メインビジュアル　ダミー画像"></div>
         <div class="wrapper">
-            <div class="contents">
-                <div>
-                    <h2>MEDIA</h2>
+            <div class="contact">
+                <div class="form_contact">
+                    <h2 class="t_contact">お問い合わせ</h2>
+                    <div class="form_box">
+                        <form action="#">
+                            <div>
+                                <label for="name">お名前<span class="mandatory_tag">必須</span></label>
+                                <input type="text" id="name" name="your-name">
+                            </div>
+                            <div>
+                                <label for="email">メールアドレス<span class="mandatory_tag">必須</span></label>
+                                <input type="text" id="email" name="your-email">
+                            </div>
+                            <div>
+                                <label for="f_title">題名</label>
+                                <input type="text" id="f_title" name="your-f_title">
+                            </div>
+                            <div>
+                                <label for="message">メッセージ本文<span class="mandatory_tag">必須</span></label>
+                                <textarea name="message" id="your-message"></textarea>
+                            </div>
+                            <input type="submit" class="buttun" value="送信">
+                        </form>
+                    </div>
                 </div>
             </div>
 
@@ -73,10 +93,11 @@
                         <li><a href="#">BRAND</a></li>
                         <li><a href="#">FASHION</a></li>
                         <li><a href="contact.html">CONTACT</a></li>
-                        <li class="f_nav_p"><a href="#">PRIVACY POLICY</a></li>
+                        <li><a href="#">PRIVACY POLICY</a></li>
                     </ul>
+                  </div>
+                  <p><small>&copy; Rishry</small></p>
                 </div>
-                <p><small>&copy; Rishry</small></p>
             </div>
         </footer>
     </body>
