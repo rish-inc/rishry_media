@@ -73,13 +73,19 @@
 
 .container {
   background: #FFEDEE;
-  padding-bottom: 15px;
+  padding: 3.5% 0;
+  width: 100%;
+}
+
+@media (min-width: 415px) {
+  .container {
+    padding: 2.5% 0 1.5% 0;
+  }
 }
 
 .container .inner {
   width: 100%;
   height: 50%;
-  padding-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,10 +101,19 @@
       flex-wrap: wrap;
   min-width: 180px;
   max-width: 360px;
-  width: 90%;
+  width: 75%;
   height: 65px;
   margin: 0 auto;
-  background: #ffffe0;
+}
+
+@media (min-width: 415px) {
+  .container .inner .footer_li {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    min-width: 200px;
+    max-width: 1000px;
+    height: auto;
+  }
 }
 
 .container .inner .footer_li li {
@@ -110,49 +125,13 @@
   width: 23%;
   height: 20px;
   margin: 1%;
-  background: red;
 }
 
-.container .inner .footer_li li:nth-child(1) {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-}
-
-.container .inner .footer_li li:nth-child(2) {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-
-.container .inner .footer_li li:nth-child(3) {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-}
-
-.container .inner .footer_li li:nth-child(4) {
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
-}
-
-.container .inner .footer_li li:nth-child(5) {
-  -webkit-box-ordinal-group: 6;
-      -ms-flex-order: 5;
-          order: 5;
-}
-
-.container .inner .footer_li li:nth-child(6) {
-  -webkit-box-ordinal-group: 7;
-      -ms-flex-order: 6;
-          order: 6;
-}
-
-.container .inner .footer_li li:nth-child(7) {
-  -webkit-box-ordinal-group: 8;
-      -ms-flex-order: 7;
-          order: 7;
+@media (min-width: 415px) {
+  .container .inner .footer_li li {
+    width: 10%;
+    margin: 0 auto;
+  }
 }
 
 .container .inner .footer_li li a {
@@ -165,13 +144,39 @@
   width: 27%;
 }
 
+@media (min-width: 415px) {
+  .container .inner .footer_li .f_nav {
+    width: 12%;
+  }
+}
+
 .container .inner .footer_li .f_nav_p {
   width: 40%;
+}
+
+@media (min-width: 415px) {
+  .container .inner .footer_li .f_nav_p {
+    width: 18%;
+  }
 }
 
 .container p {
   text-align: center;
   font-size: 10px;
+  margin-top: 4%;
+  margin-bottom: 0;
+}
+
+@media (min-width: 415px) {
+  .container p {
+    margin-top: 1.5%;
+  }
+}
+
+@media (min-width: 415px) {
+  .container small {
+    font-size: 12px;
+  }
 }
 
 html {
