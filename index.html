@@ -8,22 +8,34 @@
         <!-- css -->
         <link rel="stylesheet" href="css/style.css">
         <title>Rishry</title>
+
+        <!-- jQuery -->
+        <script src=""></script>
     </head>
 
     <body>
         <div id="header">
             <nav>
                 <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="Rishry ロゴ"></a></h1>
-                <div id="content">
-                    <ul class="main-nav">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">NEWS</a></li>
-                        <li><a href="#">BRAND</a></li>
-                        <li><a href="#">FASHION</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
-                        <li><a href="#">PRIVACY POLICY</a></li>
-                    </ul>
+                <div id="nav-drawer">
+                    <input id="nav-input" type="checkbox" class="nav-unshown">
+                    <label id="nav-open" for="nav-input">
+                        <span class="ham_line ham_line1"></span>
+                        <span class="ham_line ham_line2"></span>
+                        <span class="ham_line ham_line3"></span>
+                    </label>
+                    <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+                    <div id="content">
+                        <ul class="main-nav">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">NEWS</a></li>
+                            <li><a href="#">BRAND</a></li>
+                            <li><a href="#">FASHION</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                            <li><a href="#">PRIVACY POLICY</a></li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>
