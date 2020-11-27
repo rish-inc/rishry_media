@@ -284,6 +284,233 @@
   }
 }
 
+.side_wrapper {
+  width: 100%;
+  padding-bottom: 4%;
+}
+
+@media (min-width: 1025px) {
+  .side_wrapper form {
+    margin-bottom: 30px;
+  }
+}
+
+.side_wrapper .search_inner {
+  position: relative;
+  background: #fff;
+  border: 1px solid #707070;
+  border-radius: 8px;
+  width: 260px;
+  margin: 0 auto;
+}
+
+.side_wrapper .search_inner dt {
+  margin-right: 40px;
+  padding: 8px 0 5px 8px;
+}
+
+.side_wrapper .search_inner dt input {
+  width: 100%;
+  height: 24px;
+  line-height: 24px;
+  background: none;
+  border: none;
+}
+
+.side_wrapper .search_inner dt input[type="text"] {
+  font-size: 14px;
+  padding-left: 5px;
+}
+
+.side_wrapper .search_inner dd {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.side_wrapper .search_inner dd button {
+  display: block;
+  padding: 7px 15px 3px;
+  background: none;
+  border: none;
+}
+
+.side_wrapper .search_inner dd button span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url("/images/search_mark.svg") no-repeat scroll 0 0;
+}
+
+.side_wrapper .side {
+  margin: 0 auto;
+  max-width: 390px;
+  position: relative;
+}
+
+@media (min-width: 1025px) {
+  .side_wrapper .side {
+    width: 300px;
+    height: auto;
+    border: 1px solid #FFD6DB;
+  }
+}
+
+.side_wrapper .side::before {
+  position: absolute;
+  content: '';
+  width: 105%;
+  height: 1px;
+  background: #DCDCDC;
+  top: -20px;
+  left: -12px;
+}
+
+@media (min-width: 1025px) {
+  .side_wrapper .side::before {
+    display: none;
+  }
+}
+
+.side_wrapper .side .sub_title {
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+}
+
+@media (min-width: 1025px) {
+  .side_wrapper .side .sub_title {
+    font-weight: normal;
+    padding-top: 10px;
+  }
+}
+
+.side_wrapper .side .sub_title::before, .side_wrapper .side .sub_title::after {
+  position: absolute;
+  content: '';
+  width: 4.5%;
+  height: 3px;
+  background: #FEC1C8;
+  border-radius: 9px;
+  top: 60%;
+}
+
+@media (min-width: 415px) {
+  .side_wrapper .side .sub_title::before, .side_wrapper .side .sub_title::after {
+    width: 6%;
+  }
+}
+
+.side_wrapper .side .sub_title::before {
+  left: 31%;
+}
+
+@media (min-width: 1025px) {
+  .side_wrapper .side .sub_title::before {
+    left: 25%;
+  }
+}
+
+.side_wrapper .side .sub_title::after {
+  left: 64%;
+}
+
+@media (min-width: 1025px) {
+  .side_wrapper .side .sub_title::after {
+    left: 68%;
+  }
+}
+
+.side_wrapper .side .sub_menu {
+  list-style: none;
+  padding: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.side_wrapper .side .sub_menu li {
+  margin: 0 0 3% 10%;
+  position: relative;
+}
+
+@media (min-width: 1025px) {
+  .side_wrapper .side .sub_menu li {
+    margin: 0 0 8% 20%;
+  }
+}
+
+.side_wrapper .side .sub_menu li::before, .side_wrapper .side .sub_menu li::after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 15px;
+  background: #FEC1C8;
+  border-radius: 9px;
+  top: 5px;
+}
+
+@media (min-width: 1025px) {
+  .side_wrapper .side .sub_menu li::before, .side_wrapper .side .sub_menu li::after {
+    height: 18px;
+    top: 2px;
+  }
+}
+
+.side_wrapper .side .sub_menu li::before {
+  left: -10px;
+}
+
+.side_wrapper .side .sub_menu li::after {
+  left: -15px;
+}
+
+.side_wrapper .side .sub_menu li a {
+  text-decoration: none;
+  color: #030303;
+  font-size: 12px;
+}
+
+@media (min-width: 1025px) {
+  .side_wrapper .side .sub_menu li a {
+    font-size: 15px;
+  }
+}
+
+.side_wrapper .side .sns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: inherit;
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  .side_wrapper .side .sns {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 208px;
+    margin: 0 auto;
+    padding: 10% 0 7%;
+  }
+}
+
+.side_wrapper .side .sns li {
+  list-style: none;
+}
+
+@media (min-width: 1025px) {
+  .side_wrapper .side .sns li {
+    margin: 0 auto;
+  }
+}
+
+.side_wrapper .side .sns li img {
+  width: 50px;
+  height: auto;
+}
+
 html {
   font-size: 100%;
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
@@ -292,5 +519,12 @@ html {
 body {
   width: 100%;
   margin: 0;
+}
+
+.wrapper {
+  display: block;
+  max-width: 100%;
+  min-width: 261px;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */
