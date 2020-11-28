@@ -1,0 +1,32 @@
+.contact {
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+    padding: 30px 0 40px 0;
+    text-align: center;
+    position: relative;
+    background: #ffffe0;
+    .t_contact {
+        font-weight: inherit;
+        margin: auto;
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            width: 18px;
+            height: 3px;
+            background: #FFD6DB;
+            border-radius: 7px;
+            top: 48px;
+        }
+        &::before {
+            left: 26%;
+        }
+        &::after {
+            left: 69%;
+        }
+        .form_box {
+            padding-top: 20px;
+        }
+    }
+}

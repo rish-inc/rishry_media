@@ -667,6 +667,43 @@
   }
 }
 
+.contact {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 30px 0 40px 0;
+  text-align: center;
+  position: relative;
+  background: #ffffe0;
+}
+
+.contact .t_contact {
+  font-weight: inherit;
+  margin: auto;
+}
+
+.contact .t_contact::before, .contact .t_contact::after {
+  position: absolute;
+  content: '';
+  width: 18px;
+  height: 3px;
+  background: #FFD6DB;
+  border-radius: 7px;
+  top: 48px;
+}
+
+.contact .t_contact::before {
+  left: 26%;
+}
+
+.contact .t_contact::after {
+  left: 69%;
+}
+
+.contact .t_contact .form_box {
+  padding-top: 20px;
+}
+
 html {
   font-size: 100%;
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
