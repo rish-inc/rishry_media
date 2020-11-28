@@ -3,6 +3,7 @@
 @import "./common/header";
 @import "./common/footer";
 @import "./common/sidebar";
+@import "./404";
 
 
 html {
@@ -22,5 +23,6 @@ body {
     margin: 0 auto;
     @include breakpoint ( pc ) {
         max-width: 1280px;
+        display: flex;
     }
 }
