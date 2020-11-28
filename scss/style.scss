@@ -2,6 +2,7 @@
 @import "./mixin";
 @import "./common/header";
 @import "./common/footer";
+@import "./common/sidebar";
 
 
 html {
@@ -12,4 +13,14 @@ html {
 body {
     width: 100%;
     margin: 0;
+}
+
+.wrapper {
+    display: block;
+    max-width: 100%;
+    min-width: 261px;
+    margin: 0 auto;
+    @include breakpoint ( pc ) {
+        max-width: 1280px;
+    }
 }
