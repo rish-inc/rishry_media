@@ -4,10 +4,14 @@
     margin: 0 auto;
     padding: 30px 0 40px 0;
     position: relative;
-    background: #ffffe0;
+    // background: #ffffe0;
     @include breakpoint ( tablet ) {
         max-width: 450px;
         padding-bottom: 80px;
+    }
+    @include breakpoint ( pc ) {
+        max-width: 816px;
+        padding: 100px 0 80px 0;
     }
     &::after {
         position: absolute;
@@ -17,6 +21,10 @@
         background: #DCDCDC;
         top: 100%;
         left: -3%;
+        @include breakpoint ( tablet ) {
+            width: 228%;
+            left: -64%;
+        }
         @include breakpoint ( pc ) {
             display: none;
         }
@@ -28,6 +36,9 @@
         text-align: center;
         @include breakpoint ( tablet ) {
             font-size: 24px;
+        }
+        @include breakpoint ( pc ) {
+            font-size: 30px;
         }
         &::before,
         &::after {
@@ -42,11 +53,17 @@
                 width: 20px;
                 top: 48px;
             }
+            @include breakpoint ( pc ) {
+                top: 121px;
+            }
         }
         &::before {
             left: 29%;
             @include breakpoint ( tablet ) {
                 left: 28.5%;
+            }
+            @include breakpoint ( pc ) {
+                left: 35.5%;
             }
         }
         &::after {
@@ -54,13 +71,22 @@
             @include breakpoint ( tablet ) {
                 left: 67%;
             }
+            @include breakpoint ( pc ) {
+                left: 62%;
+            }
         }
     }
     .form_box {
         padding-top: 20px;
+        @include breakpoint ( pc ) {
+            padding-top: 40px;
+        }
         form {
             width: 90%;
             margin: 0 auto;
+            @include breakpoint ( pc ) {
+                width: 50%;
+            }
             div {
                 margin-bottom: 10px;
                 label {
@@ -68,6 +94,7 @@
                     font-size: 14px;
                     @include breakpoint ( tablet ) {
                         font-size: 16px;
+                        margin-bottom: 4px;
                     }
                     &[for="message"] {
                         margin-bottom: 5px;
@@ -92,6 +119,13 @@
                         border: 1px solid #707070;
                         border-radius: 5px;
                         margin-bottom: 5px;
+                        @include breakpoint ( tablet ) {
+                            height: 2rem;
+                            max-width: 420px;
+                        }
+                        // @include breakpoint ( pc ) {
+                        //     height: 2rem;
+                        // }
                     }
                 }
                 textarea {
@@ -101,6 +135,9 @@
                     border: 1px solid #707070;
                     border-radius: 5px;
                     margin-bottom: 5px;
+                    @include breakpoint ( tablet ) {
+                        max-width: 420px;
+                    }
                 }
             }
             input {

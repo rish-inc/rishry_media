@@ -297,6 +297,7 @@
 @media (min-width: 1025px) {
   .side_wrapper {
     padding-top: 60px;
+    margin-right: 60px;
   }
 }
 
@@ -673,13 +674,19 @@
   margin: 0 auto;
   padding: 30px 0 40px 0;
   position: relative;
-  background: #ffffe0;
 }
 
 @media (min-width: 415px) {
   .contact {
     max-width: 450px;
     padding-bottom: 80px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .contact {
+    max-width: 816px;
+    padding: 100px 0 80px 0;
   }
 }
 
@@ -691,6 +698,13 @@
   background: #DCDCDC;
   top: 100%;
   left: -3%;
+}
+
+@media (min-width: 415px) {
+  .contact::after {
+    width: 228%;
+    left: -64%;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -712,6 +726,12 @@
   }
 }
 
+@media (min-width: 1025px) {
+  .contact .t_contact {
+    font-size: 30px;
+  }
+}
+
 .contact .t_contact::before, .contact .t_contact::after {
   position: absolute;
   content: '';
@@ -729,6 +749,12 @@
   }
 }
 
+@media (min-width: 1025px) {
+  .contact .t_contact::before, .contact .t_contact::after {
+    top: 121px;
+  }
+}
+
 .contact .t_contact::before {
   left: 29%;
 }
@@ -736,6 +762,12 @@
 @media (min-width: 415px) {
   .contact .t_contact::before {
     left: 28.5%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .contact .t_contact::before {
+    left: 35.5%;
   }
 }
 
@@ -749,13 +781,31 @@
   }
 }
 
+@media (min-width: 1025px) {
+  .contact .t_contact::after {
+    left: 62%;
+  }
+}
+
 .contact .form_box {
   padding-top: 20px;
+}
+
+@media (min-width: 1025px) {
+  .contact .form_box {
+    padding-top: 40px;
+  }
 }
 
 .contact .form_box form {
   width: 90%;
   margin: 0 auto;
+}
+
+@media (min-width: 1025px) {
+  .contact .form_box form {
+    width: 50%;
+  }
 }
 
 .contact .form_box form div {
@@ -770,6 +820,7 @@
 @media (min-width: 415px) {
   .contact .form_box form div label {
     font-size: 16px;
+    margin-bottom: 4px;
   }
 }
 
@@ -801,6 +852,13 @@
   margin-bottom: 5px;
 }
 
+@media (min-width: 415px) {
+  .contact .form_box form div input[type="text"] {
+    height: 2rem;
+    max-width: 420px;
+  }
+}
+
 .contact .form_box form div textarea {
   width: 100%;
   max-width: 350px;
@@ -808,6 +866,12 @@
   border: 1px solid #707070;
   border-radius: 5px;
   margin-bottom: 5px;
+}
+
+@media (min-width: 415px) {
+  .contact .form_box form div textarea {
+    max-width: 420px;
+  }
 }
 
 .contact .form_box form input[type="submit"] {
