@@ -6,6 +6,7 @@
     }
     @include breakpoint ( pc ) {
         padding-top: 60px;
+        margin-right: 60px;
     }
     form {
         display: none;
