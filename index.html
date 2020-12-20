@@ -12,91 +12,86 @@
         <!-- jQuery -->
         <script src=""></script>
     </head>
-
-    <body>
-        <div id="header">
-            <nav>
-                <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="Rishry ロゴ"></a></h1>
-                <div id="nav-drawer">
-                    <input id="nav-input" type="checkbox" class="nav-unshown">
-                    <label id="nav-open" for="nav-input">
-                        <span class="ham_line ham_line1"></span>
-                        <span class="ham_line ham_line2"></span>
-                        <span class="ham_line ham_line3"></span>
-                    </label>
-                    <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-                    <div id="content">
-                        <ul class="main-nav">
-                            <li><a href="index.html">HOME</a></li>
+    <body class="home">
+        <header id="header" class="l-header">
+            <div class="c-container">
+                <h1 class="logo l-header__left"><a href="/"><img src="images/logo.png" alt="Rishry ロゴ"></a></h1>
+                <div class="l-header__right">
+                    <button class="p-hamburger p-gmenu--bt is-hamburger">
+                        <span>menuボタン</span>
+                    </button>
+                    <nav class="p-gnavi">
+                        <ul class="p-gnavi__menu">
+                            <li><a href="/">HOME</a></li>
                             <li><a href="#">ABOUT</a></li>
                             <li><a href="#">NEWS</a></li>
                             <li><a href="#">BRAND</a></li>
                             <li><a href="#">FASHION</a></li>
-                            <li><a href="contact.html">CONTACT</a></li>
+                            <li><a href="./contact.html">CONTACT</a></li>
                             <li><a href="#">PRIVACY POLICY</a></li>
                         </ul>
-                        <nav>
-                            <ul class="sns_header">
-                                <li class="twitter"><img src="images/sns/t_logo.png" alt="twitter"></li>
-                                <li class="facebook"><img src="images/sns/f_logo.png" alt="facebook"></li>
-                                <li class="instagram"><img src="images/sns/i_logo.svg" alt="instagram"></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <div id="main_visual"><img src="images/dummy.jpg" alt="メインビジュアル　ダミー画像"></div>
-        <div class="wrapper">
-            <div class="contents">
-                <div>
-                    <h2>MEDIA</h2>
-                </div>
-                <article></article>
-            </div>
-
-            <div class="side_wrapper">
-                <form action="/" name="search_box" method="post">
-                    <dl class="search_inner">
-                        <dt><input type="text" name="search" value="" placeholder="Search"></input></dt>
-                        <dd><button><span></span></button></dd>
-                    </dl>
-                </form>
-                <div class="side">
-                    <h3 class="sub_title">CATEGORY</h3>
-                    <nav>
-                        <ul class="sub_menu">
-                            <li><a href="#">NEWS</a></li>
-                            <li><a href="#">BRAND</a></li>
-                            <li><a href="#">FASHION</a></li>
-                        </ul>
-                    </nav>
-                    <nav>
-                        <ul class="sns">
+                        <ul class="p-gnavi__sns">
                             <li class="twitter"><img src="images/sns/t_logo.png" alt="twitter"></li>
                             <li class="facebook"><img src="images/sns/f_logo.png" alt="facebook"></li>
                             <li class="instagram"><img src="images/sns/i_logo.svg" alt="instagram"></li>
                         </ul>
                     </nav>
                 </div>
-
             </div>
-        </div>
+        </header>
+        <main class="p-contents">
+            <div class="c-container">
+                <div class="p-mainvisual"><img src="images/dummy.jpg" alt="メインビジュアル　ダミー画像"></div>
+                <div class="c-wrapper">
+                    <div class="p-contents">
+                        <div>
+                            <h2>MEDIA</h2>
+                        </div>
+                        <article></article>
+                    </div>
 
+                    <div class="l-sidebar">
+                        <form action="/" name="search_box" method="post" class="p-search-form">
+                            <dl class="search_inner">
+                                <dt><input type="text" name="search" value="" placeholder="Search"></input></dt>
+                                <dd><button><span></span></button></dd>
+                            </dl>
+                        </form>
+                        <div class="p-side-navigation">
+                            <h3 class="sub_title">CATEGORY</h3>
+                            <nav>
+                                <ul class="sub_menu">
+                                    <li><a href="#">NEWS</a></li>
+                                    <li><a href="#">BRAND</a></li>
+                                    <li><a href="#">FASHION</a></li>
+                                </ul>
+                            </nav>
+                            <nav>
+                                <ul class="sns">
+                                    <li class="twitter"><img src="images/sns/t_logo.png" alt="twitter"></li>
+                                    <li class="facebook"><img src="images/sns/f_logo.png" alt="facebook"></li>
+                                    <li class="instagram"><img src="images/sns/i_logo.svg" alt="instagram"></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
         <footer>
-            <div class="container">
-                <div class="inner">
+            <div class="c-container">
+                <div class="c-inner">
                     <ul class="footer_li">
-                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="/">HOME</a></li>
                         <li><a href="#">ABOUT</a></li>
                         <li><a href="#">NEWS</a></li>
                         <li><a href="#">BRAND</a></li>
                         <li class="f_nav"><a href="#">FASHION</a></li>
-                        <li class="f_nav"><a href="contact.html">CONTACT</a></li>
+                        <li class="f_nav"><a href="./contact.html">CONTACT</a></li>
                         <li class="f_nav_p"><a href="#">PRIVACY POLICY</a></li>
                     </ul>
                 </div>
-                <p><small>&copy; 2020 Rishry</small></p>
+                <address><small>&copy; 2020 Rishry</small></address>
             </div>
         </footer>
     </body>

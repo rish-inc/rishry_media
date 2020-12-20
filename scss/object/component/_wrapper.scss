@@ -1,0 +1,10 @@
+.c-wrapper {
+    display: block;
+    max-width: 100%;
+    min-width: 261px;
+    margin: 0 auto;
+    @include breakpoint ( pc ) {
+        max-width: 1280px;
+        display: flex;
+    }
+}
