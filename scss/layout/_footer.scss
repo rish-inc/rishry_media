@@ -1,11 +1,6 @@
-.container {
+.l-footer {
     background: #FFEDEE;
-    padding: 3.5% 0;
-    width: 100%;
-    @include breakpoint ( tablet ) {
-        padding: 2.5% 0 1.5% 0;
-    }
-    .inner {
+    .c-inner {
         width: 100%;
         height: 50%;
         display: flex;
