@@ -15,11 +15,14 @@
     <body class="home">
         <header id="header" class="l-header">
             <div class="c-container">
-                <h1 class="logo l-header__left"><a href="/"><img src="images/logo.png" alt="Rishry ロゴ"></a></h1>
-                <div class="l-header__right">
+                <h1 class="logo l-header__left">
                     <button class="p-hamburger p-gmenu--bt is-hamburger">
                         <span>menuボタン</span>
                     </button>
+                    <a href="/"><img src="images/logo.png" alt="Rishry ロゴ"></a>
+                </h1>
+                <div class="l-header__right">
+                    <a href="#"><img class="p-ec-bnr" src="バナー画像挿入" alt="ECサイト　バナー"></a>
                     <nav class="p-gnavi">
                         <ul class="p-gnavi__menu">
                             <li><a href="/">HOME</a></li>
@@ -30,12 +33,18 @@
                             <li><a href="./contact.html">CONTACT</a></li>
                             <li><a href="#">PRIVACY POLICY</a></li>
                         </ul>
-                        <ul class="p-gnavi__sns">
+                        <!-- <ul class="p-gnavi__sns">
                             <li class="twitter"><img src="images/sns/t_logo.png" alt="twitter"></li>
                             <li class="facebook"><img src="images/sns/f_logo.png" alt="facebook"></li>
                             <li class="instagram"><img src="images/sns/i_logo.svg" alt="instagram"></li>
-                        </ul>
+                        </ul> -->
                     </nav>
+                    <form action="/" name="search-box" method="post" class="p-search-form">
+                        <dl class="search-inner">
+                            <dt><input type="text" name="search" value="" placeholder="Search"></input></dt>
+                            <dd><button><span></span></button></dd>
+                        </dl>
+                    </form>
                 </div>
             </div>
         </header>
@@ -43,24 +52,48 @@
             <div class="c-container">
                 <div class="p-mainvisual"><img src="images/dummy.jpg" alt="メインビジュアル　ダミー画像"></div>
                 <div class="c-wrapper">
-                    <div class="p-contents">
-                        <div>
-                            <h2>MEDIA</h2>
-                        </div>
-                        <article></article>
+                    <article class="p-contents">
+                        <h2 class="title">MEDIA</h2>
+                        <ul class="p-post-list">
+                            <li>
+                                <figure class="p-card">
+                                    <figcaption class="p-card__caption">
+                                        <h3 class="p-card__caption__title">ブログタイトル</h3>
+                                        <ul class="c-post-time">
+                                            <li class="time">投稿日時</li>
+                                            <li class="tag">タグ名</li>
+                                        </ul>
+                                    </figcaption>
+                                    <img class="p-card__img" src="images/p-card/eye-catching.jpg" alt="アイキャッチ画像">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure class="p-card">
+                                    <figcaption class="p-card__caption">
+                                        <h3 class="p-card__caption__title">ブログタイトル</h3>
+                                        <ul class="c-post-time">
+                                            <li class="time">投稿日時</li>
+                                            <li class="tag">タグ名</li>
+                                        </ul>
+                                    </figcaption>
+                                    <img class="p-card__img" src="images/p-card/eye-catching.jpg" alt="アイキャッチ画像">
+                                </figure>
+                            </li>
+                        </ul>
+                    </article>
+                    <div class="pagination">
+                        <span class="page_numbers">1</span>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <span class="page_numbers__dot">…</span>
+                        <a href="">次へ</a>
                     </div>
 
                     <div class="l-sidebar">
-                        <form action="/" name="search_box" method="post" class="p-search-form">
-                            <dl class="search_inner">
-                                <dt><input type="text" name="search" value="" placeholder="Search"></input></dt>
-                                <dd><button><span></span></button></dd>
-                            </dl>
-                        </form>
                         <div class="p-side-navigation">
-                            <h3 class="sub_title">CATEGORY</h3>
-                            <nav>
-                                <ul class="sub_menu">
+                            <h3 class="sub-title">CATEGORY</h3>
+                            <nav class="">
+                                <ul class="sub-menu">
                                     <li><a href="#">NEWS</a></li>
                                     <li><a href="#">BRAND</a></li>
                                     <li><a href="#">FASHION</a></li>
@@ -78,19 +111,19 @@
                 </div>
             </div>
         </main>
-        <footer class="l-footer">
+        <footer id="footer" class="l-footer">
             <div class="c-container">
-                <div class="c-inner">
-                    <ul class="footer_li">
+                <nav class="c-inner">
+                    <ul class="c-inner__menu">
                         <li><a href="/">HOME</a></li>
                         <li><a href="#">ABOUT</a></li>
                         <li><a href="#">NEWS</a></li>
                         <li><a href="#">BRAND</a></li>
-                        <li class="f_nav"><a href="#">FASHION</a></li>
-                        <li class="f_nav"><a href="./contact.html">CONTACT</a></li>
-                        <li class="f_nav_p"><a href="#">PRIVACY POLICY</a></li>
+                        <li><a href="#">FASHION</a></li>
+                        <li><a href="./contact.html">CONTACT</a></li>
+                        <li><a href="#">PRIVACY POLICY</a></li>
                     </ul>
-                </div>
+                </nav>
                 <address><small>&copy; 2020 Rishry</small></address>
             </div>
         </footer>
