@@ -587,12 +587,12 @@
   }
 }
 
-.inner_404 .t_404 {
+.inner_404 .ttl {
   font-weight: inherit;
 }
 
 @media (min-width: 415px) {
-  .inner_404 .t_404 {
+  .inner_404 .ttl {
     margin: auto;
     font-size: 30px;
   }

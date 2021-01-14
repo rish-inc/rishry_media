@@ -10,11 +10,17 @@
         <title>Rishry</title>
     </head>
 
-    <body>
+    <body class="not-found">
         <header id="header" class="l-header">
             <div class="c-container">
-                <h1 class="logo l-header__left"><a href="/"><img src="images/logo.png" alt="Rishry ロゴ"></a></h1>
+                <h1 class="logo l-header__left">
+                    <button class="p-hamburger p-gmenu--bt is-hamburger">
+                        <span>menuボタン</span>
+                    </button>
+                    <a href="/"><img src="images/logo.png" alt="Rishry ロゴ"></a>
+                </h1>
                 <div class="l-header__right">
+                    <a href="#"><img class="p-ec-bnr" src="バナー画像挿入" alt="ECサイト　バナー"></a>
                     <nav class="p-gnavi">
                         <ul class="p-gnavi__menu">
                             <li><a href="/">HOME</a></li>
@@ -26,63 +32,65 @@
                             <li><a href="#">PRIVACY POLICY</a></li>
                         </ul>
                     </nav>
+                    <form action="/" name="search-box" method="post" class="p-search-form">
+                        <dl class="search-inner">
+                            <dt><input type="text" name="search" value="" placeholder="Search"></input></dt>
+                            <dd><button><span></span></button></dd>
+                        </dl>
+                    </form>
                 </div>
             </div>
         </header>
-        <div class="wrapper">
-            <div class="inner_404">
-                <h2 class="t_404">404 File not found.</h2>
-                <div class="details">
-                    <h3>お探しのページはありません</h3>
-                    <p>お探しのページは移動、または削除された可能性があります。</p>
+        <main class="l-contents">
+            <div class="c-wrapper">
+                <div class="c-wrapper__404">
+                    <h2 class="ttl">404 File not found.</h2>
+                    <div class="details">
+                        <h3>お探しのページはありません</h3>
+                        <p>お探しのページは移動、または削除された可能性があります。</p>
+                    </div>
+                    <div class="c-btn__404">
+                        <div class="c-btn">
+                            <a href="index.html">TOPへ戻る</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="buttun_404">
-                    <div class="b_inner_404">
-                        <a href="index.html">TOPへ戻る</a>
+
+                <div class="l-sidebar">
+                    <div class="p-side-navigation">
+                        <h3 class="sub-title">CATEGORY</h3>
+                        <nav class="c-category">
+                            <ul class="c-category__sub-menu">
+                                <li><a href="#">NEWS</a></li>
+                                <li><a href="#">BRAND</a></li>
+                                <li><a href="#">FASHION</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="c-sns">
+                            <ul class="c-sns__icon">
+                                <li class="twitter"><img src="images/sns/t_logo.png" alt="twitter"></li>
+                                <li class="facebook"><img src="images/sns/f_logo.png" alt="facebook"></li>
+                                <li class="instagram"><img src="images/sns/i_logo.svg" alt="instagram"></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
+        </main>
 
-            <div class="l-sidebar">
-                <form action="/" name="search_box" method="post" class="p-search-form">
-                    <dl class="search_inner">
-                        <dt><input type="text" name="search" value="" placeholder="Search"></input></dt>
-                        <dd><button><span></span></button></dd>
-                    </dl>
-                </form>
-                <div class="p-side-navigation">
-                    <h3 class="sub_title">CATEGORY</h3>
-                    <nav>
-                        <ul class="sub_menu">
-                            <li><a href="#">NEWS</a></li>
-                            <li><a href="#">BRAND</a></li>
-                            <li><a href="#">FASHION</a></li>
-                        </ul>
-                    </nav>
-                    <nav>
-                        <ul class="sns">
-                            <li class="twitter"><img src="images/sns/t_logo.png" alt="twitter"></li>
-                            <li class="facebook"><img src="images/sns/f_logo.png" alt="facebook"></li>
-                            <li class="instagram"><img src="images/sns/i_logo.svg" alt="instagram"></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-
-        <footer class="l-footer">
+        <footer id="footer" class="l-footer">
             <div class="c-container">
-                <div class="c-inner">
-                    <ul class="footer_li">
-                        <li><a href="index.html">HOME</a></li>
+                <nav class="c-inner">
+                    <ul class="c-inner__menu">
+                        <li><a href="/">HOME</a></li>
                         <li><a href="#">ABOUT</a></li>
                         <li><a href="#">NEWS</a></li>
                         <li><a href="#">BRAND</a></li>
-                        <li class="f_nav"><a href="#">FASHION</a></li>
-                        <li class="f_nav"><a href="./contact.html">CONTACT</a></li>
-                        <li class="f_nav_p"><a href="#">PRIVACY POLICY</a></li>
+                        <li><a href="#">FASHION</a></li>
+                        <li><a href="./contact.html">CONTACT</a></li>
+                        <li><a href="#">PRIVACY POLICY</a></li>
                     </ul>
-                </div>
+                </nav>
                 <address><small>&copy; 2020 Rishry</small></address>
             </div>
         </footer>
