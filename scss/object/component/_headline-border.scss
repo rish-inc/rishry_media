@@ -1,0 +1,11 @@
+.c-headline-border {
+    &::before, 
+    &::after {
+        position: absolute;
+        content: '';
+        // width: 4.5%;
+        height: 3px;
+        background: #FEC1C8;
+        border-radius: 9px;
+    }
+}
