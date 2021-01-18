@@ -2,8 +2,10 @@
     margin: 0 auto;
     max-width: 390px;
     position: relative;
+    // padding-bottom: 5%;
     @include breakpoint ( tablet ) {
         max-width: 984px;
+        // padding-bottom: 1%;
     }
     @include breakpoint ( pc ) {
         width: 300px;
@@ -65,6 +67,24 @@
                     top: 2px;
                 }
             }
+            &::before {
+                left: -3%;
+                @include breakpoint ( tablet ) {
+                    left: -1%;
+                }
+                @include breakpoint ( pc ) {
+                    left: -5%;
+                }
+            }
+            &::after {
+                left: -2%;
+                @include breakpoint ( tablet ) {
+                    left: -1.5%;
+                }
+                @include breakpoint ( pc ) {
+                    left: -3%;
+                }
+            }
         }
         a {
             text-decoration: none;
@@ -78,7 +98,7 @@
             display: block;
             display: flex;
             max-width: 208px;
-            padding: 10% 0 7%;
+            padding: 5% 0 7%;
         }
         .twitter,
         .facebook,
