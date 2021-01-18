@@ -427,38 +427,6 @@ body {
   }
 }
 
-.l-sidebar .side .sub_title::before {
-  left: 31%;
-}
-
-@media (min-width: 415px) {
-  .l-sidebar .side .sub_title::before {
-    left: 41%;
-  }
-}
-
-@media (min-width: 1025px) {
-  .l-sidebar .side .sub_title::before {
-    left: 25%;
-  }
-}
-
-.l-sidebar .side .sub_title::after {
-  left: 64%;
-}
-
-@media (min-width: 415px) {
-  .l-sidebar .side .sub_title::after {
-    left: 56%;
-  }
-}
-
-@media (min-width: 1025px) {
-  .l-sidebar .side .sub_title::after {
-    left: 68%;
-  }
-}
-
 .l-sidebar .side .sub_menu {
   list-style: none;
   padding: 0;
@@ -550,11 +518,37 @@ body {
 }
 
 .c-headline-border::before, .c-headline-border::after {
-  position: absolute;
   content: '';
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   height: 3px;
   background: #FEC1C8;
+  display: block;
   border-radius: 9px;
+  width: 18px;
+}
+
+.c-headline-border::before {
+  margin-right: 0.3em;
+  margin-left: 6em;
+}
+
+@media (min-width: 1025px) {
+  .c-headline-border::before {
+    margin-left: 3em;
+  }
+}
+
+.c-headline-border::after {
+  margin-right: 6em;
+  margin-left: 0.3em;
+}
+
+@media (min-width: 1025px) {
+  .c-headline-border::after {
+    margin-right: 3em;
+  }
 }
 
 .c-sns__icon {
@@ -923,7 +917,6 @@ body {
 .p-side-navigation {
   margin: 0 auto;
   max-width: 390px;
-  position: relative;
 }
 
 @media (min-width: 415px) {
@@ -943,9 +936,13 @@ body {
 .p-side-navigation__title {
   font-weight: normal;
   font-size: 2rem;
-  text-align: center;
-  position: relative;
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 415px) {
@@ -958,40 +955,6 @@ body {
   .p-side-navigation__title {
     padding-top: 10px;
     margin-top: 20px;
-  }
-}
-
-.p-side-navigation__title::before, .p-side-navigation__title::after {
-  width: 4.5%;
-  top: 53%;
-}
-
-@media (min-width: 415px) {
-  .p-side-navigation__title::before, .p-side-navigation__title::after {
-    width: 2%;
-  }
-}
-
-@media (min-width: 1025px) {
-  .p-side-navigation__title::before, .p-side-navigation__title::after {
-    width: 6%;
-    top: 60%;
-  }
-}
-
-.p-side-navigation__title::before {
-  left: 31%;
-}
-
-@media (min-width: 415px) {
-  .p-side-navigation__title::before {
-    left: 42.3%;
-  }
-}
-
-@media (min-width: 1025px) {
-  .p-side-navigation__title::before {
-    left: 25%;
   }
 }
 

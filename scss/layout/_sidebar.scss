@@ -115,24 +115,24 @@
                     top: 60%;
                 }
             }
-            &::before {
-                left: 31%;
-                @include breakpoint ( tablet ) {
-                    left: 41%;
-                }
-                @include breakpoint ( pc ) {
-                    left: 25%;
-                }
-            }
-            &::after {
-                left: 64%;
-                @include breakpoint ( tablet ) {
-                    left: 56%;
-                }
-                @include breakpoint ( pc ) {
-                    left: 68%;
-                }
-            }
+            // &::before {
+            //     left: 31%;
+            //     @include breakpoint ( tablet ) {
+            //         left: 41%;
+            //     }
+            //     @include breakpoint ( pc ) {
+            //         left: 25%;
+            //     }
+            // }
+            // &::after {
+            //     left: 64%;
+            //     @include breakpoint ( tablet ) {
+            //         left: 56%;
+            //     }
+            //     @include breakpoint ( pc ) {
+            //         left: 68%;
+            //     }
+            // }
         }
         .sub_menu {
             list-style: none;

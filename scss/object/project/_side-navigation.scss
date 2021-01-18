@@ -1,7 +1,7 @@
 .p-side-navigation {
     margin: 0 auto;
     max-width: 390px;
-    position: relative;
+    // position: relative;
     // padding-bottom: 5%;
     @include breakpoint ( tablet ) {
         max-width: 984px;
@@ -15,36 +15,17 @@
     &__title {
         font-weight: normal;
         font-size: 2rem;
-        text-align: center;
-        position: relative;
         margin-top: 20px;
+        display: flex;
+        align-items: center;
+        // text-align: center;
+        // position: relative;
         @include breakpoint ( tablet ) {
             margin-top: 40px;
         }
         @include breakpoint ( pc ) {
             padding-top: 10px;
             margin-top: 20px;
-        }
-        &::before,
-        &::after {
-            width: 4.5%;
-            top: 53%;
-            @include breakpoint ( tablet ) {
-                width: 2%;
-            }
-            @include breakpoint ( pc ) {
-                width: 6%;
-                top: 60%;
-            }
-        }
-        &::before {
-            left: 31%;
-            @include breakpoint ( tablet ) {
-                left: 42.3%;
-            }
-            @include breakpoint ( pc ) {
-                left: 25%;
-            }
         }
     }
     &__main-menu {
