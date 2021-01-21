@@ -1,14 +1,11 @@
 .p-side-navigation {
     margin: 0 auto;
     max-width: 390px;
-    // position: relative;
-    // padding-bottom: 5%;
     @include breakpoint ( tablet ) {
         max-width: 984px;
-        // padding-bottom: 1%;
     }
     @include breakpoint ( pc ) {
-        width: 300px;
+        width: 280px;
         height: auto;
         border: 1px solid #FFD6DB;
     }
@@ -18,8 +15,7 @@
         margin-top: 20px;
         display: flex;
         align-items: center;
-        // text-align: center;
-        // position: relative;
+        justify-content: center;
         @include breakpoint ( tablet ) {
             margin-top: 40px;
         }
@@ -30,12 +26,14 @@
     }
     &__main-menu {
         list-style: none;
-        flex-wrap: wrap;
         padding: 0;
         &__word {
             font-size: 1.2rem;
             margin: 0 0 3% 10%;
             position: relative;
+            @include breakpoint ( tablet ) {
+                margin: 0 0 2% 10%;
+            }
             @include breakpoint ( pc ) {
                 font-size: 1.5rem;
                 margin: 0 0 8% 20%;
@@ -45,26 +43,13 @@
                 height: 15px;
                 @include breakpoint ( pc ) {
                     height: 18px;
-                    top: 2px;
                 }
             }
             &::before {
-                left: -3%;
-                @include breakpoint ( tablet ) {
-                    left: -1%;
-                }
-                @include breakpoint ( pc ) {
-                    left: -5%;
-                }
+                left: -10px;
             }
             &::after {
-                left: -2%;
-                @include breakpoint ( tablet ) {
-                    left: -1.5%;
-                }
-                @include breakpoint ( pc ) {
-                    left: -3%;
-                }
+                left: -6px;
             }
         }
         a {
@@ -87,7 +72,7 @@
             margin: 0 auto;
         }
         img {
-            width: 50px;
+            width: 45px;
             height: auto;
         }
     }

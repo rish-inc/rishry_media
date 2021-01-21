@@ -1,4 +1,5 @@
 .c-barline-border {
+    border-radius: 9px;
     &::before, 
     &::after {
         position: absolute;

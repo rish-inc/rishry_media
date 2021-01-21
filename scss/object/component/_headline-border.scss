@@ -1,50 +1,19 @@
 .c-headline-border {
     &::before, 
     &::after {
-        // position: absolute;
         content: '';
-        flex-grow: 1;
+        flex-basis: 18px;
         height: 3px;
         background: #FEC1C8;
-        display: block;
         border-radius: 9px;
-        width: 18px;
-        // width: 4.5%;
-        // top: 53%;
-        // @include breakpoint ( tablet ) {
-        //     width: 2%;
-        // }
-        // @include breakpoint ( pc ) {
-        //     width: 6%;
-        //     top: 60%;
-        // }
+        @include breakpoint ( tablet ) {
+            flex-basis: 20px;
+        }
     }
     &::before {
-        margin-right: 0.3em;
-        margin-left: 6em;
-        @include breakpoint ( pc ) {
-            margin-left: 3em;
-        }
-        // left: 31%;
-        // @include breakpoint ( tablet ) {
-        //     left: 41%;
-        // }
-        // @include breakpoint ( pc ) {
-        //     left: 25%;
-        // }
+        margin-right: 3px;
     }
     &::after {
-        margin-right: 6em;
-        margin-left: 0.3em;
-        @include breakpoint ( pc ) {
-            margin-right: 3em;
-        }
-        // left: 64%;
-        // @include breakpoint ( tablet ) {
-        //     left: 56%;
-        // }
-        // @include breakpoint ( pc ) {
-        //     left: 68%;
-        // }
+        margin-left: 2px;
     }
 }
