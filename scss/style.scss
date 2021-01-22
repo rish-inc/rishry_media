@@ -4,7 +4,7 @@
 //  Foundation
 //=======================================================
 @import "./mixin";
-@import "./base";
+@import "./foundation/base";
 
 //=======================================================
 //  layout
@@ -19,12 +19,17 @@
 // -----------------------------------------------------------------
 // Component
 // -----------------------------------------------------------------
+@import "./object/component/headline-border";
+@import "./object/component/sns__icon";
+@import "./object/component/barline-border";
+@import "./object/component/boundary-line";
 
 // -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------
-@import "./project/404";
-@import "./project/contact";
+@import "./object/project/404";
+@import "./object/project/contact";
+@import "./object/project/side-navigation";
 
 // -----------------------------------------------------------------
 // Utility

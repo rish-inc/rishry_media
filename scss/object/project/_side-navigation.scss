@@ -1,0 +1,79 @@
+.p-side-navigation {
+    margin: 0 auto;
+    max-width: 390px;
+    @include breakpoint ( tablet ) {
+        max-width: 984px;
+    }
+    @include breakpoint ( pc ) {
+        width: 280px;
+        height: auto;
+        border: 1px solid #FFD6DB;
+    }
+    &__title {
+        font-weight: normal;
+        font-size: 2rem;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include breakpoint ( tablet ) {
+            margin-top: 40px;
+        }
+        @include breakpoint ( pc ) {
+            padding-top: 10px;
+            margin-top: 20px;
+        }
+    }
+    &__main-menu {
+        list-style: none;
+        padding: 0;
+        &__word {
+            font-size: 1.2rem;
+            margin: 0 0 3% 10%;
+            position: relative;
+            @include breakpoint ( tablet ) {
+                margin: 0 0 2% 10%;
+            }
+            @include breakpoint ( pc ) {
+                font-size: 1.5rem;
+                margin: 0 0 8% 20%;
+            }
+            &::before,
+            &::after {
+                height: 15px;
+                @include breakpoint ( pc ) {
+                    height: 18px;
+                }
+            }
+            &::before {
+                left: -10px;
+            }
+            &::after {
+                left: -6px;
+            }
+        }
+        a {
+            text-decoration: none;
+            color: #030303;
+        }
+    }
+    &__sns-menu {
+        padding-left: inherit;
+        display: none;
+        @include breakpoint ( pc ) {
+            display: block;
+            display: flex;
+            max-width: 208px;
+            padding: 5% 0 7%;
+        }
+        .twitter,
+        .facebook,
+        .instagram {
+            margin: 0 auto;
+        }
+        img {
+            width: 45px;
+            height: auto;
+        }
+    }
+}
