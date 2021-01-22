@@ -1,0 +1,26 @@
+.p-card {
+    &__caption {
+
+        &__title {
+            font-size: 1.6rem;
+            font-weight: normal;
+            position: relative;
+            @include breakpoint ( tablet ) {
+                font-size: 2.0rem;
+            }
+            @include breakpoint ( pc ) {
+                font-size: 2.4rem;
+            }
+            &::before,
+            &::after {
+                height: 16px;
+            }
+            &::before {
+                left: -10px;
+            }
+            &::after {
+                left: -6px;
+            }
+        }
+    }
+}

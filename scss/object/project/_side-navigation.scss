@@ -1,9 +1,4 @@
 .p-side-navigation {
-    margin: 0 auto;
-    max-width: 390px;
-    @include breakpoint ( tablet ) {
-        max-width: 984px;
-    }
     @include breakpoint ( pc ) {
         width: 280px;
         height: auto;

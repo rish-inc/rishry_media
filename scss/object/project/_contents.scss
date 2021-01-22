@@ -1,0 +1,15 @@
+.p-contents {
+}
+.title {
+    font-weight: normal;
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include breakpoint ( tablet ) {
+         font-size: 2.6rem;
+    }
+    @include breakpoint ( pc ) {
+        font-size: 3.0rem;
+    }
+}

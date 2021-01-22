@@ -315,63 +315,12 @@ body {
   }
 }
 
-.l-sidebar form {
-  display: none;
-}
-
 @media (min-width: 1025px) {
-  .l-sidebar form {
-    display: block;
-    margin-bottom: 30px;
-    margin-left: 3.9%;
+  .l-contents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-}
-
-.l-sidebar .search_inner {
-  position: relative;
-  background: #fff;
-  border: 1px solid #707070;
-  border-radius: 8px;
-  width: 260px;
-  margin: 0 auto;
-}
-
-.l-sidebar .search_inner dt {
-  margin-right: 40px;
-  padding: 8px 0 5px 8px;
-}
-
-.l-sidebar .search_inner dt input {
-  width: 100%;
-  height: 24px;
-  line-height: 24px;
-  background: none;
-  border: none;
-}
-
-.l-sidebar .search_inner dt input[type="text"] {
-  font-size: 14px;
-  padding-left: 5px;
-}
-
-.l-sidebar .search_inner dd {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.l-sidebar .search_inner dd button {
-  display: block;
-  padding: 7px 15px 3px;
-  background: none;
-  border: none;
-}
-
-.l-sidebar .search_inner dd button span {
-  display: block;
-  width: 30px;
-  height: 30px;
-  background: url("/images/search_mark.svg") no-repeat scroll 0 0;
 }
 
 .c-headline-border::before, .c-headline-border::after {
@@ -769,17 +718,6 @@ body {
   }
 }
 
-.p-side-navigation {
-  margin: 0 auto;
-  max-width: 390px;
-}
-
-@media (min-width: 415px) {
-  .p-side-navigation {
-    max-width: 984px;
-  }
-}
-
 @media (min-width: 1025px) {
   .p-side-navigation {
     width: 280px;
@@ -888,5 +826,61 @@ body {
 .p-side-navigation__sns-menu img {
   width: 45px;
   height: auto;
+}
+
+.title {
+  font-weight: normal;
+  font-size: 2.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 415px) {
+  .title {
+    font-size: 2.6rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .title {
+    font-size: 3.0rem;
+  }
+}
+
+.p-card__caption__title {
+  font-size: 1.6rem;
+  font-weight: normal;
+  position: relative;
+}
+
+@media (min-width: 415px) {
+  .p-card__caption__title {
+    font-size: 2.0rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .p-card__caption__title {
+    font-size: 2.4rem;
+  }
+}
+
+.p-card__caption__title::before, .p-card__caption__title::after {
+  height: 16px;
+}
+
+.p-card__caption__title::before {
+  left: -10px;
+}
+
+.p-card__caption__title::after {
+  left: -6px;
 }
 /*# sourceMappingURL=style.css.map */
