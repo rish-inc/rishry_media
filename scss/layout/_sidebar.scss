@@ -1,11 +1,19 @@
 .l-sidebar {
     width: 100%;
+    padding-top: 20px;
+    position: relative;
     @include breakpoint ( tablet ) {
         padding-bottom: 1%;
     }
     @include breakpoint ( pc ) {
         padding-top: 60px;
         margin-right: 60px;
+    }
+    &::before {
+        width: 100%;
+        @include breakpoint ( pc ) {
+            display: none;
+        }
     }
     form {
         display: none;

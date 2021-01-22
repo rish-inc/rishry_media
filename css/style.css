@@ -288,6 +288,8 @@ body {
 
 .l-sidebar {
   width: 100%;
+  padding-top: 20px;
+  position: relative;
 }
 
 @media (min-width: 415px) {
@@ -300,6 +302,16 @@ body {
   .l-sidebar {
     padding-top: 60px;
     margin-right: 60px;
+  }
+}
+
+.l-sidebar::before {
+  width: 100%;
+}
+
+@media (min-width: 1025px) {
+  .l-sidebar::before {
+    display: none;
   }
 }
 
@@ -396,15 +408,19 @@ body {
   }
 }
 
-.c-barline-border {
-  border-radius: 9px;
-}
-
 .c-barline-border::before, .c-barline-border::after {
   position: absolute;
   content: '';
   width: 2px;
   background: #FEC1C8;
+  border-radius: 9px;
+}
+
+.c-boundary-line::before {
+  position: absolute;
+  content: '';
+  height: 1px;
+  background: #dcdcdc;
   border-radius: 9px;
 }
 
