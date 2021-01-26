@@ -24,7 +24,7 @@
 @import "./object/component/sns__icon";
 @import "./object/component/barline-border";
 @import "./object/component/boundary-line";
-@import "./object/component/post-time";
+@import "./object/component/time-category-chunk";
 
 // -----------------------------------------------------------------
 // Project
@@ -33,10 +33,11 @@
 @import "./object/project/contact";
 @import "./object/project/side-navigation";
 @import "./object/project/contents";
+@import "./object/project/post-list";
 @import "./object/project/card";
 
 
 // -----------------------------------------------------------------
 // Utility
 // -----------------------------------------------------------------
-
+@import "./object/utility/border-pc-none";
