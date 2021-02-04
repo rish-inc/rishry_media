@@ -1,9 +1,6 @@
 .c-boundary-line {
-    &::before {
-        position: absolute;
-        content: '';
-        height: 1px;
-        background: #dcdcdc;
-        border-radius: 9px;
+    border-top: 1px solid #dcdcdc;
+    &:first-child {
+        border: 0;
     }
 }

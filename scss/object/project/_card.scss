@@ -1,0 +1,55 @@
+.p-card {
+    margin: auto;
+    &__caption {
+        padding: 10px;
+        @include breakpoint ( tablet ) {
+            padding-top: 30px;
+        }
+        &__title {
+            font-size: 1.6rem;
+            font-weight: normal;
+            position: relative;
+            margin: auto;
+            @include breakpoint ( tablet ) {
+                font-size: 2.0rem;
+            }
+            @include breakpoint ( pc ) {
+                font-size: 2.4rem;
+            }
+            &::before,
+            &::after {
+                height: 16px;
+                top: 4px;
+                @include breakpoint ( tablet ) {
+                    height: 20px;
+                }
+                @include breakpoint ( pc ) {
+                    height: 25px;
+                }
+            }
+            &::before {
+                left: -10px;
+            }
+            &::after {
+                left: -6px;
+            }
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.data {
+    padding-top: 10px;
+}
+.time,
+.category {
+    font-size: 1.2rem;
+    margin-right: 20px;
+    @include breakpoint ( tablet ) {
+        font-size: 1.5rem;
+    }
+}
+
