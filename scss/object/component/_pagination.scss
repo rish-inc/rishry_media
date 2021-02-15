@@ -1,8 +1,14 @@
 .c-pagination {
     display: flex;
-    // justify-content: space-around;
     justify-content: center;
-    padding-left: 0;
+    margin: 0 auto;
+    padding: 20px 12px 40px;
+    @include breakpoint ( tablet ) {
+        padding: 10px 20px 80px;
+    }
+    @include breakpoint ( pc ) {
+        padding: 40px 0 80px;
+    }
 }
 .page-list {
     list-style: none;
@@ -10,6 +16,19 @@
         color: #030303;
         text-decoration: none;
         font-size: 1.5rem;
+    }
+}
+.before-to,
+.page-active,
+.page,
+.extend,
+.next {
+    margin: 0 5px;
+    @include breakpoint ( tablet ) {
+        margin: 0 4px;
+    }
+    @include breakpoint ( pc ) {
+        margin: 0 6px;
     }
 }
 .page-active,
