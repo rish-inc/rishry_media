@@ -4,4 +4,9 @@
     @include breakpoint ( tablet ) {
         max-width: 984px;
     }
+    @include breakpoint ( pc ) {
+        max-width: 1280px;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

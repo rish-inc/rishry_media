@@ -11,5 +11,7 @@
     }
     @include breakpoint ( pc ) {
         font-size: 3.0rem;
+        margin: 0;
+        padding-top: 60px;
     }
 }
