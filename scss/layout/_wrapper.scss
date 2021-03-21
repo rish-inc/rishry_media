@@ -4,6 +4,6 @@
     min-width: 261px;
     margin: 0 auto;
     @include breakpoint ( pc ) {
-        // max-width: 1280px;
+        max-width: 1280px;
     }
 }
