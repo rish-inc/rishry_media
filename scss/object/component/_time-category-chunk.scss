@@ -1,0 +1,15 @@
+.c-time-category-chunk {
+    display: flex;
+    padding: 0;
+}
+.time,
+.category {
+    list-style: none;
+}
+.time {
+    color: #797979;
+}
+.category {
+    color: #FFC0C8;
+    font-weight: bold;
+}

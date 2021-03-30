@@ -1,26 +1,49 @@
 @charset "UTF-8";
+
+//=======================================================
+//  Foundation
+//=======================================================
 @import "./mixin";
-@import "./common/header";
-@import "./common/footer";
-@import "./common/sidebar";
+@import "./foundation/base";
+
+//=======================================================
+//  layout
+//=======================================================
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/sidebar";
+@import "./layout/contents";
+@import "./layout/container";
+@import "./layout/wrapper";
+
+//=======================================================
+//  Object
+//=======================================================
+// -----------------------------------------------------------------
+// Component
+// -----------------------------------------------------------------
+@import "./object/component/headline-border";
+@import "./object/component/sns__icon";
+@import "./object/component/barline-border";
+@import "./object/component/boundary-line";
+@import "./object/component/time-category-chunk";
+@import "./object/component/pagination";
+@import "./object/component/mainvisual";
+@import "./object/component/btn";
+
+// -----------------------------------------------------------------
+// Project
+// -----------------------------------------------------------------
+@import "./object/project/404";
+@import "./object/project/contact";
+@import "./object/project/side-navigation";
+@import "./object/project/contents";
+@import "./object/project/post-list";
+@import "./object/project/card";
+@import "./object/project/pagination-enclosure";
 
 
-html {
-    font-size: 100%;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-}
-
-body {
-    width: 100%;
-    margin: 0;
-}
-
-.wrapper {
-    display: block;
-    max-width: 100%;
-    min-width: 261px;
-    margin: 0 auto;
-    @include breakpoint ( pc ) {
-        max-width: 1280px;
-    }
-}
+// -----------------------------------------------------------------
+// Utility
+// -----------------------------------------------------------------
+@import "./object/utility/border-pc-none";

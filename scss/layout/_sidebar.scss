@@ -1,0 +1,18 @@
+.l-sidebar {
+    width: 100%;
+    padding-top: 20px;
+    position: relative;
+    @include breakpoint ( tablet ) {
+        padding-bottom: 1%;
+    }
+    @include breakpoint ( pc ) {
+        max-width: 280px;
+        padding-top: 60px;
+    }
+    &::before {
+        width: 100%;
+        @include breakpoint ( pc ) {
+            display: none;
+        }
+    }
+}

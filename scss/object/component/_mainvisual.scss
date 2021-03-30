@@ -1,0 +1,8 @@
+.c-mainvisual {
+    img {
+        max-width: 100%;
+        @include breakpoint ( pc ) {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+.c-sns__icon {
+    list-style: none;
+    @include breakpoint ( pc ) {
+        margin: 0 auto;
+    }
+}
