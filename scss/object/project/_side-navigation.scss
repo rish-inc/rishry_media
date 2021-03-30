@@ -1,6 +1,6 @@
 .p-side-navigation {
     @include breakpoint ( pc ) {
-        width: 280px;
+        max-width: 280px;
         height: auto;
         border: 1px solid #FFD6DB;
     }
