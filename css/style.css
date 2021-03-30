@@ -578,6 +578,16 @@ body {
   }
 }
 
+.c-btn {
+  background-color: #FFD6DB;
+  width: 10%;
+}
+
+.c-btn a {
+  text-decoration: none;
+  color: #444;
+}
+
 .c-wrapper__404 {
   width: 100%;
   max-width: 390px;
@@ -599,17 +609,6 @@ body {
     max-width: 876px;
     margin: 0;
     padding-top: 100px;
-  }
-}
-
-.c-wrapper__404 .ttl {
-  font-weight: inherit;
-}
-
-@media (min-width: 415px) {
-  .c-wrapper__404 .ttl {
-    margin: auto;
-    font-size: 30px;
   }
 }
 
@@ -680,6 +679,18 @@ body {
 @media (min-width: 415px) {
   .c-wrapper__404 .c-btn a {
     font-size: 20px;
+  }
+}
+
+.ttl {
+  font-weight: inherit;
+  font-size: 2.8rem;
+}
+
+@media (min-width: 415px) {
+  .ttl {
+    margin: auto;
+    font-size: 3.5rem;
   }
 }
 
@@ -1029,6 +1040,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 30px;
 }
 
 @media (min-width: 415px) {
@@ -1078,7 +1090,7 @@ body {
 }
 
 .p-card__caption {
-  padding: 10px;
+  padding: 15px 10px 10px;
 }
 
 @media (min-width: 415px) {
