@@ -26,13 +26,7 @@
     //         display: none;
     //     }
     // }
-    .ttl {
-        font-weight: inherit;
-        @include breakpoint ( tablet ) {
-            margin: auto;
-            font-size: 30px;
-        }
-    }
+    
     h3 {
         font-size: 16px;
         font-weight: inherit;
@@ -76,5 +70,14 @@
                 font-size: 20px;
             }
         }
+    }
+}
+
+.ttl {
+    font-weight: inherit;
+    font-size: 2.8rem;
+    @include breakpoint ( tablet ) {
+        margin: auto;
+        font-size: 3.5rem;
     }
 }
