@@ -1111,6 +1111,7 @@ body {
 @media (min-width: 415px) {
   .p-copyright {
     padding: 20px 0;
+    font-size: 0.75rem;
   }
 }
 

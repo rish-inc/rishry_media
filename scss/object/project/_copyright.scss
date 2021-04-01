@@ -4,5 +4,6 @@
     padding: 20px 0 15px;
     @include breakpoint ( tablet ) {
         padding: 20px 0;
+        font-size: 0.75rem;
     }
 }
