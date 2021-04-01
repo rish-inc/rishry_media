@@ -1,7 +1,18 @@
 .c-container {
-    padding: 3.5% 0;
-    width: 100%;
+    margin: auto;
+    max-width: 320px;
+    padding-top: 20px;
     @include breakpoint ( tablet ) {
-        padding: 2.5% 0 1.5% 0;
+        min-width: 200px;
+        max-width: 1000px;
+        padding-top: 40px;
     }
 }
+
+// .c-container {
+//     padding: 3.5% 0;
+//     width: 100%;
+//     @include breakpoint ( tablet ) {
+//         padding: 2.5% 0 1.5% 0;
+//     }
+// }
