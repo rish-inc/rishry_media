@@ -1138,6 +1138,7 @@ body {
   max-width: 360px;
   height: 65px;
   margin: 0 auto;
+  background: #ffffe0;
 }
 
 @media (min-width: 415px) {
@@ -1166,12 +1167,17 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: #ff7f50;
 }
 
 @media (min-width: 415px) {
   .p-footer__navigation__menu li {
     width: 100%;
   }
+}
+
+.p-footer__navigation__menu li:nth-child(7) {
+  white-space: nowrap;
 }
 
 .p-footer__navigation__menu li a {

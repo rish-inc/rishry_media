@@ -14,7 +14,7 @@
             // width: 75%;
             height: 65px;
             margin: 0 auto;
-            // background: #ffffe0;
+            background: #ffffe0;
             @include breakpoint ( tablet ) {
                 flex-wrap: nowrap;
                 min-width: 400px;
@@ -32,10 +32,13 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                // background: #ff7f50;
+                background: #ff7f50;
                 @include breakpoint ( tablet ) {
                     width: 100%;
                     // margin: 0 auto;
+                }
+                &:nth-child( 7 ) {
+                    white-space: nowrap;
                 }
                 a {
                     text-decoration: none;
