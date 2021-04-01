@@ -8,12 +8,13 @@
             padding: 0;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             min-width: 180px;
             max-width: 360px;
             // width: 75%;
             height: 65px;
             margin: 0 auto;
-            background: #ffffe0;
+            // background: #ffffe0;
             @include breakpoint ( tablet ) {
                 flex-wrap: nowrap;
                 min-width: 400px;
@@ -23,12 +24,15 @@
                 margin: 0 auto;
             }
             li {
-                flex-direction: column;
+                // flex-direction: column;
                 text-align: center;
                 width: 23%;
                 height: 20px;
                 margin: 1%;
-                background: #ff7f50;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                // background: #ff7f50;
                 @include breakpoint ( tablet ) {
                     width: 100%;
                     // margin: 0 auto;

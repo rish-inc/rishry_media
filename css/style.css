@@ -1131,11 +1131,13 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-width: 180px;
   max-width: 360px;
   height: 65px;
   margin: 0 auto;
-  background: #ffffe0;
 }
 
 @media (min-width: 415px) {
@@ -1151,15 +1153,19 @@ body {
 }
 
 .p-footer__navigation__menu li {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   text-align: center;
   width: 23%;
   height: 20px;
   margin: 1%;
-  background: #ff7f50;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 415px) {
