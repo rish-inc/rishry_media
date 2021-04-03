@@ -1,12 +1,12 @@
 .p-post-list {
     list-style: none;
     margin: 0;
-    padding: 0 12px;
+    padding: 0;
     @include breakpoint ( tablet ) {
-        padding: 0 20px;
+        // padding: 0 20px;
     }
     @include breakpoint ( pc ) {
-        padding: 0 7%;
+        // padding: 0 7%;
     }
 }
 .posted { 
