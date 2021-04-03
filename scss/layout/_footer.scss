@@ -1,30 +1,17 @@
 .l-footer {
     background: #FFEDEE;
-    p {
-        text-align: center;
-        font-size: 10px;
-        margin-top: 4%;
-        margin-bottom: 0;
-        @include breakpoint ( tablet ) {
-            margin-top: 1.5%;
-        }
-    }
     small {
         @include breakpoint ( tablet ) {
-            font-size: 12px;
+            font-size: 1.2rem;
         }
     }
 }
-
-// .f_nav {
-            //     width: 27%;
-            //     @include breakpoint ( tablet ) {
-            //         width: 12%;
-            //     }
-            // }
-            // .f_nav_p {
-            //     width: 40%;
-            //     @include breakpoint ( tablet ) {
-            //         width: 18%;
-            //     }
-            // }
+    // p {
+    //     text-align: center;
+    //     font-size: 10px;
+    //     margin-top: 4%;
+    //     margin-bottom: 0;
+    //     @include breakpoint ( tablet ) {
+    //         margin-top: 1.5%;
+    //     }
+    // }
