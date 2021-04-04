@@ -1,4 +1,5 @@
 .l-container {
+    margin: 0 auto;
     max-width: 390px;
     @include breakpoint ( tablet ) {
         max-width: 984px;
