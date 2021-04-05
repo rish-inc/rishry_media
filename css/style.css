@@ -198,6 +198,8 @@ body {
 }
 
 .l-sidebar {
+  width: 100vw;
+  margin: 0 calc( 50% - 50vw);
   overflow: hidden;
   padding-top: 20px;
 }
@@ -225,12 +227,12 @@ body {
 
 .l-container {
   margin: 0 auto;
-  max-width: 414px;
-  padding: 0 12px;
+  max-width: 390px;
 }
 
 @media (min-width: 415px) {
   .l-container {
+    max-width: 984px;
     max-width: 1024px;
     padding: 0 20px;
   }
