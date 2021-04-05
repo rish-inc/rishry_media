@@ -1113,8 +1113,6 @@ body {
 
 @media (min-width: 415px) {
   .p-footer__navigation__menu {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
     min-width: 400px;
     max-width: 800px;
     width: 90%;
