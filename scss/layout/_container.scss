@@ -3,6 +3,8 @@
     max-width: 390px;
     @include breakpoint ( tablet ) {
         max-width: 984px;
+        max-width: 1024px;
+        padding: 0 20px;
     }
     @include breakpoint ( pc ) {
         max-width: 1280px;
