@@ -14,7 +14,7 @@
     <body>
         <header id="header" class="l-header">
             <div class="c-container">
-                <h1 class="logo l-header__left"><a href="/"><img src="images/logo.png" alt="Rishry ロゴ"></a></h1>
+                <div class="logo l-header__left"><a href="/"><img src="images/logo.png" alt="Rishry ロゴ"></a></div>
                 <div class="l-header__right">
                     <nav class="p-gnavi">
                         <ul class="p-gnavi__menu">
@@ -32,13 +32,13 @@
         </header>
         <div class="l-container">
             <main class="l-contents">
-                <article class="contact">
-                    <h2 class="title c-headline-border">お問い合わせ</h2>
-                    <div class="contact__inner">
-                        <form class="contact__inner__area" action="#">
+                <article class="p-contents contact">
+                    <h1 class="title c-headline-border">お問い合わせ</h1>
+                    <div class="c-inner">
+                        <form class="p-contact" action="#">
                             <dl>
                                 <dt>
-                                    <label for="name">お名前<span class="mandatory_tag">必須</span></label>
+                                    <label for="name">お名前<span class="mandatory-tag">必須</span></label>
                                 </dt>
                                 <dd>
                                     <input type="text" id="name" name="your-name">
@@ -46,7 +46,7 @@
                             </dl>
                             <dl>
                                 <dt>
-                                    <label for="email">メールアドレス<span class="mandatory_tag">必須</span></label>
+                                    <label for="email">メールアドレス<span class="mandatory-tag">必須</span></label>
                                 </dt>
                                 <dd>
                                     <input type="text" id="email" name="your-email">
@@ -62,7 +62,7 @@
                             </dl>
                             <dl>
                                 <dt>
-                                    <label for="message">メッセージ本文<span class="mandatory_tag">必須</span></label>
+                                    <label for="message">メッセージ本文<span class="mandatory-tag">必須</span></label>
                                 </dt>
                                 <dd>
                                     <textarea name="message" id="your-message"></textarea>
