@@ -524,6 +524,43 @@ body {
   }
 }
 
+.c-title {
+  font-weight: normal;
+  font-size: 2.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 415px) {
+  .c-title {
+    font-size: 2.6rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .c-title {
+    font-size: 3.0rem;
+    margin: 0;
+  }
+}
+
+.index {
+  padding-top: 30px;
+}
+
+@media (min-width: 415px) {
+  .index {
+    padding-top: 60px;
+  }
+}
+
 .error {
   text-align: center;
   padding: 50px 0 40px;
@@ -812,35 +849,6 @@ body {
 .p-side-navigation__sns-menu img {
   width: 45px;
   height: auto;
-}
-
-.title {
-  font-weight: normal;
-  font-size: 2.4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 30px;
-}
-
-@media (min-width: 415px) {
-  .title {
-    font-size: 2.6rem;
-  }
-}
-
-@media (min-width: 1025px) {
-  .title {
-    font-size: 3.0rem;
-    margin: 0;
-    padding-top: 60px;
-  }
 }
 
 .p-post-list {
