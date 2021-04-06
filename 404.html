@@ -36,7 +36,7 @@
                     <form action="/" name="search-box" method="post" class="p-search-form">
                         <dl class="search-inner">
                             <dt><input type="text" name="search" value="" placeholder="Search"></input></dt>
-                            <dd><button><span></span></button></dd>
+                            <dd><button><span>検索</span></button></dd>
                         </dl>
                     </form>
                 </div>
@@ -44,18 +44,14 @@
         </header>
         <div class="l-container">
             <main class="l-contents">
-                <article class="p-contents">
-                    <h2 class="ttl">404 File not found.</h2>
-                    <div class="p-not-found-detail">
-                        <h3>お探しのページはありません</h3>
-                        <p>お探しのページは移動、または削除された可能性があります。</p>
-                    </div>
-                    <div class="c-btn back-to-top">
-                        <a href="/">TOPへ戻る</a>
-                    </div>
+                <article class="p-contents error">
+                    <h2 class="error__title">404 File not found.</h2>
+                    <h3>お探しのページはありません</h3>
+                    <p>お探しのページは移動、または削除された可能性があります。</p>
+                    <a class="back-to-top c-btn" href="/">TOPへ戻る</a>
                 </article>
             </main>
-            <div class="l-sidebar c-boundary-line">
+            <div class="l-sidebar c-boundary-line u-border-pc-none">
                 <nav class="p-side-navigation">
                     <h3 class="p-side-navigation__title c-headline-border">CATEGORY</h3>
                     <ul class="p-side-navigation__main-menu">
@@ -71,7 +67,6 @@
                 </nav>
             </div>
         </div>
-
         <footer class="l-footer p-footer">
             <div class="c-container">
                 <nav class="p-footer__navigation">

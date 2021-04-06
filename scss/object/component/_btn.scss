@@ -1,8 +1,23 @@
 .c-btn {
-    background-color: #FFD6DB;
-    width: 10%;
-    a {
-        text-decoration: none;
-        color: #444;
+    text-decoration: none;
+    color: #444;
+    background: #FFD6DB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 61%;
+    height: 26px;
+    border-radius: 5px;
+    @include breakpoint ( tablet ) {
+        width: 40%;
+        height: 46px;
+        font-size: 2rem;
     }
 }
+// a {
+//     text-decoration: none;
+//     color: #444;
+//     @include breakpoint ( tablet ) {
+//         font-size: 2rem;
+//     }
+// }

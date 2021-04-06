@@ -31,10 +31,12 @@
 @import "./object/component/mainvisual";
 @import "./object/component/btn";
 @import "./object/component/container";
+@import "./object/component/title";
 
 // -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------
+@import "./object/project/index";
 @import "./object/project/404";
 @import "./object/project/contact";
 @import "./object/project/side-navigation";

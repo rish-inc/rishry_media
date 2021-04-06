@@ -1,83 +1,36 @@
-.c-wrapper__404 {
-    width: 100%;
-    max-width: 390px;
-    margin: 0 auto;
-    padding: 30px 0 40px 0;
+.error {
     text-align: center;
-    position: relative;
+    padding: 50px 0 40px;
     @include breakpoint ( tablet ) {
-        max-width: 984px;
-        padding-bottom: 80px;
+        padding: 30px 0 80px;
     }
-    @include breakpoint ( pc ) {
-        max-width: 876px;
-        margin: 0;
-        padding-top: 100px;
-    }
-    // &::after {
-    //     position: absolute;
-    //     content: '';
-    //     width: 106%;
-    //     height: 1px;
-    //     background: #DCDCDC;
-    //     top: 100%;
-    //     left: -3%;
-    //     @include breakpoint ( pc ) {
-    //         display: none;
-    //     }
-    // }
-    
-    h3 {
-        font-size: 16px;
+    &__title {
         font-weight: inherit;
-        margin-bottom: 1.2%;
+        font-size: 2.4rem;
+        padding-bottom: 20px;
         @include breakpoint ( tablet ) {
-            font-size: 24px;
-            margin: 4% 0 2% 0;
+            margin: auto;
+            font-size: 3rem;
+            padding-bottom: 40px;
+        }
+    }
+    h3 {
+        font-weight: inherit;
+        font-size: 1.6rem;
+        padding-bottom: 10px;
+        @include breakpoint ( tablet ) {
+            font-size: 2.4rem;
+            padding-bottom: 20px;
         }
     }
     p {
-        font-size: 10px;
-        margin: auto;
+        padding-bottom: 20px;
         @include breakpoint ( tablet ) {
-            font-size: 16px;
-        }
-    }
-    .c-btn__404 {
-        margin-top: 20px;
-        @include breakpoint ( tablet ) {
-            margin-top: 40px;
-        }
-    }
-    .c-btn {
-        max-width: 240px;
-        height: 26px;
-        margin: 0 auto;
-        background: #FFD6DB;
-        border-radius: 7px;
-        @include breakpoint ( tablet ) {
-            max-width: 400px;
-            height: 46px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        a {
-            text-decoration: none;
-            color: #030303;
-            font-size: 10px;
-            @include breakpoint ( tablet ) {
-                font-size: 20px;
-            }
+            font-size: 1.6rem;
+            padding-bottom: 40px;
         }
     }
 }
-
-.ttl {
-    font-weight: inherit;
-    font-size: 2.8rem;
-    @include breakpoint ( tablet ) {
-        margin: auto;
-        font-size: 3.5rem;
-    }
+.back-to-top {
+    margin: 0 auto;
 }
