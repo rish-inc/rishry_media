@@ -30,35 +30,53 @@
                 </div>
             </div>
         </header>
-        <div class="wrapper">
-            <div class="contact">
-                <div class="form_contact">
-                    <h2 class="title">お問い合わせ</h2>
-                    <div class="form_box">
+        <div class="l-container">
+            <main class="l-contents">
+                <article class="contact">
+                    <h2 class="title c-headline-border">お問い合わせ</h2>
+                    <div class="contact__inner">
                         <form action="#">
+                            <dl>
+                                <dt>
+                                    <label for="name">お名前<span class="mandatory_tag">必須</span></label>
+                                </dt>
+                                <dd>
+                                    <input type="text" id="name" name="your-name">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <label for="email">メールアドレス<span class="mandatory_tag">必須</span></label>
+                                </dt>
+                                <dd>
+                                    <input type="text" id="email" name="your-email">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <label for="f_title">題名</label>
+                                </dt>
+                                <dd>
+                                    <input type="text" id="f_title" name="your-f_title">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <label for="message">メッセージ本文<span class="mandatory_tag">必須</span></label>
+                                </dt>
+                                <dd>
+                                    <textarea name="message" id="your-message"></textarea>
+                                </dd>
+                            </dl>
                             <div>
-                                <label for="name">お名前<span class="mandatory_tag">必須</span></label>
-                                <input type="text" id="name" name="your-name">
+                                <input type="submit" class="button" value="送信">
                             </div>
-                            <div>
-                                <label for="email">メールアドレス<span class="mandatory_tag">必須</span></label>
-                                <input type="text" id="email" name="your-email">
-                            </div>
-                            <div>
-                                <label for="f_title">題名</label>
-                                <input type="text" id="f_title" name="your-f_title">
-                            </div>
-                            <div>
-                                <label for="message">メッセージ本文<span class="mandatory_tag">必須</span></label>
-                                <textarea name="message" id="your-message"></textarea>
-                            </div>
-                            <input type="submit" class="button" value="送信">
                         </form>
                     </div>
-                </div>
-            </div>
+                </article>
+            </main>
 
-            <div class="l-sidebar c-boundary-line">
+            <div class="l-sidebar c-boundary-line u-border-pc-none">
                 <nav class="p-side-navigation">
                     <h3 class="p-side-navigation__title c-headline-border">CATEGORY</h3>
                     <ul class="p-side-navigation__main-menu">
