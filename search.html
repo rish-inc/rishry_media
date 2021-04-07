@@ -42,30 +42,42 @@
                 </div>
             </div>
         </header>
-        <main class="l-contents">
-            <div class="c-wrapper">
+        <div class="l-container">
+            <main class="l-contents">
                 <article class="p-contents">
                     <h1 class="p-contents__search-results">○○の検索結果</h1>
                     <ul class="p-post-list">
-                        <li>
+                        <li class="posted c-boundary-line">
                             <figure class="p-card">
                                 <figcaption class="p-card__caption">
-                                    <h3 class="p-card__caption__title">ブログタイトル</h3>
-                                    <ul class="c-post-time">
-                                        <li class="time">投稿日時</li>
-                                        <li class="tag">タグ名</li>
+                                    <h3 class="p-card__caption__title c-barline-border">ブログタイトル</h3>
+                                    <ul class="data c-time-category-chunk">
+                                        <li class="time"><time>投稿日時</time></li>
+                                        <li class="category">カテゴリー名</li>
+                                    </ul>
+                                </figcaption>
+                                <img class="p-card__img" src="././images/p-card/eye-catching.jpg" alt="アイキャッチ画像">
+                            </figure>
+                        </li>
+                        <li class="posted c-boundary-line">
+                            <figure class="p-card">
+                                <figcaption class="p-card__caption">
+                                    <h3 class="p-card__caption__title c-barline-border">ブログタイトル</h3>
+                                    <ul class="data c-time-category-chunk">
+                                        <li class="time"><time>投稿日時</time></li>
+                                        <li class="category">カテゴリー名</li>
                                     </ul>
                                 </figcaption>
                                 <img class="p-card__img" src="./images/p-card/eye-catching.jpg" alt="アイキャッチ画像">
                             </figure>
                         </li>
-                        <li>
+                        <li class="posted c-boundary-line">
                             <figure class="p-card">
                                 <figcaption class="p-card__caption">
-                                    <h3 class="p-card__caption__title">ブログタイトル</h3>
-                                    <ul class="c-post-time">
-                                        <li class="time">投稿日時</li>
-                                        <li class="tag">タグ名</li>
+                                    <h3 class="p-card__caption__title c-barline-border">ブログタイトル</h3>
+                                    <ul class="data c-time-category-chunk">
+                                        <li class="time"><time>投稿日時</time></li>
+                                        <li class="category">カテゴリー名</li>
                                     </ul>
                                 </figcaption>
                                 <img class="p-card__img" src="./images/p-card/eye-catching.jpg" alt="アイキャッチ画像">
@@ -73,13 +85,16 @@
                         </li>
                     </ul>
                 </article>
-                <div class="pagination">
-                    <span class="page_numbers">1</span>
-                    <a href="">2</a>
-                    <a href="">3</a>
-                    <span class="page_numbers__dot">…</span>
-                    <a href="">次へ</a>
-                </div>
+                <nav class="p-pagination-enclosure">
+                    <ul class="c-pagination">
+                        <li class="page-list"><a class="before-to" href="#">前へ</a></li>
+                        <li class="page-list"><a class="page-active" href="#">1</a></li>
+                        <li class="page-list"><a class="page" href="#">2</a></li>
+                        <li class="page-list"><a class="page" href="#">3</a></li>
+                        <li class="page-list"><a class="extend" href="#">…</a></li>
+                        <li class="page-list"><a class="next" href="#">次へ</a></li>
+                    </ul>
+                </nav>
 
                 <div class="l-sidebar c-boundary-line">
                     <nav class="p-side-navigation">
@@ -96,8 +111,8 @@
                         </ul>
                     </nav>
                 </div>
-            </div>
-        </main>
+            </main>
+        </div>
 
         <footer class="l-footer p-footer">
             <div class="c-container">
