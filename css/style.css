@@ -614,123 +614,98 @@ body {
   margin: 0 auto;
 }
 
-.contact {
+.contact-area {
   width: 100%;
-  max-width: 390px;
   margin: 0 auto;
-  padding: 30px 0 40px 0;
+  display: block;
+  padding: 30px 0 40px;
+  background: #ffffe0;
 }
 
 @media (min-width: 415px) {
-  .contact {
-    max-width: 450px;
+  .contact-area {
     padding-bottom: 80px;
   }
 }
 
 @media (min-width: 1025px) {
-  .contact {
-    max-width: 816px;
+  .contact-area {
     padding: 100px 0 80px 0;
   }
 }
 
-.form_box {
-  padding-top: 20px;
+.contact-area dl {
+  padding-bottom: 20px;
 }
 
-@media (min-width: 1025px) {
-  .form_box {
-    padding-top: 40px;
-  }
+.contact-area dl dt {
+  padding-bottom: 3px;
 }
 
-.form_box form {
-  width: 90%;
-  margin: 0 auto;
-}
-
-@media (min-width: 1025px) {
-  .form_box form {
-    width: 50%;
-  }
-}
-
-.form_box form div {
-  margin-bottom: 10px;
-}
-
-.form_box form div label {
-  display: block;
-  font-size: 14px;
+.contact-area dl dt label {
+  font-size: 1.4rem;
 }
 
 @media (min-width: 415px) {
-  .form_box form div label {
-    font-size: 16px;
-    margin-bottom: 4px;
+  .contact-area dl dt label {
+    font-size: 2rem;
   }
 }
 
-.form_box form div label[for="message"] {
-  margin-bottom: 5px;
-}
-
-.form_box form div input[type="text"] {
+.contact-area dl dd input,
+.contact-area dl dd textarea {
   width: 100%;
-  height: 1.25rem;
   max-width: 350px;
   border: 1px solid #707070;
   border-radius: 5px;
+}
+
+.contact-area dl dd input[type=text],
+.contact-area dl dd textarea[type=text] {
+  height: 4rem;
   margin-bottom: 5px;
 }
 
 @media (min-width: 415px) {
-  .form_box form div input[type="text"] {
-    height: 2rem;
+  .contact-area dl dd input[type=text],
+  .contact-area dl dd textarea[type=text] {
+    height: 4rem;
     max-width: 420px;
   }
 }
 
-.form_box form div textarea {
-  width: 100%;
-  max-width: 350px;
-  height: 15rem;
-  border: 1px solid #707070;
-  border-radius: 5px;
-  margin-bottom: 5px;
+.contact-area dl dd textarea {
+  height: 24.2rem;
 }
 
 @media (min-width: 415px) {
-  .form_box form div textarea {
-    max-width: 420px;
+  .contact-area dl dd textarea {
+    height: 24rem;
   }
 }
 
-.form_box form input[type="submit"] {
-  border: none;
+.mandatory-tag,
+.button {
+  background: #FFD6DB;
+  border-radius: 5px;
 }
 
 .mandatory-tag {
   font-size: 1.2rem;
   margin-left: 5px;
-  background: #FFD6DB;
-  border-radius: 5px;
   padding: 1%;
-  display: inline-block;
 }
 
 @media (min-width: 415px) {
   .mandatory-tag {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 }
 
 .button {
   font-size: 1.4rem;
-  background: #FFD6DB;
-  border-radius: 5px;
-  padding: 1%;
+  border: none;
+  padding: 2% 3%;
   display: inline-block;
 }
 
@@ -944,6 +919,25 @@ body {
   .time,
   .category {
     font-size: 1.5rem;
+  }
+}
+
+.p-contact {
+  padding-top: 20px;
+  max-width: 350px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 415px) {
+  .p-contact {
+    padding-top: 40px;
+  }
+}
+
+@media (min-width: 415px) {
+  .p-contact {
+    width: 50%;
   }
 }
 
