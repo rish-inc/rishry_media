@@ -941,6 +941,14 @@ body {
   }
 }
 
+.p-search {
+  padding-top: 30px;
+}
+
+.p-search__results {
+  font-size: 1.4rem;
+}
+
 .p-copyright {
   font-style: normal;
   text-align: center;
