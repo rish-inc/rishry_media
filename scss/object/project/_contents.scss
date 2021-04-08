@@ -1,2 +1,6 @@
 .p-contents {
+    padding-top: 30px;
+    @include breakpoint ( tablet ) {
+        padding-top: 60px;
+    }
 }
