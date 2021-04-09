@@ -13,33 +13,32 @@
         <!-- jQuery -->
         <script src=""></script>
     </head>
+
     <body class="home">
-        <header id="header" class="l-header">
-            <div class="c-container">
-                <h1 class="logo l-header__left">
-                    <button class="p-hamburger p-gmenu--bt is-hamburger">
-                        <span>menuボタン</span>
-                    </button>
-                    <a href="/"><img src="./images/logo.png" alt="Rishry ロゴ"></a>
-                </h1>
-                <div class="l-header__right">
-                    <a href="#"><img class="p-ec-bnr" src="バナー画像挿入" alt="ECサイト　バナー"></a>
-                    <nav class="p-gnavi">
-                        <ul class="p-gnavi__menu">
-                            <li><a href="/">HOME</a></li>
-                            <li><a href="#">ABOUT</a></li>
-                            <li><a href="#">NEWS</a></li>
-                            <li><a href="#">BRAND</a></li>
-                            <li><a href="#">FASHION</a></li>
-                            <li><a href="./contact.html">CONTACT</a></li>
-                            <li><a href="#">PRIVACY POLICY</a></li>
-                        </ul>
-                    </nav>
-                    <form action="/" name="search-box" method="post" class="p-search-form">
-                        <dl class="search-inner">
-                            <dt><input type="text" name="search" value="" placeholder="Search"></input></dt>
-                            <dd><button><span></span></button></dd>
-                        </dl>
+        <header class="l-header">
+            <div class="p-head__inner">
+                <input class="nav-unshown" type="checkbox">
+                <label class="humburer-menu" for="nav-input">
+                    <span class="line1"></span>
+                    <span class="line2"></span>
+                    <span class="line3"></span>
+                </label>
+                <h1 class="logo"><a href="/"><img src="./images/logo.png" alt="Rishry ロゴ"></a></h1>
+                <nav class="p-head__navigation">
+                    <ul class="p-head__inner__navigation__menu">
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">NEWS</a></li>
+                        <li><a href="#">BRAND</a></li>
+                        <li><a href="#">FASHION</a></li>
+                        <li><a href="./contact.html">CONTACT</a></li>
+                        <li><a href="#">PRIVACY POLICY</a></li>
+                    </ul>
+                </nav>
+                <div class="p-head__inner__search">
+                    <form class="c-search-window" action="/" name="search-form" method="post">
+                        <input type="text" name="search" placeholder="Search">
+                        <input type="submit" class="c-search-window__button" aria-label="search" value="">
                     </form>
                 </div>
             </div>
