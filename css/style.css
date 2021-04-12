@@ -227,7 +227,7 @@ body {
 
 .l-container {
   margin: 0 auto;
-  max-width: 390px;
+  max-width: 360px;
 }
 
 @media (min-width: 415px) {
