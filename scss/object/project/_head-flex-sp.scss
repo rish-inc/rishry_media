@@ -1,0 +1,15 @@
+.p-head-flex-sp {
+    width: 65vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include breakpoint ( tablet ) {
+        display: block;
+    }
+    &__logo {
+        margin: 0;
+        @include breakpoint ( tablet ) {
+            margin: 0 auto;
+        }
+    }
+}

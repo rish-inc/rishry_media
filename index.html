@@ -12,18 +12,21 @@
 
         <!-- jQuery -->
         <script src="./js/jquery-3.6.0.min.js"></script>
+        <script src="./js/hamburger.js"></script>
     </head>
 
     <body class="home">
         <header class="l-header">
             <div class="p-head__inner">
-                <button class="p-hamburger-menu">
-                    <span>ハンバーガーメニュー</span>
-                </button>
-                <h1 class="logo"><a href="/"><img src="./images/logo.png" alt="Rishry ロゴ"></a></h1>
+                <div class="p-head-flex-sp">
+                    <button class="p-hamburger-menu">
+                        <span>メニュー展開ボタン</span>
+                    </button>
+                    <h1 class="logo p-head-flex-sp__logo"><a href="/"><img src="./images/logo.png" alt="Rishry ロゴ"></a></h1>
+                </div>
                 <div class="p-head-nav-sp">
-                    <nav class="p-head__inner__navigation p-nav-sp__navigation">
-                        <ul class="p-head__inner__navigation__menu p-nav-sp__navigation__menu">
+                    <nav class="p-head__inner__navigation p-hamburger-nav-sp__navigation">
+                        <ul class="p-head__inner__navigation__menu p-hamburger-nav-sp__navigation__menu">
                             <li><a href="/">HOME</a></li>
                             <li><a href="#">ABOUT</a></li>
                             <li><a href="#">NEWS</a></li>

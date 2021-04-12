@@ -1,5 +1,12 @@
 .p-head {
     &__inner {
+
+        &__search {
+            visibility: collapse;
+            @include breakpoint ( tablet ) {
+                visibility: visible;
+            }
+        }
     }
 }
 .logo {

@@ -536,16 +536,56 @@ body {
   }
 }
 
+.p-head__inner__search {
+  visibility: collapse;
+}
+
+@media (min-width: 415px) {
+  .p-head__inner__search {
+    visibility: visible;
+  }
+}
+
 .logo {
   margin: 0 auto;
   max-width: 110px;
   height: auto;
 }
 
+.p-head-flex-sp {
+  width: 65vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 415px) {
+  .p-head-flex-sp {
+    display: block;
+  }
+}
+
+.p-head-flex-sp__logo {
+  margin: 0;
+}
+
+@media (min-width: 415px) {
+  .p-head-flex-sp__logo {
+    margin: 0 auto;
+  }
+}
+
 .p-hamburger-menu {
   width: 60px;
   height: 60px;
   border: none;
+  outline: none;
   background: #FFEDEE;
   position: relative;
 }
@@ -563,6 +603,8 @@ body {
   background: #333;
   border-radius: 5px;
   left: calc( 50% - ( 30px / 2 ));
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .p-hamburger-menu::before {
@@ -585,22 +627,54 @@ body {
   border-radius: 5px;
   top: 50%;
   left: calc( 50% - ( 30px / 2 ));
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .p-hamburger-menu.is-open::before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  top: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  top: 28px;
 }
 
 .p-hamburger-menu.is-open::after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  top: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 30px;
+  top: 28px;
 }
 
 .p-hamburger-menu.is-open span {
   background: none;
+}
+
+.p-head-nav-sp {
+  z-index: 10;
+  height: 100%;
+}
+
+.p-hamburger-nav-sp {
+  background: #fff;
+  width: 100%;
+}
+
+.p-hamburger-nav-sp__navigation__menu {
+  list-style: none;
+  padding: 0;
+}
+
+.p-hamburger-nav-sp__navigation__menu li {
+  border-bottom: solid 1px #acacac;
+}
+
+.p-hamburger-nav-sp__navigation__menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.6rem;
 }
 
 .p-contents {
