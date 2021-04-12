@@ -13,20 +13,20 @@
         display: flex;
         justify-content: space-between;
     }
-    .logo {
-        margin: 0;
-        img {
-            width: 130px;
-            height: auto;
-            margin: 20px 15px 15px 15px;
-            @include breakpoint ( tablet ) {
-                width: 187px;
-            }
-            @include breakpoint ( pc ) {
-                width: 230px;
-            }
-        }
-    }
+    // .logo {
+    //     margin: 0;
+    //     img {
+    //         width: 130px;
+    //         height: auto;
+    //         margin: 20px 15px 15px 15px;
+    //         @include breakpoint ( tablet ) {
+    //             width: 187px;
+    //         }
+    //         @include breakpoint ( pc ) {
+    //             width: 230px;
+    //         }
+    //     }
+    // }
     #nav-drawer {
         position: relative;
         .nav-unshown {

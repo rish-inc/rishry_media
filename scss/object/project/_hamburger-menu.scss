@@ -1,0 +1,51 @@
+.p-hamburger-menu {
+    width: 60px;
+    height: 60px;
+    border: none;
+    background: #FFEDEE;
+    position: relative;
+    @include breakpoint ( tablet ) {
+        display: none;
+    }
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        height: 2px;
+        background: #333;
+        border-radius: 5px;
+        left: calc( 50% - ( 30px / 2 ) );
+    }
+    &::before {
+        width: 30px;
+        top: 21px;
+    }
+    &::after {
+        width: 20px;
+        top: 39px;
+    }
+    span {
+        font-size: 0;
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 2px;
+        background: #333;
+        border-radius: 5px;
+        top: 50%;
+        left: calc( 50% - ( 30px / 2 ) );
+    }
+    &.is-open {
+        &::before {
+            transform: rotate( 45deg );
+            top: 20px;
+        }
+        &::after {
+            transform: rotate( -45deg );
+            top: 20px;
+        }
+        span {
+            background: none;
+        }
+    }
+}
