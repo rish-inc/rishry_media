@@ -1,7 +1,10 @@
 .p-head-nav-sp {
     display: none;
-    // z-index: 10;
-    height: 100%;
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background: #fff;
     &__sns {
         background: #FFEDEE;
         height: 90px;
