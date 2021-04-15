@@ -1,10 +1,21 @@
+body {
+    overflow-x: hidden;
+}
+
+.p-testtest {
+    overflow: scroll;
+    height: 100vh;
+}
+
 .p-head-nav-sp {
     display: none;
     z-index: 9999;
     position: fixed;
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
     background: #fff;
+    &__inner {
+    }
     &__sns {
         background: #FFEDEE;
         height: 90px;
