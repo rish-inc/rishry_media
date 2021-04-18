@@ -1,0 +1,27 @@
+.p-responsive-sns {
+    background: #FFEDEE;
+    @include breakpoint ( pc ) {
+        display: none;
+    }
+    &__icon {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0 30px;
+        margin: 0 auto;
+        min-width: 180px;
+        max-width: 300px;
+    }
+}
+.twitter,
+.facebook,
+.instagram {
+    @include breakpoint ( pc ) {
+        display: none;
+    }
+    text-align: center;
+    img {
+    width: 40px;
+    height: auto;
+    }
+}
