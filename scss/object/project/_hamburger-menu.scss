@@ -55,14 +55,26 @@
         }
     }
 }
-body.is-open {
-    position: fixed;
+body {
+    &.is-open {
+        position: fixed;
+    }
 }
-.c-dorower-bg-sp.is-open {
-    background: rgba( 0, 0, 0, .45 );
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 9998;
-    transition: all .5s;
+.dorower-bg-sp {
+    &.is-open {
+        background: rgba( 0, 0, 0, .45 );
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 9998;
+        transition: all .5s;
+    }
 }
+// .c-dorower-bg-sp {
+//     background: rgba( 0, 0, 0, .45 );
+//     // position: fixed;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 9998;
+//     transition: all .5s;
+// }
