@@ -533,12 +533,14 @@ body.is-open {
   width: 100vw;
   height: calc( 100% - 50px);
   background: #fff;
-  overflow: scroll;
 }
 
 .p-head-nav-sp__sns {
   background: #FFEDEE;
   height: 90px;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
 }
 
 .p-head-nav-sp__icon {
@@ -577,11 +579,17 @@ body.is-open {
   z-index: 9999;
 }
 
+.p-hamburger-nav-sp__navigation {
+  overflow: scroll;
+  height: 87%;
+}
+
 .p-hamburger-nav-sp__navigation__menu {
   list-style: none;
   padding: 0;
   margin: 0 auto;
   width: 80%;
+  height: auto;
 }
 
 .p-hamburger-nav-sp__navigation__menu li {
@@ -591,6 +599,7 @@ body.is-open {
 
 .p-hamburger-nav-sp__navigation__menu li:last-child {
   border: 0;
+  padding: 20px 0 50px;
 }
 
 .p-hamburger-nav-sp__navigation__menu a {

@@ -4,16 +4,20 @@
     height: 90%;
     z-index: 9999;
     &__navigation {
+        overflow: scroll;
+        height: 87%;
         &__menu {
             list-style: none;
             padding: 0;
             margin: 0 auto;
             width: 80%;
+            height: auto;
             li {
                 border-bottom: solid 1px #acacac;
                 padding: 20px 0;
                 &:last-child {
                     border: 0;
+                    padding: 20px 0 50px;
                 }
             }
             a {
