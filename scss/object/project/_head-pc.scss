@@ -1,17 +1,22 @@
 .p-head-pc {
-    &__navigation {
-        @include breakpoint ( pc ) {
-        }
+    @include breakpoint ( pc ) {
+        display: flex;
     }
-    &__search {
-        visibility: hidden;
-        @include breakpoint ( pc ) {
-            visibility: visible;
-        }
-    }
+    // &__navigation {
+    //     @include breakpoint ( pc ) {
+    //     }
+    // }
+    // &__search {
+    //     visibility: hidden;
+    //     @include breakpoint ( pc ) {
+    //         visibility: visible;
+    //     }
+    // }
 }
 .logo {
-    // margin: 0 auto;
-    max-width: 110px;
-    height: auto;
+    @include breakpoint ( pc ) {
+        // margin: 0 auto;
+        max-width: 150px;
+        height: auto;
+    }
 }

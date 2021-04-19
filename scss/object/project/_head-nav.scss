@@ -1,0 +1,76 @@
+.p-head-nav {
+    display: none;
+    z-index: 9999;
+    position: fixed;
+    width: 100vw;
+    height: calc( 100% - 50px );
+    background: #fff;
+    @include breakpoint ( pc ) {
+        display: initial;
+        z-index: initial;
+        background: none;
+    }
+    &__navigation {
+        overflow: scroll;
+        height: 87%;
+        @include breakpoint ( pc ) {
+            display: flex;
+        }
+        &__menu {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            width: 80%;
+            height: auto;
+            li {
+                border-bottom: solid 1px #acacac;
+                padding: 20px 0;
+                @include breakpoint ( pc ) {
+                    border-bottom: none;
+                }
+                &:last-child {
+                    border: 0;
+                    padding: 20px 0 50px;
+                }
+            }
+            a {
+                text-decoration: none;
+                color: #333;
+                font-size: 1.6rem;
+                padding-left: 15px;
+            }
+        }
+    }
+    &__sns {
+        background: #FFEDEE;
+        height: 90px;
+        width: 100vw;
+        position: fixed;
+        bottom: 0;
+        @include breakpoint ( pc ) {
+            display: none;
+        }
+    }
+    &__icon {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        margin: 0 auto;
+        min-width: 180px;
+        max-width: 300px;
+        @include breakpoint ( pc ) {
+            display: none;
+        }
+    }
+}
+.twitter,
+.facebook,
+.instagram {
+    text-align: center;
+    margin: 0 10%;
+    img {
+    width: 40px;
+    height: auto;
+    }
+}

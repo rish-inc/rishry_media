@@ -6,7 +6,7 @@
     background: #FFEDEE;
     position: relative;
     @include breakpoint ( pc ) {
-        // display: none;
+        display: none;
     }
     &::before,
     &::after {
