@@ -600,18 +600,17 @@ body.is-open {
   padding-left: 15px;
 }
 
-.p-head-pc__inner__search {
-  visibility: collapse;
+.p-head-pc__search {
+  visibility: hidden;
 }
 
 @media (min-width: 1025px) {
-  .p-head-pc__inner__search {
+  .p-head-pc__search {
     visibility: visible;
   }
 }
 
 .logo {
-  margin: 0 auto;
   max-width: 110px;
   height: auto;
 }

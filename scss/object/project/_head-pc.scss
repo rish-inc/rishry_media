@@ -1,18 +1,17 @@
 .p-head-pc {
-    &__inner {
+    &__navigation {
         @include breakpoint ( pc ) {
-            // visibility: visible;
         }
-        &__search {
-            visibility: collapse;
-            @include breakpoint ( pc ) {
-                visibility: visible;
-            }
+    }
+    &__search {
+        visibility: hidden;
+        @include breakpoint ( pc ) {
+            visibility: visible;
         }
     }
 }
 .logo {
-    margin: 0 auto;
+    // margin: 0 auto;
     max-width: 110px;
     height: auto;
 }
