@@ -1,8 +1,11 @@
-.p-head {
+.p-head-pc {
     &__inner {
+        @include breakpoint ( pc ) {
+            // visibility: visible;
+        }
         &__search {
             visibility: collapse;
-            @include breakpoint ( tablet ) {
+            @include breakpoint ( pc ) {
                 visibility: visible;
             }
         }

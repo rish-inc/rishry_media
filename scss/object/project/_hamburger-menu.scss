@@ -5,8 +5,8 @@
     outline: none;
     background: #FFEDEE;
     position: relative;
-    @include breakpoint ( tablet ) {
-        display: none;
+    @include breakpoint ( pc ) {
+        // display: none;
     }
     &::before,
     &::after {

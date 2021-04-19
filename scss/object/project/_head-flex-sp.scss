@@ -4,12 +4,19 @@
     align-items: center;
     justify-content: space-between;
     @include breakpoint ( tablet ) {
+        width: 95vw;
+        margin-left: 10px;
+    }
+    @include breakpoint ( pc ) {
         display: block;
     }
     &__logo {
         margin: 0;
         @include breakpoint ( tablet ) {
             margin: 0 auto;
+        }
+        @include breakpoint ( pc ) {
+            margin: 0;
         }
     }
 }
