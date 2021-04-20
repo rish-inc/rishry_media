@@ -118,6 +118,7 @@ body {
   background: #fff;
   border: solid 1px #aaa;
   border-radius: 5px;
+  padding: 0 15px;
 }
 
 @media (min-width: 1025px) {
@@ -133,6 +134,7 @@ body {
   background: none;
   border: none;
   padding: 0;
+  outline: none;
 }
 
 .c-search-window__img {
@@ -146,6 +148,8 @@ input[type="text"] {
   font-size: 1.4rem;
   background: none;
   border: none;
+  width: 100%;
+  outline: none;
 }
 
 .c-headline-border::before, .c-headline-border::after {
@@ -755,10 +759,20 @@ body.is-open {
   height: auto;
 }
 
+.p-contents-search {
+  padding: 20px 0;
+  margin: 0 auto;
+  width: 93%;
+}
+
 @media (min-width: 1025px) {
   .p-contents-search {
-    visibility: collapse;
+    display: none;
   }
+}
+
+.p-contents-search__window {
+  border-radius: 40px;
 }
 
 .p-contents {

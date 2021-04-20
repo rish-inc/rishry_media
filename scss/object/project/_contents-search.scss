@@ -1,6 +1,11 @@
 .p-contents-search {
-    // visibility: collapse;
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 93%;
     @include breakpoint ( pc ) {
-        visibility: collapse;
+        display: none;
+    }
+    &__window {
+        border-radius: 40px;
     }
 }
