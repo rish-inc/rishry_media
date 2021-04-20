@@ -1,18 +1,14 @@
-.p-head-pc {
+.p-head-nav-flex {
     @include breakpoint ( pc ) {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 50px;
-        padding-top: 50px;
     }
-}
-.logo {
-    img {
+    &__search {
+        visibility: collapse;
         @include breakpoint ( pc ) {
-            // margin: 0 auto;
-            max-width: 150px;
-            height: auto;
+            visibility: visible;
+            width: 300px;
         }
     }
 }

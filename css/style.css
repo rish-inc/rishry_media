@@ -122,20 +122,30 @@ body {
 
 @media (min-width: 1025px) {
   .c-search-window {
+    max-width: 250px;
     height: 40px;
   }
 }
 
-.c-search-window__button__img {
+.c-search-window__button {
+  width: 30px;
+  height: auto;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.c-search-window__img {
   width: 15px;
   height: auto;
-  background-image: url(../../../images/search/search.svg);
-  right: 0;
-  top: 0;
+  margin: 0 auto;
 }
 
 input[type="text"] {
   height: auto;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
 }
 
 .c-headline-border::before, .c-headline-border::after {
@@ -480,17 +490,14 @@ input[type="text"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 0 50px;
-  }
-}
-
-.p-head-pc__search {
-  visibility: collapse;
-}
-
-@media (min-width: 1025px) {
-  .p-head-pc__search {
-    visibility: visible;
+    padding-top: 50px;
   }
 }
 
@@ -586,6 +593,31 @@ body.is-open {
   transition: all .5s;
 }
 
+@media (min-width: 1025px) {
+  .p-head-nav-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.p-head-nav-flex__search {
+  visibility: collapse;
+}
+
+@media (min-width: 1025px) {
+  .p-head-nav-flex__search {
+    visibility: visible;
+    width: 300px;
+  }
+}
+
 .p-head-nav {
   display: none;
   z-index: 9999;
@@ -602,6 +634,7 @@ body.is-open {
     width: 100%;
     height: auto;
     background: none;
+    margin-right: 20px;
   }
 }
 
@@ -613,6 +646,7 @@ body.is-open {
 @media (min-width: 1025px) {
   .p-head-nav__navigation {
     overflow: visible;
+    height: auto;
   }
 }
 
@@ -630,6 +664,7 @@ body.is-open {
     display: -ms-flexbox;
     display: flex;
     margin: 0;
+    width: 100%;
   }
 }
 
@@ -642,6 +677,7 @@ body.is-open {
   .p-head-nav__navigation__menu li {
     border-bottom: none;
     padding: 0;
+    margin: 0 1%;
   }
 }
 
@@ -653,6 +689,7 @@ body.is-open {
 @media (min-width: 1025px) {
   .p-head-nav__navigation__menu li:last-child {
     padding: 0;
+    white-space: nowrap;
   }
 }
 
@@ -661,6 +698,12 @@ body.is-open {
   color: #333;
   font-size: 1.6rem;
   padding-left: 15px;
+}
+
+@media (min-width: 1025px) {
+  .p-head-nav__navigation__menu a {
+    padding: 0 5px;
+  }
 }
 
 .p-head-nav__sns {

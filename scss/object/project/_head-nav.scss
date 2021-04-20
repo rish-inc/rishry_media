@@ -7,17 +7,19 @@
     background: #fff;
     @include breakpoint ( pc ) {
         display: initial;
-        // z-index: initial;
         position: static;
         width: 100%;
         height: auto;
         background: none;
+        margin-right: 20px;
     }
     &__navigation {
         overflow: scroll;
         height: 87%;
         @include breakpoint ( pc ) {
             overflow: visible;
+            height: auto;
+            // background: #f0f8ff;
         }
         &__menu {
             list-style: none;
@@ -28,6 +30,8 @@
             @include breakpoint ( pc ) {
                 display: flex;
                 margin: 0;
+                width: 100%;
+                // background: #ffffe0;
             }
             li {
                 border-bottom: solid 1px #acacac;
@@ -35,12 +39,15 @@
                 @include breakpoint ( pc ) {
                     border-bottom: none;
                     padding: 0;
+                    margin: 0 1%;
+                    // background: #ff7f50;
                 }
                 &:last-child {
                     border: 0;
                     padding: 20px 0 50px;
                     @include breakpoint ( pc ) {
                         padding: 0;
+                        white-space: nowrap;
                     }
                 }
             }
@@ -49,6 +56,9 @@
                 color: #333;
                 font-size: 1.6rem;
                 padding-left: 15px;
+                @include breakpoint ( pc ) {
+                    padding: 0 5px;
+                }
             }
         }
     }
