@@ -57,7 +57,29 @@
                 font-size: 1.6rem;
                 padding-left: 15px;
                 @include breakpoint ( pc ) {
-                    padding: 0 5px;
+                    padding: 10px 5px;
+                    display: inline-block;
+                }
+                &::after {
+                    @include breakpoint ( pc ) {
+                        display: block;
+                        border-bottom: solid 1px #ccc;
+                        bottom: 0;
+                        content: '';
+                        transition: all 0.5s ease;
+                        width: 0;
+                    }
+                }
+                &:hover {
+                    @include breakpoint ( pc ) {
+                        color: #ccc;
+                        transition: all 0.5s ease;
+                    }
+                    &::after {
+                        @include breakpoint ( pc ) {
+                            width: 100%;
+                        }
+                    }
                 }
             }
         }

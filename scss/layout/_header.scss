@@ -5,9 +5,14 @@
     @include breakpoint ( pc ) {
         height: 130px;
     }
-    nav {
-        display: flex;
-        justify-content: space-between;
+    &__lead {
+        display: none;
+        @include breakpoint ( pc ) {
+            display: block;
+            font-size: 1.2rem;
+            padding: 14px 0;
+            margin-left: 59px;
+        }
     }
 }
 
