@@ -7,14 +7,17 @@
     background: #fff;
     @include breakpoint ( pc ) {
         display: initial;
-        z-index: initial;
+        // z-index: initial;
+        position: static;
+        width: 100%;
+        height: auto;
         background: none;
     }
     &__navigation {
         overflow: scroll;
         height: 87%;
         @include breakpoint ( pc ) {
-            display: flex;
+            overflow: visible;
         }
         &__menu {
             list-style: none;
@@ -22,15 +25,23 @@
             margin: 0 auto;
             width: 80%;
             height: auto;
+            @include breakpoint ( pc ) {
+                display: flex;
+                margin: 0;
+            }
             li {
                 border-bottom: solid 1px #acacac;
                 padding: 20px 0;
                 @include breakpoint ( pc ) {
                     border-bottom: none;
+                    padding: 0;
                 }
                 &:last-child {
                     border: 0;
                     padding: 20px 0 50px;
+                    @include breakpoint ( pc ) {
+                        padding: 0;
+                    }
                 }
             }
             a {
@@ -48,7 +59,7 @@
         position: fixed;
         bottom: 0;
         @include breakpoint ( pc ) {
-            display: none;
+            visibility: collapse;
         }
     }
     &__icon {

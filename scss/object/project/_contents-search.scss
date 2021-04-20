@@ -1,0 +1,6 @@
+.p-contents-search {
+    // visibility: collapse;
+    @include breakpoint ( pc ) {
+        visibility: collapse;
+    }
+}
