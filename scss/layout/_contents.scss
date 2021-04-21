@@ -1,5 +1,6 @@
 .l-contents {
     @include breakpoint ( pc ) {
-        max-width: 78%;
+        // max-width: 78%;
+        max-width: 70%;
     }
 }
