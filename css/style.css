@@ -402,14 +402,14 @@ input[type="text"] {
   }
 }
 
-.c-container {
+.p-container {
   margin: auto;
   max-width: 320px;
   padding-top: 20px;
 }
 
 @media (min-width: 415px) {
-  .c-container {
+  .p-container {
     min-width: 200px;
     max-width: 1000px;
     padding-top: 40px;
