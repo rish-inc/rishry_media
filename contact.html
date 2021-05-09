@@ -4,33 +4,71 @@
         <meta charset="utf-8">
         <meta name="description" content="Rishry ファッション＆メイク初心者さんのための情報サイト">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="images/favicon.ico">
 
         <!-- css -->
         <link rel="stylesheet" href="css/reset.min.css">
         <link rel="stylesheet" href="css/style.css">
         <title>Rishry</title>
+
+        <!-- jQuery -->
+        <script src="./js/jquery-3.6.0.min.js"></script>
+        <script src="./js/hamburger.js"></script>
+        <script src="./js/dorower.js"></script>
     </head>
 
     <body>
-        <header id="header" class="l-header">
-            <div class="c-container">
-                <div class="logo l-header__left"><a href="/"><img src="images/logo.png" alt="Rishry ロゴ"></a></div>
-                <div class="l-header__right">
-                    <nav class="p-gnavi">
-                        <ul class="p-gnavi__menu">
-                            <li><a href="index.html">HOME</a></li>
-                            <li><a href="#">ABOUT</a></li>
-                            <li><a href="#">NEWS</a></li>
-                            <li><a href="#">BRAND</a></li>
-                            <li><a href="#">FASHION</a></li>
-                            <li><a href="./contact.html">CONTACT</a></li>
-                            <li><a href="#">PRIVACY POLICY</a></li>
-                        </ul>
-                    </nav>
+        <header class="l-header">
+            <p class="l-header__lead">私らしく生きるためのライフメディア</p>
+            <div class="p-head-pc">
+                <div class="p-head-flex-sp">
+                    <button class="p-hamburger-menu js-hamburger">
+                        <span>メニュー展開ボタン</span>
+                    </button>
+                    <h1 class="logo p-head-flex-sp__logo"><a href="/"><img src="./images/logo.png" alt="Rishry ロゴ"></a></h1>
+                </div>
+                <div class class="c-dorower-bg-sp"></div>
+                <div class="p-head-nav-flex">
+                    <div class="p-head-nav">
+                        <nav class="p-head-nav__navigation">
+                            <ul class="p-head-nav__navigation__menu">
+                                <li><a href="/">HOME</a></li>
+                                <li><a href="#">ABOUT</a></li>
+                                <li><a href="#">NEWS</a></li>
+                                <li><a href="#">BRAND</a></li>
+                                <li><a href="#">FASHION</a></li>
+                                <li><a href="./contact.html">CONTACT</a></li>
+                                <li><a href="#">PRIVACY POLICY</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="p-head-nav__sns">
+                            <ul class="p-head-nav__icon c-sns__icon">
+                                <li class="twitter"><a href="#"><img src="images/sns/t_logo.png" alt="twitter"></a></li>
+                                <li class="facebook"><a href="#"><img src="images/sns/f_logo.png" alt="facebook"></a></li>
+                                <li class="instagram"><a href="#"><img src="images/sns/i_logo.png" alt="instagram"></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="p-head-nav-flex__search">
+                        <form class="c-search-window" action="/" name="search-form" method="post">
+                            <input type="text" name="search" placeholder="Search">
+                            <button type="submit" class="c-search-window__button" aria-label="search" value="">
+                                <img class="c-search-window__img" src="./images/search/search.svg" alt="">
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </header>
         <div class="l-container">
+            <div class="p-contents-search">
+                <form class="p-contents-search__window c-search-window" action="/" name="search-form" method="post">
+                    <input type="text" name="search" placeholder="Search">
+                    <button type="submit" class="c-search-window__button" aria-label="search" value="">
+                        <img class="c-search-window__img" src="./images/search/search.svg" alt="">
+                    </button>
+                </form>
+            </div>
             <main class="l-contents">
                 <article class="p-contents p-contact-area">
                     <h1 class="c-title c-headline-border">お問い合わせ</h1>
@@ -87,14 +125,14 @@
                     <ul class="p-side-navigation__sns-menu c-sns__icon">
                         <li class="twitter"><a href="#"><img src="images/sns/t_logo.png" alt="twitter"></a></li>
                         <li class="facebook"><a href="#"><img src="images/sns/f_logo.png" alt="facebook"></a></li>
-                        <li class="instagram"><a href="#"><img src="images/sns/i_logo.svg" alt="instagram"></a></li>
+                        <li class="instagram"><a href="#"><img src="images/sns/i_logo.png" alt="instagram"></a></li>
                     </ul>
                 </nav>
             </div>
         </div>
 
         <footer class="l-footer p-footer">
-            <div class="c-container">
+            <div class="p-container">
                 <nav class="p-footer__navigation">
                     <ul class="p-footer__navigation__menu">
                         <li><a href="/">HOME</a></li>
