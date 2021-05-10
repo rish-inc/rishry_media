@@ -1,6 +1,16 @@
 .l-contents {
+    margin: 0 auto;
+    min-width: 261px;
+    max-width: 360px;
+    @include breakpoint ( tablet ) {
+        max-width: 984px;
+        padding: 0 20px;
+    }
     @include breakpoint ( pc ) {
-        // max-width: 78%;
-        max-width: 70%;
+        padding: 0 60px;
+        min-width: 905px;
+        max-width: 1160px;
+        display: flex;
+        flex-wrap: wrap;
     }
 }
