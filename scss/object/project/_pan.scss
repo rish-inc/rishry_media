@@ -1,0 +1,28 @@
+.p-pan {
+    width: 100%;
+}
+.home,
+.pan-category {
+    padding-right: 20px;
+    margin-right: 12px;
+    line-height: 1.4;
+    position: relative;
+    &:not(:last-child)::after {
+        position: absolute;
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-color: #707070;
+        border-style: solid;
+        border-width: 1px 1px 0 0;
+        transform: rotate( 45deg );
+        margin: 6px 10px;
+    }
+    a {
+        font-size: 1.4rem;
+        &:hover {
+            color: #ccc;
+            transition: all 0.5s ease;
+        }
+    }
+}

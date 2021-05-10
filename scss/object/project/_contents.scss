@@ -1,6 +1,5 @@
 .p-contents {
-    padding-top: 30px;
-    @include breakpoint ( tablet ) {
+    @include breakpoint ( pc ) {
         padding-top: 60px;
     }
 }
