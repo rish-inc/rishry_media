@@ -22,6 +22,9 @@
     &__main-menu {
         list-style: none;
         padding: 0;
+        @include breakpoint ( pc ) {
+            margin-top: 30px;
+        }
         &__word {
             font-size: 1.2rem;
             margin: 0 0 3% 10%;

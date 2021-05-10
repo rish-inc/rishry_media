@@ -1050,6 +1050,12 @@ body.is-open {
   padding: 0;
 }
 
+@media (min-width: 1025px) {
+  .p-side-navigation__main-menu {
+    margin-top: 30px;
+  }
+}
+
 .p-side-navigation__main-menu__word {
   font-size: 1.2rem;
   margin: 0 0 3% 10%;
