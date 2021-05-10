@@ -402,20 +402,6 @@ input[type="text"] {
   }
 }
 
-.p-container {
-  margin: auto;
-  max-width: 320px;
-  padding-top: 20px;
-}
-
-@media (min-width: 415px) {
-  .p-container {
-    min-width: 200px;
-    max-width: 1000px;
-    padding-top: 40px;
-  }
-}
-
 .c-title {
   font-weight: normal;
   font-size: 2.4rem;
@@ -441,6 +427,22 @@ input[type="text"] {
     font-size: 3.0rem;
     margin: 0;
   }
+}
+
+.c-pan-list {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c-pan-list li {
+  list-style: none;
+}
+
+.c-pan-list li a {
+  text-decoration: none;
+  color: #030303;
 }
 
 .p-head-flex-sp {
@@ -639,7 +641,7 @@ body.is-open {
     width: 100%;
     height: auto;
     background: none;
-    margin-right: 20px;
+    margin-right: 2%;
   }
 }
 
