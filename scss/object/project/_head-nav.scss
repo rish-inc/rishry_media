@@ -37,7 +37,6 @@
                 padding: 20px 0;
                 @include breakpoint ( pc ) {
                     border-bottom: none;
-                    // padding: 0;
                     padding: 10px 5px;
                     margin: 0 1%;
                 }
@@ -45,7 +44,6 @@
                     border: 0;
                     padding: 20px 0 50px;
                     @include breakpoint ( pc ) {
-                        // padding: 0;
                         padding: 10px 5px;
                         white-space: nowrap;
                     }
@@ -57,7 +55,6 @@
                 font-size: 1.6rem;
                 padding-left: 15px;
                 @include breakpoint ( pc ) {
-                    // padding: 10px 5px;
                     padding: 0;
                     display: inline-block;
                 }

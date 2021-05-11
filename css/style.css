@@ -347,16 +347,6 @@ input[type="text"] {
           transform: rotate(-55deg);
 }
 
-.c-mainvisual img {
-  max-width: 100%;
-}
-
-@media (min-width: 1025px) {
-  .c-mainvisual img {
-    width: 100%;
-  }
-}
-
 .c-btn {
   text-decoration: none;
   color: #444;
@@ -766,6 +756,16 @@ body.is-open {
 .instagram img {
   width: 40px;
   height: auto;
+}
+
+.p-mainvisual img {
+  max-width: 100%;
+}
+
+@media (min-width: 1025px) {
+  .p-mainvisual img {
+    width: 100%;
+  }
 }
 
 .p-detail-search {
@@ -1342,14 +1342,14 @@ body.is-open {
 
 @media (min-width: 415px) {
   .p-footer__inner__navigation__menu li {
- p-footer__inner1% 2%;
+    margin: 1% 2%;
   }
 }
 
 .p-footer__inner__navigation__menu li:nth-child(7) {
   white-space: nowrap;
 }
-p-footer__inner
+
 .p-footer__inner__navigation__menu li a {
   text-decoration: none;
   color: #030303;
