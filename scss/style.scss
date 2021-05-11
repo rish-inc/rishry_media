@@ -13,8 +13,6 @@
 @import "./layout/footer";
 @import "./layout/sidebar";
 @import "./layout/contents";
-@import "./layout/container";
-@import "./layout/wrapper";
 
 //=======================================================
 //  Object
@@ -29,7 +27,6 @@
 @import "./object/component/boundary-line";
 @import "./object/component/time-category-chunk";
 @import "./object/component/pagination";
-@import "./object/component/mainvisual";
 @import "./object/component/btn";
 @import "./object/component/title";
 @import "./object/component/pan-list";
@@ -42,11 +39,11 @@
 @import "./object/project/hamburger-menu";
 @import "./object/project/head-nav-flex";
 @import "./object/project/head-nav";
-// @import "./object/project/hamburger-nav";
-@import "./object/project/contents-search";
-@import "./object/project/contents";
+@import "./object/project/mainvisual";
+@import "./object/project/detail-search";
+@import "./object/project/main";
+@import "./object/project/detail";
 @import "./object/project/pan";
-@import "./object/project/index";
 @import "./object/project/404";
 @import "./object/project/contact-area";
 @import "./object/project/side-navigation";
@@ -57,7 +54,6 @@
 @import "./object/project/search";
 @import "./object/project/copyright";
 @import "./object/project/footer";
-@import "./object/project/container";
 
 // -----------------------------------------------------------------
 // Utility

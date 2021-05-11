@@ -6,23 +6,18 @@
     background: #fff;
     border: solid 1px #aaa;
     border-radius: 5px;
-    // padding: 0 15px;
     @include breakpoint ( pc ) {
         max-width: 250px;
         height: 40px;
     }
     &__button {
-        // width: 30px;
         height: auto;
         background: none;
         border: none;
-        // padding: 0;
-        // outline: none;
     }
     &__img {
         width: 15px;
         height: auto;
-        // margin: 0 auto;
     }
 }
 input[ type="text" ] {
@@ -32,7 +27,4 @@ input[ type="text" ] {
     border: none;
     width: 90%;
     padding-left: 10px;
-    // width: 100%;
-    // outline: none;
-    // padding: 0 0 0 5%;
 }
