@@ -243,7 +243,7 @@ input[type="text"] {
 .page-active,
 .page,
 .extend,
-.next {
+.next-for {
   margin: 0 5px;
 }
 
@@ -252,7 +252,7 @@ input[type="text"] {
   .page-active,
   .page,
   .extend,
-  .next {
+  .next-for {
     margin: 0 4px;
   }
 }
@@ -262,7 +262,7 @@ input[type="text"] {
   .page-active,
   .page,
   .extend,
-  .next {
+  .next-for {
     margin: 0 6px;
   }
 }
@@ -279,19 +279,19 @@ input[type="text"] {
 
 .before-to,
 .page,
-.next {
+.next-for {
   border: solid 1px #656565;
 }
 
 .before-to,
-.next {
+.next-for {
   padding: 12px;
   position: relative;
 }
 
 .before-to::before, .before-to::after,
-.next::before,
-.next::after {
+.next-for::before,
+.next-for::after {
   content: "";
   position: absolute;
   width: 25px;
@@ -300,12 +300,12 @@ input[type="text"] {
 }
 
 .before-to::before,
-.next::before {
+.next-for::before {
   top: 9px;
 }
 
 .before-to::after,
-.next::after {
+.next-for::after {
   top: 29px;
 }
 
@@ -328,21 +328,21 @@ input[type="text"] {
           transform: rotate(55deg);
 }
 
-.next {
+.next-for {
   border-right: none;
   padding-right: 10px;
 }
 
-.next::before, .next::after {
+.next-for::before, .next-for::after {
   right: -20px;
 }
 
-.next::before {
+.next-for::before {
   -webkit-transform: rotate(55deg);
           transform: rotate(55deg);
 }
 
-.next::after {
+.next-for::after {
   -webkit-transform: rotate(-55deg);
           transform: rotate(-55deg);
 }
