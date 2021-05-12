@@ -75,10 +75,10 @@
                 <div class="single">
                     <div>
                         <div>
-                            <h2>ブログタイトル</h2>
-                            <ul>
-                                <li>日付</li>
-                                <li>カテゴリー</li>
+                            <h2 class="c-barline-border">ブログタイトル</h2>
+                            <ul class="data c-time-category-chunk">
+                                <li class="time"><time>投稿日時</time></li>
+                                <li class="category">カテゴリー名</li>
                             </ul>
                         </div>
                         <figure class="eye_catching">
@@ -86,41 +86,39 @@
                         </figure>
                     </div>
                     <div class=" c-boundary-line">
-                        <h3>見出し</h3>
+                        <h3 class="c-barline-border">見出し</h3>
                         <div>
                             <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
                             <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
                             <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
                             <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
                         </div>
-                        <div>
+                        <div class="p-entry-tag">
                             <a href="">#タグ名</a>
                             <a href="">#タグ名</a>
                             <a href="">#タグ名</a>
                         </div>
-                        <div>
-                            <p>SHARE!</p>
-                            <div>
-                                <ul>
-                                    <li><a href=""><img src="./images/sns/t_logo.png" alt="Twitterアイコン画像"></a></li>
-                                    <li><a href=""><img src="./images/sns/f_logo.png" alt="Facebookアイコン画像"></a></li>
-                                    <li><a href=""><img src="./images/sns/l_logo.png" alt="LINEアイコン画像"></a></li>
-                                </ul>
-                            </div>
+                        <div class="p-share">
+                            <p class="p-share">SHARE!</p>
+                            <ul class="c-sns__icon">
+                                <li><a href=""><img src="./images/sns/t_logo.png" alt="Twitterアイコン画像"></a></li>
+                                <li><a href=""><img src="./images/sns/f_logo.png" alt="Facebookアイコン画像"></a></li>
+                                <li><a href=""><img src="./images/sns/l_logo.png" alt="LINEアイコン画像"></a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div>
-                        <h4>関連記事</h4>
+                    <aside class="p-related">
+                        <h4 class="p-related__title">関連記事</h4>
                         <div>
                             <ul>
                                 <li>
                                     <a href="">
-                                        <figure>
+                                        <figure class="p-">
                                             <img src="./images/eye-catching03.jpg" alt="関連記事アイキャッチ画像">
                                             <figcaption>
-                                                <ul>
-                                                    <li>投稿日時</li>
-                                                    <li>カテゴリー名</li>
+                                                <ul class="data c-time-category-chunk">
+                                                    <li class="time"><time>投稿日時</time></li>
+                                                    <li class="category">カテゴリー名</li>
                                                 </ul>
                                                 <h5>タイトル</h5>
                                             </figcaption>
@@ -132,9 +130,9 @@
                                         <figure>
                                             <img src="./images/eye-catching03.jpg" alt="関連記事アイキャッチ画像">
                                             <figcaption>
-                                                <ul>
-                                                    <li>投稿日時</li>
-                                                    <li>カテゴリー名</li>
+                                                <ul class="data c-time-category-chunk">
+                                                    <li class="time"><time>投稿日時</time></li>
+                                                    <li class="category">カテゴリー名</li>
                                                 </ul>
                                                 <h5>タイトル</h5>
                                             </figcaption>
@@ -146,9 +144,9 @@
                                         <figure>
                                             <img src="./images/eye-catching03.jpg" alt="関連記事アイキャッチ画像">
                                             <figcaption>
-                                                <ul>
-                                                    <li>投稿日時</li>
-                                                    <li>カテゴリー名</li>
+                                                <ul class="data c-time-category-chunk">
+                                                    <li class="time"><time>投稿日時</time></li>
+                                                    <li class="category">カテゴリー名</li>
                                                 </ul>
                                                 <h5>タイトル</h5>
                                             </figcaption>
@@ -157,13 +155,13 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>前へ</li>
-                            <li>次へ</li>
+                    </aside>
+                    <nav class="p-pager">
+                        <ul class="p-prev-next">
+                            <li class="prev">前へ</li>
+                            <li class="next">次へ</li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
             </main>
 
