@@ -72,89 +72,81 @@
                 </form>
             </div>
             <main class="p-main">
-                <div class="single">
-                    <div>
-                        <div>
-                            <h2 class="c-barline-border">ブログタイトル</h2>
-                            <ul class="data c-time-category-chunk">
-                                <li class="time"><time>投稿日時</time></li>
-                                <li class="category">カテゴリー名</li>
-                            </ul>
-                        </div>
-                        <figure class="eye_catching">
-                            <img src="./images/eye-catching02.jpg" alt="">
-                        </figure>
+                <article class="p-detail">
+                    <div class="p-entry-card">
+                        <h2 class="c-entry-title c-barline-border">ブログタイトル</h2>
+                        <ul class="data c-time-category-chunk">
+                            <li class="time"><time>投稿日時</time></li>
+                            <li class="category">カテゴリー名</li>
+                        </ul>
                     </div>
-                    <div class=" c-boundary-line">
+                    <div class="p-eye-catching"><img src="./images/eye-catching02.jpg" alt="記事アイキャッチ画像"></div>
+                    <section class="p-entry-content c-boundary-line">
                         <h3 class="c-barline-border">見出し</h3>
-                        <div>
-                            <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
-                            <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
-                            <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
-                            <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
-                        </div>
+                        <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
+                        <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
+                        <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
+                        <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
                         <div class="p-entry-tag">
                             <a href="">#タグ名</a>
                             <a href="">#タグ名</a>
                             <a href="">#タグ名</a>
                         </div>
                         <div class="p-share">
-                            <p class="p-share">SHARE!</p>
-                            <ul class="c-sns__icon">
+                            <p class="p-share__title">SHARE!</p>
+                            <ul class="p-share__sns c-sns__icon">
                                 <li><a href=""><img src="./images/sns/t_logo.png" alt="Twitterアイコン画像"></a></li>
                                 <li><a href=""><img src="./images/sns/f_logo.png" alt="Facebookアイコン画像"></a></li>
                                 <li><a href=""><img src="./images/sns/l_logo.png" alt="LINEアイコン画像"></a></li>
                             </ul>
                         </div>
-                    </div>
+                    </section>
                     <aside class="p-related">
                         <h4 class="p-related__title">関連記事</h4>
-                        <div>
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <figure class="p-">
-                                            <img src="./images/eye-catching03.jpg" alt="関連記事アイキャッチ画像">
-                                            <figcaption>
-                                                <ul class="data c-time-category-chunk">
-                                                    <li class="time"><time>投稿日時</time></li>
-                                                    <li class="category">カテゴリー名</li>
-                                                </ul>
-                                                <h5>タイトル</h5>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <figure>
-                                            <img src="./images/eye-catching03.jpg" alt="関連記事アイキャッチ画像">
-                                            <figcaption>
-                                                <ul class="data c-time-category-chunk">
-                                                    <li class="time"><time>投稿日時</time></li>
-                                                    <li class="category">カテゴリー名</li>
-                                                </ul>
-                                                <h5>タイトル</h5>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <figure>
-                                            <img src="./images/eye-catching03.jpg" alt="関連記事アイキャッチ画像">
-                                            <figcaption>
-                                                <ul class="data c-time-category-chunk">
-                                                    <li class="time"><time>投稿日時</time></li>
-                                                    <li class="category">カテゴリー名</li>
-                                                </ul>
-                                                <h5>タイトル</h5>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="p-related-list">
+                            <li class="p-related-item">
+                                <a href="">
+                                    <figure class="p-related-card">
+                                        <img src="./images/eye-catching03.jpg" alt="関連記事アイキャッチ画像">
+                                        <figcaption class="p-related-card__caption">
+                                            <ul class="p-related-card__caption__data c-time-category-chunk">
+                                                <li class="time"><time>投稿日時</time></li>
+                                                <li class="category">カテゴリー名</li>
+                                            </ul>
+                                            <h5 class="p-related-card__caption__title">タイトル</h5>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="p-related-item">
+                                <a href="">
+                                    <figure class="p-related-card">
+                                        <img src="./images/eye-catching03.jpg" alt="関連記事アイキャッチ画像">
+                                        <figcaption class="p-related-card__caption">
+                                            <ul class="p-related-card__caption__data c-time-category-chunk">
+                                                <li class="time"><time>投稿日時</time></li>
+                                                <li class="category">カテゴリー名</li>
+                                            </ul>
+                                            <h5 class="p-related-card__caption__title">タイトル</h5>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="p-related-item">
+                                <a href="">
+                                    <figure class="p-related-card">
+                                        <img src="./images/eye-catching03.jpg" alt="関連記事アイキャッチ画像">
+                                        <figcaption class="p-related-card__caption">
+                                            <ul class="p-related-card__caption__data c-time-category-chunk">
+                                                <li class="time"><time>投稿日時</time></li>
+                                                <li class="category">カテゴリー名</li>
+                                            </ul>
+                                            <h5 class="p-related-card__caption__title">タイトル</h5>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                        </ul>
                     </aside>
                     <nav class="p-pager">
                         <ul class="p-prev-next">
@@ -162,7 +154,7 @@
                             <li class="next">次へ</li>
                         </ul>
                     </nav>
-                </div>
+                </article>
             </main>
 
             <div class="l-sidebar c-boundary-line u-border-pc-none">
