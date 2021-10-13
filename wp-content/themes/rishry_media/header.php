@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="description" content="Rishry ファッション＆メイク初心者さんのための情報サイト">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="images/favicon.ico">
+        <link rel="icon" href="images/common/ico/favicon.ico">
 
         <!-- css -->
         <link rel="stylesheet" href="css/reset.min.css">
@@ -18,7 +18,7 @@
         <script src="./js/dorower.js"></script>
     </head>
 
-    <body class="home">
+    <body class="home" <?php body_class(); ?>>
         <header class="l-header">
             <div class="l-header__lead">
                 <p><?php bloginfo( 'description' ); ?></p>
@@ -33,17 +33,7 @@
                 <div class class="c-dorower-bg-sp"></div>
                 <div class="p-head-nav-flex">
                     <div class="p-head-nav">
-                        <nav class="p-head-nav__navigation">
-                            <ul class="p-head-nav__navigation__menu">
-                                <li><a href="/">HOME</a></li>
-                                <li><a href="#">ABOUT</a></li>
-                                <li><a href="#">NEWS</a></li>
-                                <li><a href="#">BRAND</a></li>
-                                <li><a href="#">FASHION</a></li>
-                                <li><a href="./contact.html">CONTACT</a></li>
-                                <li><a href="#">PRIVACY POLICY</a></li>
-                            </ul>
-                        </nav>
+                        <?php wp_nav_menu(); ?>
                         <nav class="p-head-nav__sns">
                             <ul class="p-head-nav__icon c-sns__icon">
                                 <li class="twitter"><a href="#"><img src="images/sns/t_logo.png" alt="twitter"></a></li>
@@ -53,12 +43,7 @@
                         </nav>
                     </div>
                     <div class="p-head-nav-flex__search">
-                        <form class="c-search-window" action="/" name="search-form" method="post">
-                            <input type="text" name="search" placeholder="Search">
-                            <button type="submit" class="c-search-window__button" aria-label="search" value="">
-                                <img class="c-search-window__img" src="./images/search/search.svg" alt="">
-                            </button>
-                        </form>
+                        <?php get_search_form(); ?>
                     </div>
                 </div>
             </div>

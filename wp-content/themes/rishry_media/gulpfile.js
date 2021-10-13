@@ -1,3 +1,38 @@
+const gulp = require("gulp"),
+sass = require("gulp-sass")(require("sass")),
+sassGlob         = require( 'gulp-sass-glob-use-forward' ),
+browserSync      = require( 'browser-sync' ),//ブラウザシンク
+path             = require( 'path' ), //path
+minimist         = require( 'minimist' );
+
+const paths = {
+	rootDir   : '/',
+	dstrootDir: 'htdocs',
+	srcDir    : '/images',
+	dstDir    : 'htdocs/images',
+	serverDir : 'localhost',
+	styleguide: 'css/guid'
+};
+
+const options = minimist( process.argv.slice( 2 ), {
+	string: 'path',
+	default: {
+		path: 'http://rishrymedia.local' // 引数の初期値
+	}
+});
+
+gulp.task("default", function() {
+	// style.scssファイルを取得
+	return (
+	  gulp
+		.src("css/style.scss")
+		// Sassのコンパイルを実行
+		.pipe(sass())
+		// cssフォルダー以下に保存
+		.pipe(gulp.dest("css"))
+	);
+  });
+
 /*
  * Sass
  */
@@ -22,6 +57,46 @@ gulp.task( 'sass', function( done ) {
 		} ) )
 		.pipe( sourcemaps.write( './' ) )
 		.pipe( gulp.dest( './css' ) );
+	done();
+});
+
+/*
+ * Useref
+ */
+gulp.task( 'html', function ( done ) {
+	return gulp.src( './**/*.+( html|php )' )
+		.pipe( useref( { searchPath: [ '.', 'dev' ] } ) )
+		.pipe( gulpif( '*.js', uglify() ) )
+		.pipe( gulpif( '*.css', minifyCss() ) )
+		.pipe( gulp.dest( paths.dstrootDir ) );
+	done();
+});
+
+/*
+ * Browser-sync
+ */
+gulp.task( 'browser-sync', function( done ) {
+	browserSync.init({
+		// server: {
+		// 	baseDir: paths.rootDir,
+		// 	routes: {
+		// 		"/node_modules": "node_modules"
+		// 	}
+		// },
+		proxy: {
+			target: options.path
+		},
+		notify: true
+	});
+	done();
+});
+gulp.task( 'bs-reload', function ( done ) {
+	browserSync.reload();
+	done();
+});
+
+gulp.task( 'setWatch', function ( done ) {
+	global.isWatching = true;
 	done();
 });
 
