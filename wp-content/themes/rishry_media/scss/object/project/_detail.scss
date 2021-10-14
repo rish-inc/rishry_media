@@ -1,0 +1,19 @@
+.p-detail {
+    @include breakpoint ( pc ) {
+        padding-top: 60px;
+    }
+    &__search {
+        @include breakpoint ( tablet ) {
+            padding-top: 30px;
+        }
+        @include breakpoint ( pc ) {
+            padding-top: 100px;
+        }
+        &__results {
+            font-size: 1.4rem;
+            @include breakpoint ( tablet ) {
+                 font-size: 1.6rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.p-search {
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 93%;
+    @include breakpoint ( pc ) {
+        display: none;
+    }
+    &__window {
+        border-radius: 40px;
+    }
+    &__results {
+        font-size: 1.4rem;
+        @include breakpoint ( tablet ) {
+             font-size: 1.6rem;
+        }
+    }
+}
