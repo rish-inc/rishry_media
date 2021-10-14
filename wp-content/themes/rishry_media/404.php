@@ -1,7 +1,7 @@
 <?php get_header(); ?>
         <div class="l-contents">
-            <div class="p-detail-search">
-                <form class="p-detail-search__window c-search-window" action="/" name="search-form" method="post">
+            <div class="p-search">
+                <form class="p-search__window c-search-window" action="/" name="search-form" method="post">
                     <input type="text" name="search" placeholder="Search">
                     <button type="submit" class="c-search-window__button" aria-label="search" value="">
                         <img class="c-search-window__img" src="./images/search/search.svg" alt="">
