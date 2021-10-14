@@ -20,12 +20,12 @@
 
     <body class="home" <?php body_class(); ?>>
         <header class="l-header">
-            <div class="l-header__lead">
+            <div class="l-header__catchphrase">
                 <p><?php bloginfo( 'description' ); ?></p>
             </div>
             <div class="p-head-pc">
                 <div class="p-head-flex-sp">
-                    <button class="p-hamburger-menu is-hamburger">
+                    <button class="p-hamburger is-hamburger">
                         <span>メニュー展開ボタン</span>
                     </button>
                     <h1 class="logo p-head-flex-sp__logo"><a href="/"><img src="./images/logo.png" alt="Rishry ロゴ"></a></h1>

@@ -5,7 +5,7 @@
     @include breakpoint ( pc ) {
         height: 130px;
     }
-    &__lead {
+    &__catchphrase {
         display: none;
         @include breakpoint ( pc ) {
             display: block;

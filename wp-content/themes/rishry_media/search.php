@@ -50,16 +50,14 @@
                         </li>
                     </ul>
                 </article>
-                <nav class="p-pagination-enclosure">
-                    <ul class="c-pagination">
-                        <li class="c-pagination__list"><a class="before-to" href="#">前へ</a></li>
-                        <li class="c-pagination__list"><a class="page-active" href="#">1</a></li>
-                        <li class="c-pagination__list"><a class="page" href="#">2</a></li>
-                        <li class="c-pagination__list"><a class="page" href="#">3</a></li>
-                        <li class="c-pagination__list"><a class="extend" href="#">…</a></li>
-                        <li class="c-pagination__list"><a class="next-for" href="#">次へ</a></li>
-                    </ul>
-                </nav>
+                <ul class="c-pagination">
+                    <li class="c-pagination__list"><a class="before-to" href="#">前へ</a></li>
+                    <li class="c-pagination__list"><a class="page-active" href="#">1</a></li>
+                    <li class="c-pagination__list"><a class="page" href="#">2</a></li>
+                    <li class="c-pagination__list"><a class="page" href="#">3</a></li>
+                    <li class="c-pagination__list"><a class="extend" href="#">…</a></li>
+                    <li class="c-pagination__list"><a class="next-for" href="#">次へ</a></li>
+                </ul>
             </main>
             <?php get_sidebar(); ?>
         </div>
