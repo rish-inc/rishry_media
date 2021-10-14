@@ -416,7 +416,7 @@ input[type="text"] {
   color: #707070;
 }
 
-.c-head-flex-sp {
+.c-header-flex-beside {
   width: 65vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -430,14 +430,14 @@ input[type="text"] {
 }
 
 @media (min-width: 415px) {
-  .c-head-flex-sp {
+  .c-header-flex-beside {
     width: 95vw;
     margin-left: 10px;
   }
 }
 
 @media (min-width: 1025px) {
-  .c-head-flex-sp {
+  .c-header-flex-beside {
     display: block;
     margin-left: 0;
     width: auto;

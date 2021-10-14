@@ -7,8 +7,6 @@
         min-width: 1025px;
         max-width: 1160px;
     }
-}
-.logo {
     img {
         @include breakpoint ( pc ) {
             max-width: 150px;

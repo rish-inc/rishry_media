@@ -24,11 +24,11 @@
                 <p><?php bloginfo( 'description' ); ?></p>
             </div>
             <div class="p-head-pc">
-                <div class="c-head-flex-sp">
+                <div class="c-header-flex-beside">
                     <button class="p-hamburger is-hamburger">
                         <span>メニュー展開ボタン</span>
                     </button>
-                    <h1 class="logo c-head-flex-sp__logo"><a href="/"><img src="./images/logo.png" alt="Rishry ロゴ"></a></h1>
+                    <h1 class="header-flex-beside__logo"><a href="/"><img src="./images/logo.png" alt="Rishry ロゴ"></a></h1>
                 </div>
                 <div class class="c-dorower-bg-sp"></div>
                 <div class="p-head-nav-flex">
