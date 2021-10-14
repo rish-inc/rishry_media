@@ -9,8 +9,8 @@
                 </form>
             </div>
             <main class="p-main">
-                <article class="p-detail p-search-inner">
-                    <p class="p-search-inner__results">○○の検索結果</p>
+                <article class="p-detail__search">
+                    <p class="p-detail__search__results">○○の検索結果</p>
                     <ul class="p-post-list">
                         <li class="p-post-list__posted c-boundary-line">
                             <figure class="p-card">
