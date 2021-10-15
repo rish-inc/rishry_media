@@ -1,21 +1,17 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="<?php language_attributes(); ?>">
     <head>
         <meta charset="utf-8">
         <meta name="description" content="Rishry ファッション＆メイク初心者さんのための情報サイト">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="images/common/ico/favicon.ico">
+        <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/common/ico/favicon.ico">
 
         <!-- css -->
-        <link rel="stylesheet" href="css/reset.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <title><?php bloginfo( 'name' ); ?></title>
+        <!-- <title><?php bloginfo( 'name' ); ?></title> -->
 
         <!-- jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <!-- <script src="./js/jquery-3.6.0.min.js"></script> -->
-        <script src="./js/hamburger.js"></script>
-        <script src="./js/dorower.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+        <?php wp_head(); ?>
     </head>
 
     <body class="home" <?php body_class(); ?>>

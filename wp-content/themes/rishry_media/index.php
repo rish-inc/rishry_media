@@ -1,12 +1,14 @@
 <?php get_header(); ?>
         <div class="l-contents">
             <div class="p-search">
-                <form class="p-search__window c-search-window" action="/" name="search-form" method="post">
-                    <input type="text" name="search" placeholder="Search">
-                    <button type="submit" class="c-search-window__button" aria-label="search" value="">
-                        <img class="c-search-window__img" src="./images/search/search.svg" alt="">
-                    </button>
-                </form>
+                <div class="p-search__window">
+                    <form class="c-search-window" action="/" name="search-form" method="post">
+                        <input type="text" name="search" placeholder="Search">
+                        <button type="submit" class="c-search-window__button" aria-label="search" value="">
+                            <img class="c-search-window__img" src="<?php echo get_theme_file_uri( '/images/search/search.svg' ); ?>" alt="">
+                        </button>
+                    </form>
+                </div>
             </div>
             <div class="p-mainvisual"><img src="./images/dummy.jpg" alt="メインビジュアル　ダミー画像"></div>
             <main class="p-main">
