@@ -1,0 +1,17 @@
+@use "foundation/mixin";
+@use "foundation/variable";
+
+.p-head-nav-flex {
+    @include mixin.breakpoint ( pc ) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__search {
+        visibility: collapse;
+        @include mixin.breakpoint ( pc ) {
+            visibility: visible;
+            width: 300px;
+        }
+    }
+}

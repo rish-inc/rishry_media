@@ -1,0 +1,11 @@
+@use "foundation/mixin";
+@use "foundation/variable";
+
+.l-footer {
+    background: variable.$bgcolor--pink;
+    small {
+        @include mixin.breakpoint ( tablet ) {
+            font-size: 1.2rem;
+        }
+    }
+}
