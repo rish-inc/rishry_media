@@ -10,5 +10,6 @@
                 <address class="p-copyright"><small>&copy; <?php bloginfo( 'name' ); ?></small></address>
             </div>
         </footer>
+        <?php wp_footer(); ?>
     </body>
 </html>

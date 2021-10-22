@@ -1,9 +1,13 @@
 const gulp           = require("gulp"),
+	postcss          = require( 'gulp-postcss' ),
 	sass             = require("gulp-sass")(require("sass")),
 	sassGlob         = require( 'gulp-sass-glob-use-forward' ),
 	browserSync      = require( 'browser-sync'),//ブラウザシンク
+	plumber          = require( 'gulp-plumber' ),//エラー通知
+	notify           = require( 'gulp-notify' ),//エラー通知
 	path             = require( 'path' ), //path
 	cached           = require('gulp-cached'),
+	sourcemaps       = require( 'gulp-sourcemaps' ), // Js ファイルの圧縮・変換
 	minimist         = require( 'minimist' );
 
 const paths = {
@@ -57,9 +61,21 @@ gulp.task( 'sass', function( done ) {
 			sass: true
 		} ) )
 		.pipe( sourcemaps.write( './' ) )
-		.pipe( gulp.dest( './css' ) );
+		.pipe( gulp.dest( './css' ) )
+		.pipe( plumber() )
+		.pipe(plumber(notify.onError('Error: <%= error.message %>')));
 	done();
 });
+
+/*
+ * JavaScript
+ */
+
+function handleErrors( error ) {
+	notify.onError( { title: "Error", message: "Check your terminal", sound: "Funk" } )( error ); //Error Notification
+	console.log( error.toString() ); //Prints Error to Console
+	this.emit( "end" ); //End function
+};
 
 /*
  * Useref
