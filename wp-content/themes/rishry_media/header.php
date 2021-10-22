@@ -29,7 +29,7 @@
                 <div class class="c-dorower-bg-sp"></div>
                 <div class="p-head-nav-flex">
                     <div class="p-head-nav">
-                        <?php wp_nav_menu(); ?>
+                        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
                         <nav class="p-head-nav__sns">
                             <ul class="p-head-nav__icon c-sns__icon">
                                 <li class="twitter"><a href="#"><img src="images/sns/t_logo.png" alt="twitter"></a></li>

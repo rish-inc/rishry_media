@@ -1,9 +1,10 @@
-const gulp = require("gulp"),
-sass = require("gulp-sass")(require("sass")),
-sassGlob         = require( 'gulp-sass-glob-use-forward' ),
-browserSync      = require( 'browser-sync' ),//ブラウザシンク
-path             = require( 'path' ), //path
-minimist         = require( 'minimist' );
+const gulp           = require("gulp"),
+	sass             = require("gulp-sass")(require("sass")),
+	sassGlob         = require( 'gulp-sass-glob-use-forward' ),
+	browserSync      = require( 'browser-sync'),//ブラウザシンク
+	path             = require( 'path' ), //path
+	cached           = require('gulp-cached'),
+	minimist         = require( 'minimist' );
 
 const paths = {
 	rootDir   : '/',

@@ -10,7 +10,7 @@
                     </form>
                 </div>
             </div>
-            <div class="p-mainvisual"><img src="./images/dummy.jpg" alt="メインビジュアル　ダミー画像"></div>
+            <div class="p-mainvisual"><img src="<?php echo get_theme_file_uri( '/images/dummy.jpg' ); ?>" alt="メインビジュアル　ダミー画像"></div>
             <main class="p-main">
                 <article class="p-detail">
                     <h2 class="c-title c-headline-border">MEDIA</h2>
@@ -24,7 +24,7 @@
                                         <li class="category">カテゴリー名</li>
                                     </ul>
                                 </figcaption>
-                                <img class="p-card__img" src="././images/p-card/eye-catching.jpg" alt="アイキャッチ画像">
+                                <img class="p-card__img" src="<?php echo get_theme_file_uri( './images/p-card/eye-catching.jpg' ); ?>" alt="アイキャッチ画像">
                             </figure>
                         </li>
                         <li class="p-post-list__posted c-boundary-line">
@@ -36,7 +36,7 @@
                                         <li class="category">カテゴリー名</li>
                                     </ul>
                                 </figcaption>
-                                <img class="p-card__img" src="./images/p-card/eye-catching.jpg" alt="アイキャッチ画像">
+                                <img class="p-card__img" src="<?php echo get_theme_file_uri( './images/p-card/eye-catching.jpg' ); ?>" alt="アイキャッチ画像">
                             </figure>
                         </li>
                         <li class="p-post-list__posted c-boundary-line">
@@ -48,7 +48,7 @@
                                         <li class="category">カテゴリー名</li>
                                     </ul>
                                 </figcaption>
-                                <img class="p-card__img" src="./images/p-card/eye-catching.jpg" alt="アイキャッチ画像">
+                                <img class="p-card__img" src="<?php echo get_theme_file_uri( './images/p-card/eye-catching.jpg' ); ?>" alt="アイキャッチ画像">
                             </figure>
                         </li>
                     </ul>
