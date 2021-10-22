@@ -8,6 +8,7 @@
 !/wp-content/themes/rishry_media/styleguide/
 !/wp-content/themes/rishry_media/styleguide/*
 !main.css
+!/.github
 *.map
 .sql
 
