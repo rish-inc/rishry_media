@@ -7,7 +7,6 @@ on:
       - main
 name: Deploy
 jobs:
-  test:
   production:
     name: Upload Production
     runs-on: ubuntu-latest
