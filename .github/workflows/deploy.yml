@@ -19,5 +19,7 @@ jobs:
           name: rish_ida_rsa
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
         env:
+          FTP_SERVER: ${{ secrets.SSH_HOST }}
+          FTP_USERNAME: ${{ secrets.SSH_USERNAME }}
           LOCAL_DIR: ./
           REMOTE_DIR: /var/www/html/media.rish/wp/
