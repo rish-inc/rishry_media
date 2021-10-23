@@ -23,4 +23,4 @@ jobs:
           SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
           SSH_PORT: ${{ secrets.SSH_PORT }}
           LOCAL_DIR: ./
-          REMOTE_DIR: /var/www/html/media.rish/wp/
+          REMOTE_DIR: /var/www/html/media.rishry/wp/
