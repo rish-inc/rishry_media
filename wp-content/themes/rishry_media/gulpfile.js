@@ -1,13 +1,18 @@
-const gulp           = require("gulp"),
+const { watch } = require('browser-sync');
+const { src, parallel } = require('gulp');
+
+const gulp           = require( 'gulp' ),
 	postcss          = require( 'gulp-postcss' ),
-	sass             = require("gulp-sass")(require("sass")),
+	autoprefixer     = require( 'autoprefixer' ),
+	sass             = require( 'gulp-sass' )(require( 'sass' )),
 	sassGlob         = require( 'gulp-sass-glob-use-forward' ),
 	browserSync      = require( 'browser-sync'),//ブラウザシンク
 	plumber          = require( 'gulp-plumber' ),//エラー通知
 	notify           = require( 'gulp-notify' ),//エラー通知
+	rename           = require( 'gulp-rename' ),
 	path             = require( 'path' ), //path
 	cached           = require('gulp-cached'),
-	sourcemaps       = require( 'gulp-sourcemaps' ), // Js ファイルの圧縮・変換
+	// sourcemaps       = require( 'gulp-sourcemaps' ), // Js ファイルの圧縮・変換
 	minimist         = require( 'minimist' );
 
 const paths = {
@@ -26,7 +31,7 @@ const options = minimist( process.argv.slice( 2 ), {
 	}
 });
 
-gulp.task("default", function() {
+gulp.task("default", function( done ) {
 	// style.scssファイルを取得
 	return (
 	  gulp
@@ -36,36 +41,61 @@ gulp.task("default", function() {
 		// cssフォルダー以下に保存
 		.pipe(gulp.dest("css"))
 	);
+	done();
   });
 
 /*
  * Sass
  */
-gulp.task( 'sass', function( done ) {
-	gulp.src( './src/styles/**/*.scss' )
-		.pipe( sassGlob() )
-		.pipe( sass.sync().on( 'error', sass.logError ) )
-		.pipe( cached( 'scss' ) )
-		.pipe( sourcemaps.init() )
-		.pipe( sass( {
-			outputStyle: 'expanded',
-			minifier: true //圧縮の有無 true/false
-		} ) )
-		.pipe( postcss( [
-			autoprefixer( {
-				grid: true,
-				cascade: false
-			} )
-		] ) )
-		.pipe( rename( {
-			sass: true
-		} ) )
-		.pipe( sourcemaps.write( './' ) )
-		.pipe( gulp.dest( './css' ) )
-		.pipe( plumber() )
-		.pipe(plumber(notify.onError('Error: <%= error.message %>')));
-	done();
-});
+const css = () => {
+	return src( 'src/styles/**/*.scss', { sourcemaps: true } )
+	.pipe( sassGlob() )
+	.pipe( sass.sync().on( 'error', sass.logError ) )
+	.pipe( cached( 'scss' ) )
+	.pipe( sass( {
+		outputStyle: 'expanded',
+		minifier: true //圧縮の有無 true/false
+	} ) )
+	.pipe( postcss( [
+		autoprefixer( {
+			grid: true,
+			cascade: false
+		} )
+	] ) )
+	.pipe( rename( {
+		sass: true
+	} ) )
+	.pipe( dest( 'css', { sourcemaps: './' } ) );
+};
+exports.css = css;
+
+// gulp.task( 'sass', function( done ) {
+// 	gulp.src( './src/styles/**/*.scss' )
+// 		.pipe( sassGlob() )
+// 		.pipe( sass.sync().on( 'error', sass.logError ) )
+// 		.pipe( cached( 'scss' ) )
+// 		.pipe( sourcemaps.init() )
+// 		.pipe( sass( {
+// 			outputStyle: 'expanded',
+// 			minifier: true //圧縮の有無 true/false
+// 		} ) )
+// 		.pipe( postcss( [
+// 			autoprefixer( {
+// 				grid: true,
+// 				cascade: false
+// 			} )
+// 		] ) )
+// 		.pipe( rename( {
+// 			sass: true
+// 		} ) )
+// 		.pipe( sourcemaps.write( './' ) )
+// 		.pipe( gulp.dest( './css' ) )
+// 		.pipe( plumber() )
+// 		.pipe(plumber(notify.onError('Error: <%= error.message %>')));
+// 	done();
+// });
+
+
 
 /*
  * JavaScript
@@ -92,50 +122,69 @@ gulp.task( 'html', function ( done ) {
 /*
  * Browser-sync
  */
-gulp.task( 'browser-sync', function( done ) {
-	browserSync.init({
-		// server: {
-		// 	baseDir: paths.rootDir,
-		// 	routes: {
-		// 		"/node_modules": "node_modules"
-		// 	}
-		// },
+const buildServer = () => {
+	return browserSync.init({
 		proxy: {
 			target: options.path
 		},
 		notify: true
 	});
-	done();
-});
-gulp.task( 'bs-reload', function ( done ) {
+}
+//ブラウザ自動リロード
+const reload = (done) => {
 	browserSync.reload();
-	done();
-});
+	done()
+}
+//ファイル監視
+const watchFiles = () => {
+	watch( './scss/**/*.scss', series( sass, reload ) );
+}
+exports.default = parallel( buildServer, watchFiles );
 
-gulp.task( 'setWatch', function ( done ) {
-	global.isWatching = true;
-	done();
-});
+// gulp.task( 'browser-sync', function( done ) {
+// 	browserSync.init({
+// 		// server: {
+// 		// 	baseDir: paths.rootDir,
+// 		// 	routes: {
+// 		// 		"/node_modules": "node_modules"
+// 		// 	}
+// 		// },
+// 		proxy: {
+// 			target: options.path
+// 		},
+// 		notify: true
+// 	});
+// 	done();
+// });
+// gulp.task( 'bs-reload', function ( done ) {
+// 	browserSync.reload();
+// 	done();
+// });
+
+// gulp.task( 'setWatch', function ( done ) {
+// 	global.isWatching = true;
+// 	done();
+// });
 
 /*
  * Default
  */
-gulp.task( 'default', gulp.series( 'browser-sync', function() {
-	const bsList = [
-		'./**/*.html',
-		'./**/*.php',
-		'./js/**/*.js',
-		'./style.css',
-		'./**/*.scss',
-		'./**/*._scss',
-		'./**/*.png',
-		'./**/*.jpg',
-		'./**/*.svg'
-	];
-	gulp.watch( './src/styles/**/*.scss', gulp.task( 'sass' ) );
-	gulp.watch( './src/scripts/**/*.js', gulp.task( 'browserify' ) );
-	gulp.watch( bsList, gulp.task( 'bs-reload') );
-}));
+// gulp.task( 'default', gulp.series( 'browser-sync', function() {
+// 	const bsList = [
+// 		'./**/*.html',
+// 		'./**/*.php',
+// 		'./js/**/*.js',
+// 		'./style.css',
+// 		'./**/*.scss',
+// 		'./**/*._scss',
+// 		'./**/*.png',
+// 		'./**/*.jpg',
+// 		'./**/*.svg'
+// 	];
+// 	gulp.watch( './src/styles/**/*.scss', gulp.task( 'sass' ) );
+// 	gulp.watch( './src/scripts/**/*.js', gulp.task( 'browserify' ) );
+// 	gulp.watch( bsList, gulp.task( 'bs-reload') );
+// }));
 
 /*
  * Build

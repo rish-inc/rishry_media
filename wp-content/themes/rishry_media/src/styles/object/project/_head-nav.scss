@@ -7,7 +7,7 @@
     position: fixed;
     width: 100vw;
     height: calc( 100% - 50px );
-    background: #fff;
+    background: variable.$bgcolor--white;
     @include mixin.breakpoint ( pc ) {
         display: initial;
         position: static;
@@ -54,8 +54,8 @@
             }
             a {
                 text-decoration: none;
-                color: #333;
-                font-size: 1.6rem;
+                color: variable.$font-color--default;
+                font-size: variable.$font-size--header--sp;
                 padding-left: 15px;
                 @include mixin.breakpoint ( pc ) {
                     padding: 0;
@@ -64,7 +64,7 @@
                 &::after {
                     @include mixin.breakpoint ( pc ) {
                         display: block;
-                        border-bottom: solid 1px #ccc;
+                        border-bottom: solid 1px variable.$border-color--pale--gray;
                         bottom: 0;
                         content: '';
                         transition: all 0.5s ease;
@@ -72,7 +72,7 @@
                     }
                 }
                 &:hover {
-                    color: #ccc;
+                    color: variable.$font-color--hover;
                     transition: all 0.5s ease;
                     &::after {
                         width: 100%;

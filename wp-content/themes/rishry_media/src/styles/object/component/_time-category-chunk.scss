@@ -10,9 +10,9 @@
     list-style: none;
 }
 .time {
-    color: #797979;
+    color: variable.$font-color--gray;
 }
 .category {
-    color: #FFC0C8;
+    color: variable.$font-color--pink;
     font-weight: bold;
 }

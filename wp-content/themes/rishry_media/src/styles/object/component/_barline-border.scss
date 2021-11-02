@@ -7,7 +7,7 @@
         position: absolute;
         content: '';
         width: 2px;
-        background: #FEC1C8;
+        background: variable.$border-color--pink;
         border-radius: 9px;
     }
 }

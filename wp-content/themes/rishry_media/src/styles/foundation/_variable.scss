@@ -1,5 +1,42 @@
+ /*
+ * 配色
+ */
+//文字カラー
+$font-color--default: #030303;
+$font-color--hover: #CCC;
+$font-color--pink: #FFEDEE;
+$font-color--gray: #797979;
+
 //背景カラー
 $bgcolor--pink: #FFEDEE;
+$bgcolor--white: #FFF;
 
 //ボーダーカラー
+$border-color--pink: #FFEDEE;
 $border-color--gray: #dcdcdc;
+$border-color--pale--gray: #CCC;
+
+/*
+ * 文字サイズ
+ */
+//ヘッダー用
+$font-size--header--sp: 1.6rem;
+
+//ヘッダー用　キャッチフレーズ
+$font-size--header--catchphrase--pc: 1.2rem;
+
+//サイドバー用
+$font-size--sidebar--sp: 1.2rem;
+$font-size--sidebar--pc: 1.5rem;
+
+//フッター用
+$font-size--footer--sp: 1.4rem;
+
+// フッター用 コピーライト
+$font-size--footer-copyright--sp: 1.2rem;
+
+/*
+ * 角丸
+ */
+//ボーダー用
+$radius--border--nomal: 5px;
