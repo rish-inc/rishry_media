@@ -137,7 +137,7 @@ const reload = (done) => {
 }
 //ファイル監視
 const watchFiles = () => {
-	watch( './scss/**/*.scss', series( sass, reload ) );
+	gulp.watch( 'src/styles/**/*.scss', gulp.series( sass, reload ) );
 }
 exports.default = parallel( buildServer, watchFiles );
 
