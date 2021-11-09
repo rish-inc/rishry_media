@@ -148,7 +148,7 @@ body {
   position: absolute;
   content: "";
   width: 2px;
-  background: #FFEDEE;
+  background: #FFC0C8;
   border-radius: 9px;
 }
 
@@ -235,7 +235,7 @@ body {
   content: "";
   flex-basis: 18px;
   height: 3px;
-  background: #FFEDEE;
+  background: #FFC0C8;
   border-radius: 9px;
 }
 
@@ -410,7 +410,7 @@ input[type=text] {
 }
 
 .category {
-  color: #FFEDEE;
+  color: #FFC0C8;
   font-weight: bold;
 }
 
@@ -1138,7 +1138,7 @@ body.is-open {
   .p-side-navigation {
     max-width: 280px;
     height: auto;
-    border: 1px solid #FFEDEE;
+    border: 1px solid #FFC0C8;
   }
 }
 .p-side-navigation__title {

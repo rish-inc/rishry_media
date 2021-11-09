@@ -1,5 +1,5 @@
-const { watch } = require('browser-sync');
-const { src, parallel } = require('gulp');
+const { watch } = require('browser-sync').create();
+const { src, series, parallel, dest } = require('gulp');
 
 const gulp           = require( 'gulp' ),
 	postcss          = require( 'gulp-postcss' ),
@@ -12,6 +12,8 @@ const gulp           = require( 'gulp' ),
 	rename           = require( 'gulp-rename' ),
 	path             = require( 'path' ), //path
 	cached           = require('gulp-cached'),
+	browserify       = require( 'browserify' ),
+	uglify           = require( 'gulp-uglify' ),//js圧縮
 	// sourcemaps       = require( 'gulp-sourcemaps' ), // Js ファイルの圧縮・変換
 	minimist         = require( 'minimist' );
 
@@ -31,27 +33,34 @@ const options = minimist( process.argv.slice( 2 ), {
 	}
 });
 
-gulp.task("default", function( done ) {
-	// style.scssファイルを取得
-	return (
-	  gulp
-		.src("css/style.scss")
-		// Sassのコンパイルを実行
-		.pipe(sass())
-		// cssフォルダー以下に保存
-		.pipe(gulp.dest("css"))
-	);
-	done();
-  });
+// gulp.task("default", function( done ) {
+// 	// style.scssファイルを取得
+// 	return (
+// 	  gulp
+// 		.src("css/style.scss")
+// 		// Sassのコンパイルを実行
+// 		.pipe(sass())
+// 		// cssフォルダー以下に保存
+// 		.pipe(gulp.dest("css"))
+// 	);
+// 	done();
+//   });
 
 /*
  * Sass
  */
 const css = () => {
-	return src( 'src/styles/**/*.scss', { sourcemaps: true } )
+	return src( '/src/styles/**/*.scss', { sourcemaps: true } )
 	.pipe( sassGlob() )
 	.pipe( sass.sync().on( 'error', sass.logError ) )
 	.pipe( cached( 'scss' ) )
+	.pipe( //エラーが発生しても処理は止めない
+		plumber(
+			{
+				errorHandler: notify.onError( 'Error: <%= error.message %>' ) //エラー出力設定
+			}
+		)
+	)
 	.pipe( sass( {
 		outputStyle: 'expanded',
 		minifier: true //圧縮の有無 true/false
@@ -65,9 +74,9 @@ const css = () => {
 	.pipe( rename( {
 		sass: true
 	} ) )
-	.pipe( dest( 'css', { sourcemaps: './' } ) );
-};
-exports.css = css;
+	.pipe( dest( '/css/', { sourcemaps: './' } ) );
+}
+exports.default = series( css );
 
 // gulp.task( 'sass', function( done ) {
 // 	gulp.src( './src/styles/**/*.scss' )
@@ -100,12 +109,29 @@ exports.css = css;
 /*
  * JavaScript
  */
-
-function handleErrors( error ) {
-	notify.onError( { title: "Error", message: "Check your terminal", sound: "Funk" } )( error ); //Error Notification
-	console.log( error.toString() ); //Prints Error to Console
-	this.emit( "end" ); //End function
-};
+const js = () => {
+	return src( '/src/scripts/**' )
+	.pipe(
+		plumber(
+			{
+				errorHandler: notify.onError( 'Error: <%= error.message %>' )
+			}
+		)
+	)
+	.pipe( uglify() )
+	// .pipe(
+	// 	rename(
+	// 		{ extname: '.min.js' }
+	// 	)
+	// )
+	.pipe( dest( '/src/scripts/main.js' ) );
+}
+exports.default = series( js );
+// function handleErrors( error ) {
+// 	notify.onError( { title: "Error", message: "Check your terminal", sound: "Funk" } )( error ); //Error Notification
+// 	console.log( error.toString() ); //Prints Error to Console
+// 	this.emit( "end" ); //End function
+// };
 
 /*
  * Useref
