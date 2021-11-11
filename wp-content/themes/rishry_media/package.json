@@ -10,11 +10,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@frctl/fractal": "^1.5.11",
     "autoprefixer": "^10.4.0",
+    "babelify": "^10.0.0",
     "browser-sync": "^2.27.7",
     "browserify": "^17.0.0",
     "g": "^2.0.1",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
     "gulp-cached": "^1.1.1",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
@@ -29,7 +34,8 @@
     "npm-check-updates": "^11.8.5",
     "postcss": "^8.3.11",
     "sass": "^1.43.4",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "vinyl-source-stream": "^2.0.0"
   },
   "devDependencies": {
     "gulp-sass": "^5.0.0"
