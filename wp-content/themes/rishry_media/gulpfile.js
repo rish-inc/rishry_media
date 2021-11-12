@@ -25,10 +25,10 @@ const
 const paths = {
 	rootDir   : '/',
 	dstrootDir: 'htdocs',
-	srcDir    : { css: 'src/styles/**/*.scss', js: 'src/scripts/*.js', img: 'images/' },
+	srcDir    : { css: '/src/styles/**/*.scss', js: '/src/scripts/*.js', img: 'src/images' },
 	dstDir    : { css: 'css', js: 'js', img: 'images' },
 	serverDir : 'localhost',
-	styleguide: { base: 'src/styleguide', css: 'src/styleguide/styles/**/*.scss', js: 'src/styleguide/scripts/**/*.js' }
+	styleguide: { base: '/src/styleguide', css: '/src/styleguide/styles/**/*.scss', js: '/src/styleguide/scripts/*.js' }
 };
 
 const options = minimist( process.argv.slice( 2 ), {
@@ -39,10 +39,10 @@ const options = minimist( process.argv.slice( 2 ), {
 });
 
 fractal.set( 'project.title', 'Style guide' );
-	fractal.components.set( 'path', 'src/styleguide/' );
-	fractal.docs.set('path', 'src/styleguide/docs' );
+	fractal.components.set( 'path', './src/styleguide/' );
+	fractal.docs.set('path', './src/styleguide/docs' );
 	fractal.web.set( 'static.path', './htdocs/assets' );
-	fractal.web.set( 'builder.dest', 'src/styleguide' );
+	fractal.web.set( 'builder.dest', './src/styleguide' );
 	const logger = fractal.cli.console;
 
 	const browsers = [
@@ -114,7 +114,7 @@ const js = () => {
 		bundleOption: {
 			cache: {}, packageCache: {}, fullPaths: false,
 			debug: true,
-			entries: 'src/scripts/main.js',
+			entries: './src/scripts/main.js',
 			extensions: [ 'js' ]
 		},
 		dest: paths.dstDir.js,
@@ -131,13 +131,14 @@ const js = () => {
 	.pipe( dest ( paths.dstDir.js ) );
 }
 
-const server = () => {
+const server = ( done ) => {
 	browserSync.init( {
 		server: {
 			baseDir: paths.rootDir
 		},
 		notify: true
 	} );
+	done();
 }
 
 const reload = ( done ) => {
@@ -157,10 +158,10 @@ const devcopy = ( done ) => {
 	return src([
 		paths.srcDir.css,
 		paths.srcDir.js,
-		'!src/scripts/main.js',
-		'!src/scripts/config.js',
-		'!src/styles/foundation/*.scss',
-		'!src/styles/style.scss',
+		'!./src/scripts/main.js',
+		'!./src/scripts/config.js',
+		'!./src/styles/foundation/*.scss',
+		'!./src/styles/style.scss',
 	], {
 		dot: true
 	} )
@@ -172,9 +173,10 @@ const devcopy = ( done ) => {
 	done();
 };
 
-const watchFile = () => {
+const watchFile = ( done ) => {
 	watch( paths.srcDir.css, series( css, reload ) );
 	watch( paths.srcDir.js , series( js,  reload ) );
+	done();
 }
 
 
