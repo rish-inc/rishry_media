@@ -365,6 +365,7 @@ body {
   display: flex;
   justify-content: space-around;
   background: #fff;
+  border: solid 1px #aaa;
 }
 
 .c-search-window__button {

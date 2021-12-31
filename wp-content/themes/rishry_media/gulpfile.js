@@ -2,20 +2,25 @@ const { doesNotMatch } = require('assert');
 const { src, dest, watch, series, parallel } = require('gulp');
 
 const 
-	gulp           = require( 'gulp' ),
+	// gulp           = require( 'gulp' ),
 	postcss          = require( 'gulp-postcss' ),
 	autoprefixer     = require( 'autoprefixer' ),
+	stylelint        = require( 'stylelint' ),
 	sass             = require( 'gulp-sass' )(require( 'sass' )),
 	sassGlob         = require( 'gulp-sass-glob-use-forward' ),
 	browserSync      = require( 'browser-sync').create(),//ブラウザシンク
 	plumber          = require( 'gulp-plumber' ),//エラー通知
 	notify           = require( 'gulp-notify' ),//エラー通知
+	pleeease         = require( 'gulp-pleeease' ),//ベンダープレフィックス
 	vinylSource      = require( 'vinyl-source-stream' ),
 	browserify       = require( 'browserify' ),
 	babel            = require( 'gulp-babel' ),
 	babelify         = require( 'babelify' ),
+	browserifyShim   = require( 'browserify-shim' ),
+	gulpif           = require( 'gulp-if' ),// if文
 	uglify           = require( 'gulp-uglify' ),//js圧縮
 	rename           = require( 'gulp-rename' ),
+	minifyCss        = require( 'gulp-cssnano' ),//css圧縮
 	path             = require( 'path' ), //path
 	minimist         = require( 'minimist' ),
 	cached           = require('gulp-cached'),
@@ -23,12 +28,12 @@ const
 	// sourcemaps       = require( 'gulp-sourcemaps' ), // Js ファイルの圧縮・変換
 
 const paths = {
-	rootDir   : '/',
+	rootDir   : './',
 	dstrootDir: 'htdocs',
-	srcDir    : { css: '/src/styles/**/*.scss', js: '/src/scripts/*.js', img: 'src/images' },
-	dstDir    : { css: 'css', js: 'js', img: 'images' },
+	srcDir    : { css: './src/styles/**/*.scss', js: './src/scripts/*.js', img: './src/images', php: '**.php' },
+	dstDir    : { css: './css/', js: './js', img: './images' },
 	serverDir : 'localhost',
-	styleguide: { base: '/src/styleguide', css: '/src/styleguide/styles/**/*.scss', js: '/src/styleguide/scripts/*.js' }
+	styleguide: { base: './src/styleguide', css: './src/styleguide/styles/**/*.scss', js: './src/styleguide/scripts/*.js' }
 };
 
 const options = minimist( process.argv.slice( 2 ), {
@@ -38,11 +43,11 @@ const options = minimist( process.argv.slice( 2 ), {
 	}
 });
 
-fractal.set( 'project.title', 'Style guide' );
+fractal.set( 'project.title', 'rishrymedia' );
 	fractal.components.set( 'path', './src/styleguide/' );
 	fractal.docs.set('path', './src/styleguide/docs' );
-	fractal.web.set( 'static.path', './htdocs/assets' );
-	fractal.web.set( 'builder.dest', './src/styleguide' );
+	fractal.web.set( 'static.path', './css' );
+	fractal.web.set( 'builder.dest', './styleguide' );
 	const logger = fractal.cli.console;
 
 	const browsers = [
@@ -55,10 +60,56 @@ fractal.set( 'project.title', 'Style guide' );
 		'Android >= 5',
 	]
 
+// const srcPath = {
+// 	css: './src/styles/**/*.scss',
+// 	php
+// }
 
 /*
- * Sass
+ * Browser-sync
  */
+const browserSyncOption = {
+	proxy: 'http://rishrymedia.local',
+	open: 'true',
+	watchOptions: {
+		debounceDelay: 3000,
+	},
+	reloadOnRestart: true,
+};
+
+const server = () => {
+	browserSync.init( {
+		server: {
+			baseDir: paths.rootDir
+		},
+		// notify: true
+	} );
+}
+
+const reload = () => {
+	browserSync.reload();
+}
+
+// function bsInit( done ) {
+// 	bs.init( {
+// 		server: {
+// 			baseDir: './'
+// 		},
+// 		startPath: 'index.php',
+// 		notify: false,
+// 		open: 'external',
+// 	});
+// 	done();
+// }
+// function bsReload( done ) {
+// 	bs.reload();
+
+// 	done();
+// }
+
+/*
+	* Sass
+	*/
 const css = () => {
 	return src( paths.srcDir.css, { sourcemaps: true } )
 	.pipe( sassGlob() )
@@ -82,8 +133,8 @@ const css = () => {
 
 
 /*
- * Style Guide
- */
+	* Style Guide
+	*/
 function styleguideTask() {
 	const builder = fractal.web.builder();
 	builder.on( 'progress', ( completed, total ) => logger.update( `${total} 件中 ${completed} 件目を出力中...`, 'info' ) );
@@ -101,8 +152,8 @@ const styleguideReload = {
 }
 
 /*
- * JavaScript
- */
+	* JavaScript
+	*/
 function errorAlert( error ) {
 	notify.onError( { title: "Error", message: "Check your terminal", sound: "Funk" } )( error ); //Error Notification
 	console.log( error.toString() );//Prints Error to Console
@@ -131,25 +182,23 @@ const js = () => {
 	.pipe( dest ( paths.dstDir.js ) );
 }
 
-const server = ( done ) => {
-	browserSync.init( {
-		server: {
-			baseDir: paths.rootDir
-		},
-		notify: true
-	} );
-	done();
-}
+// const server = () => {
+// 	browserSync.init( {
+// 		server: {
+// 			baseDir: paths.rootDir
+// 		},
+// 		notify: true
+// 	} );
+// }
 
-const reload = ( done ) => {
-	browserSync.reload();
-	done();
-}
+// const reload = () => {
+// 	browserSync.reload();
+// }
 
 
 /*
- * Build
- */
+	* Build
+	*/
 const clean = ( done ) => {
 	return del( [paths.styleguide.base] );
 	done();
@@ -159,7 +208,7 @@ const devcopy = ( done ) => {
 		paths.srcDir.css,
 		paths.srcDir.js,
 		'!./src/scripts/main.js',
-		'!./src/scripts/config.js',
+		// '!./src/scripts/config.js',
 		'!./src/styles/foundation/*.scss',
 		'!./src/styles/style.scss',
 	], {
