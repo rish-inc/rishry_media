@@ -18,7 +18,6 @@ function rishrymedia_title( $title ) {
 }
 add_filter( 'pre_get_document_title', 'rishrymedia_title' );
 
-
 /*
  * スタイルとスクリプトの読み込み
  */
