@@ -3,7 +3,7 @@
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' ); //アイキャッチ表示
     register_nav_menus( array (
-		'header-menu'   => 'header-menu',
+		'header-menu' => 'header-menu',
 		'footer-menu' => 'footer-menu'
     ));
 
