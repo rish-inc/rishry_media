@@ -1,0 +1,22 @@
+@use "foundation/mixin";
+@use "foundation/variable";
+
+.p-detail {
+    @include mixin.breakpoint ( pc ) {
+        padding-top: 60px;
+    }
+    &__search {
+        @include mixin.breakpoint ( tablet ) {
+            padding-top: 30px;
+        }
+        @include mixin.breakpoint ( pc ) {
+            padding-top: 100px;
+        }
+        &__results {
+            font-size: 1.4rem;
+            @include mixin.breakpoint ( tablet ) {
+                 font-size: 1.6rem;
+            }
+        }
+    }
+}

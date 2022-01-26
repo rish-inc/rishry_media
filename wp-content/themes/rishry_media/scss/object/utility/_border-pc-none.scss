@@ -1,7 +1,0 @@
-.u-border-pc-none {
-    @include breakpoint ( pc ) {
-        &:last-child {
-            border: 0;
-        }
-    }
-}

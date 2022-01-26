@@ -24,12 +24,20 @@
                     <button class="p-hamburger is-hamburger">
                         <span>メニュー展開ボタン</span>
                     </button>
-                    <h1 class="c-header-flex-beside__logo"><a href="/"><img src="./images/logo.png" alt="Rishry ロゴ"></a></h1>
+                    <h1 class="c-header-flex-beside__logo"><a href="/"><img src="<?php echo get_theme_file_uri( '/images/logo.png' ); ?>" alt="Rishry ロゴ"></a></h1>
                 </div>
                 <div class class="c-dorower-bg-sp"></div>
                 <div class="p-head-nav-flex">
                     <div class="p-head-nav">
-                        <?php wp_nav_menu(); ?>
+                        <nav class="p-head-nav__navigation">
+                            <ul class="p-head-nav__navigation__menu">
+                                <?php wp_nav_menu( array( 
+                                    'theme_location' => 'header-menu',
+                                    'items_wrap' => '%3$s',
+                                    'container' => false
+                                ) ); ?>
+                            </ul>
+                        </nav>
                         <nav class="p-head-nav__sns">
                             <ul class="p-head-nav__icon c-sns__icon">
                                 <li class="twitter"><a href="#"><img src="images/sns/t_logo.png" alt="twitter"></a></li>
