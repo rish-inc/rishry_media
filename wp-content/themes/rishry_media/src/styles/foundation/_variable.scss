@@ -19,10 +19,15 @@ $border-color--pale--gray: #CCC;
 /*
  * 文字サイズ
  */
+// ベースフォント用
+$font-size--base: 1.6rem;
+
+// 見出しフォント用
+
 //ヘッダー用
 $font-size--header--sp: 1.6rem;
 
-//ヘッダー用　キャッチフレーズ
+//ヘッダー用 キャッチフレーズ
 $font-size--header--catchphrase--pc: 1.2rem;
 
 //サイドバー用
@@ -35,10 +40,9 @@ $font-size--footer--sp: 1.4rem;
 // フッター用 コピーライト
 $font-size--footer-copyright--sp: 1.2rem;
 
+
 /*
  * 角丸
  */
 //ボーダー用
 $radius--border--nomal: 5px;
-
-
