@@ -1141,7 +1141,7 @@ body.is-open {
   .p-side-navigation {
     max-width: 280px;
     height: auto;
-    border: 1px solid #FFC0C8;
+    border: 1px solid #FFD6DB;
   }
 }
 .p-side-navigation__title {

@@ -29,3 +29,16 @@ function rishrymedia_scripts() {
     wp_enqueue_style( 'dorower', get_theme_file_uri( '/src/scripts/dorower.js' ), array(), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'rishrymedia_scripts' );
+
+/*
+ * SVG ファイルをメディアライブラリで表示
+ */
+add_filter( 'upload_mimes', function ( $mimes ) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+});
+
+add_filter( 'manage_media_columns', function ( $columns ) {
+    echo '<style>.media-icon img[src$=".svg"]{width:100%;}</style>';
+    return $columns;
+});
