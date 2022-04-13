@@ -1132,6 +1132,29 @@ body.is-open {
   margin: 0 auto;
 }
 
+.p-share__title {
+  font-size: 2rem;
+  color: #797979;
+  text-align: center;
+  position: relative;
+}
+
+.p-share::before, .p-share::after {
+  position: absolute;
+  width: 13.75px;
+  height: 24.91px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.p-share::before {
+  content: url(../../../../images/parts/border-left.svg);
+}
+
+.p-share::after {
+  content: url(../../../../images/parts/border-right.svg);
+}
+
 .p-share__sns {
   padding-left: inherit;
   display: flex;

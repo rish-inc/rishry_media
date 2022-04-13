@@ -4,8 +4,25 @@
 .p-share {
     margin: 0 auto;
     &__title {
-
+		font-size: 2rem;
+		color: variable.$font-color--gray;
+		text-align: center;
+		position: relative;
     }
+	&::before,
+	&::after {
+		position: absolute;
+		width: 13.75px;
+		height: 24.91px;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	&::before {
+		content: url( ../../../../images/parts/border-left.svg );
+	}
+	&::after {
+		content: url( ../../../../images/parts/border-right.svg );
+	}
     &__sns {
         padding-left: inherit;
         display: flex;

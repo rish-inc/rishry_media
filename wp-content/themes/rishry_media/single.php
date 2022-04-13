@@ -17,7 +17,7 @@
                             <li class="category">カテゴリー名</li>
                         </ul>
                     </div>
-                    <div class="p-eye-catching"><img src="./images/eye-catching02.jpg" alt="記事アイキャッチ画像"></div>
+                    <div class="p-eye-catching"><img src="<?php echo get_theme_file_uri( './images/eye-catching02.jpg' ); ?>" alt="記事アイキャッチ画像"></div>
                     <section class="p-entry-content c-boundary-line">
                         <h3 class="c-barline-border">見出し</h3>
                         <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
@@ -32,9 +32,9 @@
                         <div class="p-share">
                             <p class="p-share__title">SHARE!</p>
                             <ul class="p-share__sns c-sns__icon">
-                                <li><a href=""><img src="./images/sns/t_logo.png" alt="Twitterアイコン画像"></a></li>
-                                <li><a href=""><img src="./images/sns/f_logo.png" alt="Facebookアイコン画像"></a></li>
-                                <li><a href=""><img src="./images/sns/l_logo.png" alt="LINEアイコン画像"></a></li>
+                                <li><a href=""><img src="<?php echo get_theme_file_uri( './images/sns/t_logo.png' ); ?>" alt="Twitterアイコン画像"></a></li>
+                                <li><a href=""><img src="<?php echo get_theme_file_uri( './images/sns/f_logo.png' ); ?>" alt="Facebookアイコン画像"></a></li>
+                                <li><a href=""><img src="<?php echo get_theme_file_uri( './images/sns/l_logo.png' ); ?>" alt="LINEアイコン画像"></a></li>
                             </ul>
                         </div>
                     </section>
@@ -42,9 +42,9 @@
                         <h4 class="p-related__title">関連記事</h4>
                         <ul class="p-related-list">
                             <li class="p-related-item">
-                                <a href="">
+                                <a href="#">
                                     <figure class="p-related-card">
-                                        <img src="./images/eye-catching03.jpg" alt="関連記事アイキャッチ画像">
+                                        <img src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
                                         <figcaption class="p-related-card__caption">
                                             <ul class="p-related-card__caption__data c-time-category-chunk">
                                                 <li class="time"><time>投稿日時</time></li>
@@ -56,9 +56,9 @@
                                 </a>
                             </li>
                             <li class="p-related-item">
-                                <a href="">
+                                <a href="#">
                                     <figure class="p-related-card">
-                                        <img src="./images/eye-catching03.jpg" alt="関連記事アイキャッチ画像">
+                                        <img src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
                                         <figcaption class="p-related-card__caption">
                                             <ul class="p-related-card__caption__data c-time-category-chunk">
                                                 <li class="time"><time>投稿日時</time></li>
@@ -70,9 +70,9 @@
                                 </a>
                             </li>
                             <li class="p-related-item">
-                                <a href="">
+                                <a href="#">
                                     <figure class="p-related-card">
-                                        <img src="./images/eye-catching03.jpg" alt="関連記事アイキャッチ画像">
+                                        <img src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
                                         <figcaption class="p-related-card__caption">
                                             <ul class="p-related-card__caption__data c-time-category-chunk">
                                                 <li class="time"><time>投稿日時</time></li>
@@ -93,7 +93,6 @@
                     </nav>
                 </article>
             </main>
-
             <?php get_sidebar(); ?>
         </div>
 <?php get_footer(); ?>
