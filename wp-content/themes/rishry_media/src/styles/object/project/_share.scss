@@ -6,23 +6,27 @@
     &__title {
 		font-size: 2rem;
 		color: variable.$font-color--gray;
-		text-align: center;
+		width: 100px;
+		margin: 0 auto;
 		position: relative;
+		&::before,
+		&::after {
+			position: absolute;
+			width: 13.75px;
+			height: 24.91px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			bottom: 8px;
+		}
+		&::before {
+			content: url( ../images/parts/border-left.svg );
+			left: -28px;
+		}
+		&::after {
+			content: url( ../images/parts/border-right.svg );
+			right: 0;
+		}
     }
-	&::before,
-	&::after {
-		position: absolute;
-		width: 13.75px;
-		height: 24.91px;
-		background-size: contain;
-		background-repeat: no-repeat;
-	}
-	&::before {
-		content: url( ../../../../images/parts/border-left.svg );
-	}
-	&::after {
-		content: url( ../../../../images/parts/border-right.svg );
-	}
     &__sns {
         padding-left: inherit;
         display: flex;

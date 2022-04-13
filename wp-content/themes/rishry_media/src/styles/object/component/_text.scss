@@ -1,0 +1,14 @@
+@use "foundation/mixin";
+@use "foundation/variable";
+
+.c-text {
+	text-decoration: none;
+	color: variable.$font-color--gray;
+	font-size: 1rem;
+	@include mixin.breakpoint ( tablet ) {
+		font-size: 1.2rem;
+	}
+	@include mixin.breakpoint ( pc ) {
+		font-size: 2rem;
+	}
+}

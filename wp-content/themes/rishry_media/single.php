@@ -24,17 +24,17 @@
                         <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
                         <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
                         <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
-                        <div class="p-entry-tag">
-                            <a href="">#タグ名</a>
-                            <a href="">#タグ名</a>
-                            <a href="">#タグ名</a>
+                        <div class="p-parallel">
+                            <a class="c-text" href="#">#タグ名</a>
+                            <a class="c-text" href="#">#タグ名</a>
+                            <a class="c-text" href="#">#タグ名</a>
                         </div>
                         <div class="p-share">
                             <p class="p-share__title">SHARE!</p>
                             <ul class="p-share__sns c-sns__icon">
-                                <li><a href=""><img src="<?php echo get_theme_file_uri( './images/sns/t_logo.png' ); ?>" alt="Twitterアイコン画像"></a></li>
-                                <li><a href=""><img src="<?php echo get_theme_file_uri( './images/sns/f_logo.png' ); ?>" alt="Facebookアイコン画像"></a></li>
-                                <li><a href=""><img src="<?php echo get_theme_file_uri( './images/sns/l_logo.png' ); ?>" alt="LINEアイコン画像"></a></li>
+                                <li><a href="#"><img src="<?php echo get_theme_file_uri( './images/sns/t_logo.png' ); ?>" alt="Twitterアイコン画像"></a></li>
+                                <li><a href="#"><img src="<?php echo get_theme_file_uri( './images/sns/f_logo.png' ); ?>" alt="Facebookアイコン画像"></a></li>
+                                <li><a href="#"><img src="<?php echo get_theme_file_uri( './images/sns/l_logo.png' ); ?>" alt="LINEアイコン画像"></a></li>
                             </ul>
                         </div>
                     </section>
