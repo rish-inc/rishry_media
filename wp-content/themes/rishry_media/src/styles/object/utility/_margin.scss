@@ -1,0 +1,19 @@
+@use "foundation/mixin";
+@use "foundation/variable";
+
+.u-mt20 {
+	margin-top: 20px;
+}
+
+.u-mt30 {
+	margin-top: 30px;
+	&--tb60 {
+		@include mixin.breakpoint ( tablet ) {
+			margin-top: 60px;
+		}
+	}
+}
+
+.u-mb20 {
+	margin-bottom: 20px;
+}

@@ -2,18 +2,18 @@
 @use "foundation/variable";
 
 .p-head-pc {
-    @include mixin.breakpoint ( pc ) {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin: 0 auto;
-        min-width: 1025px;
-        max-width: 1160px;
-    }
-    img {
-        @include mixin.breakpoint ( pc ) {
-            max-width: 150px;
-            height: auto;
-        }
-    }
+	@include mixin.breakpoint ( pc ) {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin: 0 auto;
+		min-width: 1025px;
+		max-width: 1160px;
+	}
+	img {
+		@include mixin.breakpoint ( pc ) {
+			max-width: 150px;
+			height: auto;
+		}
+	}
 }

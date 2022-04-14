@@ -2,10 +2,10 @@
 @use "foundation/variable";
 
 .l-footer {
-    background: variable.$bgcolor--pink;
-    small {
-        @include mixin.breakpoint ( tablet ) {
-            font-size: variable.$font-size--footer-copyright--sp;
-        }
-    }
+	background: variable.$bgcolor--pink;
+	small {
+		@include mixin.breakpoint ( tablet ) {
+			font-size: variable.$font-size--footer-copyright--sp;
+		}
+	}
 }

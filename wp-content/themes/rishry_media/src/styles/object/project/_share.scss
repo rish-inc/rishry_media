@@ -2,12 +2,13 @@
 @use "foundation/variable";
 
 .p-share {
-    margin: 0 auto;
-    &__title {
+	margin: 0 auto;
+	&__title {
 		font-size: 2rem;
 		color: variable.$font-color--gray;
 		width: 100px;
 		margin: 0 auto;
+		text-align: center;
 		position: relative;
 		&::before,
 		&::after {
@@ -20,15 +21,19 @@
 		}
 		&::before {
 			content: url( ../images/parts/border-left.svg );
-			left: -28px;
+			left: -10px;
 		}
 		&::after {
 			content: url( ../images/parts/border-right.svg );
-			right: 0;
+			right: -5px;
 		}
-    }
-    &__sns {
-        padding-left: inherit;
-        display: flex;
-    }
+	}
+	&__sns {
+		padding-left: inherit;
+		display: flex;
+		justify-content: center;
+		&__list {
+			padding: 0 20px;
+		}
+	}
 }
