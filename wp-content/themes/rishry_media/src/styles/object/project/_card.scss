@@ -10,7 +10,7 @@
 		}
 		&__title {
 			font-size: 1.6rem;
-			font-weight: normal;
+			// font-weight: normal;
 			position: relative;
 			margin: auto;
 			@include mixin.breakpoint ( tablet ) {
@@ -41,6 +41,23 @@
 	&__img {
 		width: 100%;
 		height: auto;
+	}
+	&--entry {
+		padding-left: 20px;
+		&__title {
+			position: relative;
+			&::before,
+			&::after {
+				height: 30px;
+				bottom: 5px;
+			}
+			&::before {
+				left: -20px;
+			}
+			&::after {
+				left: -15px;
+			}
+		}
 	}
 }
 

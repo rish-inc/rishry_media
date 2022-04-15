@@ -17,3 +17,16 @@ body {
 	margin: 0;
 	overflow-x: hidden;
 }
+
+h1, h2, h3, h4, h5 {
+	font-weight: normal;
+	color: variable.$font-color--default;
+}
+
+p {
+	color: variable.$font-color--default;
+}
+
+a {
+	text-decoration: none;
+}

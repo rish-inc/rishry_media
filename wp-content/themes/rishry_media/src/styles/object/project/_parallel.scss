@@ -18,14 +18,28 @@
 			margin-right: 20px;
 			@include mixin.breakpoint ( tablet ) {
 				font-size: 1.5rem;
+		 	}
+			&--relation {
+				list-style: none;
+				font-size: 1rem;
+				margin-right: 10px;
 			}
 		}
-		&__text {
-			color: variable.$font-color--gray;
+	}
+	&--card {
+		display: flex;
+		flex-wrap: nowrap;
+		&__img {
+			width: 100%;
+			max-width: 200px;
 		}
-		&__text-bold {
-			color: variable.$font-color--pink;
-			font-weight: bold;
+		&__caption {
+			&__title {
+				font-size: 1.2rem;
+				@include mixin.breakpoint ( tablet ) {
+					font-size: 1.5rem;
+				}
+			}
 		}
 	}
 }

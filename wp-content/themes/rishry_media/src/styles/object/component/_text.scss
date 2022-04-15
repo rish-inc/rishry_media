@@ -8,4 +8,30 @@
 	@include mixin.breakpoint ( tablet ) {
 		font-size: 1.5rem;
 	}
+	&--title {
+		color: variable.$font-color--default;
+		font-size: variable.$font-size--title--sp;
+		@include mixin.breakpoint ( pc ) {
+			font-size: variable.$font-size--title--pc;
+		}
+	}
+	&--head {
+		font-size: variable.$font-size--head--sp;
+		@include mixin.breakpoint ( pc ) {
+			font-size: variable.$font-size--head--pc;
+		}
+	}
+	&--subhead {
+		font-size: variable.$font-size--sub-head;
+	}
+	&--default {
+		font-size: variable.$font-size--base;
+	}
+	&--gray {
+		color: variable.$font-color--gray;
+	}
+	&--pink {
+		color: variable.$font-color--pink;
+		font-weight: bold;
+	}
 }

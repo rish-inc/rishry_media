@@ -1,0 +1,17 @@
+@use "foundation/mixin";
+@use "foundation/variable";
+
+.p-relation {
+	&__title {
+
+	}
+	&__list {
+		list-style: none;
+		padding: 0;
+		&__item {
+			&__link {
+				
+			}
+		}
+	}
+}

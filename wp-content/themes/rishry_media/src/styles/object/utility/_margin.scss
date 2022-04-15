@@ -7,9 +7,28 @@
 
 .u-mt30 {
 	margin-top: 30px;
-	&--tb60 {
-		@include mixin.breakpoint ( tablet ) {
+	&--pc60 {
+		margin-top: 30px;
+		@include mixin.breakpoint ( pc ) {
 			margin-top: 60px;
+		}
+	}
+}
+
+.u-mb {
+	&--pc10 {
+		@include mixin.breakpoint ( pc ) {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.u-mb15 {
+	margin-bottom: 15px;
+	&--pc30 {
+		margin-bottom: 15px;
+		@include mixin.breakpoint ( pc ) {
+			margin-bottom: 30px;
 		}
 	}
 }
