@@ -1,6 +1,16 @@
 @use "foundation/mixin";
 @use "foundation/variable";
 
+.u-mt12 {
+	margin-top: 12px;
+	&--tb20 {
+		margin-top: 12px;
+		@include mixin.breakpoint ( tablet ) {
+			margin-top: 20px;
+		}
+	}
+}
+
 .u-mt20 {
 	margin-top: 20px;
 }
@@ -25,10 +35,10 @@
 
 .u-mb10 {
 	margin-bottom: 10px;
-	&--pc30 {
+	&--pc20 {
 		margin-bottom: 10px;
 		@include mixin.breakpoint ( pc ) {
-			margin-bottom: 30px;
+			margin-bottom: 20px;
 		}
 	}
 }

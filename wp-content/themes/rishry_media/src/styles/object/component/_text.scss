@@ -24,6 +24,9 @@
 	&--subhead {
 		@include mixin.font-rem( 18 );
 	}
+	&--little {
+		@include mixin.font-rem( 15 );
+	}
 	&--default {
 		@include mixin.font-rem( 16 );
 	}

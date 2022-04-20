@@ -17,7 +17,7 @@
 		a {
 			color: #030303;
 			text-decoration: none;
-			font-size: 1.5rem;
+			@include mixin.font-rem( 15 );
 		}
 		&__before-to,
 		&__page-active,

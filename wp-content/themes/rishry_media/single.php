@@ -40,10 +40,10 @@
 					</section>
 					<aside class="p-relation c-boundary-line">
 						<h4 class="p-relation__title c-text--subhead u-mt30">関連記事</h4>
-						<ul class="p-relation__list">
-							<li class="p-relation__list__item">
+						<ul class="p-relation__list u-mt12--tb20">
+							<li class="p-relation__list__item u-mb10--pc20">
 								<a class="p-relation__list__item__link" href="#">
-									<figure class="p-parallel--card u-mb10--pc30">
+									<figure class="p-parallel--card">
 										<img class="p-parallel--card__img" src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
 										<figcaption class="p-parallel--card__caption">
 											<ul class="p-parallel--data">
@@ -55,9 +55,9 @@
 									</figure>
 								</a>
 							</li>
-							<li class="p-relation__list__item">
+							<li class="p-relation__list__item u-mb10--pc20">
 								<a class="p-relation__list__item__link" href="#">
-									<figure class="p-parallel--card u-mb10--pc30">
+									<figure class="p-parallel--card">
 										<img class="p-parallel--card__img" src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
 										<figcaption class="p-parallel--card__caption">
 											<ul class="p-parallel--data">
@@ -69,9 +69,9 @@
 									</figure>
 								</a>
 							</li>
-							<li class="p-relation__list__item">
+							<li class="p-relation__list__item u-mb10--pc20">
 								<a class="p-relation__list__item__link" href="#">
-									<figure class="p-parallel--card u-mb10--pc30">
+									<figure class="p-parallel--card">
 										<img class="p-parallel--card__img" src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
 										<figcaption class="p-parallel--card__caption">
 											<ul class="p-parallel--data">
@@ -87,8 +87,8 @@
 					</aside>
 					<nav class="p-pager">
 						<ul class="p-prev-next">
-							<li class="prev">前へ</li>
-							<li class="next">次へ</li>
+							<a href="#"><li class="c-text--little">前へ</li></a>
+							<a href="#"><li class="c-text--little">次へ</li></a>
 						</ul>
 					</nav>
 				</article>

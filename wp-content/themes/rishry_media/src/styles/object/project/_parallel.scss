@@ -29,11 +29,16 @@
 	&--card {
 		display: flex;
 		flex-wrap: nowrap;
+		height: 100%;
 		&__img {
 			width: 30%;
-			// max-width: 200px;
+			object-fit: cover;
 		}
 		&__caption {
+			margin-left: 10px;
+			@include mixin.breakpoint ( tablet ) {
+				margin-left: 20px;
+			}
 			&__title {
 				@include mixin.font-rem( 12 );
 				@include mixin.breakpoint ( tablet ) {

@@ -9,8 +9,15 @@
 		list-style: none;
 		padding: 0;
 		&__item {
+			height: 100px;
 			&__link {
-				
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+				transition: 0.5s;
+				&:hover {
+					opacity: 0.5;
+				}
 			}
 		}
 	}
