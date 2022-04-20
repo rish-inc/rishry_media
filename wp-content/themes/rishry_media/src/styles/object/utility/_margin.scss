@@ -23,6 +23,16 @@
 	}
 }
 
+.u-mb10 {
+	margin-bottom: 10px;
+	&--pc30 {
+		margin-bottom: 10px;
+		@include mixin.breakpoint ( pc ) {
+			margin-bottom: 30px;
+		}
+	}
+}
+
 .u-mb15 {
 	margin-bottom: 15px;
 	&--pc30 {

@@ -14,14 +14,14 @@
 		&__text,
 		&__text-bold {
 			list-style: none;
-			font-size: 1.2rem;
+			@include mixin.font-rem( 12 );
 			margin-right: 20px;
 			@include mixin.breakpoint ( tablet ) {
-				font-size: 1.5rem;
+				@include mixin.font-rem( 15 );
 		 	}
 			&--relation {
 				list-style: none;
-				font-size: 1rem;
+				@include mixin.font-rem( 10 );
 				margin-right: 10px;
 			}
 		}
@@ -30,14 +30,14 @@
 		display: flex;
 		flex-wrap: nowrap;
 		&__img {
-			width: 100%;
-			max-width: 200px;
+			width: 30%;
+			// max-width: 200px;
 		}
 		&__caption {
 			&__title {
-				font-size: 1.2rem;
+				@include mixin.font-rem( 12 );
 				@include mixin.breakpoint ( tablet ) {
-					font-size: 1.5rem;
+					@include mixin.font-rem( 15 );
 				}
 			}
 		}

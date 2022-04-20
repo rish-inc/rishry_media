@@ -5,7 +5,7 @@
 	background: variable.$bgcolor--pink;
 	small {
 		@include mixin.breakpoint ( tablet ) {
-			font-size: variable.$font-size--footer-copyright--sp;
+			@include mixin.font-rem( 12 );
 		}
 	}
 }

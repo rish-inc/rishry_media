@@ -63,7 +63,6 @@ input, button, textarea, select {
 }
 
 html {
-  font-size: 62.5%;
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
 }
 
@@ -114,7 +113,7 @@ a {
 
 @media (min-width: 415px) {
   .l-footer small {
-    font-size: 1.2rem;
+    font-size: 0.75rem;
   }
 }
 .l-header {
@@ -135,7 +134,6 @@ a {
 @media (min-width: 1025px) {
   .l-header__catchphrase {
     display: block;
-    font-size: 1.2rem;
     padding: 14px 10px;
     margin: 0 auto;
     max-width: 1140px;
@@ -429,39 +427,39 @@ input[type=text] {
 .c-text {
   text-decoration: none;
   color: #797979;
-  font-size: 1rem;
+  font-size: 0.0625rem;
 }
 
 @media (min-width: 415px) {
   .c-text {
-    font-size: 1.5rem;
+    font-size: 0.75rem;
   }
 }
 .c-text--title {
   color: #030303;
-  font-size: 2.4rem;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 1025px) {
   .c-text--title {
-    font-size: 2.6rem;
+    font-size: 1.625rem;
   }
 }
 .c-text--head {
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 @media (min-width: 1025px) {
   .c-text--head {
-    font-size: 2.6rem;
+    font-size: 1.5rem;
   }
 }
 .c-text--subhead {
-  font-size: 1.8rem;
+  font-size: 1.125rem;
 }
 
 .c-text--default {
-  font-size: 1.6rem;
+  font-size: 1rem;
 }
 
 .c-text--gray {
@@ -475,7 +473,7 @@ input[type=text] {
 
 .c-title {
   font-weight: normal;
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -483,15 +481,19 @@ input[type=text] {
 
 @media (min-width: 415px) {
   .c-title {
-    font-size: 2.6rem;
+    font-size: 1.625rem;
   }
 }
 @media (min-width: 1025px) {
   .c-title {
-    font-size: 3rem;
+    font-size: 1.875rem;
     margin: 0;
   }
 }
+.c-title--sub {
+  font-size: 0.75rem;
+}
+
 .error {
   text-align: center;
   padding: 50px 0 40px;
@@ -592,19 +594,19 @@ input[type=text] {
   }
 }
 .p-card__caption__title {
-  font-size: 1.6rem;
+  font-size: 1rem;
   position: relative;
   margin: auto;
 }
 
 @media (min-width: 415px) {
   .p-card__caption__title {
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 }
 @media (min-width: 1025px) {
   .p-card__caption__title {
-    font-size: 2.4rem;
+    font-size: 1.5rem;
   }
 }
 .p-card__caption__title::before, .p-card__caption__title::after {
@@ -864,7 +866,7 @@ input[type=text] {
 .p-footer__inner__navigation__menu li a {
   text-decoration: none;
   color: #030303;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 
 .p-hamburger {
@@ -1033,7 +1035,7 @@ body.is-open {
 .p-head-nav__navigation__menu a {
   text-decoration: none;
   color: #030303;
-  font-size: 1.6rem;
+  font-size: 1rem;
   padding-left: 15px;
 }
 
@@ -1124,6 +1126,21 @@ body.is-open {
     height: auto;
   }
 }
+.p-inside__head {
+  position: relative;
+  padding-left: 10px;
+}
+
+.p-inside__head::before {
+  height: 30px;
+  left: 0;
+}
+
+@media (min-width: 1025px) {
+  .p-inside__head::before {
+    bottom: 5px;
+  }
+}
 @media (min-width: 1025px) {
   .p-main {
     max-width: 70%;
@@ -1154,18 +1171,18 @@ body.is-open {
 
 .p-parallel--data__text, .p-parallel--data__text-bold {
   list-style: none;
-  font-size: 1.2rem;
+  font-size: 0.75rem;
   margin-right: 20px;
 }
 
 @media (min-width: 415px) {
   .p-parallel--data__text, .p-parallel--data__text-bold {
-    font-size: 1.5rem;
+    font-size: 0.9375rem;
   }
 }
 .p-parallel--data__text--relation, .p-parallel--data__text-bold--relation {
   list-style: none;
-  font-size: 1rem;
+  font-size: 0.625rem;
   margin-right: 10px;
 }
 
@@ -1175,17 +1192,16 @@ body.is-open {
 }
 
 .p-parallel--card__img {
-  width: 100%;
-  max-width: 200px;
+  width: 30%;
 }
 
 .p-parallel--card__caption__title {
-  font-size: 1.2rem;
+  font-size: 0.75rem;
 }
 
 @media (min-width: 415px) {
   .p-parallel--card__caption__title {
-    font-size: 1.5rem;
+    font-size: 0.9375rem;
   }
 }
 .p-post-list {
@@ -1248,7 +1264,7 @@ body.is-open {
 }
 
 .p-share__title {
-  font-size: 2rem;
+  font-size: 1.25rem;
   color: #797979;
   width: 100px;
   margin: 0 auto;
@@ -1294,7 +1310,7 @@ body.is-open {
 }
 .p-side-navigation__title {
   font-weight: normal;
-  font-size: 2rem;
+  font-size: 1.25rem;
   margin-top: 20px;
   display: flex;
   align-items: center;
@@ -1323,7 +1339,7 @@ body.is-open {
   }
 }
 .p-side-navigation__main-menu__word {
-  font-size: 1.2rem;
+  font-size: 0.75rem;
   margin: 0 0 3% 10%;
   position: relative;
 }
@@ -1335,7 +1351,7 @@ body.is-open {
 }
 @media (min-width: 1025px) {
   .p-side-navigation__main-menu__word {
-    font-size: 1.5rem;
+    font-size: 0.9375rem;
     margin: 0 0 8% 20%;
   }
 }
@@ -1410,6 +1426,19 @@ body.is-open {
 @media (min-width: 1025px) {
   .u-mb--pc10 {
     margin-bottom: 10px;
+  }
+}
+.u-mb10 {
+  margin-bottom: 10px;
+}
+
+.u-mb10--pc30 {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1025px) {
+  .u-mb10--pc30 {
+    margin-bottom: 30px;
   }
 }
 .u-mb15 {

@@ -55,7 +55,7 @@
 			a {
 				text-decoration: none;
 				color: variable.$font-color--default;
-				font-size: variable.$font-size--header--sp;
+				@include mixin.font-rem( 16 );
 				padding-left: 15px;
 				@include mixin.breakpoint ( pc ) {
 					padding: 0;

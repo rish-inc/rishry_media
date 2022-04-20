@@ -4,7 +4,7 @@
 .p-share {
 	margin: 0 auto;
 	&__title {
-		font-size: 2rem;
+		@include mixin.font-rem( 20 );
 		color: variable.$font-color--gray;
 		width: 100px;
 		margin: 0 auto;

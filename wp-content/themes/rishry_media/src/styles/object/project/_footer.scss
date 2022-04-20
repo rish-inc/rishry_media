@@ -48,7 +48,7 @@
 					a {
 						text-decoration: none;
 						color: variable.$font-color--default;
-						font-size: variable.$font-size--footer--sp;
+						@include mixin.font-rem( 14 );
 					}
 				}
 			}

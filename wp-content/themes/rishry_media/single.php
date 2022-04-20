@@ -18,8 +18,8 @@
 						</ul>
 					</div>
 					<div class="p-eye-catching"><img src="<?php echo get_theme_file_uri( './images/eye-catching02.jpg' ); ?>" alt="記事アイキャッチ画像"></div>
-					<section class="p-entry-content u-mt30--pc60 u-mb20">
-						<h3 class="c-text--head c-barline-border u-mb20">見出し</h3>
+					<section class="p-inside u-mt30--pc60 u-mb20">
+						<h3 class="p-inside__head c-text--head c-barline-border u-mb20">見出し</h3>
 						<p class="c-text--default">本文です本文です本文です本文です本文です本文です本文です本文です</p>
 						<p class="c-text--default">本文です本文です本文です本文です本文です本文です本文です本文です</p>
 						<p class="c-text--default">本文です本文です本文です本文です本文です本文です本文です本文です</p>
@@ -43,7 +43,7 @@
 						<ul class="p-relation__list">
 							<li class="p-relation__list__item">
 								<a class="p-relation__list__item__link" href="#">
-									<figure class="p-parallel--card">
+									<figure class="p-parallel--card u-mb10--pc30">
 										<img class="p-parallel--card__img" src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
 										<figcaption class="p-parallel--card__caption">
 											<ul class="p-parallel--data">
@@ -57,7 +57,7 @@
 							</li>
 							<li class="p-relation__list__item">
 								<a class="p-relation__list__item__link" href="#">
-									<figure class="p-parallel--card">
+									<figure class="p-parallel--card u-mb10--pc30">
 										<img class="p-parallel--card__img" src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
 										<figcaption class="p-parallel--card__caption">
 											<ul class="p-parallel--data">
@@ -71,7 +71,7 @@
 							</li>
 							<li class="p-relation__list__item">
 								<a class="p-relation__list__item__link" href="#">
-									<figure class="p-parallel--card">
+									<figure class="p-parallel--card u-mb10--pc30">
 										<img class="p-parallel--card__img" src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
 										<figcaption class="p-parallel--card__caption">
 											<ul class="p-parallel--data">

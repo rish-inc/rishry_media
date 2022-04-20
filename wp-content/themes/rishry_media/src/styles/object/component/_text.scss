@@ -4,28 +4,28 @@
 .c-text {
 	text-decoration: none;
 	color: variable.$font-color--gray;
-	font-size: 1rem;
+	@include mixin.font-rem( 1 );
 	@include mixin.breakpoint ( tablet ) {
-		font-size: 1.5rem;
+		@include mixin.font-rem( 12 );
 	}
 	&--title {
 		color: variable.$font-color--default;
-		font-size: variable.$font-size--title--sp;
+		@include mixin.font-rem( 24 );
 		@include mixin.breakpoint ( pc ) {
-			font-size: variable.$font-size--title--pc;
+			@include mixin.font-rem( 26 );
 		}
 	}
 	&--head {
-		font-size: variable.$font-size--head--sp;
+		@include mixin.font-rem( 20 );
 		@include mixin.breakpoint ( pc ) {
-			font-size: variable.$font-size--head--pc;
+			@include mixin.font-rem( 24 );
 		}
 	}
 	&--subhead {
-		font-size: variable.$font-size--sub-head;
+		@include mixin.font-rem( 18 );
 	}
 	&--default {
-		font-size: variable.$font-size--base;
+		@include mixin.font-rem( 16 );
 	}
 	&--gray {
 		color: variable.$font-color--gray;
