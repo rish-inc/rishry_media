@@ -9,11 +9,11 @@
 				</form>
 			</div>
 			<main class="p-main">
-				<article class="p-detail">
+				<article class="p-detail u-mb30--tb60">
 					<div class="p-card--entry u-mb15--pc30">
-						<h2 class="p-card--entry__title c-text--title c-barline-border u-mb--pc10">ブログタイトル</h2>
+						<h2 class="p-card--entry__title c-text--title c-barline-border u-mb--pc10"><?php the_title(); ?></h2>
 						<ul class="p-parallel--data">
-							<li class="p-parallel--data__text c-text--gray"><time>投稿日時</time></li>
+							<li class="p-parallel--data__text c-text--gray"><time><?php echo get_the_date(); ?></time></li>
 							<li class="p-parallel--data__text-bold c-text--pink">カテゴリー名</li>
 						</ul>
 					</div>
@@ -85,12 +85,14 @@
 							</li>
 						</ul>
 					</aside>
-					<nav class="p-pager">
-						<ul class="p-prev-next">
-							<a href="#"><li class="c-text--little">前へ</li></a>
-							<a href="#"><li class="c-text--little">次へ</li></a>
-						</ul>
-					</nav>
+					<ul class="p-link--page u-mt30">
+						<?php if ( get_previous_post()): ?>
+							<li class="p-link--page__btn c-text--little"><?php previous_post_link('%link', '前へ'); ?></li>
+						<?php endif; ?>
+						<?php if ( get_next_post()): ?>
+							<li class="p-link--page__btn c-text--little"><?php next_post_link('%link', '次へ'); ?></li>
+						<?php endif; ?>
+					</ul>
 				</article>
 			</main>
 			<?php get_sidebar(); ?>

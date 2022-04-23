@@ -56,3 +56,13 @@
 .u-mb20 {
 	margin-bottom: 20px;
 }
+
+.u-mb30 {
+	margin-bottom: 30px;
+	&--tb60 {
+		margin-bottom: 30px;
+		@include mixin.breakpoint ( tablet ) {
+			margin-bottom: 60px;
+		}
+	}
+}

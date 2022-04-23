@@ -42,3 +42,15 @@ add_filter( 'manage_media_columns', function ( $columns ) {
 	echo '<style>.media-icon img[src$=".svg"]{width:100%;}</style>';
 	return $columns;
 });
+
+/*
+ * 「前へ」「次へ」に class 名を付与
+ */
+function add_prev_post_link_class( $output ) {
+	return str_replace( '<a href=', '<a class="p-link--page__btn__prev" href=', $output ); // 前の記事へのリンク
+}
+add_filter( 'previous_post_link', 'add_prev_post_link_class' );
+function add_next_post_link_class( $output ) {
+	return str_replace( '<a href=', '<a class="p-link--page__btn__next" href=', $output ); // 次の記事へのリンク
+}
+add_filter( 'next_post_link', 'add_next_post_link_class' );

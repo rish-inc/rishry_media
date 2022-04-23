@@ -2,6 +2,10 @@
 @use "foundation/variable";
 
 .p-main {
+	padding: 0 10px;
+	@include mixin.breakpoint ( tablet ) {
+		padding: 0 20px;
+	}
 	@include mixin.breakpoint ( pc ) {
 		max-width: 70%;
 	}
