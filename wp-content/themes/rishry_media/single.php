@@ -21,7 +21,7 @@
 								<li class="p-parallel--data__text-bold c-text--pink"><?php the_category( ', ' ); ?></li>
 							</ul>
 						</div>
-						<div class="p-eye-catching"><img src="<?php echo get_theme_file_uri( './images/eye-catching02.jpg' ); ?>" alt="記事アイキャッチ画像"></div>
+						<div class="p-eye-catching"><?php the_post_thumbnail(); ?></div>
 						<section class="p-inside u-mt30--pc60 u-mb20">
 							<h3 class="p-inside__head c-text--head c-barline-border u-mb20">見出し</h3>
 							<p class="c-text--default">本文です本文です本文です本文です本文です本文です本文です本文です</p>

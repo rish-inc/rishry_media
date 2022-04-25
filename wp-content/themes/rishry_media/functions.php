@@ -54,3 +54,14 @@ function add_next_post_link_class( $output ) {
 	return str_replace( '<a href=', '<a class="p-link--page__btn__next" href=', $output ); // 次の記事へのリンク
 }
 add_filter( 'next_post_link', 'add_next_post_link_class' );
+
+
+/*
+ * アイキャッチ画像設定
+ */
+add_filter( 'post_thumbnail_html', 'custom_attribute' );
+function custom_attribute( $html ) {
+	// class を削除
+	$html = preg_replace( '/(width|height)="\d*"\s/', '', $html );
+	return $html;
+}
