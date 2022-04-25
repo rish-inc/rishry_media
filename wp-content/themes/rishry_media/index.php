@@ -20,7 +20,7 @@
 							<figcaption class="p-card__caption">
 								<h3 class="p-card__caption__title c-barline-border">ブログタイトル</h3>
 								<ul class="p-parallel--data">
-									<li class="p-parallel--data__text c-text--gray"><time>投稿日時</time></li>
+									<li class="p-parallel--data__text c-text--gray"><time><?php echo get_the_date(); ?></time></li>
 									<li class="p-parallel--data__text-bold c-text--pink">カテゴリー名</li>
 								</ul>
 							</figcaption>
@@ -32,7 +32,7 @@
 							<figcaption class="p-card__caption">
 								<h3 class="p-card__caption__title c-barline-border">ブログタイトル</h3>
 								<ul class="p-parallel--data">
-									<li class="p-parallel--data__text c-text--gray"><time>投稿日時</time></li>
+									<li class="p-parallel--data__text c-text--gray"><time><?php echo get_the_date(); ?></time></li>
 									<li class="p-parallel--data__text-bold c-text--pink">カテゴリー名</li>
 								</ul>
 							</figcaption>
@@ -44,7 +44,7 @@
 							<figcaption class="p-card__caption">
 								<h3 class="p-card__caption__title c-barline-border">ブログタイトル</h3>
 								<ul class="p-parallel--data">
-									<li class="p-parallel--data__text c-text--gray"><time>投稿日時</time></li>
+									<li class="p-parallel--data__text c-text--gray"><time><?php echo get_the_date(); ?></time></li>
 									<li class="p-parallel--data__text-bold c-text--pink">カテゴリー名</li>
 								</ul>
 							</figcaption>
