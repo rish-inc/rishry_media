@@ -2,9 +2,9 @@
 @use "foundation/variable";
 
 .u-border-pc-none {
-    @include mixin.breakpoint ( pc ) {
-        &:last-child {
-            border: 0;
-        }
-    }
+	@include mixin.breakpoint ( pc ) {
+		&:last-child {
+			border: 0;
+		}
+	}
 }

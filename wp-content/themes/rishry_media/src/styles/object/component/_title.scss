@@ -2,16 +2,19 @@
 @use "foundation/variable";
 
 .c-title {
-    font-weight: normal;
-    font-size: 2.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include mixin.breakpoint ( tablet ) {
-         font-size: 2.6rem;
-    }
-    @include mixin.breakpoint ( pc ) {
-        font-size: 3.0rem;
-        margin: 0;
-    }
+	font-weight: normal;
+	@include mixin.font-rem( 24 );
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include mixin.breakpoint ( tablet ) {
+		@include mixin.font-rem( 26 );
+	}
+	@include mixin.breakpoint ( pc ) {
+		@include mixin.font-rem( 30 );
+		margin: 0;
+	}
+	&--sub {
+		@include mixin.font-rem( 12 );
+	}
 }

@@ -1,0 +1,40 @@
+@use "foundation/mixin";
+@use "foundation/variable";
+
+.c-text {
+	text-decoration: none;
+	color: variable.$font-color--gray;
+	@include mixin.font-rem( 1 );
+	@include mixin.breakpoint ( tablet ) {
+		@include mixin.font-rem( 12 );
+	}
+	&--title {
+		color: variable.$font-color--default;
+		@include mixin.font-rem( 24 );
+		@include mixin.breakpoint ( pc ) {
+			@include mixin.font-rem( 26 );
+		}
+	}
+	&--head {
+		@include mixin.font-rem( 20 );
+		@include mixin.breakpoint ( pc ) {
+			@include mixin.font-rem( 24 );
+		}
+	}
+	&--subhead {
+		@include mixin.font-rem( 18 );
+	}
+	&--little {
+		@include mixin.font-rem( 15 );
+	}
+	&--default {
+		@include mixin.font-rem( 16 );
+	}
+	&--gray {
+		color: variable.$font-color--gray;
+	}
+	&--pink {
+		color: variable.$font-color--pink;
+		font-weight: bold;
+	}
+}
