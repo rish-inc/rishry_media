@@ -1,15 +1,21 @@
-<footer class="l-footer p-footer">
-			<div class="p-footer__inner">
-				<nav class="p-footer__inner__navigation">
-					<ul class="p-footer__inner__navigation__menu">
-						<?php wp_nav_menu( array(
-							'theme_location' => 'footer-menu',
-							'items_wrap' => '%3$s',
-							'container' => false
-						) ); ?>
-					</ul>
+<footer class="l-footer">
+			<div class="p-footer">
+				<nav class="p-footer__menu u-mb100">
+					<?php wp_nav_menu( array(
+						'theme_location' => 'footer-menu',
+						'menu_class' => 'p-footer__menu__list',
+						'container' => false
+					) ); ?>
 				</nav>
-				<address class="p-copyright"><small>&copy; <?php bloginfo( 'name' ); ?></small></address>
+				<?php wp_nav_menu( array(
+					'theme_location' => 'sns-list',
+					'menu_class' => 'p-link--list u-mb20', // class 名を複数指定
+					'add_li_class' => 'p-link--list__sns', // li タグへ class を追加
+					'add_a_class' => 'c-text--sns', // a タグへ class を追加
+					'container' => false
+				) );
+				?>
+				<address class="c-text--copyright"><small>&copy; <?php bloginfo( 'name' ); ?></small></address>
 			</div>
 		</footer>
 		<?php wp_footer(); ?>

@@ -27,6 +27,10 @@ p {
 	color: variable.$font-color--default;
 }
 
+ul {
+	padding-left: 0;
+}
+
 li {
 	list-style: none;
 }
