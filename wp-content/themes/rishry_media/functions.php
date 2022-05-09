@@ -4,7 +4,8 @@
 	add_theme_support( 'post-thumbnails' ); //アイキャッチ表示
 	register_nav_menus( array (
 		'header-menu' => 'header-menu',
-		'footer-menu' => 'footer-menu'
+		'footer-menu' => 'footer-menu',
+		'sns-list' => 'sns-list'
 	));
 
 
@@ -65,6 +66,28 @@ function custom_attribute( $html ) {
 	$html = preg_replace( '/(width|height)="\d*"\s/', '', $html );
 	return $html;
 }
+
+
+/*
+ * li a に任意の class を追加
+ */
+// wp_nav_menuのliにclass追加
+function rishrymedia_additional_class_on_li( $classes, $item, $args ) {
+	if (isset( $args -> add_li_class )) {
+		$classes['class'] = $args -> add_li_class;
+	}
+	return $classes;
+}
+add_filter( 'nav_menu_css_class', 'rishrymedia_additional_class_on_li', 1, 3 );
+
+// wp_nav_menuのaにclass追加
+function rishrymedia_additional_class_on_a($classes, $item, $args) {
+	if (isset( $args -> add_a_class )) {
+		$classes['class'] = $args -> add_a_class;
+	}
+	return $classes;
+}
+add_filter( 'nav_menu_link_attributes', 'rishrymedia_additional_class_on_a', 1, 3 );
 
 
 /*
