@@ -1,15 +1,10 @@
 <?php get_header(); ?>
-		<div class="l-contents">
+		<main class="l-main">
 			<div class="p-search">
-				<form class="p-search__window c-search-window" action="/" name="search-form" method="post">
-					<input type="text" name="search" placeholder="Search">
-					<button type="submit" class="c-search-window__button" aria-label="search" value="">
-						<img class="c-search-window__img" src="./images/search/search.svg" alt="">
-					</button>
-				</form>
+				<?php get_search_form(); ?>
 			</div>
-			<main class="p-main">
-				<article class="p-detail">
+			<article class="p-contents">
+				<section class="p-detail">
 					<ul class="p-breadcrumb c-breadcrumb-list">
 						<li class="p-breadcrumb__item"><a href="/">HOME</a></li>
 						<li class="p-breadcrumb__item"><a href="">BRAND</a></li>
@@ -52,7 +47,7 @@
 							</figure>
 						</li>
 					</ul>
-				</article>
+				</section>
 				<ul class="c-pagination">
 					<li class="c-pagination__list"><a class="c-pagination__list__before-to" href="#">前へ</a></li>
 					<li class="c-pagination__list"><a class="c-pagination__list__page-active" href="#">1</a></li>
@@ -61,7 +56,7 @@
 					<li class="c-pagination__list"><a class="c-pagination__list__extend" href="#">…</a></li>
 					<li class="c-pagination__list"><a class="c-pagination__list__next-for" href="#">次へ</a></li>
 				</ul>
-			</main>
+			</article>
 			<?php get_sidebar(); ?>
-		</div>
+		</main>
 <?php get_footer(); ?>

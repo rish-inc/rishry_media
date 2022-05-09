@@ -1,7 +1,7 @@
 @use "foundation/mixin";
 @use "foundation/variable";
 
-.p-main {
+.p-contents {
 	padding: 0 10px;
 	@include mixin.breakpoint ( tablet ) {
 		padding: 0 20px;

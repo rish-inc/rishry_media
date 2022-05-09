@@ -1,7 +1,7 @@
 @use "foundation/mixin";
 @use "foundation/variable";
 
-.p-mainvisual {
+.p-contentsvisual {
 	img {
 		max-width: 100%;
 		@include mixin.breakpoint ( pc ) {

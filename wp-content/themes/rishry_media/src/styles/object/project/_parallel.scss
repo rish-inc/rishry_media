@@ -2,6 +2,22 @@
 @use "foundation/variable";
 
 .p-parallel {
+	&--head {
+		display: none;
+		@include mixin.breakpoint ( pc ) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		&__search {
+			visibility: collapse;
+			@include mixin.breakpoint ( pc ) {
+				visibility: visible;
+				width: 300px;
+			}
+		}
+	}
+
 	a {
 		margin-right: 10px;
 		@include mixin.breakpoint ( tablet ) {

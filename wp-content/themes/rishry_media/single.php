@@ -1,14 +1,9 @@
 <?php get_header(); ?>
-		<div class="l-contents">
+		<div class="l-main">
 			<div class="p-search">
-				<form class="p-search__window c-search-window" action="/" name="search-form" method="post">
-					<input type="text" name="search" placeholder="Search">
-					<button type="submit" class="c-search-window__button" aria-label="search" value="">
-						<img class="c-search-window__img" src="./images/search/search.svg" alt="">
-					</button>
-				</form>
+				<?php get_search_form(); ?>
 			</div>
-			<main class="p-main">
+			<main class="p-contents">
 				<?php
 					if( have_posts() ):
 						while( have_posts() ):
@@ -18,11 +13,24 @@
 							<h2 class="p-card--entry__title c-text--title c-barline-border u-mb--pc10"><?php the_title(); ?></h2>
 							<ul class="p-parallel--data">
 								<li class="p-parallel--data__text c-text--gray"><time><?php echo get_the_date(); ?></time></li>
-								<li class="p-parallel--data__text-bold c-text--pink"><?php the_category( ', ' ); ?></li>
+								<!-- <li class="p-parallel--data__text-bold c-text--pink"></li> -->
+								<?php
+									$cats = get_the_category(); // get_the_category(); を変数 $cats へ代入
+									if( $cats ) : // $cats が空ではない場合
+										foreach( $cats as $cat ) : ?> <!-- $cats の中にある要素を $cat へ代入。 $cat を全てとりだすまでループを続ける -->
+											<li class="p-parallel--data__text-bold c-text--pink"> <!-- li タグ内に $cat がある場合、 -->
+												<?php
+													echo esc_html( $cat -> name ); // カテゴリー名を出力
+												?>
+											</li>
+										<?php endforeach;
+									endif;
+								?>
 							</ul>
 						</div>
-						<div class="p-eye-catching"><?php the_post_thumbnail(); ?></div>
+						<div class="p-eyecatch"><?php the_post_thumbnail(); ?></div>
 						<section class="p-inside u-mt30--pc60 u-mb20">
+							<?php the_content(); ?>
 							<h3 class="p-inside__head c-text--head c-barline-border u-mb20">見出し</h3>
 							<p class="c-text--default">本文です本文です本文です本文です本文です本文です本文です本文です</p>
 							<p class="c-text--default">本文です本文です本文です本文です本文です本文です本文です本文です</p>
