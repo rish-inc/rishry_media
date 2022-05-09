@@ -1,15 +1,10 @@
 <?php get_header(); ?>
-		<div class="l-contents">
+		<main class="l-main">
 			<div class="p-search">
-				<form class="p-search__window c-search-window" action="/" name="search-form" method="post">
-					<input type="text" name="search" placeholder="Search">
-					<button type="submit" class="c-search-window__button" aria-label="search" value="">
-						<img class="c-search-window__img" src="./images/search/search.svg" alt="">
-					</button>
-				</form>
+				<?php get_search_form(); ?>
 			</div>
-			<main class="p-main">
-				<article class="p-detail p-contact">
+			<article class="p-contents">
+				<section class="p-detail p-contact">
 					<h1 class="c-title c-headline-border">お問い合わせ</h1>
 					<form class="p-contact__form" action="#">
 						<dl>
@@ -48,10 +43,10 @@
 							<input type="submit" class="button" value="送信">
 						</div>
 					</form>
-				</article>
-			</main>
+				</section>
+			</article>
 
 			<?php get_sidebar(); ?>
-		</div>
+		</main>
 
 <?php get_footer(); ?>

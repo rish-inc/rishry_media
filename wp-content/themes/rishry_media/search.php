@@ -1,14 +1,9 @@
 <?php get_header(); ?>
-		<div class="l-contents">
+		<div class="l-main">
 			<div class="p-search">
-				<form class="p-search__window c-search-window" action="/" name="search-form" method="post">
-					<input type="text" name="search" placeholder="Search">
-					<button type="submit" class="c-search-window__button" aria-label="search" value="">
-						<img class="c-search-window__img" src="./images/search/search.svg" alt="">
-					</button>
-				</form>
+				<?php get_search_form(); ?>
 			</div>
-			<main class="p-main">
+			<main class="p-contents">
 				<article class="p-detail__search">
 					<p class="p-detail__search__results">○○の検索結果</p>
 					<ul class="p-post-list">

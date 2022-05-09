@@ -27,7 +27,7 @@
 					<h1 class="c-header-flex-beside__logo"><a href="/"><img src="<?php echo get_theme_file_uri( '/images/logo.png' ); ?>" alt="Rishry ロゴ"></a></h1>
 				</div>
 				<div class class="c-dorower-bg-sp"></div>
-				<div class="p-head-nav-flex">
+				<div class="p-parallel--head">
 					<div class="p-head-nav">
 						<nav class="p-head-nav__navigation">
 							<ul class="p-head-nav__navigation__menu">
@@ -46,7 +46,7 @@
 							</ul>
 						</nav>
 					</div>
-					<div class="p-head-nav-flex__search">
+					<div class="p-parallel--head__search">
 						<?php get_search_form(); ?>
 					</div>
 				</div>

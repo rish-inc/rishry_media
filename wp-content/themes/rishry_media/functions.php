@@ -65,3 +65,16 @@ function custom_attribute( $html ) {
 	$html = preg_replace( '/(width|height)="\d*"\s/', '', $html );
 	return $html;
 }
+
+
+/*
+ * カテゴリーを取得
+ */
+// function rishrymedia_category() {
+// 	$cats = get_the_category();
+// 	if( $cats ) : // $cats が空ではない場合
+// 		foreach( $cats as $cat ) :
+// 			echo esc_html( $cat -> name ); // カテゴリー名を出力
+// 		endforeach;
+// 	endif;
+// }
