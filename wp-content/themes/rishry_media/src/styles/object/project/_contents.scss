@@ -1,0 +1,12 @@
+@use "foundation/mixin";
+@use "foundation/variable";
+
+.p-contents {
+	padding: 0 10px;
+	@include mixin.breakpoint ( tablet ) {
+		padding: 0 20px;
+	}
+	@include mixin.breakpoint ( pc ) {
+		max-width: 70%;
+	}
+}

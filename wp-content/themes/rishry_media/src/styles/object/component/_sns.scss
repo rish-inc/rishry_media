@@ -1,11 +1,11 @@
 @use "foundation/mixin";
 @use "foundation/variable";
 
-.p-contentsvisual {
-	img {
-		max-width: 100%;
+.c-sns {
+	&--icon {
+		list-style: none;
 		@include mixin.breakpoint ( pc ) {
-			width: 100%;
+			margin: 0 auto;
 		}
 	}
 }

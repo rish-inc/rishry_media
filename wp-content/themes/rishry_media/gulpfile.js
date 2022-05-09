@@ -1,52 +1,52 @@
+/*
+ * Global variables
+ */
+
 const { doesNotMatch } = require('assert');
-const { src, dest, watch, series, parallel } = require('gulp');
+const { src, dest, watch, series, parallel } = require( 'gulp' );
 
-const 
-	// gulp           = require( 'gulp' ),
-	postcss          = require( 'gulp-postcss' ),
-	autoprefixer     = require( 'autoprefixer' ),
-	stylelint        = require( 'stylelint' ),
-	sass             = require( 'gulp-sass' )(require( 'sass' )),
-	sassGlob         = require( 'gulp-sass-glob-use-forward' ),
-	browserSync      = require( 'browser-sync').create(),//ブラウザシンク
-	plumber          = require( 'gulp-plumber' ),//エラー通知
-	notify           = require( 'gulp-notify' ),//エラー通知
-	pleeease         = require( 'gulp-pleeease' ),//ベンダープレフィックス
-	vinylSource      = require( 'vinyl-source-stream' ),
-	browserify       = require( 'browserify' ),
-	babel            = require( 'gulp-babel' ),
-	babelify         = require( 'babelify' ),
-	browserifyShim   = require( 'browserify-shim' ),
-	gulpif           = require( 'gulp-if' ),// if文
-	uglify           = require( 'gulp-uglify' ),//js圧縮
-	rename           = require( 'gulp-rename' ),
-	minifyCss        = require( 'gulp-cssnano' ),//css圧縮
-	path             = require( 'path' ), //path
-	minimist         = require( 'minimist' ),
-	cached           = require('gulp-cached'),
-	fractal          = require( '@frctl/fractal' ).create();
-	// sourcemaps       = require( 'gulp-sourcemaps' ), // Js ファイルの圧縮・変換
+const postcss		  = require( 'gulp-postcss' ),
+	autoprefixer	 = require( 'autoprefixer' ),
+	stylelint		= require( 'stylelint' ),
+	sass			 = require( 'gulp-dart-sass' ),
+	sassGlob		 = require( 'gulp-sass-glob-use-forward' ),
+	browserSync	  = require( 'browser-sync' ).create(),//ブラウザシンク
+	plumber		  = require( 'gulp-plumber' ),//エラー通知
+	notify		   = require( 'gulp-notify' ),//エラー通知
+	vinylSource	  = require( 'vinyl-source-stream' ),
+	browserify	   = require( 'browserify' ),
+	babel			= require( 'gulp-babel' ),
+	babelify		 = require( 'babelify' ),
+	watchify		 = require( 'watchify' ),
+	uglify		   = require( 'gulp-uglify' ),//js圧縮
+	rename		   = require( 'gulp-rename' ),
+	del			  = require( 'del' ),//ディレクトリ削除
+	debug			= require( 'gulp-debug' ),
+	path			 = require( 'path' ), //path
+	minimist		 = require( 'minimist' ),
+	cached		   = require( 'gulp-cached'),
+	fractal		  = require( '@frctl/fractal' ).create()
+	// imagemin		 = require( 'gulp-imagemin' ),
+	// pngquant		 = require( 'imagemin-pngquant' );
 
-const paths = {
-	rootDir   : './',
-	dstrootDir: 'htdocs',
-	srcDir    : { css: './src/styles/**/*.scss', js: './src/scripts/*.js', img: './src/images', php: '**.php' },
-	dstDir    : { css: './css/', js: './js', img: './images' },
-	serverDir : 'localhost',
-	styleguide: { base: './src/styleguide', css: './src/styleguide/styles/**/*.scss', js: './src/styleguide/scripts/*.js' }
-};
+	const paths = {
+		rootDir   : './',
+		srcDir	: { php: './**/*.php', css: './src/styles/**/*.scss', js: './src/scripts/**/*.js', img: './src/images/**/*.{jpg,jpeg,png,svg,gif}' },
+		dstDir	: { css: './css', js: './js', img: './images' },
+		serverDir : 'localhost',
+		styleguide: { base: './src/styleguide', css: './src/styles/**/*.scss', js: './src/scripts/**/*.js', img: './src/images/**/*.{jpg,jpeg,png,svg,gif}', watch: './src/**/*' },
+	};
 
-const options = minimist( process.argv.slice( 2 ), {
-	string: 'path',
-	default: {
-		path: 'http://rishrymedia.local' // 引数の初期値
-	}
-});
+	const options = minimist( process.argv.slice( 2 ), {
+		string: 'path',
+		default: {
+			path: 'rishrymedia.local' // 引数の初期値
+		}
+	});
 
-fractal.set( 'project.title', 'rishrymedia' );
+	fractal.set( 'project.title', 'Style guide' );
 	fractal.components.set( 'path', './src/styleguide/' );
 	fractal.docs.set('path', './src/styleguide/docs' );
-	fractal.web.set( 'static.path', './css' );
 	fractal.web.set( 'builder.dest', './styleguide' );
 	const logger = fractal.cli.console;
 
@@ -54,62 +54,14 @@ fractal.set( 'project.title', 'rishrymedia' );
 		'last 2 versions',
 		'> 5%',
 		'ie = 11',
-		'not ie <= 10',
 		'ios >= 8',
 		'and_chr >= 5',
 		'Android >= 5',
 	]
 
-// const srcPath = {
-// 	css: './src/styles/**/*.scss',
-// 	php
-// }
-
 /*
- * Browser-sync
+ * Sass
  */
-const browserSyncOption = {
-	proxy: 'http://rishrymedia.local',
-	open: 'true',
-	watchOptions: {
-		debounceDelay: 3000,
-	},
-	reloadOnRestart: true,
-};
-
-const server = () => {
-	browserSync.init( {
-		server: {
-			baseDir: paths.rootDir
-		},
-		// notify: true
-	} );
-}
-
-const reload = () => {
-	browserSync.reload();
-}
-
-// function bsInit( done ) {
-// 	bs.init( {
-// 		server: {
-// 			baseDir: './'
-// 		},
-// 		startPath: 'index.php',
-// 		notify: false,
-// 		open: 'external',
-// 	});
-// 	done();
-// }
-// function bsReload( done ) {
-// 	bs.reload();
-
-// 	done();
-// }
-
-/*
-	* Sass
-	*/
 const css = () => {
 	return src( paths.srcDir.css, { sourcemaps: true } )
 	.pipe( sassGlob() )
@@ -117,12 +69,13 @@ const css = () => {
 	.pipe( cached( 'scss' ) )
 	.pipe( sass( {
 		outputStyle: 'expanded',
-		minifier: true //圧縮の有無 true/false
+		minifier: true, //圧縮の有無 true/false
+		includePaths: ['./src/styles']
 	} ) )
 	.pipe( postcss( [
 		autoprefixer( {
 			cascade: false,
-			grid: "autoplace"
+			grid: true
 		} ),
 	] ) )
 	.pipe( rename( {
@@ -131,10 +84,9 @@ const css = () => {
 	.pipe( dest( paths.dstDir.css, { sourcemaps: paths.rootDir } ) );
 };
 
-
 /*
-	* Style Guide
-	*/
+ * Style Guide
+ */
 function styleguideTask() {
 	const builder = fractal.web.builder();
 	builder.on( 'progress', ( completed, total ) => logger.update( `${total} 件中 ${completed} 件目を出力中...`, 'info' ) );
@@ -142,18 +94,34 @@ function styleguideTask() {
 	return builder.build().then( () => logger.success( 'スタイルガイドの出力処理が完了しました。' ) );
 }
 
-const styleguideServer = (done) => {
+const styleguideServer = ( done ) => {
 	browserSync.init( styleguideReload );
 	done();
 }
+
 const styleguideReload = {
 	server: './styleguide/',
 	notify: false
 }
 
+const devcopyComponent = ( done ) => {
+	return src([
+	'./src/styles/object/component/*.scss'
+	], {
+		dot: true
+	} )
+	.pipe( rename ( function ( path ) {
+		path.dirname = '/components/' + path.basename.replace( '_', '' );
+		path.basename = 'style';
+	} ) )
+	.pipe( dest( paths.styleguide.base ) );
+	done();
+};
+
 /*
-	* JavaScript
-	*/
+ * JavaScript
+ */
+
 function errorAlert( error ) {
 	notify.onError( { title: "Error", message: "Check your terminal", sound: "Funk" } )( error ); //Error Notification
 	console.log( error.toString() );//Prints Error to Console
@@ -182,23 +150,50 @@ const js = () => {
 	.pipe( dest ( paths.dstDir.js ) );
 }
 
-// const server = () => {
-// 	browserSync.init( {
-// 		server: {
-// 			baseDir: paths.rootDir
-// 		},
-// 		notify: true
-// 	} );
-// }
+// const imageminOption = [
+// 	pngquant( {
+// 		quality: [.7, .85]
+// 	} ),
+// 	imagemin.gifsicle(),
+// 	imagemin.optipng(),
+// 	imagemin.svgo( {
+// 		removeViewBox: false
+// 	} )
+// ];
 
-// const reload = () => {
-// 	browserSync.reload();
-// }
+const imagemcopy = ( done ) => {
+	return src( paths.srcDir.img )
+	.pipe( imagemin( imageminOption ) )
+	.pipe( dest( paths.dstDir.img ) );
+}
+
+const server = ( done ) => {
+	browserSync.init( {
+		proxy: {
+			target: options.path
+		},
+		notify: true,
+		startPath: '/'
+	} );
+	done();
+}
+
+const browserSyncOption = {
+	proxy: {
+	  target: options.domain
+	},
+	notify: true
+}
+
+const reload = ( done ) => {
+	browserSync.reload();
+	done();
+}
 
 
-/*
-	* Build
-	*/
+// /*
+//  * Build
+//  */
 const clean = ( done ) => {
 	return del( [paths.styleguide.base] );
 	done();
@@ -208,7 +203,7 @@ const devcopy = ( done ) => {
 		paths.srcDir.css,
 		paths.srcDir.js,
 		'!./src/scripts/main.js',
-		// '!./src/scripts/config.js',
+		'!./src/scripts/config.js',
 		'!./src/styles/foundation/*.scss',
 		'!./src/styles/style.scss',
 	], {
@@ -225,15 +220,28 @@ const devcopy = ( done ) => {
 const watchFile = ( done ) => {
 	watch( paths.srcDir.css, series( css, reload ) );
 	watch( paths.srcDir.js , series( js,  reload ) );
+	watch( paths.srcDir.php , series( reload ) );
+	watch( paths.srcDir.img , series( imagemcopy, reload ) );
 	done();
 }
 
+const watchStyleguide = ( done ) => {
+	watch( paths.srcDir.css, series( css, reload ) );
+	watch( paths.srcDir.js , series( js,  reload ) );
+	watch( paths.srcDir.img , series( imagemcopy, reload ) );
+	done();
+}
 
 exports.css = css;
 exports.js = js;
+exports.imagemcopy = imagemcopy;
+
 exports.clean = clean;
-exports.devcopy = series( clean, devcopy );
+exports.devcopy = series( clean, devcopy, devcopyComponent );
 exports.build = series( devcopy, styleguideTask );
 
 exports.default = parallel( css, js, watchFile, server );
-exports.styleguide = styleguideServer;
+exports.styleguide = series(
+	parallel( css, js, devcopyComponent, styleguideTask ),
+	parallel( watchStyleguide, styleguideServer )
+)

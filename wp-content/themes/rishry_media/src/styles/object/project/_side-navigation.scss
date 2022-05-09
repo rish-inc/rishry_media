@@ -2,79 +2,79 @@
 @use "foundation/variable";
 
 .p-side-navigation {
-    @include mixin.breakpoint ( pc ) {
-        max-width: 280px;
-        height: auto;
-        border: 1px solid variable.$border-color--pink;
-    }
-    &__title {
-        font-weight: normal;
-        font-size: 2rem;
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @include mixin.breakpoint ( tablet ) {
-            margin-top: 40px;
-        }
-        @include mixin.breakpoint ( pc ) {
-            padding-top: 10px;
-            margin-top: 20px;
-        }
-    }
-    &__main-menu {
-        list-style: none;
-        padding: 0;
-        @include mixin.breakpoint ( pc ) {
-            margin-top: 30px;
-        }
-        &__word {
-            font-size: variable.$font-size--sidebar--sp;
-            margin: 0 0 3% 10%;
-            position: relative;
-            @include mixin.breakpoint ( tablet ) {
-                margin: 0 0 2% 10%;
-            }
-            @include mixin.breakpoint ( pc ) {
-                font-size: variable.$font-size--sidebar--pc;
-                margin: 0 0 8% 20%;
-            }
-            &::before,
-            &::after {
-                height: 15px;
-                @include mixin.breakpoint ( pc ) {
-                    height: 18px;
-                }
-            }
-            &::before {
-                left: -10px;
-            }
-            &::after {
-                left: -6px;
-            }
-        }
-        a {
-            text-decoration: none;
-            color: #030303;
-        }
-    }
-    &__sns-menu {
-        padding-left: inherit;
-        display: none;
-        @include mixin.breakpoint ( pc ) {
-            display: block;
-            display: flex;
-            max-width: 208px;
-            padding: 5% 0 7%;
-        }
-        .twitter,
-        .facebook,
-        .instagram {
-            margin: 0 auto;
-        }
-        img {
-            width: 45px;
-            height: auto;
-        }
-    }
+	@include mixin.breakpoint ( pc ) {
+		max-width: 280px;
+		height: auto;
+		border: 1px solid variable.$border-color--pale-pink;
+	}
+	&__title {
+		font-weight: normal;
+		@include mixin.font-rem( 20 );
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include mixin.breakpoint ( tablet ) {
+			margin-top: 40px;
+		}
+		@include mixin.breakpoint ( pc ) {
+			padding-top: 10px;
+			margin-top: 20px;
+		}
+	}
+	&__main-menu {
+		list-style: none;
+		padding: 0;
+		@include mixin.breakpoint ( pc ) {
+			margin-top: 30px;
+		}
+		&__word {
+			@include mixin.font-rem( 12 );
+			margin: 0 0 3% 10%;
+			position: relative;
+			@include mixin.breakpoint ( tablet ) {
+				margin: 0 0 2% 10%;
+			}
+			@include mixin.breakpoint ( pc ) {
+				@include mixin.font-rem( 15 );
+				margin: 0 0 8% 20%;
+			}
+			&::before,
+			&::after {
+				height: 15px;
+				@include mixin.breakpoint ( pc ) {
+					height: 18px;
+				}
+			}
+			&::before {
+				left: -10px;
+			}
+			&::after {
+				left: -6px;
+			}
+		}
+		a {
+			text-decoration: none;
+			color: #030303;
+		}
+	}
+	&__sns-menu {
+		padding-left: inherit;
+		display: none;
+		@include mixin.breakpoint ( pc ) {
+			display: block;
+			display: flex;
+			max-width: 208px;
+			padding: 5% 0 7%;
+		}
+		.twitter,
+		.facebook,
+		.instagram {
+			margin: 0 auto;
+		}
+		img {
+			width: 45px;
+			height: auto;
+		}
+	}
 }

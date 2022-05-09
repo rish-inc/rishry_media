@@ -2,12 +2,12 @@
 @use "foundation/variable";
 
 .c-barline-border {
-    &::before, 
-    &::after {
-        position: absolute;
-        content: '';
-        width: 2px;
-        background: variable.$border-color--pink;
-        border-radius: 9px;
-    }
+	&::before,
+	&::after {
+		position: absolute;
+		content: '';
+		width: 2px;
+		background: variable.$border-color--pink;
+		border-radius: 9px;
+	}
 }
