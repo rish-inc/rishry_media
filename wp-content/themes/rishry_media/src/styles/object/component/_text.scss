@@ -37,4 +37,12 @@
 		color: variable.$font-color--pink;
 		font-weight: bold;
 	}
+	&--sns {
+		color: variable.$font-color--default;
+		@include mixin.font-rem( 12 );
+	}
+	&--copyright {
+		font-style: normal;
+		text-align: center;
+	}
 }

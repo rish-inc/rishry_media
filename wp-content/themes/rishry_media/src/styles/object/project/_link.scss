@@ -54,4 +54,12 @@
 			}
 		}
 	}
+	&--list {
+		// padding-left: 0;
+		display: flex;
+		justify-content: center;
+		&__sns {
+			margin: 0 10px;
+		}
+	}
 }
