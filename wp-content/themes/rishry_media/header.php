@@ -26,7 +26,7 @@
 					</button>
 					<h1 class="c-header-flex-beside__logo"><a href="/"><img src="<?php echo get_theme_file_uri( '/images/logo.png' ); ?>" alt="Rishry ロゴ"></a></h1>
 				</div>
-				<div class class="c-dorower-bg-sp"></div>
+				<div class class="c-drawer-bg-sp"></div>
 				<div class="p-parallel--head">
 					<div class="p-head-nav">
 						<nav class="p-head-nav__navigation">

@@ -980,7 +980,7 @@ body.is-open {
   position: fixed;
 }
 
-.c-dorower-bg-sp.is-open {
+.c-drawer-bg-sp.is-open {
   background: rgba(0, 0, 0, 0.45);
   position: fixed;
   width: 100%;

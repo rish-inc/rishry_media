@@ -27,7 +27,7 @@ function rishrymedia_scripts() {
 	wp_enqueue_style( 'reset', get_theme_file_uri( '/src/styles/foundation/reset.min.css' ), array(), '1.0.0' );
 	wp_enqueue_style( 'style', get_theme_file_uri( '/css/main.css' ), array(), '1.0.0' );
 	wp_enqueue_style( 'hamburger', get_theme_file_uri( '/src/scripts/hamburger.js' ), array( 'jquery' ), '1.0.0', true );
-	wp_enqueue_style( 'dorower', get_theme_file_uri( '/src/scripts/dorower.js' ), array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_style( 'drawer', get_theme_file_uri( '/src/scripts/drawer.js' ), array( 'jquery' ), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'rishrymedia_scripts' );
 
