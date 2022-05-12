@@ -63,4 +63,18 @@
 			}
 		}
 	}
+	&--sns {
+		padding-left: inherit;
+		display: none;
+		@include mixin.breakpoint ( pc ) {
+			display: block;
+			display: flex;
+			max-width: 208px;
+			padding: 5% 0 7%;
+			margin: auto;
+		}
+		&__icon {
+			margin: auto;
+		}
+	}
 }

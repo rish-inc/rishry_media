@@ -26,8 +26,8 @@ function rishrymedia_scripts() {
 	wp_enqueue_style( 'google-web-style',);
 	wp_enqueue_style( 'reset', get_theme_file_uri( '/src/styles/foundation/reset.min.css' ), array(), '1.0.0' );
 	wp_enqueue_style( 'style', get_theme_file_uri( '/css/main.css' ), array(), '1.0.0' );
-	wp_enqueue_style( 'hamburger', get_theme_file_uri( '/src/scripts/hamburger.js' ), array(), '1.0.0', true );
-	wp_enqueue_style( 'dorower', get_theme_file_uri( '/src/scripts/dorower.js' ), array(), '1.0.0', true );
+	wp_enqueue_style( 'hamburger', get_theme_file_uri( '/src/scripts/hamburger.js' ), array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_style( 'dorower', get_theme_file_uri( '/src/scripts/dorower.js' ), array( 'jquery' ), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'rishrymedia_scripts' );
 
@@ -43,6 +43,26 @@ add_filter( 'manage_media_columns', function ( $columns ) {
 	echo '<style>.media-icon img[src$=".svg"]{width:100%;}</style>';
 	return $columns;
 });
+
+
+/*
+ * ウィジェットを追加
+ */
+function rishrymedia_widgets_init() {
+	register_sidebar(
+		array(
+			'name' => 'サイドバーウィジェット',
+			'id' => 'category_widget',
+			'description' => 'サイドバー用ウィジェットです',
+			'before_widget' => '<li id="%1$s" class="widget %2$s">',
+			'after_widget' => '</li>',
+			'before_title' => '<h3 class="p-side__title c-title--side c-headline-border">',
+			'after_title' => '</h3>\n',
+		)
+	);
+}
+add_action( 'widgets_init', 'rishrymedia_widgets_init' );
+
 
 /*
  * 「前へ」「次へ」に class 名を付与
