@@ -45,4 +45,10 @@
 		font-style: normal;
 		text-align: center;
 	}
+	&--category {
+		@include mixin.font-rem( 12 );
+		@include mixin.breakpoint ( pc ) {
+			@include mixin.font-rem( 15 );
+		}
+	}
 }

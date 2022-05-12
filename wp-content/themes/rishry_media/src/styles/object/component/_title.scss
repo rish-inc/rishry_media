@@ -17,4 +17,7 @@
 	&--sub {
 		@include mixin.font-rem( 12 );
 	}
+	&--side {
+		@include mixin.font-rem( 20 );
+	}
 }
