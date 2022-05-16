@@ -1,14 +1,17 @@
 @use "foundation/mixin";
 @use "foundation/variable";
 
-.c-header {
-	&--catchphrase {
+.c-parallel {
+	&--sns {
 		display: none;
 		@include mixin.breakpoint ( pc ) {
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+			max-width: 208px;
+		}
+		&__item {
 			display: block;
-			padding: 14px 10px;
-			margin: 0 auto;
-			max-width: 1140px;
 		}
 	}
 }

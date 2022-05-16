@@ -64,3 +64,14 @@
 		}
 	}
 }
+.c-parallel {
+	&--sns {
+		@include mixin.breakpoint ( pc ) {
+			padding: 5% 0 7%;
+			margin: auto;
+		}
+		&__item {
+			margin: 0;
+		}
+	}
+}

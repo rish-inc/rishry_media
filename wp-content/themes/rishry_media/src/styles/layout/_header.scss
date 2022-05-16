@@ -9,9 +9,12 @@
 		height: 130px;
 	}
 	&__catchphrase {
+		display: none;
 		@include mixin.breakpoint ( pc ) {
+			display: block;
 			padding: 14px 10px;
 			margin: 0 auto;
+			max-width: 1140px;
 		}
 	}
 }

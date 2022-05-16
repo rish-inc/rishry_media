@@ -16,7 +16,7 @@
 
 	<body class="home" <?php body_class(); ?>>
 		<header class="l-header">
-			<div class="l-header__catchphrase c-header--catchphrase">
+			<div class="l-header__catchphrase">
 				<p class="c-title--sub"><?php bloginfo( 'description' ); ?></p>
 			</div>
 			<div class="p-header">
