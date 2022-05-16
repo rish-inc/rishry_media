@@ -9,13 +9,13 @@
 
 		<ul class="p-parallel--sns">
 			<?php if ( ssam_url()[ 'twitter' ] ) : ?>
-				<li class="p-parallel--sns__icon twitter"><a href="<?php echo esc_attr( ssam_url()['twitter'] ); ?>" target="_blank"><img class="c-sns--icon" src="<?php echo get_theme_file_uri( 'images/sns/t_logo.png' ); ?>" alt="Twitterアイコン"></a></li>
+				<li class="p-parallel--sns__icon"><a href="<?php echo esc_attr( ssam_url()['twitter'] ); ?>" target="_blank"><img class="c-sns--icon" src="<?php echo get_theme_file_uri( 'images/sns/t_logo.png' ); ?>" alt="Twitterアイコン"></a></li>
 			<?php endif; ?>
 			<?php if ( ssam_url()[ 'facebook' ] ) : ?>
-				<li class="p-parallel--sns__icon facebook"><a href="#" target="_blank"><img class="c-sns--icon" src="<?php echo get_theme_file_uri( 'images/sns/f_logo.png' ); ?>" alt="Facebookアイコン"></a></li>
+				<li class="p-parallel--sns__icon"><a href="#" target="_blank"><img class="c-sns--icon" src="<?php echo get_theme_file_uri( 'images/sns/f_logo.png' ); ?>" alt="Facebookアイコン"></a></li>
 			<?php endif; ?>
 			<?php if ( ssam_url()[ 'instagram' ] ) : ?>
-				<li class="p-parallel--sns__icon instagram"><a href="#" target="_blank"><img class="c-sns--icon" src="<?php echo get_theme_file_uri( 'images/sns/i_logo.png' ); ?>" alt="Instagramアイコン"></a></li>
+				<li class="p-parallel--sns__icon"><a href="#" target="_blank"><img class="c-sns--icon" src="<?php echo get_theme_file_uri( 'images/sns/i_logo.png' ); ?>" alt="Instagramアイコン"></a></li>
 			<?php endif; ?>
 		</ul>
 	</nav>

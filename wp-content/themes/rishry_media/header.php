@@ -20,15 +20,15 @@
 				<p class="c-title--sub"><?php bloginfo( 'description' ); ?></p>
 			</div>
 			<div class="p-head-pc">
-				<div class="c-header-flex-beside">
-					<button class="p-hamburger is-hamburger">
+				<div class="p-header-flex-beside">
+					<button class="p-hamburger js-hamburger">
 						<span>メニュー展開ボタン</span>
 					</button>
-					<h1 class="c-header-flex-beside__logo"><a href="/"><img src="<?php echo get_theme_file_uri( '/images/logo.png' ); ?>" alt="Rishry ロゴ"></a></h1>
+					<h1 class="p-header-flex-beside__logo"><a href="/"><img src="<?php echo get_theme_file_uri( '/images/logo.png' ); ?>" alt="Rishry ロゴ"></a></h1>
 				</div>
-				<div class class="c-drawer-bg-sp"></div>
+				<div class class="c-drawer-bg-sp js-drawer--bg"></div>
 				<div class="p-parallel--head">
-					<div class="p-head-nav">
+					<div class="p-head-nav js-drawer">
 						<nav class="p-head-nav__navigation">
 							<ul class="p-head-nav__navigation__menu">
 								<?php wp_nav_menu( array(
@@ -39,10 +39,16 @@
 							</ul>
 						</nav>
 						<nav class="p-head-nav__sns">
-							<ul class="p-head-nav__icon c-sns--icon">
-								<li class="twitter"><a href="#"><img src="images/sns/t_logo.png" alt="twitter"></a></li>
-								<li class="facebook"><a href="#"><img src="images/sns/f_logo.png" alt="facebook"></a></li>
-								<li class="instagram"><a href="#"><img src="images/sns/i_logo.png" alt="instagram"></a></li>
+							<ul class="p-head-nav__icon">
+								<?php if ( ssam_url()[ 'twitter' ] ) : ?>
+									<li class="twitter"><a href="<?php echo esc_attr( ssam_url()['twitter'] ); ?>" target="_blank"><img class="c-sns--icon-drawer" src="<?php echo get_theme_file_uri( 'images/sns/t_logo.png' ); ?>" alt="Twitterアイコン"></a></li>
+								<?php endif; ?>
+								<?php if ( ssam_url()[ 'facebook' ] ) : ?>
+									<li class="facebook"><a href="#"><img class="c-sns--icon-drawer" src="images/sns/f_logo.png" alt="Facebookアイコン"></a></li>
+								<?php endif; ?>
+								<?php if ( ssam_url()[ 'instagram' ] ) : ?>
+									<li class="instagram"><a href="#"><img class="c-sns--icon-drawer" src="images/sns/i_logo.png" alt="Instagramアイコン"></a></li>
+								<?php endif; ?>
 							</ul>
 						</nav>
 					</div>

@@ -23,11 +23,13 @@ add_filter( 'pre_get_document_title', 'rishrymedia_title' );
  * スタイルとスクリプトの読み込み
  */
 function rishrymedia_scripts() {
-	wp_enqueue_style( 'google-web-style',);
+	wp_deregister_script( 'jquery' );
+	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), '3.6.0', true );
+	// wp_enqueue_style( 'google-web-style',);
 	wp_enqueue_style( 'reset', get_theme_file_uri( '/src/styles/foundation/reset.min.css' ), array(), '1.0.0' );
 	wp_enqueue_style( 'style', get_theme_file_uri( '/css/main.css' ), array(), '1.0.0' );
-	wp_enqueue_style( 'hamburger', get_theme_file_uri( '/src/scripts/hamburger.js' ), array( 'jquery' ), '1.0.0', true );
-	wp_enqueue_style( 'drawer', get_theme_file_uri( '/src/scripts/drawer.js' ), array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'hamburger', get_theme_file_uri( '/src/scripts/hamburger.js' ), array( 'jquery' ), '1.0.0', true );
+	// wp_enqueue_script( 'drawer', get_theme_file_uri( '/src/scripts/drawer.js' ), array( 'jquery' ), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'rishrymedia_scripts' );
 

@@ -85,10 +85,11 @@
 		background: variable.$bgcolor--pink;
 		height: 90px;
 		width: 100vw;
-		position: fixed;
+		// position: fixed;
 		bottom: 0;
 		@include mixin.breakpoint ( pc ) {
-			visibility: collapse;
+			// visibility: collapse;
+			display: none;
 		}
 	}
 	&__icon {
@@ -103,9 +104,9 @@
 			display: none;
 		}
 	}
+	&.is-active {
+		display: block;
+	}
 }
 
-.active {
-	display: block;
-}
 

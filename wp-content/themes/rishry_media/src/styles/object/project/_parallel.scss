@@ -3,7 +3,7 @@
 
 .p-parallel {
 	&--head {
-		display: none;
+		// display: none;
 		@include mixin.breakpoint ( pc ) {
 			display: flex;
 			justify-content: space-between;
