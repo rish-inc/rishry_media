@@ -16,21 +16,21 @@
 
 	<body class="home" <?php body_class(); ?>>
 		<header class="l-header">
-			<div class="l-header__catchphrase">
+			<div class="p-header--catchphrase">
 				<p class="c-title--sub"><?php bloginfo( 'description' ); ?></p>
 			</div>
-			<div class="p-head-pc">
-				<div class="p-header-flex-beside">
+			<div class="p-header">
+				<div class="p-header__abreast">
 					<button class="p-hamburger js-hamburger">
 						<span>メニュー展開ボタン</span>
 					</button>
-					<h1 class="p-header-flex-beside__logo"><a href="/"><img src="<?php echo get_theme_file_uri( '/images/logo.png' ); ?>" alt="Rishry ロゴ"></a></h1>
+					<h1 class="p-header__abreast__logo"><a href="/"><img class="c-img--logo" src="<?php echo get_theme_file_uri( '/images/logo.png' ); ?>" alt="Rishry ロゴ"></a></h1>
 				</div>
-				<div class class="c-drawer-bg-sp js-drawer--bg"></div>
-				<div class="p-parallel--head">
-					<div class="p-head-nav js-drawer">
-						<nav class="p-head-nav__navigation">
-							<ul class="p-head-nav__navigation__menu">
+				<div class class="c-drawer-bg-sp js-drawer-bg"></div>
+				<div class="p-parallel--header">
+					<div class="p-header--nav js-drawer">
+						<nav class="p-header--nav__menu">
+							<ul class="p-header--nav__menu__list">
 								<?php wp_nav_menu( array(
 									'theme_location' => 'header-menu',
 									'items_wrap' => '%3$s',
@@ -38,8 +38,8 @@
 								) ); ?>
 							</ul>
 						</nav>
-						<nav class="p-head-nav__sns">
-							<ul class="p-head-nav__icon">
+						<nav class="p-header--nav__sns">
+							<ul class="p-header--nav__sns__icon">
 								<?php if ( ssam_url()[ 'twitter' ] ) : ?>
 									<li class="twitter"><a href="<?php echo esc_attr( ssam_url()['twitter'] ); ?>" target="_blank"><img class="c-sns--icon-drawer" src="<?php echo get_theme_file_uri( 'images/sns/t_logo.png' ); ?>" alt="Twitterアイコン"></a></li>
 								<?php endif; ?>
@@ -52,7 +52,7 @@
 							</ul>
 						</nav>
 					</div>
-					<div class="p-parallel--head__search">
+					<div class="p-parallel--header__search">
 						<?php get_search_form(); ?>
 					</div>
 				</div>

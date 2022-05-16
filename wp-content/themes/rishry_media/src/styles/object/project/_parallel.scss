@@ -2,8 +2,7 @@
 @use "foundation/variable";
 
 .p-parallel {
-	&--head {
-		// display: none;
+	&--header {
 		@include mixin.breakpoint ( pc ) {
 			display: flex;
 			justify-content: space-between;
@@ -16,6 +15,34 @@
 				width: 300px;
 			}
 		}
+		// &__nav {
+		// 	display: none;
+		// 	z-index: 9999;
+		// 	position: fixed;
+		// 	width: 100vw;
+		// 	height: calc( 100% - 50px );
+		// 	background: variable.$bgcolor--white;
+		// 	@include mixin.breakpoint ( pc ) {
+		// 		display: initial;
+		// 		position: static;
+		// 		width: 100%;
+		// 		height: auto;
+		// 		background: none;
+		// 		margin-right: 2%;
+		// 	}
+		// 	&__menu {
+		// 		overflow: scroll;
+		// 		overflow-x: hidden;
+		// 		height: 87%;
+		// 		@include mixin.breakpoint ( pc ) {
+		// 			overflow: visible;
+		// 			height: auto;
+		// 		}
+		// 		&__list {
+
+		// 		}
+		// 	}
+		// }
 	}
 
 	a {

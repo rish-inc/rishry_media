@@ -1,0 +1,154 @@
+@use "foundation/mixin";
+@use "foundation/variable";
+
+.p-header {
+	@include mixin.breakpoint ( pc ) {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin: 0 auto;
+		min-width: 1025px;
+		max-width: 1160px;
+	}
+
+	&--catchphrase {
+		display: none;
+		@include mixin.breakpoint ( pc ) {
+			display: block;
+			padding: 14px 10px;
+			margin: 0 auto;
+			max-width: 1140px;
+		}
+	}
+	&__abreast {
+		width: 65vw;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include mixin.breakpoint ( tablet ) {
+			width: 95vw;
+			margin-left: 10px;
+		}
+		@include mixin.breakpoint ( pc ) {
+			display: block;
+			margin-left: 0;
+			width: auto;
+		}
+		&__logo {
+			margin: 0;
+			@include mixin.breakpoint ( tablet ) {
+				margin: 0 auto;
+			}
+			@include mixin.breakpoint ( pc ) {
+				margin: 0;
+			}
+		}
+	}
+	&--nav {
+		display: none;
+		z-index: 9999;
+		position: fixed;
+		width: 100vw;
+		height: calc( 100% - 50px );
+		background: variable.$bgcolor--white;
+		@include mixin.breakpoint ( pc ) {
+			display: initial;
+			position: static;
+			width: 100%;
+			height: auto;
+			background: none;
+			margin-right: 2%;
+		}
+		&__menu {
+			overflow: scroll;
+			overflow-x: hidden;
+			height: 87%;
+			@include mixin.breakpoint ( pc ) {
+				overflow: visible;
+				height: auto;
+			}
+			&__list {
+				list-style: none;
+				padding: 0;
+				margin: 0 auto;
+				width: 80%;
+				height: auto;
+				@include mixin.breakpoint ( pc ) {
+					display: flex;
+					margin: 0;
+					width: 100%;
+				}
+				li {
+					border-bottom: solid 1px #acacac;
+					padding: 20px 0;
+					@include mixin.breakpoint ( pc ) {
+						border-bottom: none;
+						padding: 10px 5px;
+						margin: 0 1%;
+					}
+					&:last-child {
+						border: 0;
+						padding: 20px 0 50px;
+						@include mixin.breakpoint ( pc ) {
+							padding: 10px 5px;
+							white-space: nowrap;
+						}
+					}
+				}
+				a {
+					text-decoration: none;
+					color: variable.$font-color--default;
+					@include mixin.font-rem( 16 );
+					padding-left: 15px;
+					@include mixin.breakpoint ( pc ) {
+						padding: 0;
+						display: inline-block;
+					}
+					&::after {
+						@include mixin.breakpoint ( pc ) {
+							display: block;
+							border-bottom: solid 1px variable.$border-color--pale--gray;
+							bottom: 0;
+							content: '';
+							transition: all 0.5s ease;
+							width: 0;
+						}
+					}
+					&:hover {
+						color: variable.$font-color--hover;
+						transition: all 0.5s ease;
+						&::after {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+		&__sns {
+			background: variable.$bgcolor--pink;
+			height: 90px;
+			width: 100vw;
+			// position: fixed;
+			bottom: 0;
+			@include mixin.breakpoint ( pc ) {
+				// visibility: collapse;
+				display: none;
+			}
+			&__icon {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				padding: 30px 0 0 0;
+				margin: 0 auto;
+				min-width: 180px;
+				max-width: 300px;
+				@include mixin.breakpoint ( pc ) {
+					display: none;
+				}
+			}
+		}
+		&.is-active {
+			display: block;
+		}
+	}
+}

@@ -2,6 +2,13 @@
 @use "foundation/variable";
 
 .c-img {
+	&--logo {
+		max-width: 110px;
+		@include mixin.breakpoint ( pc ) {
+			max-width: 150px;
+			height: auto;
+		}
+	}
 	&--sns {
 		width: 30px;
 		height: 30px;

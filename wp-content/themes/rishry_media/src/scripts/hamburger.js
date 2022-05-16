@@ -3,7 +3,7 @@ jQuery( function( $ ) {
 		$( this ).toggleClass( "is-open" ); // js-hamburger を指定している箇所に is-open のスタイルを付与したり削除したりする
 		$( "body" ).toggleClass( "is-active" ); // body タグに is-active のスタイルを付与したり削除したりする
 		$( ".js-drawer" ).slideToggle( 500 ); // js-drawer を指定している箇所が 0.5 秒かけてスライドダウンする
-		$( ".js-drawer--bg" ).toggleClass( "is-open" ); // js-drawer--bg を指定している箇所に is-open のスタイルを付与したり削除したりする
+		$( ".js-drawer-bg" ).toggleClass( "is-open" ); // js-drawer-bg を指定している箇所に is-open のスタイルを付与したり削除したりする
 	} );
 
 	// ウィンドウのサイズが PC サイズになった場合
