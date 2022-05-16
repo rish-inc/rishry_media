@@ -11,15 +11,15 @@
 		max-width: 1160px;
 	}
 
-	&--catchphrase {
-		display: none;
-		@include mixin.breakpoint ( pc ) {
-			display: block;
-			padding: 14px 10px;
-			margin: 0 auto;
-			max-width: 1140px;
-		}
-	}
+	// &--catchphrase {
+	// 	display: none;
+	// 	@include mixin.breakpoint ( pc ) {
+	// 		display: block;
+	// 		padding: 14px 10px;
+	// 		margin: 0 auto;
+	// 		max-width: 1140px;
+	// 	}
+	// }
 	&__abreast {
 		width: 65vw;
 		display: flex;

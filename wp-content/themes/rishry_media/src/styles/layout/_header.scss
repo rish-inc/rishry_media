@@ -8,5 +8,11 @@
 	@include mixin.breakpoint ( pc ) {
 		height: 130px;
 	}
+	&__catchphrase {
+		@include mixin.breakpoint ( pc ) {
+			padding: 14px 10px;
+			margin: 0 auto;
+		}
+	}
 }
 
