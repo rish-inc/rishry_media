@@ -1086,7 +1086,7 @@ body.is-active {
   }
 }
 .p-header__abreast {
-  width: 65vw;
+  width: 90vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1106,14 +1106,9 @@ body.is-active {
   }
 }
 .p-header__abreast__logo {
-  margin: 0;
+  margin: 0 auto;
 }
 
-@media (min-width: 415px) {
-  .p-header__abreast__logo {
-    margin: 0 auto;
-  }
-}
 @media (min-width: 1025px) {
   .p-header__abreast__logo {
     margin: 0;

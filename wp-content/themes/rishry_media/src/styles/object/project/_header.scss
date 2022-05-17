@@ -11,17 +11,8 @@
 		max-width: 1160px;
 	}
 
-	// &--catchphrase {
-	// 	display: none;
-	// 	@include mixin.breakpoint ( pc ) {
-	// 		display: block;
-	// 		padding: 14px 10px;
-	// 		margin: 0 auto;
-	// 		max-width: 1140px;
-	// 	}
-	// }
 	&__abreast {
-		width: 65vw;
+		width: 90vw;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -35,10 +26,7 @@
 			width: auto;
 		}
 		&__logo {
-			margin: 0;
-			@include mixin.breakpoint ( tablet ) {
-				margin: 0 auto;
-			}
+			margin: 0 auto;
 			@include mixin.breakpoint ( pc ) {
 				margin: 0;
 			}
@@ -128,10 +116,8 @@
 			background: variable.$bgcolor--pink;
 			height: 90px;
 			width: 100vw;
-			// position: fixed;
 			bottom: 0;
 			@include mixin.breakpoint ( pc ) {
-				// visibility: collapse;
 				display: none;
 			}
 			&__icon {
