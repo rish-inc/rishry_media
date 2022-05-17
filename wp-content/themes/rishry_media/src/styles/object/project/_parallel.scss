@@ -3,18 +3,18 @@
 
 .p-parallel {
 	&--header {
-		@include mixin.breakpoint ( pc ) {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-		&__search {
-			visibility: collapse;
-			@include mixin.breakpoint ( pc ) {
-				visibility: visible;
-				width: 300px;
-			}
-		}
+		// @include mixin.breakpoint ( pc ) {
+		// 	display: flex;
+		// 	justify-content: space-between;
+		// 	align-items: center;
+		// }
+		// &__search {
+		// 	visibility: collapse;
+		// 	@include mixin.breakpoint ( pc ) {
+		// 		visibility: visible;
+		// 		width: 300px;
+		// 	}
+		// }
 		// &__nav {
 		// 	display: none;
 		// 	z-index: 9999;
@@ -45,49 +45,49 @@
 		// }
 	}
 
-	a {
-		margin-right: 10px;
-		@include mixin.breakpoint ( tablet ) {
-			margin-right: 20px;
-		}
-	}
+	// a { // single.php
+	// 	margin-right: 10px;
+	// 	@include mixin.breakpoint ( tablet ) {
+	// 		margin-right: 20px;
+	// 	}
+	// }
 	&--data {
-		display: flex;
-		padding: 10px 0 0 0;
+		// display: flex;
+		// padding: 10px 0 0 0;
 		&__text,
 		&__text-bold {
-			list-style: none;
-			@include mixin.font-rem( 12 );
-			margin-right: 20px;
-			@include mixin.breakpoint ( tablet ) {
-				@include mixin.font-rem( 15 );
-		 	}
+			// list-style: none;
+			// @include mixin.font-rem( 12 );
+			// margin-right: 20px;
+			// @include mixin.breakpoint ( tablet ) {
+			// 	@include mixin.font-rem( 15 );
+		 	// }
 			&--relation {
-				list-style: none;
-				@include mixin.font-rem( 10 );
-				margin-right: 10px;
+				// list-style: none;
+				// @include mixin.font-rem( 10 );
+				// margin-right: 10px;
 			}
 		}
 	}
 	&--card {
-		display: flex;
-		flex-wrap: nowrap;
-		height: 100%;
-		&__img {
-			width: 30%;
-			object-fit: cover;
-		}
-		&__caption {
-			margin-left: 10px;
-			@include mixin.breakpoint ( tablet ) {
-				margin-left: 20px;
-			}
-			&__title {
-				@include mixin.font-rem( 12 );
-				@include mixin.breakpoint ( tablet ) {
-					@include mixin.font-rem( 15 );
-				}
-			}
-		}
+		// display: flex;
+		// flex-wrap: nowrap;
+		// height: 100%;
+		// &__img {
+		// 	width: 30%;
+		// 	object-fit: cover;
+		// }
+		// &__caption {
+		// 	margin-left: 10px;
+		// 	@include mixin.breakpoint ( tablet ) {
+		// 		margin-left: 20px;
+		// 	}
+		// 	&__title {
+		// 		@include mixin.font-rem( 12 );
+		// 		@include mixin.breakpoint ( tablet ) {
+		// 			@include mixin.font-rem( 15 );
+		// 		}
+		// 	}
+		// }
 	}
 }

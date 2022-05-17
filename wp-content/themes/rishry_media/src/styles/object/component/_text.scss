@@ -32,10 +32,27 @@
 	}
 	&--gray {
 		color: variable.$font-color--gray;
+		@include mixin.font-rem( 12 );
+		@include mixin.breakpoint ( tablet ) {
+			@include mixin.font-rem( 15 );
+		}
+	}
+	&--gray-small {
+		color: variable.$font-color--gray;
+		@include mixin.font-rem( 10 );
 	}
 	&--pink {
 		color: variable.$font-color--pink;
 		font-weight: bold;
+		@include mixin.font-rem( 12 );
+		@include mixin.breakpoint ( tablet ) {
+			@include mixin.font-rem( 15 );
+		}
+	}
+	&--pink-small {
+		color: variable.$font-color--pink;
+		font-weight: bold;
+		@include mixin.font-rem( 10 );
 	}
 	&--sns {
 		color: variable.$font-color--default;

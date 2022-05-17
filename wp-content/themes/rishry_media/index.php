@@ -12,9 +12,9 @@
 						<figure class="p-card">
 							<figcaption class="p-card__caption">
 								<h3 class="p-card__caption__title c-barline-border">ブログタイトル</h3>
-								<ul class="p-parallel--data">
-									<li class="p-parallel--data__text c-text--gray"><time><?php echo get_the_date(); ?></time></li>
-									<li class="p-parallel--data__text-bold c-text--pink">カテゴリー名</li>
+								<ul class="c-parallel--data">
+									<li class="c-text--gray"><time><?php echo get_the_date(); ?></time></li>
+									<li class="c-text--pink">カテゴリー名</li>
 								</ul>
 							</figcaption>
 							<img class="p-card__img" src="<?php echo get_theme_file_uri( './images/p-card/eye-catching.jpg' ); ?>" alt="アイキャッチ画像">
@@ -24,9 +24,9 @@
 						<figure class="p-card">
 							<figcaption class="p-card__caption">
 								<h3 class="p-card__caption__title c-barline-border">ブログタイトル</h3>
-								<ul class="p-parallel--data">
-									<li class="p-parallel--data__text c-text--gray"><time><?php echo get_the_date(); ?></time></li>
-									<li class="p-parallel--data__text-bold c-text--pink">カテゴリー名</li>
+								<ul class="c-parallel--data">
+									<li class="c-text--gray"><time><?php echo get_the_date(); ?></time></li>
+									<li class="c-text--pink">カテゴリー名</li>
 								</ul>
 							</figcaption>
 							<img class="p-card__img" src="<?php echo get_theme_file_uri( './images/p-card/eye-catching.jpg' ); ?>" alt="アイキャッチ画像">
@@ -36,9 +36,9 @@
 						<figure class="p-card">
 							<figcaption class="p-card__caption">
 								<h3 class="p-card__caption__title c-barline-border">ブログタイトル</h3>
-								<ul class="p-parallel--data">
-									<li class="p-parallel--data__text c-text--gray"><time><?php echo get_the_date(); ?></time></li>
-									<li class="p-parallel--data__text-bold c-text--pink">カテゴリー名</li>
+								<ul class="c-parallel--data">
+									<li class="c-text--gray"><time><?php echo get_the_date(); ?></time></li>
+									<li class="c-text--pink">カテゴリー名</li>
 								</ul>
 							</figcaption>
 							<img class="p-card__img" src="<?php echo get_theme_file_uri( './images/p-card/eye-catching.jpg' ); ?>" alt="アイキャッチ画像">

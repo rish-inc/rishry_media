@@ -27,7 +27,7 @@
 					<h1 class="p-header__abreast__logo"><a href="/"><img class="c-img--logo" src="<?php echo get_theme_file_uri( '/images/logo.png' ); ?>" alt="Rishry ロゴ"></a></h1>
 				</div>
 				<div class class="c-drawer-bg-sp js-drawer-bg"></div>
-				<div class="p-parallel--header">
+				<div class="c-parallel--header">
 					<div class="p-header--nav js-drawer">
 						<nav class="p-header--nav__menu">
 							<ul class="p-header--nav__menu__list">
@@ -52,7 +52,7 @@
 							</ul>
 						</nav>
 					</div>
-					<div class="p-parallel--header__search">
+					<div class="c-parallel--header__search">
 						<?php get_search_form(); ?>
 					</div>
 				</div>

@@ -57,7 +57,45 @@
 				left: -15px;
 			}
 		}
+		&__data {
+			padding: 10px 0 0 0;
+			// &__text,
+			// &__text-bold {
+			// 	margin-right: 20px;
+			// }
+		}
 	}
+	&--connection {
+		display: flex;
+		flex-wrap: nowrap;
+		height: 100%;
+		&__img {
+			width: 30%;
+			object-fit: cover;
+		}
+		&__caption {
+			margin-left: 10px;
+			@include mixin.breakpoint ( tablet ) {
+				margin-left: 20px;
+			}
+			&__title {
+				@include mixin.font-rem( 12 );
+				@include mixin.breakpoint ( tablet ) {
+					@include mixin.font-rem( 15 );
+				}
+			}
+		}
+	}
+}
+
+.c-text--gray,
+.c-text--pink {
+	margin-right: 20px;
+}
+
+.c-text--gray-small,
+.c-text--pink-small {
+	margin-right: 10px;
 }
 
 

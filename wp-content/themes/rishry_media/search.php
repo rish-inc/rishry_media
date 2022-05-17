@@ -11,9 +11,9 @@
 							<figure class="p-card">
 								<figcaption class="p-card__caption">
 									<h2 class="p-card__caption__title c-barline-border">ブログタイトル</h2>
-									<ul class="data c-time-category-chunk">
-										<li class="p-parallel--data__text"><time>投稿日時</time></li>
-										<li class="p-parallel--data__text-bold">カテゴリー名</li>
+									<ul class="c-parallel--data">
+										<li class="c-text--gray"><time><?php echo get_the_date(); ?></time></li>
+										<li class="c-text--pink">カテゴリー名</li>
 									</ul>
 								</figcaption>
 								<img class="p-card__img" src="././images/p-card/eye-catching.jpg" alt="アイキャッチ画像">
@@ -23,9 +23,9 @@
 							<figure class="p-card">
 								<figcaption class="p-card__caption">
 									<h2 class="p-card__caption__title c-barline-border">ブログタイトル</h2>
-									<ul class="data c-time-category-chunk">
-										<li class="p-parallel--data__text"><time>投稿日時</time></li>
-										<li class="p-parallel--data__text-bold">カテゴリー名</li>
+									<ul class="c-parallel--data">
+										<li class="c-text--gray"><time><?php echo get_the_date(); ?></time></li>
+										<li class="c-text--pink">カテゴリー名</li>
 									</ul>
 								</figcaption>
 								<img class="p-card__img" src="./images/p-card/eye-catching.jpg" alt="アイキャッチ画像">
@@ -35,9 +35,9 @@
 							<figure class="p-card">
 								<figcaption class="p-card__caption">
 									<h2 class="p-card__caption__title c-barline-border">ブログタイトル</h2>
-									<ul class="data c-time-category-chunk">
-										<li class="p-parallel--data__text"><time>投稿日時</time></li>
-										<li class="p-parallel--data__text-bold">カテゴリー名</li>
+									<ul class="c-parallel--data">
+										<li class="c-text--gray"><time><?php echo get_the_date(); ?></time></li>
+										<li class="c-text--pink">カテゴリー名</li>
 									</ul>
 								</figcaption>
 								<img class="p-card__img" src="./images/p-card/eye-catching.jpg" alt="アイキャッチ画像">

@@ -11,14 +11,13 @@
 					<article class="p-detail u-mb30--tb60">
 						<div class="p-card--entry u-mb15--pc30">
 							<h2 class="p-card--entry__title c-text--title c-barline-border u-mb--pc10"><?php the_title(); ?></h2>
-							<ul class="p-parallel--data">
-								<li class="p-parallel--data__text c-text--gray"><time><?php echo get_the_date(); ?></time></li>
-								<!-- <li class="p-parallel--data__text-bold c-text--pink"></li> -->
+							<ul class="p-card--entry__data c-parallel--data">
+								<li class="p-card--entry__data__text c-text--gray"><time><?php echo get_the_date(); ?></time></li>
 								<?php
 									$cats = get_the_category(); // get_the_category(); を変数 $cats へ代入
 									if( $cats ) : // $cats が空ではない場合
 										foreach( $cats as $cat ) : ?> <!-- $cats の中にある要素を $cat へ代入。 $cat を全てとりだすまでループを続ける -->
-											<li class="p-parallel--data__text-bold c-text--pink"> <!-- li タグ内に $cat がある場合、 -->
+											<li class="p-card--entry__data__text-bold c-text--pink"> <!-- li タグ内に $cat がある場合、 -->
 												<?php
 													echo esc_html( $cat -> name ); // カテゴリー名を出力
 												?>
@@ -36,10 +35,10 @@
 							<p class="c-text--default">本文です本文です本文です本文です本文です本文です本文です本文です</p>
 							<p class="c-text--default">本文です本文です本文です本文です本文です本文です本文です本文です</p>
 							<p class="c-text--default">本文です本文です本文です本文です本文です本文です本文です本文です</p>
-							<div class="p-parallel u-mt30--pc60">
-								<a class="c-text" href="#">#タグ名</a>
-								<a class="c-text" href="#">#タグ名</a>
-								<a class="c-text" href="#">#タグ名</a>
+							<div class="p-inside__tag u-mt30--pc60">
+								<a class="p-inside__tag__link c-text" href="#">#タグ名</a>
+								<a class="p-inside__tag__link c-text" href="#">#タグ名</a>
+								<a class="p-inside__tag__link c-text" href="#">#タグ名</a>
 							</div>
 							<div class="p-share u-mt30">
 								<p class="p-share__title">SHARE!</p>
@@ -55,42 +54,42 @@
 							<ul class="p-relation__list u-mt12--tb20">
 								<li class="p-relation__list__item u-mb10--pc20">
 									<a class="p-relation__list__item__link" href="#">
-										<figure class="p-parallel--card">
-											<img class="p-parallel--card__img" src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
-											<figcaption class="p-parallel--card__caption">
-												<ul class="p-parallel--data">
-													<li class="p-parallel--data__text--relation c-text--gray"><time>投稿日時</time></li>
-													<li class="p-parallel--data__text-bold--relation c-text--pink">カテゴリー名</li>
+										<figure class="c-parallel p-card--connection">
+											<img class="p-card--connection__img" src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
+											<figcaption class="p-card--connection__caption">
+												<ul class="c-parallel">
+													<li class="c-text--gray-small"><time>投稿日時</time></li>
+													<li class="c-text--pink-small">カテゴリー名</li>
 												</ul>
-												<h5 class="p-parallel--card__caption__title">タイトル</h5>
+												<h5 class="p-card--connection__caption__title">タイトル</h5>
 											</figcaption>
 										</figure>
 									</a>
 								</li>
 								<li class="p-relation__list__item u-mb10--pc20">
 									<a class="p-relation__list__item__link" href="#">
-										<figure class="p-parallel--card">
-											<img class="p-parallel--card__img" src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
-											<figcaption class="p-parallel--card__caption">
-												<ul class="p-parallel--data">
-													<li class="p-parallel--data__text--relation c-text--gray"><time>投稿日時</time></li>
-													<li class="p-parallel--data__text-bold--relation c-text--pink">カテゴリー名</li>
+										<figure class="c-parallel p-card--connection">
+											<img class="p-card--connection__img" src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
+											<figcaption class="p-card--connection__caption">
+												<ul class="c-parallel">
+													<li class="c-text--gray-small"><time>投稿日時</time></li>
+													<li class="c-text--pink-small">カテゴリー名</li>
 												</ul>
-												<h5 class="p-parallel--card__caption__title">タイトル</h5>
+												<h5 class="p-card--connection__caption__title">タイトル</h5>
 											</figcaption>
 										</figure>
 									</a>
 								</li>
 								<li class="p-relation__list__item u-mb10--pc20">
 									<a class="p-relation__list__item__link" href="#">
-										<figure class="p-parallel--card">
-											<img class="p-parallel--card__img" src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
-											<figcaption class="p-parallel--card__caption">
-												<ul class="p-parallel--data">
-													<li class="p-parallel--data__text--relation c-text--gray"><time>投稿日時</time></li>
-													<li class="p-parallel--data__text-bold--relation c-text--pink">カテゴリー名</li>
+										<figure class="c-parallel p-card--connection">
+											<img class="p-card--connection__img" src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
+											<figcaption class="p-card--connection__caption">
+												<ul class="c-parallel">
+													<li class="c-text--gray-small"><time>投稿日時</time></li>
+													<li class="c-text--pink-small">カテゴリー名</li>
 												</ul>
-												<h5 class="p-parallel--card__caption__title">タイトル</h5>
+												<h5 class="p-card--connection__caption__title">タイトル</h5>
 											</figcaption>
 										</figure>
 									</a>

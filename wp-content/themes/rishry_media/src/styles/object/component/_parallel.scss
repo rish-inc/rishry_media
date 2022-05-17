@@ -2,6 +2,23 @@
 @use "foundation/variable";
 
 .c-parallel {
+	&--header {
+		@include mixin.breakpoint ( pc ) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		&__search {
+			visibility: collapse;
+			@include mixin.breakpoint ( pc ) {
+				visibility: visible;
+				width: 300px;
+			}
+		}
+	}
+	&--data {
+		display: flex;
+	}
 	&--sns {
 		display: none;
 		@include mixin.breakpoint ( pc ) {
