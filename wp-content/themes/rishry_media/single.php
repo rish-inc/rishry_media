@@ -12,7 +12,7 @@
 						<div class="p-card--entry u-mb15--pc30">
 							<h2 class="p-card--entry__title c-text--title c-barline-border u-mb--pc10"><?php the_title(); ?></h2>
 							<ul class="p-card--entry__data c-parallel--data">
-								<li class="p-card--entry__data__text c-text--gray"><time><?php echo get_the_date(); ?></time></li>
+								<li class="p-card--entry__data__text c-text--gray"><time><?php the_time( 'Y年n月j日' ); ?></time></li>
 								<?php
 									$cats = get_the_category(); // get_the_category(); を変数 $cats へ代入
 									if( $cats ) : // $cats が空ではない場合
@@ -58,7 +58,7 @@
 											<img class="p-card--connection__img" src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
 											<figcaption class="p-card--connection__caption">
 												<ul class="c-parallel">
-													<li class="c-text--gray-small"><time>投稿日時</time></li>
+													<li class="c-text--gray-small"><time><?php the_time( 'Y年n月j日' ); ?></time></li>
 													<li class="c-text--pink-small">カテゴリー名</li>
 												</ul>
 												<h5 class="p-card--connection__caption__title">タイトル</h5>
@@ -72,7 +72,7 @@
 											<img class="p-card--connection__img" src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
 											<figcaption class="p-card--connection__caption">
 												<ul class="c-parallel">
-													<li class="c-text--gray-small"><time>投稿日時</time></li>
+													<li class="c-text--gray-small"><time><?php the_time( 'Y年n月j日' ); ?></time></li>
 													<li class="c-text--pink-small">カテゴリー名</li>
 												</ul>
 												<h5 class="p-card--connection__caption__title">タイトル</h5>
@@ -86,7 +86,7 @@
 											<img class="p-card--connection__img" src="<?php echo get_theme_file_uri( './images/eye-catching03.jpg' ); ?>" alt="関連記事アイキャッチ画像">
 											<figcaption class="p-card--connection__caption">
 												<ul class="c-parallel">
-													<li class="c-text--gray-small"><time>投稿日時</time></li>
+													<li class="c-text--gray-small"><time><?php the_time( 'Y年n月j日' ); ?></time></li>
 													<li class="c-text--pink-small">カテゴリー名</li>
 												</ul>
 												<h5 class="p-card--connection__caption__title">タイトル</h5>
