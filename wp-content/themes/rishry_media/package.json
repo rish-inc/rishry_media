@@ -10,24 +10,24 @@
   },
   "main": "main.js",
   "devDependencies": {
-    "vite": "^4.0.0",
-    "vite-plugin-squoosh": "^1.1.5"
+    "vite": "^4.1.4",
+    "vite-plugin-squoosh": "^1.1.6"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:rish-inc/rishry_media.git"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.13",
+    "autoprefixer": "^10.4.14",
     "cross-env": "^7.0.3",
     "fs": "^0.0.1-security",
-    "glob": "^8.1.0",
+    "glob": "^9.2.1",
     "path": "^0.12.7",
     "postcss": "^8.4.21",
     "postcss-import": "^15.1.0",
     "postcss-loader": "^7.0.2",
-    "postcss-nesting": "^10.2.0",
-    "sass": "^1.58.0",
+    "postcss-nesting": "^11.2.1",
+    "sass": "^1.59.2",
     "vite-plugin-handlebars": "^1.6.0",
     "vite-plugin-live-reload": "^3.0.1",
     "vite-plugin-sass-glob-import": "^2.0.0"

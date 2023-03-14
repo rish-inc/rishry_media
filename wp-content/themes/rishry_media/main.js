@@ -1,8 +1,8 @@
 import.meta.glob(
 	[
 		"./assets/scripts/**",
-		"./assets/img/**"
+		"./assets/images/**"
 	],
-	{ eager: true }
+	// { eager: true }
 );
 import "./main.scss";

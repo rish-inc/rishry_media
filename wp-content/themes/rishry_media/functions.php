@@ -11,8 +11,8 @@ define( 'DIST_PATH', get_template_directory()     . '/' . DIST_DEF );
 define( 'JS_DEPENDENCY', array() ) ; // array( 'jquery' ) as example
 define( 'JS_LOAD_IN_FOOTER', true ) ; // load scripts in footer?
 
-define('VITE_SERVER', 'http://localhost:3000');
-define('VITE_ENTRY_POINT', '/main.js');
+define( 'VITE_SERVER', 'http://localhost:3000' );
+define( "VITE_ENTRY_POINT", "/main.js" );
 
 function cors_http_header() {
 	header( "Access-Control-Allow-Origin: *" );
@@ -66,15 +66,15 @@ add_action( 'wp_enqueue_scripts', function() {
 } );
 
 
-function rishrymedia_title( $title ) {
-    if ( is_front_page() && is_home() ) {
-        $title = get_bloginfo( 'name', 'display' );
-    } elseif ( is_singular() ) {
-        $title = single_post_title( '', false );
-    }
-    return $title;
-}
-add_filter( 'pre_get_document_title', 'rishrymedia_title' );
+// function rishrymedia_title( $title ) {
+//     if ( is_front_page() && is_home() ) {
+//         $title = get_bloginfo( 'name', 'display' );
+//     } elseif ( is_singular() ) {
+//         $title = single_post_title( '', false );
+//     }
+//     return $title;
+// }
+// add_filter( 'pre_get_document_title', 'rishrymedia_title' );
 
 /*
  * Read styles and Scripts

@@ -2,15 +2,16 @@ import { defineConfig } from "vite";
 import liveReload from 'vite-plugin-live-reload';
 import autoprefixer from "autoprefixer";
 import postcssNesting from "postcss-nesting";
-import sassGlobImports from 'vite-plugin-sass-glob-import';
-import squooshPlugin from 'vite-plugin-squoosh';
+// import squooshPlugin from 'vite-plugin-squoosh';
 import glob from "glob";
 import path from "path";
 import fs from "fs";
+import sassGlobImports from 'vite-plugin-sass-glob-import';
 
 export default defineConfig ( {
 	plugins: [
 		liveReload( __dirname + '/**/*.php' ),
+		sassGlobImports(),
 		// squooshPlugin( {
 		// 	// Specify codec options.
 		// 	codecs: {
@@ -42,6 +43,7 @@ export default defineConfig ( {
 				entryFileNames: `assets/[name].js`,
 				chunkFileNames: `assets/[name].js`,
 				assetFileNames: ( { name } ) => {
+					console.log( name );
 					if ( /\.( gif|jpeg|jpg|png|svg|webp| )$/.test( name ?? '' ) ) {
 						return 'assets/images/[name].[ext]';
 					}
@@ -76,8 +78,5 @@ export default defineConfig ( {
 			],
 		},
 		devSourcemap: true,
-		plugins: [
-			sassGlobImports,
-		]
 	},
 } );
