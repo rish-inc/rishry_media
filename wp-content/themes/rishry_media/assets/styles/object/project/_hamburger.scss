@@ -1,0 +1,70 @@
+@use "../../foundation/global" as g;
+
+.p-hamburger {
+    width: 60px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background: g.$bgcolor--pink;
+    position: relative;
+    @include g.breakpoint ( pc ) {
+        display: none;
+    }
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        height: 2px;
+        background: #333;
+        border-radius: g.$radius--border--nomal;
+        left: calc( 50% - ( 30px / 2 ) );
+        transition: 0.5s;
+    }
+    &::before {
+        width: 30px;
+        top: 21px;
+    }
+    &::after {
+        width: 20px;
+        top: 39px;
+    }
+    span {
+        font-size: 0;
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 2px;
+        background: #333;
+        border-radius: g.$radius--border--nomal;
+        top: 50%;
+        left: calc( 50% - ( 30px / 2 ) );
+        transition: 0.5s;
+    }
+    &.is-open {
+        &::before {
+            transform: rotate( 45deg );
+            transition: 0.5s;
+            top: 28px;
+        }
+        &::after {
+            transform: rotate( -45deg );
+            transition: 0.5s;
+            width: 30px;
+            top: 28px;
+        }
+        span {
+            background: none;
+        }
+    }
+}
+body.is-open {
+    position: fixed;
+}
+.c-dorower-bg-sp.is-open {
+    background: rgba( 0, 0, 0, .45 );
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    transition: all .5s;
+}

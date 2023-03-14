@@ -17,22 +17,22 @@
                             <li class="category">カテゴリー名</li>
                         </ul>
                     </div>
-                    <div class="p-eye-catching"><img src="./images/eye-catching02.jpg" alt="記事アイキャッチ画像"></div>
+                    <figure class="p-eyecatch"><img src="./images/eye-catching02.jpg" alt="記事アイキャッチ画像"></figure>
                     <section class="p-entry-content c-boundary-line">
                         <h3 class="c-barline-border">見出し</h3>
                         <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
                         <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
                         <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
                         <p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
-                        <div class="p-entry-tag">
-                            <a href="">#タグ名</a>
-                            <a href="">#タグ名</a>
-                            <a href="">#タグ名</a>
-                        </div>
+                        <ul class="p-entry-tag">
+                            <li><a href="">#タグ名</a></li>
+                            <li><a href="">#タグ名</a></li>
+                            <li><a href="">#タグ名</a></li>
+                        </ul>
                         <div class="p-share">
                             <p class="p-share__title">SHARE!</p>
                             <ul class="p-share__sns c-sns__icon">
-                                <li><a href=""><img src="./images/sns/t_logo.png" alt="Twitterアイコン画像"></a></li>
+                                <li><li><a href=""><img src="./images/sns/t_logo.png" alt="Twitterアイコン画像"></a></li>
                                 <li><a href=""><img src="./images/sns/f_logo.png" alt="Facebookアイコン画像"></a></li>
                                 <li><a href=""><img src="./images/sns/l_logo.png" alt="LINEアイコン画像"></a></li>
                             </ul>
@@ -85,12 +85,12 @@
                             </li>
                         </ul>
                     </aside>
-                    <nav class="p-pager">
+                    <div class="p-pager">
                         <ul class="p-prev-next">
                             <li class="prev">前へ</li>
                             <li class="next">次へ</li>
                         </ul>
-                    </nav>
+                    </div>
                 </article>
             </main>
 

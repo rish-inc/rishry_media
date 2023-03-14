@@ -1,0 +1,9 @@
+@use "../../foundation/global" as g;
+
+.u-border-pc-none {
+    @include g.breakpoint ( pc ) {
+        &:last-child {
+            border: 0;
+        }
+    }
+}

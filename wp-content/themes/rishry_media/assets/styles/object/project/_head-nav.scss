@@ -1,0 +1,120 @@
+@use "../../foundation/global" as g;
+
+.p-head-nav {
+    display: none;
+    z-index: 9999;
+    position: fixed;
+    width: 100vw;
+    height: calc( 100% - 50px );
+    background: g.$bgcolor--white;
+    @include g.breakpoint ( pc ) {
+        display: initial;
+        position: static;
+        width: 100%;
+        height: auto;
+        background: none;
+        margin-right: 2%;
+    }
+    &__navigation {
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 87%;
+        @include g.breakpoint ( pc ) {
+            overflow: visible;
+            height: auto;
+        }
+        &__menu {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            width: 80%;
+            height: auto;
+            @include g.breakpoint ( pc ) {
+                display: flex;
+                margin: 0;
+                width: 100%;
+            }
+            li {
+                border-bottom: solid 1px #acacac;
+                padding: 20px 0;
+                @include g.breakpoint ( pc ) {
+                    border-bottom: none;
+                    padding: 10px 5px;
+                    margin: 0 1%;
+                }
+                &:last-child {
+                    border: 0;
+                    padding: 20px 0 50px;
+                    @include g.breakpoint ( pc ) {
+                        padding: 10px 5px;
+                        white-space: nowrap;
+                    }
+                }
+            }
+            a {
+                text-decoration: none;
+                color: g.$font-color--default;
+                font-size: g.$font-size--header--sp;
+                padding-left: 15px;
+                @include g.breakpoint ( pc ) {
+                    padding: 0;
+                    display: inline-block;
+                }
+                &::after {
+                    @include g.breakpoint ( pc ) {
+                        display: block;
+                        border-bottom: solid 1px g.$border-color--pale--gray;
+                        bottom: 0;
+                        content: '';
+                        transition: all 0.5s ease;
+                        width: 0;
+                    }
+                }
+                &:hover {
+                    color: g.$font-color--hover;
+                    transition: all 0.5s ease;
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    &__sns {
+        background: g.$bgcolor--pink;
+        height: 90px;
+        width: 100vw;
+        position: fixed;
+        bottom: 0;
+        @include g.breakpoint ( pc ) {
+            visibility: collapse;
+        }
+    }
+    &__icon {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 30px 0 0 0;
+        margin: 0 auto;
+        min-width: 180px;
+        max-width: 300px;
+        @include g.breakpoint ( pc ) {
+            display: none;
+        }
+    }
+}
+
+.active {
+    display: block;
+}
+
+.twitter,
+.facebook,
+.instagram {
+    text-align: center;
+    margin: 0 10%;
+    img {
+    width: 40px;
+    height: auto;
+    }
+}

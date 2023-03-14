@@ -1,8 +1,0 @@
-@use "foundation/mixin";
-@use "foundation/variable";
-
-.p-main {
-    @include mixin.breakpoint ( pc ) {
-        max-width: 70%;
-    }
-}
