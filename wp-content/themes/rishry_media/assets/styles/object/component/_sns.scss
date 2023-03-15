@@ -1,10 +1,9 @@
-@use "foundation/mixin";
-@use "foundation/variable";
+@use "../../foundation/global" as g;
 
 .c-sns {
 	&--icon {
 		list-style: none;
-		@include mixin.breakpoint ( pc ) {
+		@include g.breakpoint ( pc ) {
 			margin: 0 auto;
 		}
 	}

@@ -1,13 +1,13 @@
 @use "../../foundation/global" as g;
 
 .p-post-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    &__posted {
-        padding-bottom: 15px;
-        @include g.breakpoint ( tablet ) {
-            padding-bottom: 30px;
-        }
-    }
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	&__posted {
+		padding-bottom: 15px;
+		@include g.breakpoint ( tablet ) {
+			padding-bottom: 30px;
+		}
+	}
 }

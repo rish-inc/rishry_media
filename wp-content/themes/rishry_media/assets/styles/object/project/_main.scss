@@ -1,7 +1,7 @@
 @use "../../foundation/global" as g;
 
 .p-main {
-    @include g.breakpoint ( pc ) {
-        max-width: 70%;
-    }
+	@include g.breakpoint ( pc ) {
+		max-width: 70%;
+	}
 }

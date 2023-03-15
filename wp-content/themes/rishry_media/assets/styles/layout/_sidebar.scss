@@ -1,18 +1,18 @@
 @use "../foundation/global" as g;
 
 .l-sidebar {
-    width: 100vw;
-    margin: 0 calc( 50% - 50vw );
-    overflow: hidden;
-    padding-top: 20px;
-    @include g.breakpoint ( tablet ) {
-        padding-bottom: 1%;
-    }
-    @include g.breakpoint ( pc ) {
-        width: calc( 30% - 30px );
-        margin-left: 30px;
-        max-width: 280px;
-        padding-top: 60px;
-    }
+	width: 100vw;
+	margin: 0 calc( 50% - 50vw );
+	overflow: hidden;
+	padding-top: 20px;
+	@include g.breakpoint ( tablet ) {
+		padding-bottom: 1%;
+	}
+	@include g.breakpoint ( pc ) {
+		width: calc( 30% - 30px );
+		margin-left: 30px;
+		max-width: 280px;
+		padding-top: 60px;
+	}
 }
 
