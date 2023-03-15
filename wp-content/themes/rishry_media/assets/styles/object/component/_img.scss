@@ -1,11 +1,10 @@
-@use "foundation/mixin";
-@use "foundation/variable";
+@use "../../foundation/global" as g;
 
 .c-img {
 	&--sns {
 		width: 30px;
 		height: 30px;
-		@include mixin.breakpoint ( tablet ) {
+		@include g.breakpoint ( tablet ) {
 			width: 50px;
 			height: 50px;
 		}

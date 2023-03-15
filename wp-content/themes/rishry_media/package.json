@@ -4,32 +4,32 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development vite",
-    "build": "vite build",
-    "preview": "vite preview"
+	"dev": "cross-env NODE_ENV=development vite",
+	"build": "vite build",
+	"preview": "vite preview"
   },
   "main": "main.js",
   "devDependencies": {
-    "vite": "^4.1.4",
-    "vite-plugin-squoosh": "^1.1.6"
+	"vite": "^4.1.4",
+	"vite-plugin-squoosh": "^1.1.6"
   },
   "repository": {
 	"type": "git",
 	"url": "git@github.com:rish-inc/rishry_media.git"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.14",
-    "cross-env": "^7.0.3",
-    "fs": "^0.0.1-security",
-    "glob": "^9.2.1",
-    "path": "^0.12.7",
-    "postcss": "^8.4.21",
-    "postcss-import": "^15.1.0",
-    "postcss-loader": "^7.0.2",
-    "postcss-nesting": "^11.2.1",
-    "sass": "^1.59.2",
-    "vite-plugin-handlebars": "^1.6.0",
-    "vite-plugin-live-reload": "^3.0.1",
-    "vite-plugin-sass-glob-import": "^2.0.0"
+	"autoprefixer": "^10.4.14",
+	"cross-env": "^7.0.3",
+	"fs": "^0.0.1-security",
+	"glob": "^9.2.1",
+	"path": "^0.12.7",
+	"postcss": "^8.4.21",
+	"postcss-import": "^15.1.0",
+	"postcss-loader": "^7.0.2",
+	"postcss-nesting": "^11.2.1",
+	"sass": "^1.59.2",
+	"vite-plugin-handlebars": "^1.6.0",
+	"vite-plugin-live-reload": "^3.0.1",
+	"vite-plugin-sass-glob-import": "^2.0.0"
   }
 }

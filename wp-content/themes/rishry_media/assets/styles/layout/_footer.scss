@@ -1,10 +1,10 @@
 @use "../foundation/global" as g;
 
 .l-footer {
-    background: g.$bgcolor--pink;
-    small {
-        @include g.breakpoint ( tablet ) {
-            font-size: g.$font-size--footer-copyright--sp;
-        }
-    }
+	background: g.$bgcolor--pink;
+	small {
+		@include g.breakpoint ( tablet ) {
+			font-size: g.$font-size--footer-copyright--sp;
+		}
+	}
 }

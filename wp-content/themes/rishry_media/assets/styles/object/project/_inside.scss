@@ -1,5 +1,4 @@
-@use "foundation/mixin";
-@use "foundation/variable";
+@use "../../foundation/global" as g;
 
 .p-inside {
 	&__head {
@@ -8,7 +7,7 @@
 		&::before {
 			height: 30px;
 			left: 0;
-			@include mixin.breakpoint ( pc ) {
+			@include g.breakpoint ( pc ) {
 				bottom: 5px;
 			}
 		}

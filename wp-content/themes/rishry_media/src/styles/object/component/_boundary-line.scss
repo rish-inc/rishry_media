@@ -1,9 +1,0 @@
-@use "foundation/mixin";
-@use "foundation/variable";
-
-.c-boundary-line {
-	border-top: 1px solid variable.$border-color--gray;
-	&:first-child {
-		border: 0;
-	}
-}
