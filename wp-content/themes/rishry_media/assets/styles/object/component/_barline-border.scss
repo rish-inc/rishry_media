@@ -1,0 +1,12 @@
+@use "../../foundation/global" as g;
+
+.c-barline-border {
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        width: 2px;
+        background: g.$border-color--pink;
+        border-radius: 9px;
+    }
+}

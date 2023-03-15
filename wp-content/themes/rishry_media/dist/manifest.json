@@ -1,0 +1,66 @@
+{
+  "assets/images/common/ico/favicon.ico": {
+    "file": "assets/images/favicon.ico",
+    "src": "assets/images/common/ico/favicon.ico"
+  },
+  "assets/images/dummy.jpg": {
+    "file": "assets/images/dummy.jpg",
+    "src": "assets/images/dummy.jpg"
+  },
+  "assets/images/eye-catching02.jpg": {
+    "file": "assets/images/eye-catching02.jpg",
+    "src": "assets/images/eye-catching02.jpg"
+  },
+  "assets/images/eye-catching03.jpg": {
+    "file": "assets/images/eye-catching03.jpg",
+    "src": "assets/images/eye-catching03.jpg"
+  },
+  "assets/images/logo.png": {
+    "file": "assets/images/logo.png",
+    "src": "assets/images/logo.png"
+  },
+  "assets/images/p-card/eye-catching.jpg": {
+    "file": "assets/images/eye-catching.jpg",
+    "src": "assets/images/p-card/eye-catching.jpg"
+  },
+  "assets/images/search/search.svg": {
+    "file": "assets/images/search.svg",
+    "src": "assets/images/search/search.svg"
+  },
+  "assets/images/sns/f_logo.png": {
+    "file": "assets/images/f_logo.png",
+    "src": "assets/images/sns/f_logo.png"
+  },
+  "assets/images/sns/i_logo.jpg": {
+    "file": "assets/images/i_logo.jpg",
+    "src": "assets/images/sns/i_logo.jpg"
+  },
+  "assets/images/sns/i_logo.png": {
+    "file": "assets/images/i_logo.png",
+    "src": "assets/images/sns/i_logo.png"
+  },
+  "assets/images/sns/i_logo.svg": {
+    "file": "assets/images/i_logo.svg",
+    "src": "assets/images/sns/i_logo.svg"
+  },
+  "assets/images/sns/l_logo.png": {
+    "file": "assets/images/l_logo.png",
+    "src": "assets/images/sns/l_logo.png"
+  },
+  "assets/images/sns/t_logo.png": {
+    "file": "assets/images/t_logo.png",
+    "src": "assets/images/sns/t_logo.png"
+  },
+  "main.css": {
+    "file": "assets/css/main.css",
+    "src": "main.css"
+  },
+  "main.js": {
+    "css": [
+      "assets/css/main.css"
+    ],
+    "file": "assets/main.js",
+    "isEntry": true,
+    "src": "main.js"
+  }
+}

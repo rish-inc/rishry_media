@@ -1,0 +1,21 @@
+@use "../../foundation/global" as g;
+
+.c-headline-border {
+    &::before,
+    &::after {
+        content: '';
+        flex-basis: 18px;
+        height: 3px;
+        background: g.$border-color--pink;
+        border-radius: 9px;
+        @include g.breakpoint ( tablet ) {
+            flex-basis: 20px;
+        }
+    }
+    &::before {
+        margin-right: 3px;
+    }
+    &::after {
+        margin-left: 2px;
+    }
+}

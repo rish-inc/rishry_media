@@ -1,0 +1,16 @@
+@use "../../foundation/global" as g;
+
+.p-head-nav-flex {
+    @include g.breakpoint ( pc ) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__search {
+        visibility: collapse;
+        @include g.breakpoint ( pc ) {
+            visibility: visible;
+            width: 300px;
+        }
+    }
+}
