@@ -1,6 +1,6 @@
 <?php
 //develop mode config
-define( "IS_VITE_DEVELOPMENT", true );
+define( "IS_VITE_DEVELOPMENT", false );
 
 //define
 define( 'DIST_DEF', 'dist' );
@@ -15,6 +15,7 @@ define( "VITE_ENTRY_POINT", "/main.js" );
 
 function cors_http_header() {
 	header( "Access-Control-Allow-Origin: *" );
+}
 add_action( 'send_headers', 'cors_http_header' );
 
 /*
