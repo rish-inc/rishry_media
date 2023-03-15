@@ -1,5 +1,5 @@
 @use "./reset";
-@use "./global" as g;
+@use "./variable";
 html {
 	font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
 }
@@ -13,11 +13,11 @@ body {
 
 h1, h2, h3, h4, h5 {
 	font-weight: normal;
-	color: g.$font-color--default;
+	color: variable.$font-color--default;
 }
 
 p {
-	color: g.$font-color--default;
+	color: variable.$font-color--default;
 }
 
 ul {
