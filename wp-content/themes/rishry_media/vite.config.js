@@ -39,12 +39,14 @@ export default defineConfig ( {
 			input: {
 				main: path.resolve( __dirname + '/main.js' )
 			},
+			// input: inputFiles,
 			output: {
 				entryFileNames: `assets/[name].js`,
 				chunkFileNames: `assets/[name].js`,
 				assetFileNames: ( { name } ) => {
-					console.log( name );
-					if ( /\.( gif|jpeg|jpg|png|svg|webp| )$/.test( name ?? '' ) ) {
+					// let extType = name.split(".")[1];
+					// console.log( extType );
+					if ( /\.( gif|jpeg|jpg|png|svg|webp|ico| )$/.test( name ?? '' ) ) {
 						return 'assets/images/[name].[ext]';
 					}
 					if ( /\.css$/.test( name ?? '' ) ) {
