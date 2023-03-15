@@ -24,12 +24,14 @@
     }
 }
 input[ type="text" ] {
-    height: auto;
-    font-size: 1.4rem;
-    background: none;
-    border: none;
-    width: 90%;
-    padding-left: 10px;
+	@include mixin.font-rem( 14 );
+	background: none;
+	border: none;
+	width: 90%;
+	padding-left: 16px;
+	@include mixin.breakpoint ( pc ) {
+		padding-left: 10px;
+	}
 }
 
 

@@ -1,0 +1,11 @@
+@use "foundation/mixin";
+@use "foundation/variable";
+
+.c-sns {
+	&--icon {
+		list-style: none;
+		@include mixin.breakpoint ( pc ) {
+			margin: 0 auto;
+		}
+	}
+}

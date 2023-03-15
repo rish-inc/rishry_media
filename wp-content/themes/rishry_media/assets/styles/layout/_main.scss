@@ -1,0 +1,19 @@
+@use "foundation/mixin";
+@use "foundation/variable";
+
+.l-main {
+	margin: 0 auto;
+	min-width: 261px;
+	max-width: 360px;
+	@include mixin.breakpoint ( tablet ) {
+		max-width: 984px;
+		padding: 0 20px;
+	}
+	@include mixin.breakpoint ( pc ) {
+		padding: 0 60px;
+		min-width: 905px;
+		max-width: 1160px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+}

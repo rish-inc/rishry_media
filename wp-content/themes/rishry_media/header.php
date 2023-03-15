@@ -26,7 +26,7 @@
                     <div class="p-head-nav">
                         <nav class="p-head-nav__navigation">
                             <ul class="p-head-nav__navigation__menu">
-                                <?php wp_nav_menu( array( 
+                                <?php wp_nav_menu( array(
                                     'theme_location' => 'header-menu',
                                     'items_wrap' => '%3$s',
                                     'container' => false

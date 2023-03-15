@@ -1,5 +1,4 @@
 <?php
-
 //develop mode config
 define( "IS_VITE_DEVELOPMENT", true );
 
@@ -16,7 +15,6 @@ define( "VITE_ENTRY_POINT", "/main.js" );
 
 function cors_http_header() {
 	header( "Access-Control-Allow-Origin: *" );
-}
 add_action( 'send_headers', 'cors_http_header' );
 
 /*
@@ -42,10 +40,10 @@ add_action( 'wp_enqueue_scripts', function() {
 
 		// read manifest.json to figure out what to enqueue
 		$manifest = json_decode( file_get_contents( DIST_PATH . '/manifest.json'), true );
-		
+
 		// is ok
 		if ( is_array( $manifest ) ) {
-			
+
 			// get first key, by default is 'main.js'
 			$manifest_key = array_keys( $manifest );
 			if ( isset( $manifest_key[0] ) ) {
@@ -54,7 +52,7 @@ add_action( 'wp_enqueue_scripts', function() {
 				foreach( @$manifest[$manifest_key[0]]['css'] as $css_file ) {
 					wp_enqueue_style( 'main', DIST_URI . '/' . $css_file );
 				}
-				
+
 				// enqueue main JS file
 				$js_file = @$manifest[$manifest_key[0]]['file'];
 				if ( ! empty( $js_file ) ) {
@@ -87,3 +85,83 @@ add_action( 'wp_enqueue_scripts', function() {
 //     wp_enqueue_style( 'dorower', get_theme_file_uri( '/src/scripts/dorower.js' ), array(), '1.0.0', true );
 // }
 // add_action( 'wp_enqueue_scripts', 'rishrymedia_scripts' );
+
+function rishrymedia_scripts() {
+	wp_enqueue_style( 'google-web-style',);
+	wp_enqueue_style( 'reset', get_theme_file_uri( '/src/styles/foundation/reset.min.css' ), array(), '1.0.0' );
+	wp_enqueue_style( 'style', get_theme_file_uri( '/css/main.css' ), array(), '1.0.0' );
+	wp_enqueue_style( 'hamburger', get_theme_file_uri( '/src/scripts/hamburger.js' ), array(), '1.0.0', true );
+	wp_enqueue_style( 'dorower', get_theme_file_uri( '/src/scripts/dorower.js' ), array(), '1.0.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'rishrymedia_scripts' );
+
+/*
+ * SVG ファイルをメディアライブラリで表示
+ */
+add_filter( 'upload_mimes', function ( $mimes ) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+});
+
+add_filter( 'manage_media_columns', function ( $columns ) {
+	echo '<style>.media-icon img[src$=".svg"]{width:100%;}</style>';
+	return $columns;
+});
+
+/*
+ * 「前へ」「次へ」に class 名を付与
+ */
+function add_prev_post_link_class( $output ) {
+	return str_replace( '<a href=', '<a class="p-link--page__btn__prev" href=', $output ); // 前の記事へのリンク
+}
+add_filter( 'previous_post_link', 'add_prev_post_link_class' );
+function add_next_post_link_class( $output ) {
+	return str_replace( '<a href=', '<a class="p-link--page__btn__next" href=', $output ); // 次の記事へのリンク
+}
+add_filter( 'next_post_link', 'add_next_post_link_class' );
+
+
+/*
+ * アイキャッチ画像設定
+ */
+add_filter( 'post_thumbnail_html', 'custom_attribute' );
+function custom_attribute( $html ) {
+	// class を削除
+	$html = preg_replace( '/(width|height)="\d*"\s/', '', $html );
+	return $html;
+}
+
+
+/*
+ * li a に任意の class を追加
+ */
+// wp_nav_menuのliにclass追加
+function rishrymedia_additional_class_on_li( $classes, $item, $args ) {
+	if (isset( $args -> add_li_class )) {
+		$classes['class'] = $args -> add_li_class;
+	}
+	return $classes;
+}
+add_filter( 'nav_menu_css_class', 'rishrymedia_additional_class_on_li', 1, 3 );
+
+// wp_nav_menuのaにclass追加
+function rishrymedia_additional_class_on_a($classes, $item, $args) {
+	if (isset( $args -> add_a_class )) {
+		$classes['class'] = $args -> add_a_class;
+	}
+	return $classes;
+}
+add_filter( 'nav_menu_link_attributes', 'rishrymedia_additional_class_on_a', 1, 3 );
+
+
+/*
+ * カテゴリーを取得
+ */
+// function rishrymedia_category() {
+// 	$cats = get_the_category();
+// 	if( $cats ) : // $cats が空ではない場合
+// 		foreach( $cats as $cat ) :
+// 			echo esc_html( $cat -> name ); // カテゴリー名を出力
+// 		endforeach;
+// 	endif;
+// }

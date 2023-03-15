@@ -1,7 +1,7 @@
 @use "../../foundation/global" as g;
 
 .c-headline-border {
-    &::before, 
+    &::before,
     &::after {
         content: '';
         flex-basis: 18px;

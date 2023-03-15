@@ -1,0 +1,16 @@
+@use "foundation/mixin";
+@use "foundation/variable";
+
+.p-inside {
+	&__head {
+		position: relative;
+		padding-left: 10px;
+		&::before {
+			height: 30px;
+			left: 0;
+			@include mixin.breakpoint ( pc ) {
+				bottom: 5px;
+			}
+		}
+	}
+}

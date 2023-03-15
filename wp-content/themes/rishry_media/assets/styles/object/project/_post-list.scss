@@ -4,7 +4,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    &__posted { 
+    &__posted {
         padding-bottom: 15px;
         @include g.breakpoint ( tablet ) {
             padding-bottom: 30px;

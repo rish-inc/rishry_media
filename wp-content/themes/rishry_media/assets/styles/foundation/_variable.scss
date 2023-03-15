@@ -9,20 +9,37 @@ $font-color--gray: #797979;
 
 //背景カラー
 $bgcolor--pink: #FFEDEE;
+$bgcolor--dark-pink: #FFD6DB;
 $bgcolor--white: #FFF;
 
 //ボーダーカラー
+$border-color--pale-pink: #FFD6DB;
 $border-color--pink: #FFC0C8;
 $border-color--gray: #dcdcdc;
 $border-color--pale--gray: #CCC;
+$border-color--dark--gray: #797979;
 
 /*
  * 文字サイズ
  */
+// ベースフォント用
+$font-size--base: 1.6rem;
+
+// ブログタイトルフォント用
+$font-size--title--sp: 2.4rem;
+$font-size--title--pc: 2.6rem;
+
+// 見出しフォント用
+$font-size--head--sp: 2rem;
+$font-size--head--pc: 2.6rem;
+
+// 小見出しフォント用
+$font-size--sub-head: 1.8rem;
+
 //ヘッダー用
 $font-size--header--sp: 1.6rem;
 
-//ヘッダー用　キャッチフレーズ
+//ヘッダー用 キャッチフレーズ
 $font-size--header--catchphrase--pc: 1.2rem;
 
 //サイドバー用
@@ -35,10 +52,10 @@ $font-size--footer--sp: 1.4rem;
 // フッター用 コピーライト
 $font-size--footer-copyright--sp: 1.2rem;
 
+
+
 /*
  * 角丸
  */
 //ボーダー用
 $radius--border--nomal: 5px;
-
-

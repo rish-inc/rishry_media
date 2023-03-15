@@ -1,13 +1,13 @@
 @use "../../foundation/global" as g;
 
 .c-breadcrumb-list {
-    padding: 0;
-    display: flex;
-    li {
-        list-style: none;
-        a {
-            text-decoration: none;
-            color: #707070;
-        }
-    }
+	padding: 0;
+	display: flex;
+	li {
+		list-style: none;
+		a {
+			text-decoration: none;
+			color: #707070;
+		}
+	}
 }

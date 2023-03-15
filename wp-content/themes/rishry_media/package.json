@@ -14,8 +14,8 @@
     "vite-plugin-squoosh": "^1.1.6"
   },
   "repository": {
-    "type": "git",
-    "url": "git@github.com:rish-inc/rishry_media.git"
+	"type": "git",
+	"url": "git@github.com:rish-inc/rishry_media.git"
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",
