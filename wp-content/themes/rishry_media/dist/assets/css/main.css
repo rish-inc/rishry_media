@@ -38,6 +38,15 @@ input, button, textarea, select {
     scroll-behavior: auto !important;
   }
 }
+/*
+ * 配色
+ */
+/*
+ * 文字サイズ
+ */
+/*
+ * 角丸
+ */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -111,15 +120,6 @@ li {
 a {
   text-decoration: none;
 }
-/*
- * 配色
- */
-/*
- * 文字サイズ
- */
-/*
- * 角丸
- */
 /*
  * 配色
  */
