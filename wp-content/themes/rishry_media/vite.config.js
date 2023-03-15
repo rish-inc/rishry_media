@@ -18,8 +18,8 @@ export default defineConfig ( {
 		// 		mozjpeg: { quality: 30, smoothing: 1 },
 		// 		webp   : { quality: 25 },
 		// 		avif   : { cqLevel: 20, sharpness: 1 },
-		// 		jxl    : { quality: 30 },
-		// 		wp2    : { quality: 40 },
+		// 		jxl	: { quality: 30 },
+		// 		wp2	: { quality: 40 },
 		// 		oxipng : { level: 3 }
 		// 	},
 		// 	// Do not encode .wp2 and .webp files.

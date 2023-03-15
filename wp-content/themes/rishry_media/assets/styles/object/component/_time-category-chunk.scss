@@ -1,17 +1,17 @@
 @use "../../foundation/global" as g;
 
 .c-time-category-chunk {
-    display: flex;
-    padding: 0;
+	display: flex;
+	padding: 0;
 }
 .time,
 .category {
-    list-style: none;
+	list-style: none;
 }
 .time {
-    color: g.$font-color--gray;
+	color: g.$font-color--gray;
 }
 .category {
-    color: g.$font-color--pink;
-    font-weight: bold;
+	color: g.$font-color--pink;
+	font-weight: bold;
 }

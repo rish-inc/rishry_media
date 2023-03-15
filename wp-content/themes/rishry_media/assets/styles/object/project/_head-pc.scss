@@ -1,18 +1,18 @@
 @use "../../foundation/global" as g;
 
 .p-head-pc {
-    @include g.breakpoint ( pc ) {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin: 0 auto;
-        min-width: 1025px;
-        max-width: 1160px;
-    }
-    img {
-        @include g.breakpoint ( pc ) {
-            max-width: 150px;
-            height: auto;
-        }
-    }
+	@include g.breakpoint ( pc ) {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin: 0 auto;
+		min-width: 1025px;
+		max-width: 1160px;
+	}
+	img {
+		@include g.breakpoint ( pc ) {
+			max-width: 150px;
+			height: auto;
+		}
+	}
 }
