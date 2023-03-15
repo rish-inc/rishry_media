@@ -1,18 +1,18 @@
 @use "../../foundation/global" as g;
 
 .c-btn {
-    text-decoration: none;
-    color: #444;
-    background: #FFD6DB;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 61%;
-    height: 26px;
-    border-radius: 5px;
-    @include g.breakpoint ( tablet ) {
-        width: 40%;
-        height: 46px;
-        font-size: 2rem;
-    }
+	text-decoration: none;
+	color: #444;
+	background: #FFD6DB;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 61%;
+	height: 26px;
+	border-radius: 5px;
+	@include g.breakpoint ( tablet ) {
+		width: 40%;
+		height: 46px;
+		font-size: 2rem;
+	}
 }

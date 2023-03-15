@@ -1,29 +1,29 @@
 @use "../../foundation/global" as g;
 
 .c-header-flex-beside {
-    width: 65vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    @include g.breakpoint ( tablet ) {
-        width: 95vw;
-        margin-left: 10px;
-    }
-    @include g.breakpoint ( pc ) {
-        display: block;
-        margin-left: 0;
-        width: auto;
-    }
-    &__logo {
-        margin: 0;
-        @include g.breakpoint ( tablet ) {
-            margin: 0 auto;
-        }
-        @include g.breakpoint ( pc ) {
-            margin: 0;
-        }
-        img {
-            max-width: 110px;
-        }
-    }
+	width: 65vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@include g.breakpoint ( tablet ) {
+		width: 95vw;
+		margin-left: 10px;
+	}
+	@include g.breakpoint ( pc ) {
+		display: block;
+		margin-left: 0;
+		width: auto;
+	}
+	&__logo {
+		margin: 0;
+		@include g.breakpoint ( tablet ) {
+			margin: 0 auto;
+		}
+		@include g.breakpoint ( pc ) {
+			margin: 0;
+		}
+		img {
+			max-width: 110px;
+		}
+	}
 }

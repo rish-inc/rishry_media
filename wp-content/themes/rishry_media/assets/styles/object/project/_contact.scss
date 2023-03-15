@@ -1,64 +1,64 @@
 @use "../../foundation/global" as g;
 
 .p-contact {
-    width: 100%;
-    margin: 0 auto;
-    display: block;
-    padding-bottom: 40px;
-    @include g.breakpoint ( tablet ) {
-        padding-bottom: 80px;
-    }
-    @include g.breakpoint ( pc ) {
-        max-width: 816px;
-        padding: 100px 0 80px 0;
-    }
-    &__form {
-        padding-top: 20px;
-        max-width: 350px;
-        width: 90%;
-        margin: 0 auto;
-        @include g.breakpoint ( tablet ) {
-            padding-top: 40px;
-        }
-        @include g.breakpoint ( tablet ) {
-            width: 50%;
-        }
-        dl {
-            padding-bottom: 20px;
-            dt {
-                padding-bottom: 3px;
-                label {
-                    font-size: 1.4rem;
-                    @include g.breakpoint ( tablet ) {
-                        font-size: 2rem;
-                    }
-                }
-            }
-            dd {
-                input,
-                textarea {
-                    width: 100%;
-                    max-width: 350px;
-                    border: 1px solid #707070;
-                    border-radius: 5px;
-                    &[type=text] {
-                        height: 4rem;
-                        margin-bottom: 5px;
-                        @include g.breakpoint ( tablet ) {
-                            height: 4rem;
-                            max-width: 420px;
-                        }
-                    }
-                }
-                textarea {
-                    height: 24.2rem;
-                    @include g.breakpoint ( tablet ) {
-                        height: 24rem;
-                    }
-                }
-            }
-        }
-    }
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	padding-bottom: 40px;
+	@include g.breakpoint ( tablet ) {
+		padding-bottom: 80px;
+	}
+	@include g.breakpoint ( pc ) {
+		max-width: 816px;
+		padding: 100px 0 80px 0;
+	}
+	&__form {
+		padding-top: 20px;
+		max-width: 350px;
+		width: 90%;
+		margin: 0 auto;
+		@include g.breakpoint ( tablet ) {
+			padding-top: 40px;
+		}
+		@include g.breakpoint ( tablet ) {
+			width: 50%;
+		}
+		dl {
+			padding-bottom: 20px;
+			dt {
+				padding-bottom: 3px;
+				label {
+					font-size: 1.4rem;
+					@include g.breakpoint ( tablet ) {
+						font-size: 2rem;
+					}
+				}
+			}
+			dd {
+				input,
+				textarea {
+					width: 100%;
+					max-width: 350px;
+					border: 1px solid #707070;
+					border-radius: 5px;
+					&[type=text] {
+						height: 4rem;
+						margin-bottom: 5px;
+						@include g.breakpoint ( tablet ) {
+							height: 4rem;
+							max-width: 420px;
+						}
+					}
+				}
+				textarea {
+					height: 24.2rem;
+					@include g.breakpoint ( tablet ) {
+						height: 24rem;
+					}
+				}
+			}
+		}
+	}
 }
 .mandatory-tag,
 .button {
@@ -66,20 +66,20 @@
 	border-radius: 5px;
 }
 .mandatory-tag {
-    font-size: 1.2rem;
-    margin-left: 5px;
-    padding: 1%;
-    @include g.breakpoint ( tablet ) {
-        font-size: 1.5rem;
-    }
+	font-size: 1.2rem;
+	margin-left: 5px;
+	padding: 1%;
+	@include g.breakpoint ( tablet ) {
+		font-size: 1.5rem;
+	}
 }
 .button {
-    font-size: 1.4rem;
-    border: none;
-    padding: 2% 3%;
-    display: inline-block;
-    @include g.breakpoint ( tablet ) {
-        font-size: 2rem;
-        padding: 1% 2.5%;
-    }
+	font-size: 1.4rem;
+	border: none;
+	padding: 2% 3%;
+	display: inline-block;
+	@include g.breakpoint ( tablet ) {
+		font-size: 2rem;
+		padding: 1% 2.5%;
+	}
 }

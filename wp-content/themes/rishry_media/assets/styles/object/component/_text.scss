@@ -1,45 +1,44 @@
-@use "foundation/mixin";
-@use "foundation/variable";
+@use "../../foundation/global" as g;
 
 .c-text {
 	text-decoration: none;
-	color: variable.$font-color--gray;
-	@include mixin.font-rem( 1 );
-	@include mixin.breakpoint ( tablet ) {
-		@include mixin.font-rem( 12 );
+	color: g.$font-color--gray;
+	@include g.font-rem( 1 );
+	@include g.breakpoint ( tablet ) {
+		@include g.font-rem( 12 );
 	}
 	&--title {
-		color: variable.$font-color--default;
-		@include mixin.font-rem( 24 );
-		@include mixin.breakpoint ( pc ) {
-			@include mixin.font-rem( 26 );
+		color: g.$font-color--default;
+		@include g.font-rem( 24 );
+		@include g.breakpoint ( pc ) {
+			@include g.font-rem( 26 );
 		}
 	}
 	&--head {
-		@include mixin.font-rem( 20 );
-		@include mixin.breakpoint ( pc ) {
-			@include mixin.font-rem( 24 );
+		@include g.font-rem( 20 );
+		@include g.breakpoint ( pc ) {
+			@include g.font-rem( 24 );
 		}
 	}
 	&--subhead {
-		@include mixin.font-rem( 18 );
+		@include g.font-rem( 18 );
 	}
 	&--little {
-		@include mixin.font-rem( 15 );
+		@include g.font-rem( 15 );
 	}
 	&--default {
-		@include mixin.font-rem( 16 );
+		@include g.font-rem( 16 );
 	}
 	&--gray {
-		color: variable.$font-color--gray;
+		color: g.$font-color--gray;
 	}
 	&--pink {
-		color: variable.$font-color--pink;
+		color: g.$font-color--pink;
 		font-weight: bold;
 	}
 	&--sns {
-		color: variable.$font-color--default;
-		@include mixin.font-rem( 12 );
+		color: g.$font-color--default;
+		@include g.font-rem( 12 );
 	}
 	&--copyright {
 		font-style: normal;

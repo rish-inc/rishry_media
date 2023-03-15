@@ -1,21 +1,21 @@
 @use "../../foundation/global" as g;
 
 .p-detail {
-    @include g.breakpoint ( pc ) {
-        padding-top: 60px;
-    }
-    &__search {
-        @include g.breakpoint ( tablet ) {
-            padding-top: 30px;
-        }
-        @include g.breakpoint ( pc ) {
-            padding-top: 100px;
-        }
-        &__results {
-            font-size: 1.4rem;
-            @include g.breakpoint ( tablet ) {
-                 font-size: 1.6rem;
-            }
-        }
-    }
+	@include g.breakpoint ( pc ) {
+		padding-top: 60px;
+	}
+	&__search {
+		@include g.breakpoint ( tablet ) {
+			padding-top: 30px;
+		}
+		@include g.breakpoint ( pc ) {
+			padding-top: 100px;
+		}
+		&__results {
+			font-size: 1.4rem;
+			@include g.breakpoint ( tablet ) {
+				 font-size: 1.6rem;
+			}
+		}
+	}
 }

@@ -1,12 +1,11 @@
-@use "foundation/mixin";
-@use "foundation/variable";
+@use "../../foundation/global" as g;
 
 .p-link {
 	&--page {
 		padding-left: 0;
 		display: flex;
 		flex-direction: column;
-		@include mixin.breakpoint ( tablet ) {
+		@include g.breakpoint ( tablet ) {
 			display: block;
 			overflow: hidden;
 			position: relative;
@@ -16,22 +15,22 @@
 			width: 100%;
 			max-width: 320px;
 			height: 60px;
-			border: solid 1px variable.$border-color--dark--gray;
+			border: solid 1px g.$border-color--dark--gray;
 			transition: 0.5s;
-			@include mixin.breakpoint ( tablet ) {
+			@include g.breakpoint ( tablet ) {
 				width: 48%;
 				min-width: 160px;
 				float: left;
 			}
 			&:first-child {
 				margin-bottom: 20px;
-				@include mixin.breakpoint ( tablet ) {
+				@include g.breakpoint ( tablet ) {
 					left: 0;
 					// margin: 0 20px 0 0;
 				}
 			}
 			&:last-child {
-				@include mixin.breakpoint ( tablet ) {
+				@include g.breakpoint ( tablet ) {
 					position: absolute;
 					right: 0;
 				}
@@ -41,7 +40,7 @@
 			}
 			&__prev,
 			&__next {
-				color: variable.$font-color--default;
+				color: g.$font-color--default;
 				display: block;
 				line-height: 60px;
 			}

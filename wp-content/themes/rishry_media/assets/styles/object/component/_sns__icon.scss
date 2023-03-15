@@ -1,8 +1,8 @@
 @use "../../foundation/global" as g;
 
 .c-sns__icon {
-    list-style: none;
-    @include g.breakpoint ( pc ) {
-        margin: 0 auto;
-    }
+	list-style: none;
+	@include g.breakpoint ( pc ) {
+		margin: 0 auto;
+	}
 }
