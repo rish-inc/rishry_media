@@ -1,3 +1,4 @@
+import "./assets/scripts/pageload.js";
 import.meta.glob(
 	[
 		"./assets/images/**"
