@@ -16,7 +16,7 @@
 			</div>
 			<div class="p-head-pc">
 				<div class="c-header-flex-beside">
-					<button class="p-hamburger is-hamburger">
+					<button class="p-hamburger js-hamburger">
 						<span>メニュー展開ボタン</span>
 					</button>
 					<h1 class="c-header-flex-beside__logo"><a href="/"><img src="<?php echo get_theme_file_uri( '/assets/images/logo.png' ); ?>" alt="Rishry ロゴ"></a></h1>
