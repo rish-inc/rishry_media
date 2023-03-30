@@ -4,9 +4,9 @@
 	width: 60px;
 	height: 60px;
 	border: none;
-	outline: none;
 	background: g.$bgcolor--pink;
 	position: relative;
+	cursor: pointer;
 	@include g.breakpoint ( pc ) {
 		display: none;
 	}

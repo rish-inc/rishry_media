@@ -1,8 +1,9 @@
+import "./assets/scripts/pageload.js";
 import.meta.glob(
 	[
-		"./assets/scripts/**",
 		"./assets/images/**"
 	],
-	// { eager: true }
 );
+import "./assets/scripts/hamburger.js";
+
 import "./main.scss";

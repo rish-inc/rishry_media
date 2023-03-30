@@ -1,6 +1,6 @@
 <?php
 //develop mode config
-define( "IS_VITE_DEVELOPMENT", false );
+define( "IS_VITE_DEVELOPMENT", true );
 
 //define
 define( 'DIST_DEF', 'dist' );
@@ -72,18 +72,6 @@ add_action( 'wp_enqueue_scripts', function() {
 //	 return $title;
 // }
 // add_filter( 'pre_get_document_title', 'rishrymedia_title' );
-
-/*
- * Read styles and Scripts
- */
-// function rishrymedia_scripts() {
-//	 wp_enqueue_style( 'google-web-style',);
-//	 wp_enqueue_style( 'reset', get_theme_file_uri( '/src/styles/foundation/reset.min.css' ), array(), '1.0.0' );
-//	 wp_enqueue_style( 'style', get_theme_file_uri( '/css/main.css' ), array(), '1.0.0' );
-//	 wp_enqueue_style( 'hamburger', get_theme_file_uri( '/src/scripts/hamburger.js' ), array(), '1.0.0', true );
-//	 wp_enqueue_style( 'dorower', get_theme_file_uri( '/src/scripts/dorower.js' ), array(), '1.0.0', true );
-// }
-// add_action( 'wp_enqueue_scripts', 'rishrymedia_scripts' );
 
 /*
  * SVG ファイルをメディアライブラリで表示
