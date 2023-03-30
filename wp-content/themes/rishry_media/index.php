@@ -18,7 +18,7 @@
 				<li class="p-post-list__posted c-boundary-line">
 					<figure class="p-card">
 						<figcaption class="p-card__caption">
-							<h3 class="p-card__caption__title c-barline-border">ブログタイトルtest</h3>
+							<h3 class="p-card__caption__title c-barline-border">ブログタイトル</h3>
 							<ul class="data c-time-category-chunk">
 								<li class="time"><time>投稿日時</time></li>
 								<li class="category">カテゴリー名</li>
