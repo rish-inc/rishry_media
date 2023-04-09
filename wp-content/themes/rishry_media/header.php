@@ -25,7 +25,7 @@
 						</a>
 					</h1>
 				</div>
-				<div class class="c-dorower-bg-sp"></div>
+				<div class="c-dorower-bg-sp"></div>
 				<div class="p-head-nav-flex">
 					<div class="p-head-nav">
 						<nav class="p-head-nav__navigation">
@@ -39,9 +39,9 @@
 						</nav>
 						<nav class="p-head-nav__sns">
 							<ul class="p-head-nav__icon c-sns__icon">
-								<li class="twitter"><a href="#"><img src="images/sns/t_logo.png" alt="twitter"></a></li>
-								<li class="facebook"><a href="#"><img src="images/sns/f_logo.png" alt="facebook"></a></li>
-								<li class="instagram"><a href="#"><img src="images/sns/i_logo.png" alt="instagram"></a></li>
+								<li class="twitter">twitter<a href="#"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/sns/t_logo.png' )); ?>" alt="twitter"></a></li>
+								<li class="facebook"><a href="#"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/sns/f_logo.png' )); ?>" alt="facebook"></a></li>
+								<li class="instagram"><a href="#"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/sns/i_logo.png' )); ?>" alt="instagram"></a></li>
 							</ul>
 						</nav>
 					</div>
