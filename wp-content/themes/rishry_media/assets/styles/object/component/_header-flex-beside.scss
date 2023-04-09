@@ -15,11 +15,13 @@
 		width: auto;
 	}
 	&__logo {
+		display: none;
 		margin: 0;
 		@include g.breakpoint ( tablet ) {
 			margin: 0 auto;
 		}
 		@include g.breakpoint ( pc ) {
+			display: block;
 			margin: 0;
 		}
 		img {
