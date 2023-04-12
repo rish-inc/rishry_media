@@ -3,9 +3,12 @@
 .p-search {
 	padding: 20px 0;
 	margin: 0 auto;
-	width: 93%;
+	width: 40%;
 	@include g.breakpoint ( pc ) {
 		display: none;
+	}
+	@media ( max-width: 599px ) {
+		width: 80%;
 	}
 	&__window {
 		width: 100%;

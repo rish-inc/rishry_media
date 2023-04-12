@@ -1,6 +1,28 @@
 @use "../../foundation/global" as g;
 
 .c-search-window {
+	@media ( min-width: 320px ) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 2% 0 10%;
+        height: -webkit-fill-available;
+    }
+	@media ( max-width: 599px ) {
+		margin-left: 0;
+	}
+	// Firefoxの調整
+	@-moz-document url-prefix(){
+		@media ( min-width: 600px ) and ( max-width: 650px ){
+			margin-top: 2%;
+		}
+	}
+	@-moz-document url-prefix(){
+		@media ( min-width: 650px ) and ( max-width: 730px ){
+			margin-top: 1%;
+		}
+	}
+
 	@include g.breakpoint ( pc ) {
 		display: flex;
 		justify-content: space-around;
@@ -25,7 +47,22 @@ input[ type="text" ] {
 	background: none;
 	border: none;
 	width: 90%;
+	height: 100%;
 	padding-left: 16px;
+	outline: none;
+
+	@media ( max-width: 730px ) {
+		@include g.font-rem( 12 )
+	}
+
+	@media ( max-width: 650px ) {
+		@include g.font-rem( 10 )
+	}
+
+	@media ( max-width: 599px ) {
+		@include g.font-rem( 14 )
+	}
+
 	@include g.breakpoint ( pc ) {
 		padding-left: 10px;
 	}

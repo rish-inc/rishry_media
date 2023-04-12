@@ -3,7 +3,7 @@
 	<div class="p-search">
 		<div class="p-search__window">
 			<form class="c-search-window" action="/" name="search-form" method="post">
-				<input type="text" name="search" placeholder="Search">
+				<input type="text" name="search" placeholder="ブランド・フリーワードで探す">
 				<button type="submit" class="c-search-window__button" aria-label="search" value="">
 					<img class="c-search-window__img" src="<?php echo get_theme_file_uri('/assets/images/search/search.svg'); ?>" alt="">
 				</button>
