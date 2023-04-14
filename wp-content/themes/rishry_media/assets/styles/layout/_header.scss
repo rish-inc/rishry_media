@@ -11,11 +11,13 @@
 		display: none;
 		@include g.breakpoint ( pc ) {
 			display: block;
-			font-size: g.$font-size--header--catchphrase--pc;
+			@include g.font-rem ( $font-size--header--catchphrase--pc );
 			padding: 14px 10px;
 			margin: 0 auto;
 			max-width: 1140px;
+			position: relative;
+			top: 7%;
+			left: 1.2%;
 		}
 	}
 }
-

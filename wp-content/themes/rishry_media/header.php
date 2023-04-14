@@ -4,8 +4,8 @@
 		<meta charset="utf-8">
 		<meta name="description" content="Rishry ファッション＆メイク初心者さんのための情報サイト">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/common/ico/favicon.ico">
-		<!-- <title><?php bloginfo( 'name' ); ?></title> -->
+		<link rel="icon" href="<?php echo esc_url( get_theme_file_uri( './assets/images/common/ico/favicon.ico' )); ?>">
+		<title><?php bloginfo( 'name' ); ?></title>
 		<?php wp_head(); ?>
 	</head>
 
@@ -19,9 +19,13 @@
 					<button class="p-hamburger js-hamburger">
 						<span>メニュー展開ボタン</span>
 					</button>
-					<h1 class="c-header-flex-beside__logo"><a href="/"><img src="<?php echo get_theme_file_uri( '/assets/images/logo.png' ); ?>" alt="Rishry ロゴ"></a></h1>
+					<h1 class="c-header-flex-beside__logo">
+						<a href="<?php echo esc_url( home_url() ); ?>">
+							<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/logo.png' )); ?>" alt="Rishry ロゴ">
+						</a>
+					</h1>
 				</div>
-				<div class class="c-dorower-bg-sp"></div>
+				<div class="c-dorower-bg-sp"></div>
 				<div class="p-head-nav-flex">
 					<div class="p-head-nav">
 						<nav class="p-head-nav__navigation">
@@ -35,9 +39,9 @@
 						</nav>
 						<nav class="p-head-nav__sns">
 							<ul class="p-head-nav__icon c-sns__icon">
-								<li class="twitter"><a href="#"><img src="images/sns/t_logo.png" alt="twitter"></a></li>
-								<li class="facebook"><a href="#"><img src="images/sns/f_logo.png" alt="facebook"></a></li>
-								<li class="instagram"><a href="#"><img src="images/sns/i_logo.png" alt="instagram"></a></li>
+								<li class="twitter">twitter<a href="#"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/sns/t_logo.png' )); ?>" alt="twitter"></a></li>
+								<li class="facebook"><a href="#"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/sns/f_logo.png' )); ?>" alt="facebook"></a></li>
+								<li class="instagram"><a href="#"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/sns/i_logo.png' )); ?>" alt="instagram"></a></li>
 							</ul>
 						</nav>
 					</div>

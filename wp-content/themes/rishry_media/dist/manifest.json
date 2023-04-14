@@ -1,4 +1,12 @@
 {
+  "assets/images/common/border-left.svg": {
+    "file": "assets/images/border-left.svg",
+    "src": "assets/images/common/border-left.svg"
+  },
+  "assets/images/common/border-right.svg": {
+    "file": "assets/images/border-right.svg",
+    "src": "assets/images/common/border-right.svg"
+  },
   "assets/images/common/ico/favicon.ico": {
     "file": "assets/images/favicon.ico",
     "src": "assets/images/common/ico/favicon.ico"
