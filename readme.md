@@ -24,6 +24,16 @@ Use Local by Flywheel
 
 ## Usage
 
+### scss
+
+You need use CSS variable + set value.
+
+example
+```
+background: url( $base-dir + 'assets/images/dummy.jpg' );
+```
+
+
 ### develop mode
 
 functions.php
