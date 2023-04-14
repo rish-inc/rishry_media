@@ -8,6 +8,9 @@ import path from "path";
 import fs from "fs";
 import sassGlobImports from 'vite-plugin-sass-glob-import';
 
+const themePath = '/wp-content/themes/rishry_media';
+const assets = process.env.NODE_ENV === 'development' ? '/' : '/dist/';
+
 export default defineConfig ( {
 	plugins: [
 		liveReload( __dirname + '/**/*.php' ),
@@ -60,7 +63,7 @@ export default defineConfig ( {
 	css: {
 		preprocessorOptions: {
 			scss: {
-			  rootpath: "http://localhost:3000/",
+				additionalData: `$base-dir: '` + themePath + assets + `';`,
 			},
 		},
 		postcss: {

@@ -1519,6 +1519,11 @@ body.is-open {
 /*
  * 角丸
  */
+.p-mainvisual {
+  background: url("/wp-content/themes/rishry_media/dist/assets/images/dummy.jpg");
+  width: 100vw;
+  height: 500px;
+}
 .p-mainvisual img {
   max-width: 100%;
 }
@@ -1526,6 +1531,9 @@ body.is-open {
   .p-mainvisual img {
     width: 100%;
   }
+}
+.p-mainvisual img {
+  display: none;
 }
 /*
  * 配色
