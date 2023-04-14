@@ -55,10 +55,6 @@ input[ type="text" ] {
 		@include g.font-rem( 12 )
 	}
 
-	@media ( max-width: 650px ) {
-		@include g.font-rem( 10 )
-	}
-
 	@media ( max-width: 599px ) {
 		@include g.font-rem( 14 )
 	}
