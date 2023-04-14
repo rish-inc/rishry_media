@@ -12,21 +12,6 @@ export default defineConfig ( {
 	plugins: [
 		liveReload( __dirname + '/**/*.php' ),
 		sassGlobImports(),
-		// squooshPlugin( {
-		// 	// Specify codec options.
-		// 	codecs: {
-		// 		mozjpeg: { quality: 30, smoothing: 1 },
-		// 		webp   : { quality: 25 },
-		// 		avif   : { cqLevel: 20, sharpness: 1 },
-		// 		jxl	: { quality: 30 },
-		// 		wp2	: { quality: 40 },
-		// 		oxipng : { level: 3 }
-		// 	},
-		// 	// Do not encode .wp2 and .webp files.
-		// 	exclude: /.(wp2|webp)$/,
-		// 	// Encode png to webp.
-		// 	encodeTo: { from: /.png$/, to: "webp" }
-		// } )
 	],
 	root: '',
 	base: process.env.NODE_ENV === 'development' ? './' : '/dist/',
@@ -73,6 +58,11 @@ export default defineConfig ( {
 		},
 	},
 	css: {
+		preprocessorOptions: {
+			scss: {
+			  rootpath: "http://localhost:3000/",
+			},
+		},
 		postcss: {
 			plugins: [
 				postcssNesting,

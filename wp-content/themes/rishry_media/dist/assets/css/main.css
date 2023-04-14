@@ -103,6 +103,7 @@ body {
   min-width: 350px;
   margin: 0;
   overflow-x: hidden;
+  visibility: hidden;
 }
 h1, h2, h3, h4, h5 {
   font-weight: normal;
@@ -191,10 +192,13 @@ a {
 @media (min-width: 1025px) {
   .l-header__catchphrase {
     display: block;
-    font-size: font-rem(12);
+    font-size: 0.75rem;
     padding: 14px 10px;
     margin: 0 auto;
     max-width: 1140px;
+    position: relative;
+    top: 7%;
+    left: 1.2%;
   }
 }
 /*
@@ -361,6 +365,7 @@ a {
   }
 }
 .c-header-flex-beside__logo {
+  display: none;
   margin: 0;
 }
 @media (min-width: 415px) {
@@ -370,6 +375,7 @@ a {
 }
 @media (min-width: 1025px) {
   .c-header-flex-beside__logo {
+    display: block;
     margin: 0;
   }
 }
@@ -530,12 +536,16 @@ a {
 /*
  * 角丸
  */
-.c-search-window {
-  display: flex;
-  justify-content: space-around;
-  display: none;
-  background: #fff;
-  border: solid 1px #aaa;
+@media (min-width: 1025px) {
+  .c-search-window {
+    display: flex;
+    justify-content: space-around;
+    width: 249.87px;
+    height: 40px;
+    background: #fff;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+  }
 }
 .c-search-window__button {
   height: auto;
@@ -1134,9 +1144,9 @@ input[type=text] {
   width: 60px;
   height: 60px;
   border: none;
-  outline: none;
   background: #FFEDEE;
   position: relative;
+  cursor: pointer;
 }
 @media (min-width: 1025px) {
   .p-hamburger {
@@ -1220,6 +1230,7 @@ body.is-open {
   .p-head-nav-flex__search {
     visibility: visible;
     width: 300px;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   }
 }
 /*
@@ -1246,7 +1257,7 @@ body.is-open {
     width: 100%;
     height: auto;
     background: none;
-    margin-right: 2%;
+    margin-right: 5%;
   }
 }
 .p-head-nav__navigation {
@@ -1270,6 +1281,7 @@ body.is-open {
 @media (min-width: 1025px) {
   .p-head-nav__navigation__menu {
     display: flex;
+    justify-content: space-around;
     margin: 0;
     width: 100%;
   }
@@ -1713,11 +1725,11 @@ body.is-open {
   bottom: 8px;
 }
 .p-share__title::before {
-  content: url(../images/parts/border-left.svg);
+  content: url(/wp-content/themes/rishry_media/assets/images/common/border-left.svg);
   left: -10px;
 }
 .p-share__title::after {
-  content: url(../images/parts/border-right.svg);
+  content: url(/wp-content/themes/rishry_media/assets/images/common/border-right.svg);
   right: -5px;
 }
 .p-share__sns {
