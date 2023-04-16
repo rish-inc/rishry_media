@@ -6,8 +6,11 @@
 	align-items: center;
 	justify-content: space-between;
 	@include g.breakpoint ( tablet ) {
-		width: 95vw;
+		width: 85vw;
 		margin-left: 10px;
+	}
+	@media ( min-width: 600px ) {
+		width: 40vw;
 	}
 	@include g.breakpoint ( pc ) {
 		display: block;
@@ -27,5 +30,9 @@
 		img {
 			max-width: 110px;
 		}
+	}
+	.c-header-flex-beside__logo.is-open {
+		@extend .c-header-flex-beside__logo;
+		display: block;
 	}
 }
