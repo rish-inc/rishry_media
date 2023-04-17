@@ -11,14 +11,9 @@
 	@media ( max-width: 599px ) {
 		margin-left: 0;
 	}
-	// Firefoxの調整
+	// Firefox
 	@-moz-document url-prefix(){
-		@media ( min-width: 600px ) and ( max-width: 650px ){
-			margin-top: 2%;
-		}
-	}
-	@-moz-document url-prefix(){
-		@media ( min-width: 650px ) and ( max-width: 730px ){
+		@media ( min-width: 600px ) and ( max-width: 730px ){
 			margin-top: 1%;
 		}
 	}
@@ -50,6 +45,14 @@ input[ type="text" ] {
 	height: 100%;
 	padding-left: 16px;
 	outline: none;
+	&::placeholder{
+		color: g.$font-color--default;
+	}
+	// Firefox
+	&::-moz-placeholder {
+		color: g.$font-color--default;
+		opacity: 1;
+	}
 
 	@media ( max-width: 730px ) {
 		@include g.font-rem( 12 )
