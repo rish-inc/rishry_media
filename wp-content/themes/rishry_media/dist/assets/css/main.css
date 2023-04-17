@@ -353,8 +353,13 @@ a {
 }
 @media (min-width: 415px) {
   .c-header-flex-beside {
-    width: 95vw;
+    width: 85vw;
     margin-left: 10px;
+  }
+}
+@media (min-width: 600px) {
+  .c-header-flex-beside {
+    width: 40vw;
   }
 }
 @media (min-width: 1025px) {
@@ -364,23 +369,26 @@ a {
     width: auto;
   }
 }
-.c-header-flex-beside__logo {
+.c-header-flex-beside__logo, .c-header-flex-beside .c-header-flex-beside__logo.is-open {
   display: none;
   margin: 0;
 }
 @media (min-width: 415px) {
-  .c-header-flex-beside__logo {
+  .c-header-flex-beside__logo, .c-header-flex-beside .c-header-flex-beside__logo.is-open {
     margin: 0 auto;
   }
 }
 @media (min-width: 1025px) {
-  .c-header-flex-beside__logo {
+  .c-header-flex-beside__logo, .c-header-flex-beside .c-header-flex-beside__logo.is-open {
     display: block;
     margin: 0;
   }
 }
-.c-header-flex-beside__logo img {
+.c-header-flex-beside__logo img, .c-header-flex-beside .c-header-flex-beside__logo.is-open img {
   max-width: 110px;
+}
+.c-header-flex-beside .c-header-flex-beside__logo.is-open {
+  display: block;
 }
 /*
  * 配色
@@ -536,6 +544,27 @@ a {
 /*
  * 角丸
  */
+@media (min-width: 320px) {
+  .c-search-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2% 0 10%;
+    height: -webkit-fill-available;
+  }
+}
+@media (max-width: 599px) {
+  .c-search-window {
+    margin-left: 0;
+  }
+}
+@-moz-document url-prefix() {
+  @media (min-width: 600px) and (max-width: 730px) {
+    .c-search-window {
+      margin-top: 1%;
+    }
+  }
+}
 @media (min-width: 1025px) {
   .c-search-window {
     display: flex;
@@ -561,7 +590,29 @@ input[type=text] {
   background: none;
   border: none;
   width: 90%;
+  height: 100%;
   padding-left: 16px;
+  outline: none;
+}
+input[type=text]::-moz-placeholder {
+  color: #030303;
+}
+input[type=text]::placeholder {
+  color: #030303;
+}
+input[type=text]::-moz-placeholder {
+  color: #030303;
+  opacity: 1;
+}
+@media (max-width: 730px) {
+  input[type=text] {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 599px) {
+  input[type=text] {
+    font-size: 0.875rem;
+  }
 }
 @media (min-width: 1025px) {
   input[type=text] {
@@ -1250,6 +1301,11 @@ body.is-open {
   height: calc(100% - 50px);
   background: #FFF;
 }
+@media (min-width: 600px) {
+  .p-head-nav {
+    width: auto;
+  }
+}
 @media (min-width: 1025px) {
   .p-head-nav {
     display: initial;
@@ -1264,6 +1320,11 @@ body.is-open {
   overflow: scroll;
   overflow-x: hidden;
   height: 87%;
+}
+@media (min-width: 600px) {
+  .p-head-nav__navigation {
+    width: 50vw;
+  }
 }
 @media (min-width: 1025px) {
   .p-head-nav__navigation {
@@ -1295,6 +1356,11 @@ body.is-open {
     border-bottom: none;
     padding: 10px 5px;
     margin: 0 1%;
+  }
+}
+@media (max-width: 1024px) {
+  .p-head-nav__navigation__menu li:first-child {
+    padding-top: 39px;
   }
 }
 .p-head-nav__navigation__menu li:last-child {
@@ -1342,6 +1408,11 @@ body.is-open {
   width: 100vw;
   position: fixed;
   bottom: 0;
+}
+@media (min-width: 600px) {
+  .p-head-nav__sns {
+    width: 50vw;
+  }
 }
 @media (min-width: 1025px) {
   .p-head-nav__sns {
@@ -1519,11 +1590,6 @@ body.is-open {
 /*
  * 角丸
  */
-.p-mainvisual {
-  background: url("/wp-content/themes/rishry_media/dist/assets/images/dummy.jpg");
-  width: 100vw;
-  height: 500px;
-}
 .p-mainvisual img {
   max-width: 100%;
 }
@@ -1531,9 +1597,6 @@ body.is-open {
   .p-mainvisual img {
     width: 100%;
   }
-}
-.p-mainvisual img {
-  display: none;
 }
 /*
  * 配色
@@ -1675,16 +1738,21 @@ body.is-open {
 .p-search {
   padding: 20px 0;
   margin: 0 auto;
-  width: 93%;
+  width: 40vw;
 }
 @media (min-width: 1025px) {
   .p-search {
     display: none;
   }
 }
+@media (max-width: 599px) {
+  .p-search {
+    width: 80%;
+  }
+}
 .p-search__window {
   width: 100%;
-  height: 32px;
+  height: 34px;
   background: #fff;
   border: solid 1px #aaa;
   border-radius: 40px;
