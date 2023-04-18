@@ -11,12 +11,6 @@
 	@media ( max-width: 599px ) {
 		margin-left: 0;
 	}
-	// Firefox
-	@-moz-document url-prefix(){
-		@media ( min-width: 600px ) and ( max-width: 730px ){
-			margin-top: 1%;
-		}
-	}
 
 	@include g.breakpoint ( pc ) {
 		display: flex;

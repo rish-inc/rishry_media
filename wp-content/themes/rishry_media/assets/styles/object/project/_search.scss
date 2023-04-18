@@ -16,6 +16,9 @@
 		background: #fff;
 		border: solid 1px #aaa;
 		border-radius: 40px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		@include g.breakpoint ( pc ) {
 			border-radius: 5px;
 			max-width: 250px;

@@ -558,13 +558,6 @@ a {
     margin-left: 0;
   }
 }
-@-moz-document url-prefix() {
-  @media (min-width: 600px) and (max-width: 730px) {
-    .c-search-window {
-      margin-top: 1%;
-    }
-  }
-}
 @media (min-width: 1025px) {
   .c-search-window {
     display: flex;
@@ -1756,6 +1749,9 @@ body.is-open {
   background: #fff;
   border: solid 1px #aaa;
   border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @media (min-width: 1025px) {
   .p-search__window {
