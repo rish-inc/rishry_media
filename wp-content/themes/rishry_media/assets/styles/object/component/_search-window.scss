@@ -38,7 +38,6 @@ input[ type="text" ] {
 	width: 90%;
 	height: 100%;
 	padding-left: 16px;
-	outline: none;
 	&::placeholder{
 		color: g.$font-color--default;
 	}
