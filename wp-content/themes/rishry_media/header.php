@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?php language_attributes(); ?>">
+<html class="js-html_margin" lang="<?php language_attributes(); ?>">
 	<head>
 		<meta charset="utf-8">
 		<meta name="description" content="Rishry ファッション＆メイク初心者さんのための情報サイト">
