@@ -20,6 +20,9 @@
 		background: #fff;
 		border: solid 1px #aaa;
 		border-radius: 5px;
+		&:focus-within {
+			outline: 2px solid #6fb5ff;
+		}
 	}
 	&__button {
 		height: auto;
@@ -38,6 +41,7 @@ input[ type="text" ] {
 	width: 90%;
 	height: 100%;
 	padding-left: 16px;
+	outline: none;
 	&::placeholder{
 		color: g.$font-color--default;
 	}

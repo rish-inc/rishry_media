@@ -574,6 +574,9 @@ a {
     border: solid 1px #aaa;
     border-radius: 5px;
   }
+  .c-search-window:focus-within {
+    outline: 2px solid #6fb5ff;
+  }
 }
 .c-search-window__button {
   height: auto;
@@ -591,6 +594,7 @@ input[type=text] {
   width: 90%;
   height: 100%;
   padding-left: 16px;
+  outline: none;
 }
 input[type=text]::-moz-placeholder {
   color: #030303;
@@ -1764,6 +1768,9 @@ body.is-open {
     max-width: 250px;
     height: 40px;
   }
+}
+.p-search__window:focus-within {
+  outline: 2px solid #6fb5ff;
 }
 .p-search__results {
   font-size: 1.4rem;
