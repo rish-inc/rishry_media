@@ -20,4 +20,12 @@
 			left: 1.2%;
 		}
 	}
+	&.is-open {
+		@media ( max-width: 1024px ) {
+			margin-top: 32px;
+		}
+		@media ( max-width: 782px ) {
+			margin-top: 46px;
+		}
+	}
 }

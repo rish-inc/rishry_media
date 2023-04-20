@@ -207,6 +207,16 @@ a {
     left: 1.2%;
   }
 }
+@media (max-width: 1024px) {
+  .l-header.is-open {
+    margin-top: 32px;
+  }
+}
+@media (max-width: 782px) {
+  .l-header.is-open {
+    margin-top: 46px;
+  }
+}
 /*
  * 配色
  */
