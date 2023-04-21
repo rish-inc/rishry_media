@@ -1,6 +1,17 @@
 @use "../../foundation/global" as g;
 
 .c-search-window {
+	@media ( min-width: 320px ) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 2% 0 10%;
+        height: -webkit-fill-available;
+    }
+	@media ( max-width: 599px ) {
+		margin-left: 0;
+	}
+
 	@include g.breakpoint ( pc ) {
 		display: flex;
 		justify-content: space-around;
@@ -9,6 +20,9 @@
 		background: #fff;
 		border: solid 1px #aaa;
 		border-radius: 5px;
+		&:focus-within {
+			outline: 2px solid #6fb5ff;
+		}
 	}
 	&__button {
 		height: auto;
@@ -25,7 +39,26 @@ input[ type="text" ] {
 	background: none;
 	border: none;
 	width: 90%;
+	height: 100%;
 	padding-left: 16px;
+	outline: none;
+	&::placeholder{
+		color: g.$font-color--default;
+	}
+	// Firefox
+	&::-moz-placeholder {
+		color: g.$font-color--default;
+		opacity: 1;
+	}
+
+	@media ( max-width: 730px ) {
+		@include g.font-rem( 12 )
+	}
+
+	@media ( max-width: 599px ) {
+		@include g.font-rem( 14 )
+	}
+
 	@include g.breakpoint ( pc ) {
 		padding-left: 10px;
 	}
