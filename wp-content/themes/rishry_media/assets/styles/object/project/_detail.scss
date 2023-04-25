@@ -12,9 +12,9 @@
 			padding-top: 100px;
 		}
 		&__results {
-			font-size: 1.4rem;
+			@include g.font-rem( $font-size--search--sp );
 			@include g.breakpoint ( tablet ) {
-				 font-size: 1.6rem;
+				@include g.font-rem( $font-size--search--pc );
 			}
 		}
 	}

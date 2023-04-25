@@ -1,11 +1,13 @@
 <?php get_header(); ?>
 		<div class="l-main">
 			<div class="p-search">
-				<?php get_search_form(); ?>
+				<div class="p-search__window">
+					<?php get_search_form(); ?>
+				</div>
 			</div>
 			<main class="p-contents">
 				<article class="p-detail__search">
-					<p class="p-detail__search__results">○○の検索結果</p>
+					<p class="p-detail__search__results"><?php the_search_query(); ?>の検索結果</p>
 					<ul class="p-post-list">
 						<li class="p-post-list__posted c-boundary-line">
 							<figure class="p-card">
