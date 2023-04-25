@@ -2,12 +2,7 @@
 <div class="l-contents">
 	<div class="p-search">
 		<div class="p-search__window">
-			<form class="c-search-window" action="/" name="search-form" method="post">
-				<input type="text" name="search" placeholder="ブランド・フリーワードで探す">
-				<button type="submit" class="c-search-window__button" aria-label="search" value="">
-					<img class="c-search-window__img" src="<?php echo get_theme_file_uri('/assets/images/search/search.svg'); ?>" alt="">
-				</button>
-			</form>
+			<?php get_search_form(); ?>
 		</div>
 	</div>
 	<div class="p-mainvisual"><img src="<?php echo get_theme_file_uri('/assets/images/dummy.jpg'); ?>" alt="メインビジュアル　ダミー画像"></div>
