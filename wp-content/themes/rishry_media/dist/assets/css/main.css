@@ -622,6 +622,12 @@ input[type=text]::-moz-placeholder {
 input[type=text]::placeholder {
   color: #030303;
 }
+input[type=text]:focus::-moz-placeholder {
+  color: transparent;
+}
+input[type=text]:focus::placeholder {
+  color: transparent;
+}
 input[type=text]::-moz-placeholder {
   color: #030303;
   opacity: 1;
@@ -1130,11 +1136,11 @@ input[type=text]::-moz-placeholder {
   }
 }
 .p-detail__search__results {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
 }
 @media (min-width: 415px) {
   .p-detail__search__results {
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
 }
 /*
