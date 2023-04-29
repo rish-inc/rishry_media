@@ -7,9 +7,9 @@
 			<li class="p-side-navigation__main-menu__word c-barline-border"><a href="#">FASHION</a></li>
 		</ul>
 		<ul class="p-side-navigation__sns-menu c-sns--icon">
-			<li class="twitter"><a href="#"><img src="<?php echo get_theme_file_uri( 'images/sns/t_logo.png' ); ?>" alt="twitter"></a></li>
-			<li class="facebook"><a href="#"><img src="<?php echo get_theme_file_uri( 'images/sns/f_logo.png' ); ?>" alt="facebook"></a></li>
-			<li class="instagram"><a href="#"><img src="<?php echo get_theme_file_uri( 'images/sns/i_logo.png' ); ?>" alt="instagram"></a></li>
+			<li class="twitter"><a href="#"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/sns/t_logo.png' )); ?>" alt="twitter"></a></li>
+			<li class="facebook"><a href="#"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/sns/f_logo.png' )); ?>" alt="facebook"></a></li>
+			<li class="instagram"><a href="#"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/sns/i_logo.png' )); ?>" alt="instagram"></a></li>
 		</ul>
 	</nav>
 </div>
