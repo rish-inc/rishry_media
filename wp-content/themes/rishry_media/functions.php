@@ -21,13 +21,18 @@ add_action( 'send_headers', 'cors_http_header' );
 /*
  * init theme support
  */
-add_theme_support( 'menus' );
-add_theme_support( 'title-tag' );
-add_theme_support( 'post-thumbnails' );
-register_nav_menus( array (
-	'header-menu' => 'header-menu',
-	'footer-menu' => 'footer-menu'
-));
+function custom_theme_support()
+{
+	add_theme_support( 'menus' );
+	add_theme_support( 'title-tag' );
+	add_theme_support( 'post-thumbnails' );
+	register_nav_menus( array (
+		'header-menu'  => 'header-menu',
+		'sidebar-menu' => 'sidebar-menu',
+		'footer-menu'  => 'footer-menu',
+	));
+}
+add_action('after_setup_theme', 'custom_theme_support');
 
 add_action( 'wp_enqueue_scripts', function() {
 	if ( defined( 'IS_VITE_DEVELOPMENT') && IS_VITE_DEVELOPMENT === true ) {

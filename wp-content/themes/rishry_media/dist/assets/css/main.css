@@ -305,6 +305,8 @@ a {
 }
 .c-boundary-line:first-child {
   border: 0;
+  font-size: 2rem;
+  margin-top: 1rem;
 }
 /*
  * 配色
@@ -1962,6 +1964,9 @@ body.is-open {
 .p-side-navigation__sns-menu img {
   width: 45px;
   height: auto;
+}
+.p-side-navigation.is-close {
+  display: none;
 }
 /*
  * 配色

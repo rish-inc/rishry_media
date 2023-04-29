@@ -19,7 +19,7 @@
 				</figure>
 			<?php endwhile; ?>
 		<?php else : ?>
-			<p class="search_result">「表示するブログがありません」</p>
+			<p id="search_result" class="search_result">「表示するブログがありません」</p>
 		<?php endif; ?>
 	</li>
 </ul>
