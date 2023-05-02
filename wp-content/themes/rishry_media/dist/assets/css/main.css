@@ -98,11 +98,18 @@ input, button, textarea, select {
 html {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
 }
+html.is-open {
+  margin-top: 0 !important;
+}
+#wpadminbar {
+  z-index: 10000000 !important;
+}
 body {
   width: 100%;
   min-width: 350px;
   margin: 0;
   overflow-x: hidden;
+  visibility: hidden;
 }
 h1, h2, h3, h4, h5 {
   font-weight: normal;
@@ -179,6 +186,7 @@ a {
   width: 100%;
   height: 60px;
   background: #FFEDEE;
+  position: relative;
 }
 @media (min-width: 1025px) {
   .l-header {
@@ -191,10 +199,23 @@ a {
 @media (min-width: 1025px) {
   .l-header__catchphrase {
     display: block;
-    font-size: font-rem(12);
+    font-size: 0.75rem;
     padding: 14px 10px;
     margin: 0 auto;
     max-width: 1140px;
+    position: relative;
+    top: 7%;
+    left: 1.2%;
+  }
+}
+@media (max-width: 1024px) {
+  .l-header.is-open {
+    margin-top: 32px;
+  }
+}
+@media (max-width: 782px) {
+  .l-header.is-open {
+    margin-top: 46px;
   }
 }
 /*
@@ -349,8 +370,13 @@ a {
 }
 @media (min-width: 415px) {
   .c-header-flex-beside {
-    width: 95vw;
+    width: 85vw;
     margin-left: 10px;
+  }
+}
+@media (min-width: 600px) {
+  .c-header-flex-beside {
+    width: 40vw;
   }
 }
 @media (min-width: 1025px) {
@@ -368,13 +394,27 @@ a {
     margin: 0 auto;
   }
 }
+@media (min-width: 600px) and (max-width: 1024px) {
+  .c-header-flex-beside__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 @media (min-width: 1025px) {
   .c-header-flex-beside__logo {
     margin: 0;
   }
 }
 .c-header-flex-beside__logo img {
-  max-width: 110px;
+  max-width: 87px;
+  height: 40px;
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+  .c-header-flex-beside__logo.is-open {
+    position: inherit;
+    transform: inherit;
+  }
 }
 /*
  * 配色
@@ -530,12 +570,33 @@ a {
 /*
  * 角丸
  */
-.c-search-window {
-  display: flex;
-  justify-content: space-around;
-  display: none;
-  background: #fff;
-  border: solid 1px #aaa;
+@media (min-width: 320px) {
+  .c-search-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2% 0 10%;
+    height: -webkit-fill-available;
+  }
+}
+@media (max-width: 599px) {
+  .c-search-window {
+    margin-left: 0;
+  }
+}
+@media (min-width: 1025px) {
+  .c-search-window {
+    display: flex;
+    justify-content: space-around;
+    width: 249.87px;
+    height: 40px;
+    background: #fff;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+  }
+  .c-search-window:focus-within {
+    outline: 2px solid #6fb5ff;
+  }
 }
 .c-search-window__button {
   height: auto;
@@ -551,7 +612,29 @@ input[type=text] {
   background: none;
   border: none;
   width: 90%;
+  height: 100%;
   padding-left: 16px;
+  outline: none;
+}
+input[type=text]::-moz-placeholder {
+  color: #030303;
+}
+input[type=text]::placeholder {
+  color: #030303;
+}
+input[type=text]::-moz-placeholder {
+  color: #030303;
+  opacity: 1;
+}
+@media (max-width: 730px) {
+  input[type=text] {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 599px) {
+  input[type=text] {
+    font-size: 0.875rem;
+  }
 }
 @media (min-width: 1025px) {
   input[type=text] {
@@ -1134,9 +1217,9 @@ input[type=text] {
   width: 60px;
   height: 60px;
   border: none;
-  outline: none;
   background: #FFEDEE;
   position: relative;
+  cursor: pointer;
 }
 @media (min-width: 1025px) {
   .p-hamburger {
@@ -1220,6 +1303,7 @@ body.is-open {
   .p-head-nav-flex__search {
     visibility: visible;
     width: 300px;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   }
 }
 /*
@@ -1239,6 +1323,11 @@ body.is-open {
   height: calc(100% - 50px);
   background: #FFF;
 }
+@media (min-width: 600px) {
+  .p-head-nav {
+    width: auto;
+  }
+}
 @media (min-width: 1025px) {
   .p-head-nav {
     display: initial;
@@ -1246,13 +1335,18 @@ body.is-open {
     width: 100%;
     height: auto;
     background: none;
-    margin-right: 2%;
+    margin-right: 5%;
   }
 }
 .p-head-nav__navigation {
   overflow: scroll;
   overflow-x: hidden;
   height: 87%;
+}
+@media (min-width: 600px) {
+  .p-head-nav__navigation {
+    width: 50vw;
+  }
 }
 @media (min-width: 1025px) {
   .p-head-nav__navigation {
@@ -1270,6 +1364,7 @@ body.is-open {
 @media (min-width: 1025px) {
   .p-head-nav__navigation__menu {
     display: flex;
+    justify-content: space-around;
     margin: 0;
     width: 100%;
   }
@@ -1283,6 +1378,11 @@ body.is-open {
     border-bottom: none;
     padding: 10px 5px;
     margin: 0 1%;
+  }
+}
+@media (max-width: 1024px) {
+  .p-head-nav__navigation__menu li:first-child {
+    padding-top: 39px;
   }
 }
 .p-head-nav__navigation__menu li:last-child {
@@ -1330,6 +1430,11 @@ body.is-open {
   width: 100vw;
   position: fixed;
   bottom: 0;
+}
+@media (min-width: 600px) {
+  .p-head-nav__sns {
+    width: 50vw;
+  }
 }
 @media (min-width: 1025px) {
   .p-head-nav__sns {
@@ -1655,19 +1760,27 @@ body.is-open {
 .p-search {
   padding: 20px 0;
   margin: 0 auto;
-  width: 93%;
+  width: 40vw;
 }
 @media (min-width: 1025px) {
   .p-search {
     display: none;
   }
 }
+@media (max-width: 599px) {
+  .p-search {
+    width: 80%;
+  }
+}
 .p-search__window {
   width: 100%;
-  height: 32px;
+  height: 34px;
   background: #fff;
   border: solid 1px #aaa;
   border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @media (min-width: 1025px) {
   .p-search__window {
@@ -1675,6 +1788,9 @@ body.is-open {
     max-width: 250px;
     height: 40px;
   }
+}
+.p-search__window:focus-within {
+  outline: 2px solid #6fb5ff;
 }
 .p-search__results {
   font-size: 1.4rem;
@@ -1713,11 +1829,11 @@ body.is-open {
   bottom: 8px;
 }
 .p-share__title::before {
-  content: url(../images/parts/border-left.svg);
+  content: url(/wp-content/themes/rishry_media/assets/images/common/border-left.svg);
   left: -10px;
 }
 .p-share__title::after {
-  content: url(../images/parts/border-right.svg);
+  content: url(/wp-content/themes/rishry_media/assets/images/common/border-right.svg);
   right: -5px;
 }
 .p-share__sns {

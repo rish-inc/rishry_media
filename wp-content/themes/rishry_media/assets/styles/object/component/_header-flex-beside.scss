@@ -6,8 +6,11 @@
 	align-items: center;
 	justify-content: space-between;
 	@include g.breakpoint ( tablet ) {
-		width: 95vw;
+		width: 85vw;
 		margin-left: 10px;
+	}
+	@media ( min-width: 600px ) {
+		width: 40vw;
 	}
 	@include g.breakpoint ( pc ) {
 		display: block;
@@ -19,11 +22,23 @@
 		@include g.breakpoint ( tablet ) {
 			margin: 0 auto;
 		}
+		@media ( min-width: 600px ) and ( max-width: 1024px ) {
+			position: absolute;
+			left: 50%;
+			transform: translateX( -50% );
+		}
 		@include g.breakpoint ( pc ) {
 			margin: 0;
 		}
 		img {
-			max-width: 110px;
+			max-width: 87px;
+			height: 40px;
+		}
+		&.is-open {
+			@media ( min-width: 600px ) and ( max-width: 1024px ) {
+				position: inherit;
+				transform: inherit;
+			}
 		}
 	}
 }

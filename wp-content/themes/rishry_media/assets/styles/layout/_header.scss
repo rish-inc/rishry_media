@@ -4,6 +4,7 @@
 	width: 100%;
 	height: 60px;
 	background: g.$bgcolor--pink;
+	position: relative;
 	@include g.breakpoint ( pc ) {
 		height: 130px;
 	}
@@ -11,11 +12,21 @@
 		display: none;
 		@include g.breakpoint ( pc ) {
 			display: block;
-			font-size: g.$font-size--header--catchphrase--pc;
+			@include g.font-rem ( $font-size--header--catchphrase--pc );
 			padding: 14px 10px;
 			margin: 0 auto;
 			max-width: 1140px;
+			position: relative;
+			top: 7%;
+			left: 1.2%;
+		}
+	}
+	&.is-open {
+		@media ( max-width: 1024px ) {
+			margin-top: 32px;
+		}
+		@media ( max-width: 782px ) {
+			margin-top: 46px;
 		}
 	}
 }
-

@@ -7,18 +7,24 @@
 	width: 100vw;
 	height: calc( 100% - 50px );
 	background: g.$bgcolor--white;
+	@media ( min-width: 600px ) {
+		width: auto;
+	}
 	@include g.breakpoint ( pc ) {
 		display: initial;
 		position: static;
 		width: 100%;
 		height: auto;
 		background: none;
-		margin-right: 2%;
+		margin-right: 5%;
 	}
 	&__navigation {
 		overflow: scroll;
 		overflow-x: hidden;
 		height: 87%;
+		@media ( min-width: 600px ) {
+			width: 50vw;
+		}
 		@include g.breakpoint ( pc ) {
 			overflow: visible;
 			height: auto;
@@ -31,6 +37,7 @@
 			height: auto;
 			@include g.breakpoint ( pc ) {
 				display: flex;
+				justify-content: space-around;
 				margin: 0;
 				width: 100%;
 			}
@@ -41,6 +48,11 @@
 					border-bottom: none;
 					padding: 10px 5px;
 					margin: 0 1%;
+				}
+				&:first-child{
+					@media ( max-width: 1024px ) {
+					padding-top: 39px;
+					}
 				}
 				&:last-child {
 					border: 0;
@@ -86,6 +98,9 @@
 		width: 100vw;
 		position: fixed;
 		bottom: 0;
+		@media ( min-width: 600px ) {
+			width: 50vw;
+		}
 		@include g.breakpoint ( pc ) {
 			visibility: collapse;
 		}
