@@ -63,7 +63,6 @@ add_action( 'wp_enqueue_scripts', function() {
 	}
 } );
 
-
 // function rishrymedia_title( $title ) {
 //	 if ( is_front_page() && is_home() ) {
 //		 $title = get_bloginfo( 'name', 'display' );
