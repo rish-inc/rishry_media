@@ -30,6 +30,7 @@ function custom_theme_support()
 		'header-menu'  => 'header-menu',
 		'sidebar-menu' => 'sidebar-menu',
 		'footer-menu'  => 'footer-menu',
+		'sns-list'     => 'sns-menu',
 	));
 }
 add_action('after_setup_theme', 'custom_theme_support');

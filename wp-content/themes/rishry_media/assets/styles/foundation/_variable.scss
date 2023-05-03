@@ -42,14 +42,15 @@ $font-size--sub-head: font-rem( 18 );
 $font-size--header--sp: font-rem( 16 );
 
 //ヘッダー用 キャッチフレーズ
-$font-size--header--catchphrase--pc: 12 ;
+$font-size--header--catchphrase--pc: 12;
 
 //サイドバー用
 $font-size--sidebar--sp: font-rem( 12 );
 $font-size--sidebar--pc: font-rem( 154 );
 
 //フッター用
-$font-size--footer--sp: font-rem( 14 );
+$font-size--footer--menu: 14;
+$font-size--footer--sns: 12;
 
 // フッター用 コピーライト
 $font-size--footer-copyright--sp: font-rem( 12 );
