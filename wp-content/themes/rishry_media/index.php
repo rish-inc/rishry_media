@@ -18,7 +18,7 @@
 				'screen_reader_text' => "Posts navigation",
 			);
 			the_posts_pagination( $args );
-			?>
+		?>
 	</main>
 	<?php get_sidebar(); ?>
 </div>
