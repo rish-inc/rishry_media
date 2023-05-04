@@ -17,4 +17,9 @@
 		max-width: 280px;
 		padding-top: 60px;
 	}
+	&.c-boundary-line {
+		@media ( max-width: 1024px ) {
+			margin-top: 0;
+		}
+	}
 }

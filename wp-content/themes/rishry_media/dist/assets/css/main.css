@@ -284,6 +284,11 @@ a {
     padding-top: 60px;
   }
 }
+@media (max-width: 1024px) {
+  .l-sidebar.c-boundary-line {
+    margin-top: 0;
+  }
+}
 /*
  * 配色
  */
@@ -486,6 +491,7 @@ a {
 .c-pagination {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0 auto;
   padding: 20px 12px 40px;
 }
@@ -499,79 +505,112 @@ a {
     padding: 40px 0 80px;
   }
 }
+@media (max-width: 1024px) {
+  .c-pagination {
+    padding-top: 27px;
+  }
+}
+@media (max-width: 599px) {
+  .c-pagination {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+}
 .c-pagination__list {
   list-style: none;
 }
 .c-pagination__list a {
   color: #030303;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 15px;
 }
-.c-pagination__list__before-to, .c-pagination__list__page-active, .c-pagination__list__page, .c-pagination__list__extend, .c-pagination__list__next-for {
+.c-pagination__list .prev,
+.c-pagination__list .current,
+.c-pagination__list .page-numbers, .c-pagination__list__extend,
+.c-pagination__list .next {
   margin: 0 5px;
 }
 @media (min-width: 415px) {
-  .c-pagination__list__before-to, .c-pagination__list__page-active, .c-pagination__list__page, .c-pagination__list__extend, .c-pagination__list__next-for {
+  .c-pagination__list .prev,
+  .c-pagination__list .current,
+  .c-pagination__list .page-numbers, .c-pagination__list__extend,
+  .c-pagination__list .next {
     margin: 0 4px;
   }
 }
 @media (min-width: 1025px) {
-  .c-pagination__list__before-to, .c-pagination__list__page-active, .c-pagination__list__page, .c-pagination__list__extend, .c-pagination__list__next-for {
+  .c-pagination__list .prev,
+  .c-pagination__list .current,
+  .c-pagination__list .page-numbers, .c-pagination__list__extend,
+  .c-pagination__list .next {
     margin: 0 6px;
   }
 }
-.c-pagination__list__page-active, .c-pagination__list__page {
+.c-pagination__list .current,
+.c-pagination__list .page-numbers {
   padding: 12px 15px;
 }
-.c-pagination__list__page-active {
-  background: #FFD6DB;
-  border: solid 1px #FFD6DB;
-}
-.c-pagination__list__before-to, .c-pagination__list__page, .c-pagination__list__next-for {
+.c-pagination__list .prev,
+.c-pagination__list .page-numbers,
+.c-pagination__list .next {
   border: solid 1px #656565;
 }
-.c-pagination__list__before-to, .c-pagination__list__next-for {
+.c-pagination__list .current {
+  background: #FFD6DB;
+  border: solid 1px #FFD6DB;
+  font-size: 15px;
+}
+.c-pagination__list .prev,
+.c-pagination__list .next {
   padding: 12px;
   position: relative;
 }
-.c-pagination__list__before-to::before, .c-pagination__list__before-to::after, .c-pagination__list__next-for::before, .c-pagination__list__next-for::after {
+.c-pagination__list .prev::before, .c-pagination__list .prev::after,
+.c-pagination__list .next::before,
+.c-pagination__list .next::after {
   content: "";
   position: absolute;
   width: 25px;
   height: 1px;
   background: #656565;
 }
-.c-pagination__list__before-to::before, .c-pagination__list__next-for::before {
+.c-pagination__list .prev::before,
+.c-pagination__list .next::before {
   top: 9px;
 }
-.c-pagination__list__before-to::after, .c-pagination__list__next-for::after {
+.c-pagination__list .prev::after,
+.c-pagination__list .next::after {
   top: 29px;
 }
-.c-pagination__list__before-to {
+.c-pagination__list .prev {
   border-left: none;
   padding-left: 10px;
 }
-.c-pagination__list__before-to::before, .c-pagination__list__before-to::after {
+.c-pagination__list .prev::before, .c-pagination__list .prev::after {
   left: -20px;
 }
-.c-pagination__list__before-to::before {
+.c-pagination__list .prev::before {
   transform: rotate(-55deg);
 }
-.c-pagination__list__before-to::after {
+.c-pagination__list .prev::after {
   transform: rotate(55deg);
 }
-.c-pagination__list__next-for {
+.c-pagination__list .next {
   border-right: none;
   padding-right: 10px;
 }
-.c-pagination__list__next-for::before, .c-pagination__list__next-for::after {
+.c-pagination__list .next::before, .c-pagination__list .next::after {
   right: -20px;
 }
-.c-pagination__list__next-for::before {
+.c-pagination__list .next::before {
   transform: rotate(55deg);
 }
-.c-pagination__list__next-for::after {
+.c-pagination__list .next::after {
   transform: rotate(-55deg);
+}
+.c-pagination__list .page-numbers.dots {
+  border: none;
+  font-size: 25px;
 }
 /*
  * 配色
