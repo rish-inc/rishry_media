@@ -110,7 +110,7 @@ add_filter( 'next_post_link', 'add_next_post_link_class' );
  */
 function custom_the_posts_pagination( $template ) {
 	$template = '
-	<nav class="c-pagination u-boundary-line" role="navigation">
+	<nav class="c-pagination u-boundary-line %1$s" role="navigation">
 		<ul class="c-pagination__list">%3$s</ul>
 	</nav>';
 	return $template;

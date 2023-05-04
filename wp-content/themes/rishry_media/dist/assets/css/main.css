@@ -489,10 +489,6 @@ a {
  * 角丸
  */
 .c-pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
   padding: 20px 12px 40px;
 }
 @media (min-width: 415px) {
@@ -517,7 +513,11 @@ a {
   }
 }
 .c-pagination__list {
-  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 .c-pagination__list a {
   color: #030303;
@@ -548,7 +548,7 @@ a {
 }
 .c-pagination__list .current,
 .c-pagination__list .page-numbers {
-  padding: 12px 15px;
+  padding: 12px 18px;
 }
 .c-pagination__list .prev,
 .c-pagination__list .page-numbers,
@@ -569,38 +569,38 @@ a {
 .c-pagination__list .next::before,
 .c-pagination__list .next::after {
   content: "";
+  width: 30px;
   position: absolute;
-  width: 25px;
   height: 1px;
   background: #656565;
 }
 .c-pagination__list .prev::before,
 .c-pagination__list .next::before {
-  top: 9px;
+  top: 11px;
 }
 .c-pagination__list .prev::after,
 .c-pagination__list .next::after {
-  top: 29px;
+  top: 35px;
 }
 .c-pagination__list .prev {
   border-left: none;
   padding-left: 10px;
 }
 .c-pagination__list .prev::before, .c-pagination__list .prev::after {
-  left: -20px;
+  left: -24px;
 }
 .c-pagination__list .prev::before {
-  transform: rotate(-55deg);
+  transform: rotate(-54deg);
 }
 .c-pagination__list .prev::after {
-  transform: rotate(55deg);
+  transform: rotate(52deg);
 }
 .c-pagination__list .next {
   border-right: none;
   padding-right: 10px;
 }
 .c-pagination__list .next::before, .c-pagination__list .next::after {
-  right: -20px;
+  right: -23px;
 }
 .c-pagination__list .next::before {
   transform: rotate(55deg);

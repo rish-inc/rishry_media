@@ -1,10 +1,6 @@
 @use "../../foundation/global" as g;
 
 .c-pagination {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0 auto;
 	padding: 20px 12px 40px;
 	@include g.breakpoint ( tablet ) {
 		padding: 10px 20px 80px;
@@ -20,7 +16,11 @@
 		padding-bottom: 40px;
 	}
 	&__list {
-		list-style: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		flex-wrap: wrap;
 		a {
 			color: #030303;
 			text-decoration: none;
@@ -41,7 +41,7 @@
 		}
 		.current,
 		.page-numbers {
-			padding: 12px 15px;
+			padding: 12px 18px;
 		}
 		.prev,
 		.page-numbers,
@@ -60,16 +60,16 @@
 			&::before,
 			&::after {
 				content: "";
+				width: 30px;
 				position: absolute;
-				width: 25px;
 				height: 1px;
 				background: #656565;
 			}
 			&::before {
-				top: 9px;
+				top: 11px;
 			}
 			&::after {
-				top: 29px;
+				top: 35px;
 			}
 		}
 		.prev {
@@ -77,13 +77,13 @@
 			padding-left: 10px;
 			&::before,
 			&::after {
-				left: -20px;
+				left: -24px;
 			}
 			&::before {
-				transform: rotate( -55deg );
+				transform: rotate( -54deg );
 			}
 			&::after {
-				transform: rotate( 55deg );
+				transform: rotate( 52deg );
 			}
 		}
 		.next {
@@ -91,7 +91,7 @@
 			padding-right: 10px;
 			&::before,
 			&::after {
-				right: -20px;
+				right: -23px;
 			}
 			&::before {
 				transform: rotate( 55deg );
