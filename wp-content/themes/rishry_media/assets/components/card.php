@@ -1,8 +1,8 @@
 <ul class="p-post-list">
-	<li class="p-post-list__posted c-boundary-line">
+	<li class="p-post-list__posted">
 		<?php if (have_posts()) : ?>
 			<?php while (have_posts()) : the_post(); ?>
-				<figure class="p-card">
+				<figure class="p-card c-boundary-line">
 					<figcaption class="p-card__caption">
 						<h3 class="p-card__caption__title c-barline-border"><?php the_title(); ?></h3>
 						<ul class="data c-time-category-chunk">

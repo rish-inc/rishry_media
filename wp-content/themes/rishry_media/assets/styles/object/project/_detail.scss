@@ -2,7 +2,13 @@
 
 .p-detail {
 	@include g.breakpoint ( pc ) {
-		padding-top: 60px;
+		padding-top: 70px;
+	}
+	@media ( max-width: 1024px ) {
+		padding-top: 25px;
+	}
+	@media ( max-width: 599px ) {
+		padding-top: 16px;
 	}
 	&__search {
 		@include g.breakpoint ( tablet ) {
@@ -16,6 +22,11 @@
 			@include g.breakpoint ( tablet ) {
 				@include g.font-rem( $font-size--search--pc );
 			}
+		}
+	}
+	.c-headline-border {
+		@media ( max-width: 782px ) {
+			margin-bottom: 15px;
 		}
 	}
 }

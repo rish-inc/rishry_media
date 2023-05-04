@@ -1,0 +1,8 @@
+@use "../../foundation/global" as g;
+
+.u-boundary-line {
+	@media ( max-width: 1024px ) {
+		border-top: 1px solid g.$border-color--gray;
+		margin-top: 29px;
+	}
+}

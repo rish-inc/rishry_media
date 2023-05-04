@@ -11,7 +11,7 @@
 			<h2 class="c-title c-headline-border">MEDIA</h2>
 				<?php get_template_part("assets/components/card"); ?>
 		</article>
-		<ul class="c-pagination">
+		<ul class="c-pagination u-boundary-line">
 			<li class="c-pagination__list"><a class="before-to" href="#">前へ</a></li>
 			<li class="c-pagination__list"><a class="page-active" href="#">1</a></li>
 			<li class="c-pagination__list"><a class="page" href="#">2</a></li>

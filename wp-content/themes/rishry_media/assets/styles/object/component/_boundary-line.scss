@@ -2,9 +2,10 @@
 
 .c-boundary-line {
 	border-top: 1px solid g.$border-color--gray;
-	&:first-child {
+	margin-top: 31px;
+	&:first-of-type {
 		border: 0;
-		font-size: 2rem;
-		margin-top: 1rem;
+		margin: 0;
+		padding: 0;
 	}
 }
