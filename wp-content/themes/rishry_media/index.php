@@ -16,6 +16,8 @@
 				'prev_text'          => '前へ',
 				'next_text'          => '次へ',
 				'screen_reader_text' => "Posts navigation",
+				'show_all'           => false,
+				'mid_size'           => 0,
 			);
 			the_posts_pagination( $args );
 		?>

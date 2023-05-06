@@ -104,5 +104,10 @@
 			border: none;
 			font-size: 25px;
 		}
+		.page-numbers:not(.prev):not(.next):not(.current) {
+			@media ( max-width: 1024px ) {
+				display: none;
+			}
+		}
 	}
 }

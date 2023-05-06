@@ -612,6 +612,11 @@ a {
   border: none;
   font-size: 25px;
 }
+@media (max-width: 1024px) {
+  .c-pagination__list .page-numbers:not(.prev):not(.next):not(.current) {
+    display: none;
+  }
+}
 /*
  * 配色
  */
