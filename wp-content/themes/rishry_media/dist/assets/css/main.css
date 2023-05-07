@@ -1235,6 +1235,9 @@ input[type=text]::-moz-placeholder {
     font-size: 14px;
   }
 }
+.p-detail__search .not-entered {
+  margin-bottom: 15rem;
+}
 @media (max-width: 782px) {
   .p-detail .c-headline-border {
     margin-bottom: 15px;
@@ -1434,11 +1437,11 @@ body.is-open {
   }
 }
 .p-head-nav-flex__search {
-  visibility: collapse;
+  display: none;
 }
 @media (min-width: 1025px) {
   .p-head-nav-flex__search {
-    visibility: visible;
+    display: block;
     width: 300px;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
   }
