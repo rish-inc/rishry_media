@@ -1,6 +1,6 @@
 <?php
 //develop mode config
-define( "IS_VITE_DEVELOPMENT", true );
+define( "IS_VITE_DEVELOPMENT", false );
 
 //define
 define( 'DIST_DEF', 'dist' );
@@ -108,7 +108,7 @@ add_filter( 'next_post_link', 'add_next_post_link_class' );
  * the_posts_pagination()内のクラス名の変更
  */
 function custom_the_posts_pagination( $template ) {
-	$template = 
+	$template =
 	'<nav class="c-pagination u-boundary-line %1$s" role="navigation">
 		<ul class="c-pagination__list">%3$s</ul>
 	</nav>';
