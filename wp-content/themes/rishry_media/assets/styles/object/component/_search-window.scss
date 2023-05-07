@@ -45,6 +45,11 @@ input[ type="text" ] {
 	&::placeholder{
 		color: g.$font-color--default;
 	}
+	&:focus {
+		&::placeholder {
+			color: transparent;
+		}
+	}
 	// Firefox
 	&::-moz-placeholder {
 		color: g.$font-color--default;

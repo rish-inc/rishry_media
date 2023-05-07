@@ -5,9 +5,9 @@
 	margin: 0;
 	padding: 0;
 	&__posted {
-		padding-bottom: 15px;
-		@include g.breakpoint ( tablet ) {
-			padding-bottom: 30px;
+		.search_result {
+			margin-top: 1rem;
+			margin-bottom: 15rem;
 		}
 	}
 }

@@ -1,9 +1,9 @@
 <footer class="l-footer">
 			<div class="p-footer">
-				<nav class="p-footer__menu u-mb100">
+				<nav class="p-footer__inner">
 					<?php wp_nav_menu( array(
 						'theme_location' => 'footer-menu',
-						'menu_class' => 'p-footer__menu__list',
+						'menu_class' => 'p-footer__inner__navigation__menu',
 						'container' => false
 					) ); ?>
 				</nav>
@@ -15,7 +15,7 @@
 					'container' => false
 				) );
 				?>
-				<address class="c-text--copyright"><small>&copy; <?php bloginfo( 'name' ); ?></small></address>
+				<address class="c-text--copyright"><small>&copy;2023&nbsp;&nbsp; <?php bloginfo( 'name' ); ?></small></address>
 			</div>
 		</footer>
 		<?php wp_footer(); ?>
