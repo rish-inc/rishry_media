@@ -15,12 +15,15 @@
 			padding-top: 30px;
 		}
 		@include g.breakpoint ( pc ) {
-			padding-top: 100px;
+			padding-top: 48px;
 		}
 		&__results {
 			@include g.font-rem( $font-size--search--sp );
 			@include g.breakpoint ( tablet ) {
 				@include g.font-rem( $font-size--search--pc );
+			}
+			@media ( max-width: 599px ) {
+				font-size: 14px;
 			}
 		}
 	}

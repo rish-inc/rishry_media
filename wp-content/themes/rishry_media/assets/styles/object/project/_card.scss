@@ -39,6 +39,13 @@
 			&::after {
 				left: -6px;
 			}
+			&__search {
+				@extend .p-card__caption__title;
+				font-size: 26px;
+				@media ( max-width: 599px ) {
+					font-size: 18px;
+				}
+			}
 		}
 	}
 	&__img {

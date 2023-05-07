@@ -29,10 +29,10 @@
 		}
 	}
 
-	&__results {
-		font-size: 1.4rem;
-		@include g.breakpoint ( tablet ) {
-			 font-size: 1.6rem;
-		}
-	}
+	// &__results {
+	// 	font-size: 1.4rem;
+	// 	@include g.breakpoint ( tablet ) {
+	// 		 font-size: 1.6rem;
+	// 	}
+	// }
 }
