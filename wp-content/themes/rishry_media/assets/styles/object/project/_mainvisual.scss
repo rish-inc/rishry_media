@@ -1,10 +1,37 @@
 @use "../../foundation/global" as g;
 
 .p-mainvisual {
+	position: relative;
+	width: 100%;
 	img {
+		width: 100%;
 		max-width: 100%;
 		@include g.breakpoint ( pc ) {
 			width: 100%;
+			margin-top: 46px;
+		}
+		@media ( max-width: 1024px ) {
+			margin-top: 8.5px;
+		}
+		@media ( max-width: 599px ) {
+			margin-top: 1.5px;
+		}
+	}
+	&__title {
+		position: absolute;
+		top: 33%;
+		right: 6%;
+		font-size: 15px;
+		color: g.$font-color--gray;
+		@media ( max-width: 782px ) {
+			top: 43%;
+			right: 3%;
+			max-width: 272px;
+		}
+		@media ( max-width: 600px ) {
+			top: 70%;
+			right: 3%;
+			max-width: 217px;
 		}
 	}
 }

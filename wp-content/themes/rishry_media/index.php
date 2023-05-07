@@ -1,67 +1,27 @@
 <?php get_header(); ?>
-<div class="l-contents">
+<article class="l-contents">
 	<div class="p-search">
 		<div class="p-search__window">
-			<form class="c-search-window" action="/" name="search-form" method="post">
-				<input type="text" name="search" placeholder="ブランド・フリーワードで探す">
-				<button type="submit" class="c-search-window__button" aria-label="search" value="">
-					<img class="c-search-window__img" src="<?php echo get_theme_file_uri('/assets/images/search/search.svg'); ?>" alt="">
-				</button>
-			</form>
+			<?php get_search_form(); ?>
 		</div>
 	</div>
-	<div class="p-mainvisual"><img src="<?php echo get_theme_file_uri('/assets/images/dummy.jpg'); ?>" alt="メインビジュアル　ダミー画像"></div>
+	<div class="p-mainvisual"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/dummy.jpg' ) ); ?>" alt="メインビジュアル　ダミー画像"><p class="p-mainvisual__title">ファッション＆メイク初心者さんのための情報サイト♡</p></div>
 	<main class="p-main">
-		<article class="p-detail">
+		<section class="p-detail">
 			<h2 class="c-title c-headline-border">MEDIA</h2>
-			<ul class="p-post-list">
-				<li class="p-post-list__posted c-boundary-line">
-					<figure class="p-card">
-						<figcaption class="p-card__caption">
-							<h3 class="p-card__caption__title c-barline-border">ブログタイトル</h3>
-							<ul class="data c-time-category-chunk">
-								<li class="time"><time>投稿日時</time></li>
-								<li class="category">カテゴリー名</li>
-							</ul>
-						</figcaption>
-						<img class="p-card__img" src="<?php echo get_theme_file_uri('/assets/images/p-card/eye-catching.jpg'); ?>" alt="アイキャッチ画像">
-					</figure>
-				</li>
-				<li class="p-post-list__posted c-boundary-line">
-					<figure class="p-card">
-						<figcaption class="p-card__caption">
-							<h3 class="p-card__caption__title c-barline-border">ブログタイトル</h3>
-							<ul class="data c-time-category-chunk">
-								<li class="time"><time>投稿日時</time></li>
-								<li class="category">カテゴリー名</li>
-							</ul>
-						</figcaption>
-						<img class="p-card__img" src="<?php echo get_theme_file_uri('/assets/images/p-card/eye-catching.jpg'); ?>" alt="アイキャッチ画像">
-					</figure>
-				</li>
-				<li class="p-post-list__posted c-boundary-line">
-					<figure class="p-card">
-						<figcaption class="p-card__caption">
-							<h3 class="p-card__caption__title c-barline-border">ブログタイトル</h3>
-							<ul class="data c-time-category-chunk">
-								<li class="time"><time>投稿日時</time></li>
-								<li class="category">カテゴリー名</li>
-							</ul>
-						</figcaption>
-						<img class="p-card__img" src="<?php echo get_theme_file_uri('/assets/images/p-card/eye-catching.jpg'); ?>" alt="アイキャッチ画像">
-					</figure>
-				</li>
-			</ul>
-		</article>
-		<ul class="c-pagination">
-			<li class="c-pagination__list"><a class="before-to" href="#">前へ</a></li>
-			<li class="c-pagination__list"><a class="page-active" href="#">1</a></li>
-			<li class="c-pagination__list"><a class="page" href="#">2</a></li>
-			<li class="c-pagination__list"><a class="page" href="#">3</a></li>
-			<li class="c-pagination__list"><a class="extend" href="#">…</a></li>
-			<li class="c-pagination__list"><a class="next-for" href="#">次へ</a></li>
-		</ul>
+				<?php get_template_part( "assets/components/card" ); ?>
+		</section>
+		<?php
+			$args = array (
+				'prev_text'          => '前へ',
+				'next_text'          => '次へ',
+				'screen_reader_text' => "Posts navigation",
+				'show_all'           => false,
+				'mid_size'           => 0,
+			);
+			the_posts_pagination( $args );
+		?>
 	</main>
 	<?php get_sidebar(); ?>
-</div>
+</article>
 <?php get_footer(); ?>

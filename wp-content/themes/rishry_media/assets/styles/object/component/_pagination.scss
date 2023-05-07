@@ -1,9 +1,6 @@
 @use "../../foundation/global" as g;
 
 .c-pagination {
-	display: flex;
-	justify-content: center;
-	margin: 0 auto;
 	padding: 20px 12px 40px;
 	@include g.breakpoint ( tablet ) {
 		padding: 10px 20px 80px;
@@ -11,18 +8,29 @@
 	@include g.breakpoint ( pc ) {
 		padding: 40px 0 80px;
 	}
+	@media ( max-width: 1024px ) {
+		padding-top: 27px;
+	}
+	@media ( max-width: 599px ) {
+		padding-top: 80px;
+		padding-bottom: 40px;
+	}
 	&__list {
-		list-style: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		flex-wrap: wrap;
 		a {
 			color: #030303;
 			text-decoration: none;
-			font-size: 1.5rem;
+			font-size: 15px;
 		}
-		&__before-to,
-		&__page-active,
-		&__page,
+		.prev,
+		.current,
+		.page-numbers,
 		&__extend,
-		&__next-for {
+		.next {
 			margin: 0 5px;
 			@include g.breakpoint ( tablet ) {
 				margin: 0 4px;
@@ -31,58 +39,59 @@
 				margin: 0 6px;
 			}
 		}
-		&__page-active,
-		&__page {
-			padding: 12px 15px;
+		.current,
+		.page-numbers {
+			padding: 12px 18px;
 		}
-		&__page-active {
-			background: #FFD6DB;
-			border: solid 1px #FFD6DB;
-		}
-		&__before-to,
-		&__page,
-		&__next-for {
+		.prev,
+		.page-numbers,
+		.next {
 			border: solid 1px #656565;
 		}
-		&__before-to,
-		&__next-for {
+		.current {
+			background: #FFD6DB;
+			border: solid 1px #FFD6DB;
+			font-size: 15px;
+		}
+		.prev,
+		.next {
 			padding: 12px;
 			position: relative;
 			&::before,
 			&::after {
 				content: "";
+				width: 30px;
 				position: absolute;
-				width: 25px;
 				height: 1px;
 				background: #656565;
 			}
 			&::before {
-				top: 9px;
+				top: 11px;
 			}
 			&::after {
-				top: 29px;
+				top: 35px;
 			}
 		}
-		&__before-to {
+		.prev {
 			border-left: none;
 			padding-left: 10px;
 			&::before,
 			&::after {
-				left: -20px;
+				left: -24px;
 			}
 			&::before {
-				transform: rotate( -55deg );
+				transform: rotate( -54deg );
 			}
 			&::after {
-				transform: rotate( 55deg );
+				transform: rotate( 52deg );
 			}
 		}
-		&__next-for {
+		.next {
 			border-right: none;
 			padding-right: 10px;
 			&::before,
 			&::after {
-				right: -20px;
+				right: -23px;
 			}
 			&::before {
 				transform: rotate( 55deg );
@@ -91,6 +100,14 @@
 				transform: rotate( -55deg );
 			}
 		}
+		.page-numbers.dots {
+			border: none;
+			font-size: 25px;
+		}
+		.page-numbers:not(.prev):not(.next):not(.current) {
+			@media ( max-width: 1024px ) {
+				display: none;
+			}
+		}
 	}
 }
-
