@@ -15,7 +15,13 @@
 							<?php endforeach; ?>
 						</ul>
 					</figcaption>
-					<a href="<?php the_permalink(); ?>"><img class="p-card__img" src="<?php echo esc_url( get_theme_file_uri('/assets/images/p-card/eye-catching.jpg') ); ?>" alt="アイキャッチ画像"></a>
+					<a href="<?php the_permalink(); ?>">
+						<?php if ( has_post_thumbnail()) : ?>
+							<?php the_post_thumbnail( 'full', array( 'class' => 'p-card__img' ) ); ?>
+						<?php else : ?>
+							<img class="p-card__img" src="<?php echo esc_url( get_theme_file_uri('/assets/images/p-card/eye-catching.jpg') ); ?>" alt="アイキャッチ画像">
+						<?php endif; ?>
+					</a>
 				</figure>
 			<?php endwhile; ?>
 		<?php else : ?>
