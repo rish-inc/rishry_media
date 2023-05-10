@@ -1,40 +1,47 @@
 <?php get_header(); ?>
 		<div class="l-contents">
 			<div class="p-search">
-				<form class="p-search__window c-search-window" action="/" name="search-form" method="post">
-					<input type="text" name="search" placeholder="Search">
-					<button type="submit" class="c-search-window__button" aria-label="search" value="">
-						<img class="c-search-window__img" src="./images/search/search.svg" alt="">
-					</button>
-				</form>
+				<div class="p-search__window">
+					<?php get_search_form(); ?>
+				</div>
 			</div>
 			<main class="p-main">
 				<article class="p-detail">
 					<div class="p-entry-card">
-						<h2 class="c-entry-title c-barline-border">ブログタイトル</h2>
+						<h2 class="c-entry-title p-card__caption__title c-barline-border"><?php echo esc_html( get_the_title() ); ?></h2>
 						<ul class="data c-time-category-chunk">
-							<li class="time"><time>投稿日時</time></li>
-							<li class="category">カテゴリー名</li>
+							<li class="time"><time><?php echo esc_html( get_the_date( "Y年m月d日" ) ); ?></time></li>
+							<li class="category">
+								<?php
+									$category = get_the_category();
+									echo $category[0] -> cat_name;
+						 		?>
+							</li>
 						</ul>
 					</div>
-					<figure class="p-eyecatch"><img src="./images/eye-catching02.jpg" alt="記事アイキャッチ画像"></figure>
+					<?php if ( has_post_thumbnail()) : ?>
+						<?php echo get_the_post_thumbnail('', 'medium_large', array( 'class' => 'p-eyecatch') ); ?>
+					<?php else : ?>
+						<img class="p-card__img" src="<?php echo esc_url( get_theme_file_uri('/assets/images/p-card/eye-catching.jpg') ); ?>" alt="アイキャッチ画像">
+					<?php endif; ?>
 					<section class="p-entry-content c-boundary-line">
-						<h3 class="c-barline-border">見出し</h3>
-						<p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
-						<p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
-						<p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
-						<p>本文です本文です本文です本文です本文です本文です本文です本文です</p>
+						<h3 class="c-barline-border"><?php the_content(); ?></h3>
 						<ul class="p-entry-tag">
-							<li><a href="">#タグ名</a></li>
-							<li><a href="">#タグ名</a></li>
-							<li><a href="">#タグ名</a></li>
+							<?php
+								$tags = get_the_tags();
+								if ( !empty( $tags ) ) {
+									foreach ( $tags as $tag ) {
+										echo '<li>#<a href="'. get_tag_link( $tag -> term_id ) .'">' . $tag -> name . '</a></li>';
+									}
+								}
+							?>
 						</ul>
-						<div class="p-share">
+						<div class="p-share c-boundary-line__bottom">
 							<p class="p-share__title">SHARE!</p>
 							<ul class="p-share__sns c-sns__icon">
-								<li><li><a href=""><img src="./images/sns/t_logo.png" alt="Twitterアイコン画像"></a></li>
-								<li><a href=""><img src="./images/sns/f_logo.png" alt="Facebookアイコン画像"></a></li>
-								<li><a href=""><img src="./images/sns/l_logo.png" alt="LINEアイコン画像"></a></li>
+								<li class="p-share__sns__list"><a href=""><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/sns/t_logo.png' )); ?>" alt="Twitterアイコン画像"></a></li>
+								<li class="p-share__sns__list"><a href=""><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/sns/f_logo.png' )); ?>" alt="Facebookアイコン画像"></a></li>
+								<li class="p-share__sns__list"><a href=""><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/sns/l_logo.png' )); ?>" alt="LINEアイコン画像"></a></li>
 							</ul>
 						</div>
 					</section>

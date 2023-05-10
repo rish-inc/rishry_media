@@ -32,9 +32,13 @@ $font-size--title--sp: 16;
 $font-size--title--tab: 20;
 $font-size--title--pc: 24;
 
+// ブログタイトルsingleページ
+$font-size--title--single--tab: 24;
+$font-size--title--single--pc: 26;
+
 // 見出しフォント用
-$font-size--head--sp: font-rem( 20 );
-$font-size--head--pc: font-rem( 26 );
+$font-size--head--tab: 20;
+$font-size--head--pc: 24;
 
 // 小見出しフォント用
 $font-size--sub-head: font-rem( 18 );
