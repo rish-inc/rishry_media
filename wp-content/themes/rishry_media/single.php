@@ -29,7 +29,7 @@
 						<ul class="p-entry-tag">
 							<?php
 								$tags = get_the_tags();
-								if ( !empty( $tags ) ) {
+								if ( ! empty( $tags ) ) {
 									foreach ( $tags as $tag ) {
 										echo '<li>#<a href="'. get_tag_link( $tag -> term_id ) .'">' . $tag -> name . '</a></li>';
 									}
@@ -47,58 +47,23 @@
 					</section>
 					<aside class="p-related">
 						<h4 class="p-related__title">関連記事</h4>
-						<ul class="p-related-list">
-							<li class="p-related-item">
-								<a href="">
-									<figure class="p-related-card">
-										<img src="./images/eye-catching03.jpg" alt="関連記事アイキャッチ画像">
-										<figcaption class="p-related-card__caption">
-											<ul class="p-related-card__caption__data c-time-category-chunk">
-												<li class="time"><time>投稿日時</time></li>
-												<li class="category">カテゴリー名</li>
-											</ul>
-											<h5 class="p-related-card__caption__title">タイトル</h5>
-										</figcaption>
-									</figure>
-								</a>
-							</li>
-							<li class="p-related-item">
-								<a href="">
-									<figure class="p-related-card">
-										<img src="./images/eye-catching03.jpg" alt="関連記事アイキャッチ画像">
-										<figcaption class="p-related-card__caption">
-											<ul class="p-related-card__caption__data c-time-category-chunk">
-												<li class="time"><time>投稿日時</time></li>
-												<li class="category">カテゴリー名</li>
-											</ul>
-											<h5 class="p-related-card__caption__title">タイトル</h5>
-										</figcaption>
-									</figure>
-								</a>
-							</li>
-							<li class="p-related-item">
-								<a href="">
-									<figure class="p-related-card">
-										<img src="./images/eye-catching03.jpg" alt="関連記事アイキャッチ画像">
-										<figcaption class="p-related-card__caption">
-											<ul class="p-related-card__caption__data c-time-category-chunk">
-												<li class="time"><time>投稿日時</time></li>
-												<li class="category">カテゴリー名</li>
-											</ul>
-											<h5 class="p-related-card__caption__title">タイトル</h5>
-										</figcaption>
-									</figure>
-								</a>
-							</li>
-						</ul>
+						<?php get_template_part( "assets/components/related" ); ?>
 					</aside>
-					<div class="p-pager">
-						<ul class="p-prev-next">
-							<li class="prev">前へ</li>
-							<li class="next">次へ</li>
-						</ul>
-					</div>
 				</article>
+				<div class="p-pager">
+					<ul class="p-prev-next">
+						<?php if (get_previous_post()) : ?>
+							<li class="prev">
+								<?php previous_post_link( '%link', '前へ' ); ?>
+							</li>
+						<?php endif; ?>
+						<?php if (get_next_post()) : ?>
+							<li class="next">
+								<?php next_post_link( '%link', '次へ' ); ?>
+							</li>
+						<?php endif; ?>
+					</ul>
+				</div>
 			</main>
 
 			<?php get_sidebar(); ?>
