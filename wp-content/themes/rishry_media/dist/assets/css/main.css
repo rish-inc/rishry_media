@@ -1890,6 +1890,12 @@ body.is-open {
     margin-bottom: 20px;
   }
 }
+.p-main .p-pager .p-prev-next .prev-hidden {
+  visibility: hidden;
+}
+.p-main .p-pager .p-prev-next .next-hidden {
+  visibility: hidden;
+}
 /*
  * 配色
  */

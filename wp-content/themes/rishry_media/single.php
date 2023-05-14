@@ -52,15 +52,19 @@
 				</article>
 				<div class="p-pager">
 					<ul class="p-prev-next">
-						<?php if (get_previous_post()) : ?>
+						<?php if ( get_previous_post() ) : ?>
 							<li class="prev">
 								<?php previous_post_link( '%link', '前へ' ); ?>
 							</li>
+						<?php else : ?>
+							<li class="prev-hidden"></li>
 						<?php endif; ?>
-						<?php if (get_next_post()) : ?>
+						<?php if ( get_next_post() ) : ?>
 							<li class="next">
 								<?php next_post_link( '%link', '次へ' ); ?>
 							</li>
+						<?php else : ?>
+							<li class="next-hidden"></li>
 						<?php endif; ?>
 					</ul>
 				</div>
