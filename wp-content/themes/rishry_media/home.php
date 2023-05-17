@@ -5,7 +5,7 @@
 			<?php get_search_form(); ?>
 		</div>
 	</div>
-	<div class="p-mainvisual"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/dummy.jpg' ) ); ?>" alt="メインビジュアル　ダミー画像"><p class="p-mainvisual__title">ファッション＆メイク初心者さんのための情報サイト♡</p></div>
+	<div class="p-mainvisual"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/dummy.jpg' ) ); ?>" alt="メインビジュアル　ダミー画像"><p class="p-mainvisual__title"><?php bloginfo( 'description' ); ?></p></div>
 	<main class="p-main">
 		<section class="p-detail">
 			<h2 class="c-title c-headline-border">MEDIA</h2>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="js-html_margin" lang="<?php language_attributes(); ?>">
-	<head>
+	<head prefix="og:http://ogp.me/ns#">
 		<meta charset="utf-8">
 		<meta name="description" content="Rishry ファッション＆メイク初心者さんのための情報サイト">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,7 @@
 	<body class="home" <?php body_class(); ?>>
 		<header class="l-header">
 			<div class="l-header__catchphrase">
-				<p><?php bloginfo( 'description' ); ?></p>
+				<p>私らしく生きるためのライフメディア</p>
 			</div>
 			<div class="p-head-pc">
 				<div class="c-header-flex-beside">
