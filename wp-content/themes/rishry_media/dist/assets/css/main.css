@@ -312,6 +312,10 @@ a {
 /*
  * 角丸
  */
+.c-barline-border, .p-detail .p-entry-content .wp-block-heading {
+  font-size: 1rem;
+  margin-top: 7%;
+}
 .c-barline-border::before, .p-detail .p-entry-content .wp-block-heading::before, .c-barline-border::after, .p-detail .p-entry-content .wp-block-heading::after {
   position: absolute;
   content: "";
