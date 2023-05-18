@@ -1,6 +1,8 @@
 @use "../../foundation/global" as g;
 
 .c-barline-border {
+	@include g.font-rem( $font-size--base );
+	margin-top: 7%;
 	&::before,
 	&::after {
 		position: absolute;
