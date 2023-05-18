@@ -124,6 +124,9 @@
 						font-size: 12px;
 						width: 100%;
 					}
+					@media ( max-width: 385px ) {
+						width: 88%;
+					}
 				}
 			}
 		}

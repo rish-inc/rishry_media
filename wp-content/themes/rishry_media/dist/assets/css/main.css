@@ -706,7 +706,7 @@ input[type=text]::-moz-placeholder {
 }
 @media (max-width: 599px) {
   input[type=text] {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 }
 @media (min-width: 1025px) {
@@ -1352,6 +1352,11 @@ input[type=text]::-moz-placeholder {
   .p-detail .p-related .p-related-card__caption__title {
     font-size: 12px;
     width: 100%;
+  }
+}
+@media (max-width: 385px) {
+  .p-detail .p-related .p-related-card__caption__title {
+    width: 88%;
   }
 }
 .p-detail > img {
