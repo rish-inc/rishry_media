@@ -54,6 +54,15 @@
 	}
 }
 
+.p-card.c-boundary-line {
+	margin-top: 31px;
+	&:first-of-type {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+}
+
 .data {
 	padding-top: 10px;
 }
