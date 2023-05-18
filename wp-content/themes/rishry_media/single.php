@@ -41,17 +41,17 @@
 							<ul class="p-share__sns c-sns__icon">
 								<li class="p-share__sns__list">
 									<a href="https://twitter.com/share?url=<?php echo get_the_permalink();?>&text=<?php echo get_the_title();?>" target="_blank" rel="nofollow noopener">
-									<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/sns/t_logo.png' )); ?>" alt="Twitterアイコン画像">
+									<img src="<?php echo esc_url( get_theme_file_uri( '/dist/assets/images/t_logo.png' )); ?>" alt="Twitterアイコン画像">
 									</a>
 								</li>
 								<li class="p-share__sns__list">
 									<a href="http://www.facebook.com/share.php?u=<?php echo get_the_permalink(); ?>" target="_blank" rel="nofollow noopener">
-										<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/sns/f_logo.png' )); ?>" alt="Facebookアイコン画像">
+										<img src="<?php echo esc_url( get_theme_file_uri( '/dist/assets/images/f_logo.png' )); ?>" alt="Facebookアイコン画像">
 									</a>
 								</li>
 								<li class="p-share__sns__list">
 									<a href="https://social-plugins.line.me/lineit/share?url=<?php echo get_the_permalink(); ?>" target="_blank" rel="nofollow noopener">
-										<img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/sns/l_logo.png' )); ?>" alt="LINEアイコン画像">
+										<img src="<?php echo esc_url( get_theme_file_uri( '/dist/assets/images/l_logo.png' )); ?>" alt="LINEアイコン画像">
 									</a>
 								</li>
 							</ul>
