@@ -10,13 +10,18 @@
 					<div class="p-entry-card">
 						<h2 class="c-entry-title p-card__caption__title c-barline-border"><?php echo esc_html( get_the_title() ); ?></h2>
 						<ul class="data c-time-category-chunk">
-							<li class="time"><time><?php echo esc_html( get_the_date( "Y年m月d日" ) ); ?></time></li>
-							<li class="category">
-								<?php
-									$category = get_the_category();
-									echo $category[0] -> cat_name;
-						 		?>
+							<li class="time">
+								<time><?php echo esc_html( get_the_date( "Y年m月d日" ) ); ?></time>
 							</li>
+							<?php
+								$categories = get_the_category();
+								foreach( $categories as $category ):
+							?>
+							<li class="category">
+								<?php echo $category -> name; ?>
+							</li>
+						<?php endforeach; ?>
+
 						</ul>
 					</div>
 					<?php if ( has_post_thumbnail()) : ?>
@@ -25,7 +30,13 @@
 						<img class="p-card__img" src="<?php echo esc_url( get_theme_file_uri('/assets/images/p-card/eye-catching.jpg') ); ?>" alt="アイキャッチ画像">
 					<?php endif; ?>
 					<section class="p-entry-content c-boundary-line">
-						<h3 class="c-barline-border"><?php the_content(); ?></h3>
+						<p class="c-barline-border">
+							<?php if (have_posts()) : ?>
+								<?php while (have_posts()) : the_post(); ?>
+									<?php the_content(); ?>
+								<?php endwhile; ?>
+							<?php endif; ?>
+						</p>
 						<ul class="p-entry-tag">
 							<?php
 								$tags = get_the_tags();
