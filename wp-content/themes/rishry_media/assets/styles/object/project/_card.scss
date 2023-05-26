@@ -15,6 +15,7 @@
 			position: relative;
 			max-width: 550px;
 			margin: 0;
+			word-wrap: break-word;
 			@media ( max-width: 782px ) {
 				@include g.font-rem( $font-size--title--tab );
 				max-width: 460px;

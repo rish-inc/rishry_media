@@ -1053,6 +1053,7 @@ input[type=text]::-moz-placeholder {
   position: relative;
   max-width: 550px;
   margin: 0;
+  word-wrap: break-word;
 }
 @media (max-width: 782px) {
   .p-card__caption__title, .p-detail .p-entry-content .wp-block-heading, .p-card__caption__title__search {
@@ -1420,6 +1421,7 @@ input[type=text]::-moz-placeholder {
 }
 .p-detail .p-related .p-related-card__caption .c-time-category-chunk {
   display: block;
+  width: 100%;
   margin-bottom: 5%;
 }
 .p-detail .p-related .p-related-card__caption .c-time-category-chunk__inner {
@@ -1454,11 +1456,7 @@ input[type=text]::-moz-placeholder {
 .p-detail .p-related .p-related-card__caption__title {
   font-size: 15px;
   margin-top: 4px;
-}
-@media (max-width: 1024px) {
-  .p-detail .p-related .p-related-card__caption__title {
-    width: 50%;
-  }
+  overflow-wrap: anywhere;
 }
 @media (max-width: 599px) {
   .p-detail .p-related .p-related-card__caption__title {
