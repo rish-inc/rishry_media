@@ -61,7 +61,7 @@ input[ type="text" ] {
 	}
 
 	@media ( max-width: 599px ) {
-		@include g.font-rem( 14 )
+		@include g.font-rem( 12 )
 	}
 
 	@include g.breakpoint ( pc ) {

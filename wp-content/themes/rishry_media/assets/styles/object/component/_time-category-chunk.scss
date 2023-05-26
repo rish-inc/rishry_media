@@ -2,7 +2,9 @@
 
 .c-time-category-chunk {
 	display: flex;
+	flex-wrap: wrap;
 	padding: 0;
+	margin-bottom: 2%;
 }
 .time,
 .category {

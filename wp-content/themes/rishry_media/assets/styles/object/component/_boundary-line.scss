@@ -2,10 +2,8 @@
 
 .c-boundary-line {
 	border-top: 1px solid g.$border-color--gray;
-	margin-top: 31px;
-	&:first-of-type {
-		border: 0;
-		margin: 0;
-		padding: 0;
-	}
+}
+
+.c-boundary-line__bottom {
+	border-bottom: 1px solid g.$border-color--gray;
 }

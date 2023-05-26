@@ -4,4 +4,39 @@
 	@include g.breakpoint ( pc ) {
 		max-width: 70%;
 	}
+	.p-pager {
+		.p-prev-next {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 41.5px;
+			margin-bottom: 80px;
+			@media ( max-width: 782px ) {
+				margin-top: 50px;
+			}
+			@media ( max-width: 599px ) {
+				flex-direction: column;
+				align-items: center;
+				margin-top: 0;
+				margin-bottom: 30px;
+			}
+			li {
+				border: 1px solid #707070;
+				width: 40%;
+				@media ( max-width: 599px ) {
+					width: 77%;
+				}
+			}
+			.prev {
+				@media ( max-width: 599px ) {
+					margin-bottom: 20px;
+				}
+			}
+			.prev-hidden {
+				visibility: hidden;
+			}
+			.next-hidden {
+				visibility: hidden;
+			}
+		}
+	}
 }

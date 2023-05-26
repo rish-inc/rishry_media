@@ -21,6 +21,27 @@ body {
 h1, h2, h3, h4, h5 {
 	font-weight: normal;
 	color: variable.$font-color--default;
+    margin-block-start: 20px;
+    margin-block-end: 20px;
+}
+
+h1 {
+	font-size: 30px;
+}
+h2 {
+	font-size: 26px;
+}
+h3 {
+	font-size: 24px;
+}
+h4 {
+	font-size: 20px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
 }
 
 p {
@@ -33,10 +54,76 @@ ul {
 	margin-block-end: 0;
 }
 
+ul ul {
+	margin-left: 30px;
+}
+
 li {
 	list-style: none;
 }
 
 a {
 	text-decoration: none;
+	color: inherit;
+}
+
+blockquote {
+	border-left: 4px solid #ddd;
+	padding-left: 20px;
+	margin: 20px 0;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 20px 0;
+}
+
+table td, table th {
+	border: 2px solid #ddd;
+	padding: 5px;
+}
+
+dd {
+	margin-left: 30px;
+}
+
+code {
+	display: inline-block;
+	background-color: #f1f1f1;
+	font-family: Consolas, Monaco, 'Courier New', monospace;
+	font-size: 14px;
+	color: #333;
+}
+
+kbd {
+	display: inline-block;
+	padding: 4px 8px;
+	background-color: #f1f1f1;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+}
+
+strong {
+	margin: 15px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignright {
+    float: right;
+    margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.alignleft {
+    float: left;
+    margin-right:20px;
+	margin-bottom: 20px;
 }

@@ -14,6 +14,8 @@
 			font-weight: normal;
 			position: relative;
 			max-width: 550px;
+			margin: 0;
+			word-wrap: break-word;
 			@media ( max-width: 782px ) {
 				@include g.font-rem( $font-size--title--tab );
 				max-width: 460px;
@@ -54,8 +56,18 @@
 	}
 }
 
+.p-card.c-boundary-line {
+	margin-top: 31px;
+	&:first-of-type {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+}
+
 .data {
 	padding-top: 10px;
+	margin-left: 0;
 }
 .time,
 .category {
