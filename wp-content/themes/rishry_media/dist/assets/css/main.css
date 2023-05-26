@@ -513,12 +513,6 @@ strong {
   max-width: 87px;
   height: 40px;
 }
-@media (min-width: 600px) and (max-width: 1024px) {
-  .c-header-flex-beside__logo.is-open {
-    position: inherit;
-    transform: inherit;
-  }
-}
 /*
  * 配色
  */
@@ -1716,9 +1710,9 @@ body.is-open {
   overflow-x: hidden;
   height: 87%;
 }
-@media (min-width: 600px) {
+@media ((min-width: 600px) and (max-width: 1024px)) {
   .p-head-nav__navigation {
-    width: 50vw;
+    width: 100vw;
   }
 }
 @media (min-width: 1025px) {
@@ -1803,11 +1797,6 @@ body.is-open {
   width: 100vw;
   position: fixed;
   bottom: 0;
-}
-@media (min-width: 600px) {
-  .p-head-nav__sns {
-    width: 50vw;
-  }
 }
 @media (min-width: 1025px) {
   .p-head-nav__sns {
