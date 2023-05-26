@@ -1107,6 +1107,9 @@ input[type=text]::-moz-placeholder {
   margin: 0;
   padding: 0;
 }
+.p-card.c-boundary-line:last-of-type {
+  margin-bottom: 5%;
+}
 .data {
   padding-top: 10px;
   margin-left: 0;
