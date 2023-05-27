@@ -22,8 +22,8 @@
 		overflow: scroll;
 		overflow-x: hidden;
 		height: 87%;
-		@media ( min-width: 600px ) {
-			width: 50vw;
+		@media ( (min-width: 600px) and ( max-width: 1024px ) ) {
+			width: 100vw;
 		}
 		@include g.breakpoint ( pc ) {
 			overflow: visible;
@@ -98,9 +98,6 @@
 		width: 100vw;
 		position: fixed;
 		bottom: 0;
-		@media ( min-width: 600px ) {
-			width: 50vw;
-		}
 		@include g.breakpoint ( pc ) {
 			visibility: collapse;
 		}

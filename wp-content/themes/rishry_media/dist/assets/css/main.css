@@ -513,12 +513,6 @@ strong {
   max-width: 87px;
   height: 40px;
 }
-@media (min-width: 600px) and (max-width: 1024px) {
-  .c-header-flex-beside__logo.is-open {
-    position: inherit;
-    transform: inherit;
-  }
-}
 /*
  * 配色
  */
@@ -1106,6 +1100,9 @@ input[type=text]::-moz-placeholder {
   border: 0;
   margin: 0;
   padding: 0;
+}
+.p-card.c-boundary-line:last-of-type {
+  margin-bottom: 5%;
 }
 .data {
   padding-top: 10px;
@@ -1713,9 +1710,9 @@ body.is-open {
   overflow-x: hidden;
   height: 87%;
 }
-@media (min-width: 600px) {
+@media ((min-width: 600px) and (max-width: 1024px)) {
   .p-head-nav__navigation {
-    width: 50vw;
+    width: 100vw;
   }
 }
 @media (min-width: 1025px) {
@@ -1800,11 +1797,6 @@ body.is-open {
   width: 100vw;
   position: fixed;
   bottom: 0;
-}
-@media (min-width: 600px) {
-  .p-head-nav__sns {
-    width: 50vw;
-  }
 }
 @media (min-width: 1025px) {
   .p-head-nav__sns {
@@ -2264,11 +2256,11 @@ body.is-open {
   bottom: 8px;
 }
 .p-share__title::before {
-  content: url(/wp-content/themes/rishry_media/assets/images/common/border-left.svg);
+  content: url(/wp-content/themes/rishry_media/dist/assets/images/border-left.svg);
   left: -10px;
 }
 .p-share__title::after {
-  content: url(/wp-content/themes/rishry_media/assets/images/common/border-right.svg);
+  content: url(/wp-content/themes/rishry_media/dist/assets/images/border-right.svg);
   right: -5px;
 }
 .p-share__sns {

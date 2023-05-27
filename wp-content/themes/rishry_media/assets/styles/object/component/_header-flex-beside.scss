@@ -34,11 +34,5 @@
 			max-width: 87px;
 			height: 40px;
 		}
-		&.is-open {
-			@media ( min-width: 600px ) and ( max-width: 1024px ) {
-				position: inherit;
-				transform: inherit;
-			}
-		}
 	}
 }
