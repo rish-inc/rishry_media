@@ -1690,11 +1690,6 @@ body.is-open {
   height: calc(100% - 50px);
   background: #FFF;
 }
-@media (min-width: 600px) {
-  .p-head-nav {
-    width: auto;
-  }
-}
 @media (min-width: 1025px) {
   .p-head-nav {
     display: initial;
@@ -1710,7 +1705,7 @@ body.is-open {
   overflow-x: hidden;
   height: 87%;
 }
-@media ((min-width: 600px) and (max-width: 1024px)) {
+@media (max-width: 1024px) {
   .p-head-nav__navigation {
     width: 100vw;
   }
