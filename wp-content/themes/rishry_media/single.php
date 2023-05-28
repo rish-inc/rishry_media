@@ -14,14 +14,13 @@
 								<time><?php echo esc_html( get_the_date( "Y年m月d日" ) ); ?></time>
 							</li>
 							<?php
-								$categories = get_the_category();
-								foreach( $categories as $category ):
+							  $categories = get_the_category();
+							  foreach( $categories as $category ):
 							?>
 							<li class="category">
-								<?php echo $category -> name; ?>
+								<?php echo '<a href="'. get_category_link( $category -> term_id ) .'">' . $category -> name . '</a>';?>
 							</li>
-						<?php endforeach; ?>
-
+							<?php endforeach; ?>
 						</ul>
 					</div>
 					<?php if ( has_post_thumbnail()) : ?>

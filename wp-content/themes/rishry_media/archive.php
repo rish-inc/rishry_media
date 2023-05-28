@@ -1,61 +1,39 @@
 <?php get_header(); ?>
 		<main class="l-main">
 			<div class="p-search">
-				<?php get_search_form(); ?>
+				<div class="p-search__window">
+					<?php get_search_form(); ?>
+				</div>
 			</div>
 			<article class="p-contents">
 				<section class="p-detail">
-					<ul class="p-breadcrumb c-breadcrumb-list">
-						<li class="p-breadcrumb__item"><a href="/">HOME</a></li>
-						<li class="p-breadcrumb__item"><a href="">BRAND</a></li>
-					</ul>
-					<ul class="p-post-list">
-						<li class="p-post-list__posted c-boundary-line">
-							<figure class="p-card">
-								<figcaption class="p-card__caption">
-									<h2 class="p-card__caption__title c-barline-border">ブログタイトル</h2>
-									<ul class="data c-time-category-chunk">
-										<li class="p-parallel--data__text"><time>投稿日時</time></li>
-										<li class="p-parallel--data__text-bold">カテゴリー名</li>
-									</ul>
-								</figcaption>
-								<img class="p-card__img" src="././images/p-card/eye-catching.jpg" alt="アイキャッチ画像">
-							</figure>
-						</li>
-						<li class="p-post-list__posted c-boundary-line">
-							<figure class="p-card">
-								<figcaption class="p-card__caption">
-									<h2 class="p-card__caption__title c-barline-border">ブログタイトル</h2>
-									<ul class="data c-time-category-chunk">
-										<li class="p-parallel--data__text"><time>投稿日時</time></li>
-										<li class="p-parallel--data__text-bold">カテゴリー名</li>
-									</ul>
-								</figcaption>
-								<img class="p-card__img" src="./images/p-card/eye-catching.jpg" alt="アイキャッチ画像">
-							</figure>
-						</li>
-						<li class="p-post-list__posted c-boundary-line">
-							<figure class="p-card">
-								<figcaption class="p-card__caption">
-									<h2 class="p-card__caption__title c-barline-border">ブログタイトル</h2>
-									<ul class="data c-time-category-chunk">
-										<li class="p-parallel--data__text"><time>投稿日時</time></li>
-										<li class="p-parallel--data__text-bold">カテゴリー名</li>
-									</ul>
-								</figcaption>
-								<img class="p-card__img" src="./images/p-card/eye-catching.jpg" alt="アイキャッチ画像">
-							</figure>
-						</li>
-					</ul>
+					<?php
+						// パンくずリストの開始タグを出力
+						echo '<ul class="p-breadcrumb c-breadcrumb-list">';
+						echo '<li class="p-breadcrumb__item"><a href="/">HOME</a></li>';
+						// アーカイブの種類によって異なるパンくずリストを表示する
+						if (is_category()) {
+							// 現在のカテゴリーを表示
+							echo '<li class="p-breadcrumb__item">' . single_cat_title('', false) . '</li>';
+						} elseif (is_tag()) {
+							// タグアーカイブの場合
+							echo '<li class="p-breadcrumb__item">' . single_tag_title('', false) . '</li>';
+						}
+						// パンくずリストの終了タグを出力
+						echo '</ul>';
+					?>
+					<?php get_template_part( "assets/components/card_archive" ); ?>
 				</section>
-				<ul class="c-pagination">
-					<li class="c-pagination__list"><a class="c-pagination__list__before-to" href="#">前へ</a></li>
-					<li class="c-pagination__list"><a class="c-pagination__list__page-active" href="#">1</a></li>
-					<li class="c-pagination__list"><a class="c-pagination__list__page" href="#">2</a></li>
-					<li class="c-pagination__list"><a class="c-pagination__list__page" href="#">3</a></li>
-					<li class="c-pagination__list"><a class="c-pagination__list__extend" href="#">…</a></li>
-					<li class="c-pagination__list"><a class="c-pagination__list__next-for" href="#">次へ</a></li>
-				</ul>
+				<?php
+					$args = array (
+						'prev_text'          => '前へ',
+						'next_text'          => '次へ',
+						'screen_reader_text' => "Posts navigation",
+						'show_all'           => false,
+						'mid_size'           => 0,
+					);
+					the_posts_pagination( $args );
+				?>
 			</article>
 			<?php get_sidebar(); ?>
 		</main>

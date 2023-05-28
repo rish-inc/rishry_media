@@ -3,11 +3,19 @@
 .c-breadcrumb-list {
 	padding: 0;
 	display: flex;
+	align-items: center;
 	li {
+		color: g.$font-color--default;
 		list-style: none;
+		@media ( max-width: 599px ) {
+			font-size: 14px;
+		}
 		a {
+			font-size: 16px;
 			text-decoration: none;
-			color: #707070;
+			@media ( max-width: 599px ) {
+				font-size: 14px;
+			}
 		}
 	}
 }
