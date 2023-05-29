@@ -590,7 +590,7 @@ strong {
 }
 @media (min-width: 1025px) {
   .c-pagination {
-    padding: 40px 0 80px;
+    padding: 40px 0;
   }
 }
 @media (max-width: 1024px) {
@@ -1122,9 +1122,6 @@ input[type=text]::-moz-placeholder {
   margin: 0;
   padding: 0;
 }
-.p-card.c-boundary-line:last-of-type {
-  margin-bottom: 5%;
-}
 .data {
   padding-top: 10px;
   margin-left: 0;
@@ -1498,6 +1495,9 @@ input[type=text]::-moz-placeholder {
 /*
  * 角丸
  */
+.p-footer {
+  margin-top: 5%;
+}
 .p-footer__inner {
   margin: auto;
   max-width: 320px;
