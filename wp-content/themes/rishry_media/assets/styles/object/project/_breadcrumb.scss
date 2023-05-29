@@ -2,6 +2,7 @@
 
 .p-breadcrumb {
 	width: 100%;
+	margin-bottom: 3%;
 	&__item {
 		padding-right: 20px;
 		margin-right: 12px;
@@ -10,8 +11,8 @@
 		&:not(:last-child)::after {
 			position: absolute;
 			content: '';
-			width: 6px;
-			height: 6px;
+			width: 8px;
+			height: 8px;
 			border-color: #707070;
 			border-style: solid;
 			border-width: 1px 1px 0 0;
