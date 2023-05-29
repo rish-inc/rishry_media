@@ -1423,9 +1423,6 @@ input[type=text]::-moz-placeholder {
 .p-detail .p-entry-content .more-link:first-child {
   display: none;
 }
-.p-detail .c-boundary-line {
-  border-top: 0;
-}
 .p-detail .p-related .p-related__title {
   font-size: 18px;
   margin: 5% 0;

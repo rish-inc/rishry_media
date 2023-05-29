@@ -28,7 +28,7 @@
 					<?php else : ?>
 						<img class="p-card__img" src="<?php echo esc_url( get_theme_file_uri('/assets/images/p-card/eye-catching.jpg') ); ?>" alt="アイキャッチ画像">
 					<?php endif; ?>
-					<section class="p-entry-content c-boundary-line">
+					<section class="p-entry-content">
 						<p class="c-barline-border">
 							<?php if (have_posts()) : ?>
 								<?php while (have_posts()) : the_post(); ?>
