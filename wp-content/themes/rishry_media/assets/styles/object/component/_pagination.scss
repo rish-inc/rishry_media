@@ -6,7 +6,7 @@
 		padding: 10px 20px 80px;
 	}
 	@include g.breakpoint ( pc ) {
-		padding: 40px 0 80px;
+		padding: 40px 0;
 	}
 	@media ( max-width: 1024px ) {
 		padding-top: 27px;

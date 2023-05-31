@@ -5,9 +5,9 @@
 			wp_nav_menu( array (
 				'menu'            => 'sidebar-menu',
 				'theme_location'  => 'sidebar-menu',
-				'container'       => 'nav',
-				'menu_class'      => 'p-side-navigation__main-menu',
+				'container'       => 'false',
 				'items_wrap'      => '<ul>%3$s</ul>',
+				'add_li_class'    => 'p-side-navigation__main-menu__word c-barline-border',
 				));
 		?>
 		<ul class="p-side-navigation__sns-menu c-sns--icon">
