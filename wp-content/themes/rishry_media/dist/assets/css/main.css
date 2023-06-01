@@ -451,21 +451,29 @@ strong {
  * 角丸
  */
 .c-btn {
+  font-size: 20px;
   text-decoration: none;
   color: #444;
   background: #FFD6DB;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 61%;
-  height: 26px;
+  width: 75%;
+  height: 46px;
   border-radius: 5px;
 }
-@media (min-width: 415px) {
+@media ((min-width: 782px) and (max-width: 1024px)) {
   .c-btn {
-    width: 40%;
-    height: 46px;
-    font-size: 2rem;
+    width: 60%;
+    max-width: 550px;
+  }
+}
+@media (max-width: 599px) {
+  .c-btn {
+    width: 50%;
+    min-width: 250px;
+    height: 26px;
+    font-size: 10px;
   }
 }
 /*
@@ -950,46 +958,50 @@ input[type=text]::-moz-placeholder {
   text-align: center;
   padding: 50px 0 40px;
 }
-@media (min-width: 415px) {
-  .error {
-    padding: 30px 0 80px;
-  }
-}
 @media (min-width: 1025px) {
   .error {
     padding-top: 60px;
   }
 }
+@media (max-width: 782px) {
+  .error {
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 599px) {
+  .error {
+    padding-bottom: 40px;
+  }
+}
 .error__title {
   font-weight: inherit;
-  font-size: 2.4rem;
+  font-size: 30px;
   padding-bottom: 20px;
 }
-@media (min-width: 415px) {
+@media (max-width: 599px) {
   .error__title {
-    margin: auto;
-    font-size: 3rem;
-    padding-bottom: 40px;
+    margin: 0;
+    font-size: 24px;
+    padding-bottom: 0;
   }
 }
 .error h3 {
   font-weight: inherit;
-  font-size: 1.6rem;
-  padding-bottom: 10px;
+  font-size: 24px;
 }
-@media (min-width: 415px) {
+@media (max-width: 599px) {
   .error h3 {
-    font-size: 2.4rem;
-    padding-bottom: 20px;
+    font-size: 16px;
+    padding-bottom: 0;
   }
 }
 .error p {
   padding-bottom: 20px;
 }
-@media (min-width: 415px) {
+@media (max-width: 599px) {
   .error p {
-    font-size: 1.6rem;
-    padding-bottom: 40px;
+    font-size: 10px;
+    padding-bottom: 0;
   }
 }
 .back-to-top {
@@ -1261,17 +1273,22 @@ input[type=text]::-moz-placeholder {
 /*
  * 角丸
  */
-.p-contents {
+.p-contents, .p-contents_404 {
   padding: 0 10px;
 }
 @media (min-width: 415px) {
-  .p-contents {
+  .p-contents, .p-contents_404 {
     padding: 0 20px;
   }
 }
 @media (min-width: 1025px) {
-  .p-contents {
+  .p-contents, .p-contents_404 {
     max-width: 70%;
+  }
+}
+@media (min-width: 1025px) {
+  .p-contents_404 {
+    margin-right: 15%;
   }
 }
 /*
