@@ -103,6 +103,12 @@
 			display: none;
 		}
 	}
+	.p-entry-content__about {
+		@extend .p-entry-content;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 	.p-related {
 		.p-related__title {
 			font-size: 18px;
@@ -165,5 +171,21 @@
 	p {
 		margin: 15px 0;
 
+	}
+}
+
+.p-detail__about {
+	@extend .p-detail;
+	> img {
+		margin: 0;
+	}
+	.p-entry-content > .wp-block-heading {
+		font-size: 24px;
+		@media ( max-width: 782px ) {
+			font-size: 20px;
+		}
+		@media ( max-width: 599px ) {
+			font-size: 16px;
+		}
 	}
 }
