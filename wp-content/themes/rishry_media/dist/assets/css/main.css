@@ -171,9 +171,6 @@ table td, table th {
   border: 2px solid #ddd;
   padding: 5px;
 }
-dd {
-  margin-left: 30px;
-}
 code {
   display: inline-block;
   background-color: #f1f1f1;
@@ -763,7 +760,7 @@ strong {
   width: 15px;
   height: auto;
 }
-input[type=text] {
+.c-search-window input[type=text] {
   font-size: 0.875rem;
   background: none;
   border: none;
@@ -772,34 +769,34 @@ input[type=text] {
   padding-left: 16px;
   outline: none;
 }
-input[type=text]::-moz-placeholder {
+.c-search-window input[type=text]::-moz-placeholder {
   color: #030303;
 }
-input[type=text]::placeholder {
+.c-search-window input[type=text]::placeholder {
   color: #030303;
 }
-input[type=text]:focus::-moz-placeholder {
+.c-search-window input[type=text]:focus::-moz-placeholder {
   color: transparent;
 }
-input[type=text]:focus::placeholder {
+.c-search-window input[type=text]:focus::placeholder {
   color: transparent;
 }
-input[type=text]::-moz-placeholder {
+.c-search-window input[type=text]::-moz-placeholder {
   color: #030303;
   opacity: 1;
 }
 @media (max-width: 730px) {
-  input[type=text] {
+  .c-search-window input[type=text] {
     font-size: 0.75rem;
   }
 }
 @media (max-width: 599px) {
-  input[type=text] {
+  .c-search-window input[type=text] {
     font-size: 0.75rem;
   }
 }
 @media (min-width: 1025px) {
-  input[type=text] {
+  .c-search-window input[type=text] {
     padding-left: 10px;
   }
 }
@@ -932,7 +929,7 @@ input[type=text]::-moz-placeholder {
 /*
  * 角丸
  */
-.c-title, .c-title__about {
+.c-title, .c-title__contact, .c-title__about {
   font-weight: normal;
   font-size: 24px;
   display: flex;
@@ -940,7 +937,7 @@ input[type=text]::-moz-placeholder {
   justify-content: center;
 }
 @media (min-width: 1025px) {
-  .c-title, .c-title__about {
+  .c-title, .c-title__contact, .c-title__about {
     font-size: 30px;
     margin: 0;
   }
@@ -961,6 +958,26 @@ input[type=text]::-moz-placeholder {
 @media (max-width: 599px) {
   .c-title__about {
     font-size: 20px;
+  }
+}
+.c-title__contact {
+  width: 40%;
+}
+@media (max-width: 1024px) {
+  .c-title__contact {
+    font-size: 26px;
+    width: 50%;
+  }
+}
+@media (max-width: 782px) {
+  .c-title__contact {
+    width: 60%;
+  }
+}
+@media (max-width: 599px) {
+  .c-title__contact {
+    font-size: 20px;
+    width: 100%;
   }
 }
 /*
@@ -1182,9 +1199,11 @@ input[type=text]::-moz-placeholder {
  * 角丸
  */
 .p-contact {
-  width: 100%;
+  width: 58vw;
   margin: 0 auto;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-bottom: 40px;
 }
 @media (min-width: 415px) {
@@ -1200,18 +1219,22 @@ input[type=text]::-moz-placeholder {
 }
 .p-contact__form {
   padding-top: 20px;
-  max-width: 350px;
-  width: 90%;
-  margin: 0 auto;
+  width: 420px;
 }
-@media (min-width: 415px) {
+@media (min-width: 1025px) {
   .p-contact__form {
     padding-top: 40px;
   }
 }
-@media (min-width: 415px) {
+@media (max-width: 599px) {
   .p-contact__form {
-    width: 50%;
+    width: auto;
+    min-width: 330px;
+  }
+}
+@media (max-width: 414px) {
+  .p-contact__form {
+    width: auto;
   }
 }
 .p-contact__form dl {
@@ -1221,29 +1244,33 @@ input[type=text]::-moz-placeholder {
   padding-bottom: 3px;
 }
 .p-contact__form dl dt label {
-  font-size: 1.4rem;
+  font-size: 20px;
 }
 @media (min-width: 415px) {
   .p-contact__form dl dt label {
-    font-size: 2rem;
+    font-size: 20px;
   }
+}
+.p-contact__form dl dt p {
+  margin: 0;
 }
 .p-contact__form dl dd input,
 .p-contact__form dl dd textarea {
   width: 100%;
-  max-width: 350px;
+  height: 40px;
+  max-width: 420px;
   border: 1px solid #707070;
   border-radius: 5px;
 }
 .p-contact__form dl dd input[type=text],
 .p-contact__form dl dd textarea[type=text] {
-  height: 4rem;
+  height: 40px;
   margin-bottom: 5px;
 }
 @media (min-width: 415px) {
   .p-contact__form dl dd input[type=text],
   .p-contact__form dl dd textarea[type=text] {
-    height: 4rem;
+    height: 40px;
     max-width: 420px;
   }
 }
@@ -1252,7 +1279,51 @@ input[type=text]::-moz-placeholder {
 }
 @media (min-width: 415px) {
   .p-contact__form dl dd textarea {
-    height: 24rem;
+    height: 16rem;
+  }
+}
+@media (max-width: 414px) {
+  .p-contact__form dl dd textarea {
+    height: auto;
+  }
+}
+.p-contact__form input[type=text] {
+  font-size: 0.875rem;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 420px;
+  height: 40px;
+}
+.p-contact__form input[type=text]::-moz-placeholder {
+  color: #030303;
+}
+.p-contact__form input[type=text]::placeholder {
+  color: #030303;
+}
+.p-contact__form input[type=text]:focus::-moz-placeholder {
+  color: transparent;
+}
+.p-contact__form input[type=text]:focus::placeholder {
+  color: transparent;
+}
+.p-contact__form input[type=text]::-moz-placeholder {
+  color: #030303;
+  opacity: 1;
+}
+@media (max-width: 730px) {
+  .p-contact__form input[type=text] {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 599px) {
+  .p-contact__form input[type=text] {
+    font-size: 0.75rem;
+  }
+}
+@media (min-width: 1025px) {
+  .p-contact__form input[type=text] {
+    padding-left: 10px;
   }
 }
 .mandatory-tag,
@@ -1261,16 +1332,17 @@ input[type=text]::-moz-placeholder {
   border-radius: 5px;
 }
 .mandatory-tag {
-  font-size: 1.2rem;
+  font-size: 15px;
   margin-left: 5px;
   padding: 1%;
 }
 @media (min-width: 415px) {
   .mandatory-tag {
-    font-size: 1.5rem;
+    font-size: 15px;
   }
 }
 .button {
+  cursor: pointer;
   font-size: 1.4rem;
   border: none;
   padding: 2% 3%;
@@ -1278,9 +1350,12 @@ input[type=text]::-moz-placeholder {
 }
 @media (min-width: 415px) {
   .button {
-    font-size: 2rem;
+    font-size: 20px;
     padding: 1% 2.5%;
   }
+}
+.wpcf7 {
+  max-width: 420px;
 }
 /*
  * 配色
