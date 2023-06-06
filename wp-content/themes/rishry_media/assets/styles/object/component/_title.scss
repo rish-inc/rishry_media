@@ -20,7 +20,7 @@
 	@media ( max-width: 782px ) {
 		font-size: 26px;
 	}
-	@media ( max-width: 599px ) {
+	@include g.breakpoint ( sp ) {
 		font-size: 20px;
 	}
 }
@@ -34,7 +34,7 @@
 	@media ( max-width: 782px ) {
 		width: 60%;
 	}
-	@media ( max-width: 599px ) {
+	@include g.breakpoint ( sp ) {
 		font-size: 20px;
 		width: 100%;
 	}

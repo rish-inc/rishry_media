@@ -7,13 +7,13 @@
 	li {
 		color: g.$font-color--default;
 		list-style: none;
-		@media ( max-width: 599px ) {
+		@include g.breakpoint ( sp ) {
 			font-size: 14px;
 		}
 		a {
 			font-size: 16px;
 			text-decoration: none;
-			@media ( max-width: 599px ) {
+			@include g.breakpoint ( sp ) {
 				font-size: 14px;
 			}
 		}

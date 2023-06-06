@@ -15,7 +15,7 @@
 		width: 60%;
 		max-width: 550px;
 	}
-	@media ( max-width: 599px ) {
+	@include g.breakpoint ( sp ) {
 		width: 50%;
 		min-width: 250px;
 		height: 26px;

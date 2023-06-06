@@ -8,7 +8,7 @@
         margin: 0 2% 0 10%;
         height: -webkit-fill-available;
     }
-	@media ( max-width: 599px ) {
+	@include g.breakpoint ( sp ) {
 		margin-left: 0;
 	}
 
@@ -59,7 +59,7 @@
 			@include g.font-rem( 12 )
 		}
 
-		@media ( max-width: 599px ) {
+		@include g.breakpoint ( sp ) {
 			@include g.font-rem( 12 )
 		}
 
