@@ -55,10 +55,13 @@
 			&::after {
 				left: -6px;
 			}
-		}
-		a {
-			text-decoration: none;
-			color: #030303;
+			a {
+				text-decoration: none;
+				color: #030303;
+				@include g.breakpoint ( sp ) {
+					font-size: 12px;
+				}
+			}
 		}
 	}
 	&__sns-menu {

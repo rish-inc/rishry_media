@@ -1240,15 +1240,18 @@ strong {
 .p-contact__form dl {
   padding-bottom: 20px;
 }
+.p-contact__form dl:last-of-type {
+  padding-bottom: 0;
+}
 .p-contact__form dl dt {
   padding-bottom: 3px;
 }
 .p-contact__form dl dt label {
   font-size: 20px;
 }
-@media (min-width: 415px) {
+@media (max-width: 599px) {
   .p-contact__form dl dt label {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 .p-contact__form dl dt p {
@@ -1336,22 +1339,26 @@ strong {
   margin-left: 5px;
   padding: 1%;
 }
-@media (min-width: 415px) {
+@media (max-width: 599px) {
   .mandatory-tag {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 .button {
   cursor: pointer;
-  font-size: 1.4rem;
+  font-size: 20px;
   border: none;
   padding: 2% 3%;
   display: inline-block;
 }
 @media (min-width: 415px) {
   .button {
-    font-size: 20px;
     padding: 1% 2.5%;
+  }
+}
+@media (max-width: 599px) {
+  .button {
+    font-size: 12px;
   }
 }
 .wpcf7 {
@@ -2511,9 +2518,14 @@ body.is-open {
 .p-side-navigation__main-menu__word::after {
   left: -6px;
 }
-.p-side-navigation__main-menu a {
+.p-side-navigation__main-menu__word a {
   text-decoration: none;
   color: #030303;
+}
+@media (max-width: 599px) {
+  .p-side-navigation__main-menu__word a {
+    font-size: 12px;
+  }
 }
 .p-side-navigation__sns-menu {
   padding-left: inherit;

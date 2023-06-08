@@ -29,12 +29,15 @@
 		}
 		dl {
 			padding-bottom: 20px;
+			&:last-of-type {
+				padding-bottom: 0;
+			}
 			dt {
 				padding-bottom: 3px;
 				label {
 					font-size: 20px;
-					@include g.breakpoint ( tablet ) {
-						font-size: 20px;
+					@include g.breakpoint ( sp ) {
+						font-size: 14px;
 					}
 				}
 				p {
@@ -115,19 +118,21 @@
 	font-size: 15px;
 	margin-left: 5px;
 	padding: 1%;
-	@include g.breakpoint ( tablet ) {
-		font-size: 15px;
+	@include g.breakpoint ( sp ) {
+		font-size: 12px;
 	}
 }
 .button {
 	cursor: pointer;
-	font-size: 1.4rem;
+	font-size: 20px;
 	border: none;
 	padding: 2% 3%;
 	display: inline-block;
 	@include g.breakpoint ( tablet ) {
-		font-size: 20px;
 		padding: 1% 2.5%;
+	}
+	@include g.breakpoint ( sp ) {
+		font-size: 12px;
 	}
 }
 .wpcf7 {
