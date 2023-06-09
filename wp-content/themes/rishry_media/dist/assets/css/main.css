@@ -1333,6 +1333,7 @@ strong {
 .button {
   background: #FFD6DB;
   border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
 .mandatory-tag {
   font-size: 15px;
@@ -1345,13 +1346,14 @@ strong {
   }
 }
 .button {
+  color: #000000;
   cursor: pointer;
   font-size: 20px;
   border: none;
-  padding: 2% 3%;
+  padding: 5px 10px;
   display: inline-block;
 }
-@media (min-width: 415px) {
+@media (min-width: 600px) {
   .button {
     padding: 1% 2.5%;
   }

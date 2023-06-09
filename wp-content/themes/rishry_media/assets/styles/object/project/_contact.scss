@@ -72,7 +72,6 @@
 				}
 			}
 		}
-
 		input[ type="text" ] {
 			@include g.font-rem( 14 );
 			border: 1px solid #707070;
@@ -106,13 +105,13 @@
 				padding-left: 10px;
 			}
 		}
-
 	}
 }
 .mandatory-tag,
 .button {
 	background: #FFD6DB;
 	border-radius: 5px;
+	-webkit-border-radius: 5px;
 }
 .mandatory-tag {
 	font-size: 15px;
@@ -123,12 +122,13 @@
 	}
 }
 .button {
+	color: #000000;
 	cursor: pointer;
 	font-size: 20px;
 	border: none;
-	padding: 2% 3%;
+	padding: 5px 10px;
 	display: inline-block;
-	@include g.breakpoint ( tablet ) {
+	@media ( min-width: 600px ) {
 		padding: 1% 2.5%;
 	}
 	@include g.breakpoint ( sp ) {
