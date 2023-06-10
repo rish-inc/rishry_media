@@ -13,7 +13,7 @@
 			@media ( max-width: 782px ) {
 				margin-top: 50px;
 			}
-			@media ( max-width: 599px ) {
+			@include g.breakpoint ( sp ) {
 				flex-direction: column;
 				align-items: center;
 				margin-top: 0;
@@ -22,12 +22,12 @@
 			li {
 				border: 1px solid #707070;
 				width: 40%;
-				@media ( max-width: 599px ) {
+				@include g.breakpoint ( sp ) {
 					width: 77%;
 				}
 			}
 			.prev {
-				@media ( max-width: 599px ) {
+				@include g.breakpoint ( sp ) {
 					margin-bottom: 20px;
 				}
 			}

@@ -7,7 +7,7 @@
 	@include g.breakpoint ( pc ) {
 		display: none;
 	}
-	@media ( max-width: 599px ) {
+	@include g.breakpoint ( sp ) {
 		width: 80%;
 	}
 	&__window {
@@ -28,11 +28,4 @@
 			outline: 2px solid #6fb5ff;
 		}
 	}
-
-	// &__results {
-	// 	font-size: 1.4rem;
-	// 	@include g.breakpoint ( tablet ) {
-	// 		 font-size: 1.6rem;
-	// 	}
-	// }
 }
