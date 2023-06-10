@@ -220,3 +220,10 @@ function add_additional_class_on_li( $classes, $item, $args )
   return $classes;
 }
 add_filter( 'nav_menu_css_class', 'add_additional_class_on_li', 1, 3 );
+
+
+// Contact Form 7で自動挿入されるPタグ、brタグを削除
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+function wpcf7_autop_return_false() {
+  return false;
+}

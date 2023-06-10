@@ -8,7 +8,7 @@
 	@include g.breakpoint ( tablet ) {
 		padding-bottom: 40px;
 	}
-	@media ( max-width: 599px ) {
+	@include g.breakpoint ( sp ) {
 		padding-bottom: 29px;
 	}
 	@include g.breakpoint ( pc ) {

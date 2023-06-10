@@ -20,7 +20,7 @@
 				@include g.font-rem( $font-size--title--tab );
 				max-width: 460px;
 			}
-			@media ( max-width: 599px ) {
+			@include g.breakpoint ( sp ) {
 				@include g.font-rem( $font-size--title--sp );
 				max-width: inherit;
 			}
@@ -44,14 +44,14 @@
 			&__search {
 				@extend .p-card__caption__title;
 				font-size: 26px;
-				@media ( max-width: 599px ) {
+				@include g.breakpoint ( sp ) {
 					font-size: 18px;
 				}
 			}
 			&__archive {
 				@extend .p-card__caption__title;
 				font-size: 26px;
-				@media ( max-width: 599px ) {
+				@include g.breakpoint ( sp ) {
 					font-size: 18px;
 				}
 			}
@@ -82,7 +82,7 @@
 	@include g.breakpoint ( tablet ) {
 		font-size: 15px;
 	}
-	@media ( max-width: 599px ) {
+	@include g.breakpoint ( sp ) {
 		font-size: 12px;
 	}
 }

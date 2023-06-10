@@ -8,7 +8,7 @@
         margin: 0 2% 0 10%;
         height: -webkit-fill-available;
     }
-	@media ( max-width: 599px ) {
+	@include g.breakpoint ( sp ) {
 		margin-left: 0;
 	}
 
@@ -33,38 +33,38 @@
 		width: 15px;
 		height: auto;
 	}
-}
-input[ type="text" ] {
-	@include g.font-rem( 14 );
-	background: none;
-	border: none;
-	width: 90%;
-	height: 100%;
-	padding-left: 16px;
-	outline: none;
-	&::placeholder{
-		color: g.$font-color--default;
-	}
-	&:focus {
-		&::placeholder {
-			color: transparent;
+	input[ type="text" ] {
+		@include g.font-rem( 14 );
+		background: none;
+		border: none;
+		width: 90%;
+		height: 100%;
+		padding-left: 16px;
+		outline: none;
+		&::placeholder{
+			color: g.$font-color--default;
 		}
-	}
-	// Firefox
-	&::-moz-placeholder {
-		color: g.$font-color--default;
-		opacity: 1;
-	}
+		&:focus {
+			&::placeholder {
+				color: transparent;
+			}
+		}
+		// Firefox
+		&::-moz-placeholder {
+			color: g.$font-color--default;
+			opacity: 1;
+		}
 
-	@media ( max-width: 730px ) {
-		@include g.font-rem( 12 )
-	}
+		@media ( max-width: 730px ) {
+			@include g.font-rem( 12 )
+		}
 
-	@media ( max-width: 599px ) {
-		@include g.font-rem( 12 )
-	}
+		@include g.breakpoint ( sp ) {
+			@include g.font-rem( 12 )
+		}
 
-	@include g.breakpoint ( pc ) {
-		padding-left: 10px;
+		@include g.breakpoint ( pc ) {
+			padding-left: 10px;
+		}
 	}
 }

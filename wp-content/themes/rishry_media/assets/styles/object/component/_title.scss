@@ -11,3 +11,31 @@
 		margin: 0;
 	}
 }
+.c-title__about {
+	@extend .c-title;
+	font-size: 30px;
+	@include g.breakpoint ( pc ) {
+		margin-bottom: 7%;
+	}
+	@media ( max-width: 782px ) {
+		font-size: 26px;
+	}
+	@include g.breakpoint ( sp ) {
+		font-size: 20px;
+	}
+}
+.c-title__contact {
+	@extend .c-title;
+	width: 40%;
+	@media ( max-width: 1024px ) {
+		font-size: 26px;
+		width: 50%;
+	}
+	@media ( max-width: 782px ) {
+		width: 60%;
+	}
+	@include g.breakpoint ( sp ) {
+		font-size: 20px;
+		width: 100%;
+	}
+}

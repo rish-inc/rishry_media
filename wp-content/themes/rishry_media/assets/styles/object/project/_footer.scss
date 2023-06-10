@@ -37,7 +37,7 @@
 					margin: 0 auto;
 					margin-bottom: 95px;
 				}
-				@media ( max-width: 599px ) {
+				@include g.breakpoint ( sp ) {
 					margin: 0;
 					min-width: 260px;
 					width: 50%;
