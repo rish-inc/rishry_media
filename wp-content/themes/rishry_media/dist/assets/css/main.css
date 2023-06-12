@@ -1243,9 +1243,6 @@ strong {
 .p-contact__form dl:last-of-type {
   padding-bottom: 0;
 }
-.p-contact__form dl dt {
-  padding-bottom: 3px;
-}
 .p-contact__form dl dt label {
   font-size: 20px;
 }
@@ -1259,14 +1256,25 @@ strong {
 }
 .p-contact__form dl dd input,
 .p-contact__form dl dd textarea {
+  font-size: 1rem;
   width: 100%;
   height: 40px;
   max-width: 420px;
   border: 1px solid #707070;
   border-radius: 5px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+@media (max-width: 599px) {
+  .p-contact__form dl dd input,
+  .p-contact__form dl dd textarea {
+    font-size: 0.75rem;
+    margin-top: 5px;
+  }
 }
 .p-contact__form dl dd input[type=text],
 .p-contact__form dl dd textarea[type=text] {
+  font-size: 1rem;
   height: 40px;
   margin-bottom: 5px;
 }
@@ -1277,7 +1285,14 @@ strong {
     max-width: 420px;
   }
 }
+@media (max-width: 599px) {
+  .p-contact__form dl dd input[type=text],
+  .p-contact__form dl dd textarea[type=text] {
+    font-size: 0.75rem;
+  }
+}
 .p-contact__form dl dd textarea {
+  padding-top: 5px;
   height: 24.2rem;
 }
 @media (min-width: 415px) {
@@ -1291,12 +1306,14 @@ strong {
   }
 }
 .p-contact__form input[type=text] {
-  font-size: 0.875rem;
+  margin-top: 10px;
+  font-size: 1rem;
   border: 1px solid #707070;
   border-radius: 5px;
   width: 100%;
   max-width: 420px;
   height: 40px;
+  padding-left: 10px;
 }
 .p-contact__form input[type=text]::-moz-placeholder {
   color: #030303;
@@ -1314,20 +1331,14 @@ strong {
   color: #030303;
   opacity: 1;
 }
-@media (max-width: 730px) {
-  .p-contact__form input[type=text] {
-    font-size: 0.75rem;
-  }
-}
 @media (max-width: 599px) {
   .p-contact__form input[type=text] {
     font-size: 0.75rem;
+    margin-top: 5px;
   }
 }
-@media (min-width: 1025px) {
-  .p-contact__form input[type=text] {
-    padding-left: 10px;
-  }
+.p-contact__form textarea {
+  margin-top: 5px;
 }
 .mandatory-tag,
 .button {
