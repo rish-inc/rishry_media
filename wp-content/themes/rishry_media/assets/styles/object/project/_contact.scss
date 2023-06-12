@@ -28,6 +28,8 @@
 			width: auto;
 		}
 		dl {
+			margin-block-start: 0;
+			margin-block-end: 0;
 			padding-bottom: 20px;
 			&:last-of-type {
 				padding-bottom: 0;
@@ -74,6 +76,7 @@
 					}
 				}
 				textarea {
+					padding: 0;
 					padding-top: 5px;
 					height: 24.2rem;
 					@include g.breakpoint ( tablet ) {
@@ -138,12 +141,14 @@
 	font-size: 20px;
 	border: none;
 	padding: 5px 10px;
+	margin-top: 10px;
 	display: inline-block;
 	@media ( min-width: 600px ) {
 		padding: 1% 2.5%;
 	}
 	@include g.breakpoint ( sp ) {
 		font-size: 12px;
+		margin-top: 5px;
 	}
 }
 .wpcf7 {
