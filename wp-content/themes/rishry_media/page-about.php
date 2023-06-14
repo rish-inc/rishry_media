@@ -5,7 +5,7 @@
 				<?php get_search_form(); ?>
 			</div>
 		</div>
-		<main class="p-main">
+		<main class="p-main__about">
 			<article class="p-detail__about">
 				<h2 class="c-title__about c-headline-border">ABOUT</h2>
 			<figure class="p-card c-boundary-line">

@@ -179,6 +179,8 @@
 
 .p-detail__about {
 	@extend .p-detail;
+		width: 58vw;
+		margin: 0 auto;
 	> img {
 		margin: 0;
 	}
