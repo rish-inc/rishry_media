@@ -33,10 +33,12 @@
 							</h5>
 					</ul>
 					<a href="<?php the_permalink(); ?>">
-						<?php if ( has_post_thumbnail() ): the_post_thumbnail('full'); ?>
-						<?php else : ?>
-							<img src="<?php echo esc_url( get_theme_file_uri('/assets/images/p-card/eye-catching.jpg') ); ?>" alt="<?php the_title(); ?>">
-						<?php endif; ?>
+						<span class="p-card__mask">
+							<?php if ( has_post_thumbnail() ): the_post_thumbnail('full'); ?>
+							<?php else : ?>
+								<img src="<?php echo esc_url( get_theme_file_uri('/assets/images/p-card/eye-catching.jpg') ); ?>" alt="<?php the_title(); ?>">
+							<?php endif; ?>
+						</span>
 					</a>
 				</figcaption>
 			</figure>

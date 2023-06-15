@@ -1088,6 +1088,9 @@ strong {
 /*
  * 角丸
  */
+.p-card {
+  overflow: hidden;
+}
 .p-card__caption {
   padding: 15px 10px 10px;
 }
@@ -1160,6 +1163,19 @@ strong {
 .p-card__img {
   width: 100%;
   height: auto;
+  transition: transform 0.6s ease;
+}
+.p-card__img:hover {
+  transform: scale(1.1);
+}
+.p-card__img--single {
+  width: 100%;
+  height: auto;
+}
+.p-card__mask {
+  display: block;
+  line-height: 0;
+  overflow: hidden;
 }
 .p-card.c-boundary-line {
   margin-top: 31px;
@@ -1623,6 +1639,14 @@ strong {
   .p-detail .p-related .p-related-card__caption__title, .p-detail__about .p-related .p-related-card__caption__title {
     width: 88%;
   }
+}
+.p-detail .p-related .p-related-card img, .p-detail__about .p-related .p-related-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+}
+.p-detail .p-related .p-related-card img:hover, .p-detail__about .p-related .p-related-card img:hover {
+  transform: scale(1.1);
 }
 .p-detail > img, .p-detail__about > img {
   width: 100%;

@@ -1,6 +1,7 @@
 @use "../../foundation/global" as g;
 
 .p-card {
+	overflow: hidden;
 	&__caption {
 		padding: 15px 10px 10px;
 		@include g.breakpoint ( tablet ) {
@@ -60,6 +61,19 @@
 	&__img {
 		width: 100%;
 		height: auto;
+		transition: transform .6s ease;
+		&:hover {
+			transform: scale(1.1);
+		}
+		&--single {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__mask {
+		display: block;
+		line-height: 0;
+		overflow: hidden;
 	}
 }
 

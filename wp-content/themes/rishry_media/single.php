@@ -26,7 +26,7 @@
 					<?php if ( has_post_thumbnail()) : ?>
 						<?php echo get_the_post_thumbnail('', 'medium_large', array( 'class' => 'p-eyecatch') ); ?>
 					<?php else : ?>
-						<img class="p-card__img" src="<?php echo esc_url( get_theme_file_uri('/assets/images/p-card/eye-catching.jpg') ); ?>" alt="アイキャッチ画像">
+						<img class="p-card__img--single" src="<?php echo esc_url( get_theme_file_uri('/assets/images/p-card/eye-catching.jpg') ); ?>" alt="アイキャッチ画像">
 					<?php endif; ?>
 					<section class="p-entry-content">
 						<p class="c-barline-border">
