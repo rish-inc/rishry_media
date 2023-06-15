@@ -12,7 +12,7 @@
 							  foreach( $categories as $category ):
 							?>
 							<li class="category">
-								<?php echo $category -> name; ?>
+								<?php echo '<a href="'. get_category_link( $category -> term_id ) .'">' . $category -> name . '</a>';?>
 							</li>
 							<?php endforeach; ?>
 						</ul>
