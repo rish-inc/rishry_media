@@ -770,10 +770,10 @@ strong {
   outline: none;
 }
 .c-search-window input[type=text]::-moz-placeholder {
-  color: #030303;
+  color: #707070;
 }
 .c-search-window input[type=text]::placeholder {
-  color: #030303;
+  color: #707070;
 }
 .c-search-window input[type=text]:focus::-moz-placeholder {
   color: transparent;
@@ -1302,7 +1302,6 @@ strong {
 .p-contact__form dl dd textarea[type=text] {
   font-size: 1rem;
   height: 40px;
-  margin-bottom: 5px;
 }
 @media (min-width: 415px) {
   .p-contact__form dl dd input[type=text],
@@ -1539,6 +1538,11 @@ strong {
 .p-detail .p-entry-content .wp-caption, .p-detail__about .p-entry-content .wp-caption, .p-detail .p-entry-content__about .wp-caption, .p-detail__about .p-entry-content__about .wp-caption {
   width: auto;
   max-width: 100%;
+}
+@media (max-width: 599px) {
+  .p-detail .p-entry-content iframe, .p-detail__about .p-entry-content iframe, .p-detail .p-entry-content__about iframe, .p-detail__about .p-entry-content__about iframe {
+    width: 100%;
+  }
 }
 .p-detail .p-entry-content .p-entry-tag, .p-detail__about .p-entry-content .p-entry-tag, .p-detail .p-entry-content__about .p-entry-tag, .p-detail__about .p-entry-content__about .p-entry-tag {
   display: flex;

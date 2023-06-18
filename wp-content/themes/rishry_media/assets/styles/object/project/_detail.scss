@@ -68,6 +68,11 @@
 			width: auto;
 			max-width: 100%;
 		}
+		iframe {
+			@include g.breakpoint ( sp ) {
+				width: 100%;
+			}
+		}
 		.p-entry-tag {
 			display: flex;
 			flex-wrap: wrap;
