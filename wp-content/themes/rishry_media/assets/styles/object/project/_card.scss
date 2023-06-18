@@ -59,7 +59,7 @@
 		}
 	}
 	&__img {
-		width: 100%;
+		width: 100vw;
 		height: auto;
 		transition: transform .6s ease;
 		&:hover {
@@ -98,5 +98,8 @@
 	}
 	@include g.breakpoint ( sp ) {
 		font-size: 12px;
+	}
+	@media ( max-width: 385px ) {
+		margin-right: 5px;
 	}
 }
