@@ -101,9 +101,6 @@ html {
 html.is-open {
   margin-top: 0 !important;
 }
-#wpadminbar {
-  z-index: 10000000 !important;
-}
 body {
   width: 100%;
   min-width: 350px;
