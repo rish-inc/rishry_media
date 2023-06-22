@@ -23,7 +23,6 @@ add_action( 'send_headers', 'cors_http_header' );
  */
 function custom_theme_support()
 {
-	add_theme_support( 'menus' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
 	register_nav_menus( array (
@@ -78,19 +77,6 @@ add_action( 'wp_enqueue_scripts', function() {
 //	 return $title;
 // }
 // add_filter( 'pre_get_document_title', 'rishrymedia_title' );
-
-/*
- * SVG ファイルをメディアライブラリで表示
- */
-add_filter( 'upload_mimes', function ( $mimes ) {
-	$mimes['svg'] = 'image/svg+xml';
-	return $mimes;
-});
-
-add_filter( 'manage_media_columns', function ( $columns ) {
-	echo '<style>.media-icon img[src$=".svg"]{width:100%;}</style>';
-	return $columns;
-});
 
 /*
  * 「前へ」「次へ」に class 名を付与
