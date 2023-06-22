@@ -32,14 +32,16 @@
 						<p class="c-barline-border">
 							<?php if (have_posts()) : ?>
 								<?php while (have_posts()) : the_post(); ?>
-									<?php the_content(); ?>
-									<?php
-										$args = array(
-											'before'           => '<p>' . ( 'ページ：' ),
-											'separator'        => '&nbsp;&nbsp;&nbsp;',
-										);
-										wp_link_pages( $args );
-									?>
+									<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+										<?php the_content(); ?>
+										<?php
+											$args = array(
+												'before'           => '<p>' . ( 'ページ：' ),
+												'separator'        => '&nbsp;&nbsp;&nbsp;',
+											);
+											wp_link_pages( $args );
+										?>
+									</article>
 								<?php endwhile; ?>
 							<?php endif; ?>
 						</p>
