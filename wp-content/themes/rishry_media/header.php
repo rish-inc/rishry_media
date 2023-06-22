@@ -10,6 +10,7 @@
 	</head>
 
 	<body class="home" <?php body_class(); ?>>
+	<?php wp_body_open(); ?>
 		<header class="l-header">
 			<div class="l-header__catchphrase">
 				<p>私らしく生きるためのライフメディア</p>
