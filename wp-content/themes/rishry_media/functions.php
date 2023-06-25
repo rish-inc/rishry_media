@@ -215,3 +215,14 @@ add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
 function wpcf7_autop_return_false() {
   return false;
 }
+
+register_block_style(
+    'core/image', // ブロック名
+    [
+        'name'         => 'shadow', // スタイルで付けるクラスに使う名前
+        'label'        => '影付き',
+        'inline_style' => '.is-style-shadow {
+            box-shadow: 10px 5px 5px black;
+        }', // 追加するCSS
+    ]
+);
