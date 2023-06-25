@@ -23,6 +23,7 @@ add_action( 'send_headers', 'cors_http_header' );
  */
 function custom_theme_support()
 {
+	add_theme_support( 'custom-header' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
