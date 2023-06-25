@@ -226,3 +226,26 @@ register_block_style(
         }', // 追加するCSS
     ]
 );
+
+add_action( 'init', function()  {
+	register_block_pattern(
+		'rishry_media/my-awesome-pattern',
+		array(
+			'title'    => __( 'Two buttons', 'rishry_media' ),
+			'content'  => "<!-- wp:buttons  -->
+					<div class=\"wp-block-buttons\">
+					<!-- wp:button -->
+					<div class=\"wp-block-button\">
+					<a class=\"wp-block-button__link\">" . esc_html__( 'Button One', 'rishry_media' ) . "</a>
+					</div>
+					<!-- /wp:button -->
+					<!-- wp:button -->
+					<div class=\"wp-block-button is-style-outline\">
+					<a class=\"wp-block-button__link has-text-color\">" . esc_html__( 'Button Two', 'rishry_media' ) . "</a>
+					</div>
+					<!-- /wp:button --></div>
+					<!-- /wp:buttons -->",
+			'categories' => array( 'my-cat' ),
+			)
+		);
+	});
