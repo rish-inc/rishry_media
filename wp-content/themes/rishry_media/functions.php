@@ -23,6 +23,12 @@ add_action( 'send_headers', 'cors_http_header' );
  */
 function custom_theme_support()
 {
+	add_theme_support( 'custom-background' );
+	add_theme_support( 'align-wide' );
+	add_theme_support( 'custom-logo' );
+	add_theme_support( 'html5', [ 'search-form' ] );
+	add_theme_support( 'responsive-embeds' );
+	add_theme_support( 'wp-block-styles' );
 	add_theme_support( 'custom-header' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
