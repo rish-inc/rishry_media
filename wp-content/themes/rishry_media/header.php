@@ -5,7 +5,6 @@
 		<meta name="description" content="Rishry ファッション＆メイク初心者さんのための情報サイト">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="<?php echo esc_url( get_theme_file_uri( './assets/images/common/ico/favicon.ico' )); ?>">
-		<title><?php bloginfo( 'name' ); ?></title>
 		<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
 		<?php wp_head(); ?>
 	</head>
