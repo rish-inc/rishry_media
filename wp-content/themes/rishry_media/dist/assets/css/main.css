@@ -410,6 +410,7 @@ strong {
  * 角丸
  */
 .c-boundary-line {
+  margin-top: 31px;
   border-top: 1px solid #dcdcdc;
 }
 .c-boundary-line__bottom {
@@ -1185,14 +1186,6 @@ strong {
   display: block;
   line-height: 0;
   overflow: hidden;
-}
-.p-card.c-boundary-line {
-  margin-top: 31px;
-}
-.p-card.c-boundary-line:first-of-type {
-  border: 0;
-  margin: 0;
-  padding: 0;
 }
 .data {
   padding-top: 10px;
@@ -2393,6 +2386,12 @@ body.is-open {
 .p-post-list__posted .search_result {
   margin-top: 1rem;
   margin-bottom: 15rem;
+}
+.p-post-list__posted article:first-child > figure {
+  border: 0;
+}
+.p-post-list__posted > figure:first-child {
+  border: 0;
 }
 /*
  * 配色
