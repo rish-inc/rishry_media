@@ -8,7 +8,7 @@
 		<main class="p-main__about">
 			<article class="p-detail__about">
 				<h2 class="c-title__about c-headline-border">ABOUT</h2>
-			<figure class="p-card c-boundary-line">
+			<figure class="p-card">
 			</figure>
 				<?php if ( has_post_thumbnail()) : ?>
 					<?php echo get_the_post_thumbnail('', 'medium_large', array( 'class' => 'p-eyecatch') ); ?>
