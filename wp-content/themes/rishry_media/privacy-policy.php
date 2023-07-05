@@ -6,7 +6,7 @@
 			</div>
 		</div>
 		<main class="p-main">
-			<article class="p-detail__about">
+			<article class="p-detail__about--privacy">
 				<figure class="p-card"></figure>
 					<?php if ( has_post_thumbnail()) : ?>
 						<?php echo get_the_post_thumbnail('', 'medium_large', array( 'class' => 'p-eyecatch') ); ?>
