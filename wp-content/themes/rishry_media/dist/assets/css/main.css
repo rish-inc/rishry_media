@@ -402,10 +402,10 @@ strong {
 /*
  * 角丸
  */
-.c-barline-border, .p-detail .p-entry-content .wp-block-heading, .p-detail__about .p-entry-content .wp-block-heading, .p-detail .p-entry-content__about .wp-block-heading, .p-detail__about .p-entry-content__about .wp-block-heading {
+.c-barline-border, .p-detail .p-entry-content .wp-block-heading, .p-detail__about .p-entry-content .wp-block-heading, .p-detail__about--privacy .p-entry-content .wp-block-heading, .p-detail .p-entry-content__about .wp-block-heading, .p-detail__about .p-entry-content__about .wp-block-heading, .p-detail__about--privacy .p-entry-content__about .wp-block-heading {
   font-size: 1rem;
 }
-.c-barline-border::before, .p-detail .p-entry-content .wp-block-heading::before, .p-detail__about .p-entry-content .wp-block-heading::before, .p-detail .p-entry-content__about .wp-block-heading::before, .p-detail__about .p-entry-content__about .wp-block-heading::before, .c-barline-border::after, .p-detail .p-entry-content .wp-block-heading::after, .p-detail__about .p-entry-content .wp-block-heading::after, .p-detail .p-entry-content__about .wp-block-heading::after, .p-detail__about .p-entry-content__about .wp-block-heading::after {
+.c-barline-border::before, .p-detail .p-entry-content .wp-block-heading::before, .p-detail__about .p-entry-content .wp-block-heading::before, .p-detail__about--privacy .p-entry-content .wp-block-heading::before, .p-detail .p-entry-content__about .wp-block-heading::before, .p-detail__about .p-entry-content__about .wp-block-heading::before, .p-detail__about--privacy .p-entry-content__about .wp-block-heading::before, .c-barline-border::after, .p-detail .p-entry-content .wp-block-heading::after, .p-detail__about .p-entry-content .wp-block-heading::after, .p-detail__about--privacy .p-entry-content .wp-block-heading::after, .p-detail .p-entry-content__about .wp-block-heading::after, .p-detail__about .p-entry-content__about .wp-block-heading::after, .p-detail__about--privacy .p-entry-content__about .wp-block-heading::after {
   position: absolute;
   content: "";
   width: 2px;
@@ -1126,7 +1126,7 @@ strong {
     padding-top: 20px;
   }
 }
-.p-card__caption__title, .p-detail .p-entry-content .wp-block-heading, .p-detail__about .p-entry-content .wp-block-heading, .p-detail .p-entry-content__about .wp-block-heading, .p-detail__about .p-entry-content__about .wp-block-heading, .p-card__caption__title__archive, .p-card__caption__title__search {
+.p-card__caption__title, .p-detail .p-entry-content .wp-block-heading, .p-detail__about .p-entry-content .wp-block-heading, .p-detail__about--privacy .p-entry-content .wp-block-heading, .p-detail .p-entry-content__about .wp-block-heading, .p-detail__about .p-entry-content__about .wp-block-heading, .p-detail__about--privacy .p-entry-content__about .wp-block-heading, .p-card__caption__title__archive, .p-card__caption__title__search {
   font-size: 1.5rem;
   font-weight: normal;
   position: relative;
@@ -1135,35 +1135,35 @@ strong {
   word-wrap: break-word;
 }
 @media (max-width: 782px) {
-  .p-card__caption__title, .p-detail .p-entry-content .wp-block-heading, .p-detail__about .p-entry-content .wp-block-heading, .p-detail .p-entry-content__about .wp-block-heading, .p-detail__about .p-entry-content__about .wp-block-heading, .p-card__caption__title__archive, .p-card__caption__title__search {
+  .p-card__caption__title, .p-detail .p-entry-content .wp-block-heading, .p-detail__about .p-entry-content .wp-block-heading, .p-detail__about--privacy .p-entry-content .wp-block-heading, .p-detail .p-entry-content__about .wp-block-heading, .p-detail__about .p-entry-content__about .wp-block-heading, .p-detail__about--privacy .p-entry-content__about .wp-block-heading, .p-card__caption__title__archive, .p-card__caption__title__search {
     font-size: 1.25rem;
     max-width: 460px;
   }
 }
 @media (max-width: 599px) {
-  .p-card__caption__title, .p-detail .p-entry-content .wp-block-heading, .p-detail__about .p-entry-content .wp-block-heading, .p-detail .p-entry-content__about .wp-block-heading, .p-detail__about .p-entry-content__about .wp-block-heading, .p-card__caption__title__archive, .p-card__caption__title__search {
+  .p-card__caption__title, .p-detail .p-entry-content .wp-block-heading, .p-detail__about .p-entry-content .wp-block-heading, .p-detail__about--privacy .p-entry-content .wp-block-heading, .p-detail .p-entry-content__about .wp-block-heading, .p-detail__about .p-entry-content__about .wp-block-heading, .p-detail__about--privacy .p-entry-content__about .wp-block-heading, .p-card__caption__title__archive, .p-card__caption__title__search {
     font-size: 1rem;
     max-width: inherit;
   }
 }
-.p-card__caption__title::before, .p-detail .p-entry-content .wp-block-heading::before, .p-detail__about .p-entry-content .wp-block-heading::before, .p-detail .p-entry-content__about .wp-block-heading::before, .p-detail__about .p-entry-content__about .wp-block-heading::before, .p-card__caption__title__archive::before, .p-card__caption__title__search::before, .p-card__caption__title::after, .p-detail .p-entry-content .wp-block-heading::after, .p-detail__about .p-entry-content .wp-block-heading::after, .p-detail .p-entry-content__about .wp-block-heading::after, .p-detail__about .p-entry-content__about .wp-block-heading::after, .p-card__caption__title__archive::after, .p-card__caption__title__search::after {
+.p-card__caption__title::before, .p-detail .p-entry-content .wp-block-heading::before, .p-detail__about .p-entry-content .wp-block-heading::before, .p-detail__about--privacy .p-entry-content .wp-block-heading::before, .p-detail .p-entry-content__about .wp-block-heading::before, .p-detail__about .p-entry-content__about .wp-block-heading::before, .p-detail__about--privacy .p-entry-content__about .wp-block-heading::before, .p-card__caption__title__archive::before, .p-card__caption__title__search::before, .p-card__caption__title::after, .p-detail .p-entry-content .wp-block-heading::after, .p-detail__about .p-entry-content .wp-block-heading::after, .p-detail__about--privacy .p-entry-content .wp-block-heading::after, .p-detail .p-entry-content__about .wp-block-heading::after, .p-detail__about .p-entry-content__about .wp-block-heading::after, .p-detail__about--privacy .p-entry-content__about .wp-block-heading::after, .p-card__caption__title__archive::after, .p-card__caption__title__search::after {
   height: 16px;
   top: 4px;
 }
 @media (min-width: 415px) {
-  .p-card__caption__title::before, .p-detail .p-entry-content .wp-block-heading::before, .p-detail__about .p-entry-content .wp-block-heading::before, .p-detail .p-entry-content__about .wp-block-heading::before, .p-detail__about .p-entry-content__about .wp-block-heading::before, .p-card__caption__title__archive::before, .p-card__caption__title__search::before, .p-card__caption__title::after, .p-detail .p-entry-content .wp-block-heading::after, .p-detail__about .p-entry-content .wp-block-heading::after, .p-detail .p-entry-content__about .wp-block-heading::after, .p-detail__about .p-entry-content__about .wp-block-heading::after, .p-card__caption__title__archive::after, .p-card__caption__title__search::after {
+  .p-card__caption__title::before, .p-detail .p-entry-content .wp-block-heading::before, .p-detail__about .p-entry-content .wp-block-heading::before, .p-detail__about--privacy .p-entry-content .wp-block-heading::before, .p-detail .p-entry-content__about .wp-block-heading::before, .p-detail__about .p-entry-content__about .wp-block-heading::before, .p-detail__about--privacy .p-entry-content__about .wp-block-heading::before, .p-card__caption__title__archive::before, .p-card__caption__title__search::before, .p-card__caption__title::after, .p-detail .p-entry-content .wp-block-heading::after, .p-detail__about .p-entry-content .wp-block-heading::after, .p-detail__about--privacy .p-entry-content .wp-block-heading::after, .p-detail .p-entry-content__about .wp-block-heading::after, .p-detail__about .p-entry-content__about .wp-block-heading::after, .p-detail__about--privacy .p-entry-content__about .wp-block-heading::after, .p-card__caption__title__archive::after, .p-card__caption__title__search::after {
     height: 20px;
   }
 }
 @media (min-width: 1025px) {
-  .p-card__caption__title::before, .p-detail .p-entry-content .wp-block-heading::before, .p-detail__about .p-entry-content .wp-block-heading::before, .p-detail .p-entry-content__about .wp-block-heading::before, .p-detail__about .p-entry-content__about .wp-block-heading::before, .p-card__caption__title__archive::before, .p-card__caption__title__search::before, .p-card__caption__title::after, .p-detail .p-entry-content .wp-block-heading::after, .p-detail__about .p-entry-content .wp-block-heading::after, .p-detail .p-entry-content__about .wp-block-heading::after, .p-detail__about .p-entry-content__about .wp-block-heading::after, .p-card__caption__title__archive::after, .p-card__caption__title__search::after {
+  .p-card__caption__title::before, .p-detail .p-entry-content .wp-block-heading::before, .p-detail__about .p-entry-content .wp-block-heading::before, .p-detail__about--privacy .p-entry-content .wp-block-heading::before, .p-detail .p-entry-content__about .wp-block-heading::before, .p-detail__about .p-entry-content__about .wp-block-heading::before, .p-detail__about--privacy .p-entry-content__about .wp-block-heading::before, .p-card__caption__title__archive::before, .p-card__caption__title__search::before, .p-card__caption__title::after, .p-detail .p-entry-content .wp-block-heading::after, .p-detail__about .p-entry-content .wp-block-heading::after, .p-detail__about--privacy .p-entry-content .wp-block-heading::after, .p-detail .p-entry-content__about .wp-block-heading::after, .p-detail__about .p-entry-content__about .wp-block-heading::after, .p-detail__about--privacy .p-entry-content__about .wp-block-heading::after, .p-card__caption__title__archive::after, .p-card__caption__title__search::after {
     height: 25px;
   }
 }
-.p-card__caption__title::before, .p-detail .p-entry-content .wp-block-heading::before, .p-detail__about .p-entry-content .wp-block-heading::before, .p-detail .p-entry-content__about .wp-block-heading::before, .p-detail__about .p-entry-content__about .wp-block-heading::before, .p-card__caption__title__archive::before, .p-card__caption__title__search::before {
+.p-card__caption__title::before, .p-detail .p-entry-content .wp-block-heading::before, .p-detail__about .p-entry-content .wp-block-heading::before, .p-detail__about--privacy .p-entry-content .wp-block-heading::before, .p-detail .p-entry-content__about .wp-block-heading::before, .p-detail__about .p-entry-content__about .wp-block-heading::before, .p-detail__about--privacy .p-entry-content__about .wp-block-heading::before, .p-card__caption__title__archive::before, .p-card__caption__title__search::before {
   left: -10px;
 }
-.p-card__caption__title::after, .p-detail .p-entry-content .wp-block-heading::after, .p-detail__about .p-entry-content .wp-block-heading::after, .p-detail .p-entry-content__about .wp-block-heading::after, .p-detail__about .p-entry-content__about .wp-block-heading::after, .p-card__caption__title__archive::after, .p-card__caption__title__search::after {
+.p-card__caption__title::after, .p-detail .p-entry-content .wp-block-heading::after, .p-detail__about .p-entry-content .wp-block-heading::after, .p-detail__about--privacy .p-entry-content .wp-block-heading::after, .p-detail .p-entry-content__about .wp-block-heading::after, .p-detail__about .p-entry-content__about .wp-block-heading::after, .p-detail__about--privacy .p-entry-content__about .wp-block-heading::after, .p-card__caption__title__archive::after, .p-card__caption__title__search::after {
   left: -6px;
 }
 .p-card__caption__title__search {
@@ -1474,17 +1474,17 @@ strong {
  * 角丸
  */
 @media (min-width: 1025px) {
-  .p-detail, .p-detail__about {
+  .p-detail, .p-detail__about, .p-detail__about--privacy {
     padding-top: 70px;
   }
 }
 @media (max-width: 1024px) {
-  .p-detail, .p-detail__about {
+  .p-detail, .p-detail__about, .p-detail__about--privacy {
     padding-top: 25px;
   }
 }
 @media (max-width: 599px) {
-  .p-detail, .p-detail__about {
+  .p-detail, .p-detail__about, .p-detail__about--privacy {
     padding-top: 16px;
   }
 }
@@ -1515,50 +1515,50 @@ strong {
   margin-bottom: 15rem;
 }
 @media (max-width: 782px) {
-  .p-detail .c-headline-border, .p-detail__about .c-headline-border {
+  .p-detail .c-headline-border, .p-detail__about .c-headline-border, .p-detail__about--privacy .c-headline-border {
     margin-bottom: 15px;
   }
 }
-.p-detail .c-entry-title, .p-detail__about .c-entry-title {
+.p-detail .c-entry-title, .p-detail__about .c-entry-title, .p-detail__about--privacy .c-entry-title {
   font-size: 1.625rem;
 }
 @media (max-width: 782px) {
-  .p-detail .c-entry-title, .p-detail__about .c-entry-title {
+  .p-detail .c-entry-title, .p-detail__about .c-entry-title, .p-detail__about--privacy .c-entry-title {
     font-size: 1.5rem;
   }
 }
-.p-detail .p-entry-content h1, .p-detail__about .p-entry-content h1, .p-detail .p-entry-content__about h1, .p-detail__about .p-entry-content__about h1, .p-detail .p-entry-content h2, .p-detail__about .p-entry-content h2, .p-detail .p-entry-content__about h2, .p-detail__about .p-entry-content__about h2, .p-detail .p-entry-content h3, .p-detail__about .p-entry-content h3, .p-detail .p-entry-content__about h3, .p-detail__about .p-entry-content__about h3, .p-detail .p-entry-content h4, .p-detail__about .p-entry-content h4, .p-detail .p-entry-content__about h4, .p-detail__about .p-entry-content__about h4, .p-detail .p-entry-content h5, .p-detail__about .p-entry-content h5, .p-detail .p-entry-content__about h5, .p-detail__about .p-entry-content__about h5 {
+.p-detail .p-entry-content h1, .p-detail__about .p-entry-content h1, .p-detail__about--privacy .p-entry-content h1, .p-detail .p-entry-content__about h1, .p-detail__about .p-entry-content__about h1, .p-detail__about--privacy .p-entry-content__about h1, .p-detail .p-entry-content h2, .p-detail__about .p-entry-content h2, .p-detail__about--privacy .p-entry-content h2, .p-detail .p-entry-content__about h2, .p-detail__about .p-entry-content__about h2, .p-detail__about--privacy .p-entry-content__about h2, .p-detail .p-entry-content h3, .p-detail__about .p-entry-content h3, .p-detail__about--privacy .p-entry-content h3, .p-detail .p-entry-content__about h3, .p-detail__about .p-entry-content__about h3, .p-detail__about--privacy .p-entry-content__about h3, .p-detail .p-entry-content h4, .p-detail__about .p-entry-content h4, .p-detail__about--privacy .p-entry-content h4, .p-detail .p-entry-content__about h4, .p-detail__about .p-entry-content__about h4, .p-detail__about--privacy .p-entry-content__about h4, .p-detail .p-entry-content h5, .p-detail__about .p-entry-content h5, .p-detail__about--privacy .p-entry-content h5, .p-detail .p-entry-content__about h5, .p-detail__about .p-entry-content__about h5, .p-detail__about--privacy .p-entry-content__about h5 {
   font-weight: bold;
 }
-.p-detail .p-entry-content > ul, .p-detail__about .p-entry-content > ul, .p-detail .p-entry-content__about > ul, .p-detail__about .p-entry-content__about > ul {
+.p-detail .p-entry-content > ul, .p-detail__about .p-entry-content > ul, .p-detail__about--privacy .p-entry-content > ul, .p-detail .p-entry-content__about > ul, .p-detail__about .p-entry-content__about > ul, .p-detail__about--privacy .p-entry-content__about > ul {
   margin-left: 40px;
 }
-.p-detail .p-entry-content li, .p-detail__about .p-entry-content li, .p-detail .p-entry-content__about li, .p-detail__about .p-entry-content__about li {
+.p-detail .p-entry-content li, .p-detail__about .p-entry-content li, .p-detail__about--privacy .p-entry-content li, .p-detail .p-entry-content__about li, .p-detail__about .p-entry-content__about li, .p-detail__about--privacy .p-entry-content__about li {
   list-style: inherit;
   margin: 5px 0;
 }
-.p-detail .p-entry-content a, .p-detail__about .p-entry-content a, .p-detail .p-entry-content__about a, .p-detail__about .p-entry-content__about a {
+.p-detail .p-entry-content a, .p-detail__about .p-entry-content a, .p-detail__about--privacy .p-entry-content a, .p-detail .p-entry-content__about a, .p-detail__about .p-entry-content__about a, .p-detail__about--privacy .p-entry-content__about a {
   color: #0D7CBA;
 }
-.p-detail .p-entry-content a code, .p-detail__about .p-entry-content a code, .p-detail .p-entry-content__about a code, .p-detail__about .p-entry-content__about a code {
+.p-detail .p-entry-content a code, .p-detail__about .p-entry-content a code, .p-detail__about--privacy .p-entry-content a code, .p-detail .p-entry-content__about a code, .p-detail__about .p-entry-content__about a code, .p-detail__about--privacy .p-entry-content__about a code {
   border-bottom: 1px solid #0D7CBA;
 }
-.p-detail .p-entry-content dd, .p-detail__about .p-entry-content dd, .p-detail .p-entry-content__about dd, .p-detail__about .p-entry-content__about dd {
+.p-detail .p-entry-content dd, .p-detail__about .p-entry-content dd, .p-detail__about--privacy .p-entry-content dd, .p-detail .p-entry-content__about dd, .p-detail__about .p-entry-content__about dd, .p-detail__about--privacy .p-entry-content__about dd {
   margin-left: 30px;
 }
-.p-detail .p-entry-content address, .p-detail__about .p-entry-content address, .p-detail .p-entry-content__about address, .p-detail__about .p-entry-content__about address {
+.p-detail .p-entry-content address, .p-detail__about .p-entry-content address, .p-detail__about--privacy .p-entry-content address, .p-detail .p-entry-content__about address, .p-detail__about .p-entry-content__about address, .p-detail__about--privacy .p-entry-content__about address {
   line-height: 40px;
 }
-.p-detail .p-entry-content .wp-caption, .p-detail__about .p-entry-content .wp-caption, .p-detail .p-entry-content__about .wp-caption, .p-detail__about .p-entry-content__about .wp-caption {
+.p-detail .p-entry-content .wp-caption, .p-detail__about .p-entry-content .wp-caption, .p-detail__about--privacy .p-entry-content .wp-caption, .p-detail .p-entry-content__about .wp-caption, .p-detail__about .p-entry-content__about .wp-caption, .p-detail__about--privacy .p-entry-content__about .wp-caption {
   width: auto;
   max-width: 100%;
 }
 @media (max-width: 599px) {
-  .p-detail .p-entry-content iframe, .p-detail__about .p-entry-content iframe, .p-detail .p-entry-content__about iframe, .p-detail__about .p-entry-content__about iframe {
+  .p-detail .p-entry-content iframe, .p-detail__about .p-entry-content iframe, .p-detail__about--privacy .p-entry-content iframe, .p-detail .p-entry-content__about iframe, .p-detail__about .p-entry-content__about iframe, .p-detail__about--privacy .p-entry-content__about iframe {
     width: 100%;
   }
 }
-.p-detail .p-entry-content .p-entry-tag, .p-detail__about .p-entry-content .p-entry-tag, .p-detail .p-entry-content__about .p-entry-tag, .p-detail__about .p-entry-content__about .p-entry-tag {
+.p-detail .p-entry-content .p-entry-tag, .p-detail__about .p-entry-content .p-entry-tag, .p-detail__about--privacy .p-entry-content .p-entry-tag, .p-detail .p-entry-content__about .p-entry-tag, .p-detail__about .p-entry-content__about .p-entry-tag, .p-detail__about--privacy .p-entry-content__about .p-entry-tag {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -1567,148 +1567,153 @@ strong {
   margin-left: inherit;
   list-style: none;
 }
-.p-detail .p-entry-content .p-entry-tag li, .p-detail__about .p-entry-content .p-entry-tag li, .p-detail .p-entry-content__about .p-entry-tag li, .p-detail__about .p-entry-content__about .p-entry-tag li {
+.p-detail .p-entry-content .p-entry-tag li, .p-detail__about .p-entry-content .p-entry-tag li, .p-detail__about--privacy .p-entry-content .p-entry-tag li, .p-detail .p-entry-content__about .p-entry-tag li, .p-detail__about .p-entry-content__about .p-entry-tag li, .p-detail__about--privacy .p-entry-content__about .p-entry-tag li {
   font-size: 20px;
   color: #797979;
 }
 @media (max-width: 782px) {
-  .p-detail .p-entry-content .p-entry-tag li, .p-detail__about .p-entry-content .p-entry-tag li, .p-detail .p-entry-content__about .p-entry-tag li, .p-detail__about .p-entry-content__about .p-entry-tag li {
+  .p-detail .p-entry-content .p-entry-tag li, .p-detail__about .p-entry-content .p-entry-tag li, .p-detail__about--privacy .p-entry-content .p-entry-tag li, .p-detail .p-entry-content__about .p-entry-tag li, .p-detail__about .p-entry-content__about .p-entry-tag li, .p-detail__about--privacy .p-entry-content__about .p-entry-tag li {
     font-size: 12px;
   }
 }
 @media (max-width: 599px) {
-  .p-detail .p-entry-content .p-entry-tag li, .p-detail__about .p-entry-content .p-entry-tag li, .p-detail .p-entry-content__about .p-entry-tag li, .p-detail__about .p-entry-content__about .p-entry-tag li {
+  .p-detail .p-entry-content .p-entry-tag li, .p-detail__about .p-entry-content .p-entry-tag li, .p-detail__about--privacy .p-entry-content .p-entry-tag li, .p-detail .p-entry-content__about .p-entry-tag li, .p-detail__about .p-entry-content__about .p-entry-tag li, .p-detail__about--privacy .p-entry-content__about .p-entry-tag li {
     font-size: 10px;
   }
 }
-.p-detail .p-entry-content .p-entry-tag li > a, .p-detail__about .p-entry-content .p-entry-tag li > a, .p-detail .p-entry-content__about .p-entry-tag li > a, .p-detail__about .p-entry-content__about .p-entry-tag li > a {
+.p-detail .p-entry-content .p-entry-tag li > a, .p-detail__about .p-entry-content .p-entry-tag li > a, .p-detail__about--privacy .p-entry-content .p-entry-tag li > a, .p-detail .p-entry-content__about .p-entry-tag li > a, .p-detail__about .p-entry-content__about .p-entry-tag li > a, .p-detail__about--privacy .p-entry-content__about .p-entry-tag li > a {
   color: #797979;
 }
-.p-detail .p-entry-content .wp-block-heading, .p-detail__about .p-entry-content .wp-block-heading, .p-detail .p-entry-content__about .wp-block-heading, .p-detail__about .p-entry-content__about .wp-block-heading {
+.p-detail .p-entry-content .wp-block-heading, .p-detail__about .p-entry-content .wp-block-heading, .p-detail__about--privacy .p-entry-content .wp-block-heading, .p-detail .p-entry-content__about .wp-block-heading, .p-detail__about .p-entry-content__about .wp-block-heading, .p-detail__about--privacy .p-entry-content__about .wp-block-heading {
   margin: 5% 0;
   font-size: 1.5rem;
 }
 @media ((min-width: 600px) and (max-width: 782px)) {
-  .p-detail .p-entry-content .wp-block-heading, .p-detail__about .p-entry-content .wp-block-heading, .p-detail .p-entry-content__about .wp-block-heading, .p-detail__about .p-entry-content__about .wp-block-heading {
+  .p-detail .p-entry-content .wp-block-heading, .p-detail__about .p-entry-content .wp-block-heading, .p-detail__about--privacy .p-entry-content .wp-block-heading, .p-detail .p-entry-content__about .wp-block-heading, .p-detail__about .p-entry-content__about .wp-block-heading, .p-detail__about--privacy .p-entry-content__about .wp-block-heading {
     font-size: 1.25rem;
   }
 }
-.p-detail .p-entry-content .p-share__title, .p-detail__about .p-entry-content .p-share__title, .p-detail .p-entry-content__about .p-share__title, .p-detail__about .p-entry-content__about .p-share__title {
+.p-detail .p-entry-content .p-share__title, .p-detail__about .p-entry-content .p-share__title, .p-detail__about--privacy .p-entry-content .p-share__title, .p-detail .p-entry-content__about .p-share__title, .p-detail__about .p-entry-content__about .p-share__title, .p-detail__about--privacy .p-entry-content__about .p-share__title {
   margin: 0 auto;
 }
-.p-detail .p-entry-content .more-link:first-child, .p-detail__about .p-entry-content .more-link:first-child, .p-detail .p-entry-content__about .more-link:first-child, .p-detail__about .p-entry-content__about .more-link:first-child {
+.p-detail .p-entry-content .more-link:first-child, .p-detail__about .p-entry-content .more-link:first-child, .p-detail__about--privacy .p-entry-content .more-link:first-child, .p-detail .p-entry-content__about .more-link:first-child, .p-detail__about .p-entry-content__about .more-link:first-child, .p-detail__about--privacy .p-entry-content__about .more-link:first-child {
   display: none;
 }
-.p-detail .p-entry-content__about, .p-detail__about .p-entry-content__about {
+.p-detail .p-entry-content__about, .p-detail__about .p-entry-content__about, .p-detail__about--privacy .p-entry-content__about {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.p-detail .p-related .p-related__title, .p-detail__about .p-related .p-related__title {
+.p-detail .p-related .p-related__title, .p-detail__about .p-related .p-related__title, .p-detail__about--privacy .p-related .p-related__title {
   font-size: 18px;
   margin: 5% 0;
 }
-.p-detail .p-related .p-related-card__caption, .p-detail__about .p-related .p-related-card__caption {
+.p-detail .p-related .p-related-card__caption, .p-detail__about .p-related .p-related-card__caption, .p-detail__about--privacy .p-related .p-related-card__caption {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
 }
-.p-detail .p-related .p-related-card__caption .c-time-category-chunk, .p-detail__about .p-related .p-related-card__caption .c-time-category-chunk {
+.p-detail .p-related .p-related-card__caption .c-time-category-chunk, .p-detail__about .p-related .p-related-card__caption .c-time-category-chunk, .p-detail__about--privacy .p-related .p-related-card__caption .c-time-category-chunk {
   display: block;
   width: 40vw;
   margin-bottom: 5%;
 }
 @media (max-width: 782px) {
-  .p-detail .p-related .p-related-card__caption .c-time-category-chunk, .p-detail__about .p-related .p-related-card__caption .c-time-category-chunk {
+  .p-detail .p-related .p-related-card__caption .c-time-category-chunk, .p-detail__about .p-related .p-related-card__caption .c-time-category-chunk, .p-detail__about--privacy .p-related .p-related-card__caption .c-time-category-chunk {
     width: 50vw;
   }
 }
-.p-detail .p-related .p-related-card__caption .c-time-category-chunk__inner, .p-detail__about .p-related .p-related-card__caption .c-time-category-chunk__inner {
+.p-detail .p-related .p-related-card__caption .c-time-category-chunk__inner, .p-detail__about .p-related .p-related-card__caption .c-time-category-chunk__inner, .p-detail__about--privacy .p-related .p-related-card__caption .c-time-category-chunk__inner {
   display: flex;
   width: 30vw;
 }
 @media (max-width: 599px) {
-  .p-detail .p-related .p-related-card__caption .c-time-category-chunk__inner, .p-detail__about .p-related .p-related-card__caption .c-time-category-chunk__inner {
+  .p-detail .p-related .p-related-card__caption .c-time-category-chunk__inner, .p-detail__about .p-related .p-related-card__caption .c-time-category-chunk__inner, .p-detail__about--privacy .p-related .p-related-card__caption .c-time-category-chunk__inner {
     width: 45vw;
   }
 }
-.p-detail .p-related .p-related-card__caption .c-time-category-chunk__inner .time, .p-detail__about .p-related .p-related-card__caption .c-time-category-chunk__inner .time,
+.p-detail .p-related .p-related-card__caption .c-time-category-chunk__inner .time, .p-detail__about .p-related .p-related-card__caption .c-time-category-chunk__inner .time, .p-detail__about--privacy .p-related .p-related-card__caption .c-time-category-chunk__inner .time,
 .p-detail .p-related .p-related-card__caption .c-time-category-chunk__inner .category,
-.p-detail__about .p-related .p-related-card__caption .c-time-category-chunk__inner .category {
+.p-detail__about .p-related .p-related-card__caption .c-time-category-chunk__inner .category,
+.p-detail__about--privacy .p-related .p-related-card__caption .c-time-category-chunk__inner .category {
   font-size: 10px;
 }
 @media (max-width: 599px) {
-  .p-detail .p-related .p-related-card__caption .c-time-category-chunk__inner .time, .p-detail__about .p-related .p-related-card__caption .c-time-category-chunk__inner .time {
+  .p-detail .p-related .p-related-card__caption .c-time-category-chunk__inner .time, .p-detail__about .p-related .p-related-card__caption .c-time-category-chunk__inner .time, .p-detail__about--privacy .p-related .p-related-card__caption .c-time-category-chunk__inner .time {
     margin-right: 5px;
   }
 }
-.p-detail .p-related .p-related-card__caption a, .p-detail__about .p-related .p-related-card__caption a {
+.p-detail .p-related .p-related-card__caption a, .p-detail__about .p-related .p-related-card__caption a, .p-detail__about--privacy .p-related .p-related-card__caption a {
   min-width: 150px;
   margin-bottom: 20px;
 }
 @media (max-width: 1024px) {
-  .p-detail .p-related .p-related-card__caption a, .p-detail__about .p-related .p-related-card__caption a {
+  .p-detail .p-related .p-related-card__caption a, .p-detail__about .p-related .p-related-card__caption a, .p-detail__about--privacy .p-related .p-related-card__caption a {
     width: 30%;
     min-width: 30%;
   }
 }
-.p-detail .p-related .p-related-card__caption__title, .p-detail__about .p-related .p-related-card__caption__title {
+.p-detail .p-related .p-related-card__caption__title, .p-detail__about .p-related .p-related-card__caption__title, .p-detail__about--privacy .p-related .p-related-card__caption__title {
   width: 32vw;
   font-size: 15px;
   margin-top: 4px;
   overflow-wrap: anywhere;
 }
 @media (max-width: 782px) {
-  .p-detail .p-related .p-related-card__caption__title, .p-detail__about .p-related .p-related-card__caption__title {
+  .p-detail .p-related .p-related-card__caption__title, .p-detail__about .p-related .p-related-card__caption__title, .p-detail__about--privacy .p-related .p-related-card__caption__title {
     width: 50vw;
   }
 }
 @media (max-width: 599px) {
-  .p-detail .p-related .p-related-card__caption__title, .p-detail__about .p-related .p-related-card__caption__title {
+  .p-detail .p-related .p-related-card__caption__title, .p-detail__about .p-related .p-related-card__caption__title, .p-detail__about--privacy .p-related .p-related-card__caption__title {
     font-size: 12px;
     width: 100%;
   }
 }
 @media (max-width: 385px) {
-  .p-detail .p-related .p-related-card__caption__title, .p-detail__about .p-related .p-related-card__caption__title {
+  .p-detail .p-related .p-related-card__caption__title, .p-detail__about .p-related .p-related-card__caption__title, .p-detail__about--privacy .p-related .p-related-card__caption__title {
     width: 100%;
     font-size: 10px;
   }
 }
-.p-detail .p-related .p-related-card img, .p-detail__about .p-related .p-related-card img {
+.p-detail .p-related .p-related-card img, .p-detail__about .p-related .p-related-card img, .p-detail__about--privacy .p-related .p-related-card img {
   width: 100vw;
   height: auto;
   transition: transform 0.6s ease;
 }
-.p-detail .p-related .p-related-card img:hover, .p-detail__about .p-related .p-related-card img:hover {
+.p-detail .p-related .p-related-card img:hover, .p-detail__about .p-related .p-related-card img:hover, .p-detail__about--privacy .p-related .p-related-card img:hover {
   transform: scale(1.1);
 }
-.p-detail > img, .p-detail__about > img {
+.p-detail > img, .p-detail__about > img, .p-detail__about--privacy > img {
   width: 100%;
   margin-bottom: 7%;
 }
-.p-detail p, .p-detail__about p {
+.p-detail p, .p-detail__about p, .p-detail__about--privacy p {
   margin: 15px 0;
+  word-wrap: break-word;
 }
-.p-detail__about {
+.p-detail__about, .p-detail__about--privacy {
   width: 58vw;
-  margin: 0 auto;
+  margin: 0 5%;
 }
-.p-detail__about > img {
+.p-detail__about > img, .p-detail__about--privacy > img {
   margin: 0;
 }
-.p-detail__about .p-entry-content > .wp-block-heading, .p-detail__about .p-entry-content__about > .wp-block-heading {
+.p-detail__about .p-entry-content > .wp-block-heading, .p-detail__about--privacy .p-entry-content > .wp-block-heading, .p-detail__about .p-entry-content__about > .wp-block-heading, .p-detail__about--privacy .p-entry-content__about > .wp-block-heading {
   font-size: 24px;
 }
 @media (max-width: 782px) {
-  .p-detail__about .p-entry-content > .wp-block-heading, .p-detail__about .p-entry-content__about > .wp-block-heading {
+  .p-detail__about .p-entry-content > .wp-block-heading, .p-detail__about--privacy .p-entry-content > .wp-block-heading, .p-detail__about .p-entry-content__about > .wp-block-heading, .p-detail__about--privacy .p-entry-content__about > .wp-block-heading {
     font-size: 20px;
   }
 }
 @media (max-width: 599px) {
-  .p-detail__about .p-entry-content > .wp-block-heading, .p-detail__about .p-entry-content__about > .wp-block-heading {
+  .p-detail__about .p-entry-content > .wp-block-heading, .p-detail__about--privacy .p-entry-content > .wp-block-heading, .p-detail__about .p-entry-content__about > .wp-block-heading, .p-detail__about--privacy .p-entry-content__about > .wp-block-heading {
     font-size: 16px;
   }
+}
+.p-detail__about--privacy {
+  width: 50vw;
 }
 /*
  * 配色

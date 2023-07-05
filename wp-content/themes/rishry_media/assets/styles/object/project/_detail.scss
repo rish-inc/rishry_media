@@ -193,14 +193,14 @@
 	}
 	p {
 		margin: 15px 0;
-
+		word-wrap: break-word;
 	}
 }
 
 .p-detail__about {
 	@extend .p-detail;
 		width: 58vw;
-		margin: 0 auto;
+		margin: 0 5%;
 	> img {
 		margin: 0;
 	}
@@ -212,5 +212,9 @@
 		@include g.breakpoint ( sp ) {
 			font-size: 16px;
 		}
+	}
+	&--privacy {
+		@extend .p-detail__about;
+		width: 50vw;
 	}
 }
