@@ -755,7 +755,6 @@ strong {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 2% 0 10%;
     height: -webkit-fill-available;
   }
 }
@@ -1971,6 +1970,11 @@ body.is-open {
   .p-head-nav__navigation {
     overflow: visible;
     height: auto;
+  }
+}
+@media (min-width: 1060px) {
+  .p-head-nav__navigation {
+    margin-right: 20px;
   }
 }
 .p-head-nav__navigation__menu {

@@ -26,6 +26,9 @@
 			overflow: visible;
 			height: auto;
 		}
+		@media ( min-width: 1060px ) {
+			margin-right: 20px;
+		}
 		&__menu {
 			list-style: none;
 			padding: 0;
