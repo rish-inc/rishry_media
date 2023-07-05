@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<div class="l-contents">
+	<div class="l-contents--privacy">
 		<div class="p-search">
 			<div class="p-search__window">
 				<?php get_search_form(); ?>

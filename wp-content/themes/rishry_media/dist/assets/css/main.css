@@ -235,33 +235,38 @@ strong {
 /*
  * 角丸
  */
-.l-contents {
+.l-contents, .l-contents--privacy {
   margin: 0 auto;
   min-width: 261px;
 }
 @media (max-width: 414px) {
-  .l-contents {
+  .l-contents, .l-contents--privacy {
     max-width: 360px;
   }
 }
 @media (max-width: 385px) {
-  .l-contents {
+  .l-contents, .l-contents--privacy {
     max-width: 320px;
   }
 }
 @media (min-width: 415px) {
-  .l-contents {
+  .l-contents, .l-contents--privacy {
     max-width: 984px;
     padding: 0 20px;
   }
 }
 @media (min-width: 1025px) {
-  .l-contents {
+  .l-contents, .l-contents--privacy {
     padding: 0 60px;
     min-width: 905px;
     max-width: 1160px;
     display: flex;
     flex-wrap: wrap;
+  }
+}
+@media (min-width: 1025px) {
+  .l-contents--privacy {
+    justify-content: space-evenly;
   }
 }
 /*
@@ -1714,6 +1719,11 @@ strong {
 }
 .p-detail__about--privacy {
   width: 50vw;
+}
+@media (max-width: 1024px) {
+  .p-detail__about--privacy {
+    width: inherit;
+  }
 }
 /*
  * 配色

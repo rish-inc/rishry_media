@@ -216,5 +216,8 @@
 	&--privacy {
 		@extend .p-detail__about;
 		width: 50vw;
+		@media ( max-width: 1024px ) {
+			width: inherit;
+		}
 	}
 }

@@ -21,3 +21,9 @@
 		flex-wrap: wrap;
 	}
 }
+.l-contents--privacy {
+	@extend .l-contents;
+	@include g.breakpoint ( pc ) {
+		justify-content: space-evenly;
+	}
+}
