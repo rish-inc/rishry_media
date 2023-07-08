@@ -1618,7 +1618,9 @@ strong {
   justify-content: flex-end;
 }
 .p-detail .p-related .p-related-card__caption .c-time-category-chunk, .p-detail__about .p-related .p-related-card__caption .c-time-category-chunk, .p-detail__about--privacy .p-related .p-related-card__caption .c-time-category-chunk {
-  display: block;
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 40vw;
   margin-bottom: 5%;
 }
@@ -1627,25 +1629,14 @@ strong {
     width: 50vw;
   }
 }
-.p-detail .p-related .p-related-card__caption .c-time-category-chunk__inner, .p-detail__about .p-related .p-related-card__caption .c-time-category-chunk__inner, .p-detail__about--privacy .p-related .p-related-card__caption .c-time-category-chunk__inner {
-  display: flex;
-  width: 30vw;
-}
-@media (max-width: 599px) {
-  .p-detail .p-related .p-related-card__caption .c-time-category-chunk__inner, .p-detail__about .p-related .p-related-card__caption .c-time-category-chunk__inner, .p-detail__about--privacy .p-related .p-related-card__caption .c-time-category-chunk__inner {
-    width: 45vw;
-  }
-}
-.p-detail .p-related .p-related-card__caption .c-time-category-chunk__inner .time, .p-detail__about .p-related .p-related-card__caption .c-time-category-chunk__inner .time, .p-detail__about--privacy .p-related .p-related-card__caption .c-time-category-chunk__inner .time,
-.p-detail .p-related .p-related-card__caption .c-time-category-chunk__inner .category,
-.p-detail__about .p-related .p-related-card__caption .c-time-category-chunk__inner .category,
-.p-detail__about--privacy .p-related .p-related-card__caption .c-time-category-chunk__inner .category {
+.p-detail .p-related .p-related-card__caption__data .time, .p-detail__about .p-related .p-related-card__caption__data .time, .p-detail__about--privacy .p-related .p-related-card__caption__data .time,
+.p-detail .p-related .p-related-card__caption__data .category,
+.p-detail__about .p-related .p-related-card__caption__data .category,
+.p-detail__about--privacy .p-related .p-related-card__caption__data .category {
   font-size: 10px;
 }
-@media (max-width: 599px) {
-  .p-detail .p-related .p-related-card__caption .c-time-category-chunk__inner .time, .p-detail__about .p-related .p-related-card__caption .c-time-category-chunk__inner .time, .p-detail__about--privacy .p-related .p-related-card__caption .c-time-category-chunk__inner .time {
-    margin-right: 5px;
-  }
+.p-detail .p-related .p-related-card__caption__data .category:last-of-type, .p-detail__about .p-related .p-related-card__caption__data .category:last-of-type, .p-detail__about--privacy .p-related .p-related-card__caption__data .category:last-of-type {
+  display: contents;
 }
 .p-detail .p-related .p-related-card__caption a, .p-detail__about .p-related .p-related-card__caption a, .p-detail__about--privacy .p-related .p-related-card__caption a {
   min-width: 150px;
@@ -1653,14 +1644,14 @@ strong {
 }
 @media (max-width: 1024px) {
   .p-detail .p-related .p-related-card__caption a, .p-detail__about .p-related .p-related-card__caption a, .p-detail__about--privacy .p-related .p-related-card__caption a {
-    width: 30%;
+    width: 40%;
     min-width: 30%;
   }
 }
 .p-detail .p-related .p-related-card__caption__title, .p-detail__about .p-related .p-related-card__caption__title, .p-detail__about--privacy .p-related .p-related-card__caption__title {
   width: 32vw;
   font-size: 15px;
-  margin-top: 4px;
+  margin-top: -10px;
   overflow-wrap: anywhere;
 }
 @media (max-width: 782px) {

@@ -128,41 +128,35 @@
 				flex-direction: row-reverse;
 				justify-content: flex-end;
 				.c-time-category-chunk {
-					display: block;
+					display: flex;
+					height: fit-content;
 					width: 40vw;
 					margin-bottom: 5%;
 					@media ( max-width: 782px ) {
 						width: 50vw;
 					}
-					&__inner {
-						@include g.breakpoint ( sp ) {
-							width: 45vw;
-						}
-						display: flex;
-						width: 30vw;
-						.time,
-						.category {
-							font-size: 10px;
-						}
-						.time {
-							@include g.breakpoint ( sp ) {
-								margin-right: 5px;
-							}
-						}
+				}
+				&__data {
+					.time,
+					.category {
+						font-size: 10px;
+					}
+					.category:last-of-type {
+						display: contents;
 					}
 				}
 				a {
 					min-width: 150px;
 					margin-bottom: 20px;
 					@media ( max-width: 1024px ) {
-						width: 30%;
+						width: 40%;
 						min-width: 30%;
 					}
 				}
 				&__title {
 					width: 32vw;
 					font-size: 15px;
-					margin-top: 4px;
+					margin-top: -10px;
 					overflow-wrap: anywhere;
 					@media ( max-width: 782px ) {
 						width: 50vw;
