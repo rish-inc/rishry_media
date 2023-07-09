@@ -515,6 +515,11 @@ strong {
   align-items: center;
   justify-content: space-between;
 }
+@media ((min-width: 370px) and (max-width: 414px)) {
+  .c-header-flex-beside {
+    width: 60vw;
+  }
+}
 @media (min-width: 415px) {
   .c-header-flex-beside {
     width: 85vw;
