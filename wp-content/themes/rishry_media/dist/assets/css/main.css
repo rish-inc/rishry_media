@@ -226,6 +226,9 @@ strong {
 .bypostauthor {
   background: mediumslateblue;
 }
+.gallery-caption {
+  text-align: left;
+}
 /*
  * 配色
  */
