@@ -195,6 +195,9 @@
 	@extend .p-detail;
 		width: 58vw;
 		margin: 0 5%;
+		@media ( min-width: 1600px ) {
+			margin: 0;
+		}
 	> img {
 		margin: 0;
 	}
@@ -210,6 +213,10 @@
 	&--privacy {
 		@extend .p-detail__about;
 		width: 50vw;
+		@media ( min-width: 1600px ) {
+			max-width: 816px;
+			padding-right: 5%;
+		}
 		@media ( max-width: 1024px ) {
 			width: inherit;
 		}

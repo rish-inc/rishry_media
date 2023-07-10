@@ -19,11 +19,17 @@
 		max-width: 1160px;
 		display: flex;
 		flex-wrap: wrap;
+		@media ( min-width: 1600px ) {
+			padding: 0;
+		}
 	}
 }
 .l-contents--privacy {
 	@extend .l-contents;
 	@include g.breakpoint ( pc ) {
 		justify-content: space-evenly;
+	}
+	@media ( min-width: 1600px ) {
+		justify-content: inherit;
 	}
 }
