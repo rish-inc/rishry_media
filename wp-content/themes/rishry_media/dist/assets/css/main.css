@@ -2246,11 +2246,6 @@ body.is-open {
     max-width: 70%;
   }
 }
-@media (min-width: 1600px) {
-  .p-main, .p-main__about {
-    max-width: inherit;
-  }
-}
 .p-main .p-pager .p-prev-next, .p-main__about .p-pager .p-prev-next {
   display: flex;
   justify-content: space-between;

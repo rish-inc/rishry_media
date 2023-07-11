@@ -4,9 +4,6 @@
 	@include g.breakpoint ( pc ) {
 		max-width: 70%;
 	}
-	@media ( min-width: 1600px ) {
-		max-width: inherit;
-	}
 	.p-pager {
 		.p-prev-next {
 			display: flex;
