@@ -22,7 +22,7 @@
 		}
 		@include g.breakpoint ( sp ) {
 			width: auto;
-			min-width: 330px
+			min-width: 280px
 		}
 		@media ( max-width: 414px ) {
 			width: auto;

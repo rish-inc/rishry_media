@@ -103,7 +103,6 @@ html.is-open {
 }
 body {
   width: 100%;
-  min-width: 350px;
   margin: 0;
   overflow-x: hidden;
   visibility: hidden;
@@ -250,6 +249,11 @@ strong {
 @media (max-width: 385px) {
   .l-contents, .l-contents--privacy {
     max-width: 320px;
+  }
+}
+@media (max-width: 340px) {
+  .l-contents, .l-contents--privacy {
+    margin: 0 10px;
   }
 }
 @media (min-width: 415px) {
@@ -1290,7 +1294,7 @@ strong {
 @media (max-width: 599px) {
   .p-contact__form {
     width: auto;
-    min-width: 330px;
+    min-width: 280px;
   }
 }
 @media (max-width: 414px) {
@@ -1764,6 +1768,11 @@ strong {
   max-width: 320px;
   padding-top: 20px;
 }
+@media (max-width: 415px) {
+  .p-footer__inner {
+    margin: 0;
+  }
+}
 @media (min-width: 415px) {
   .p-footer__inner {
     min-width: 200px;
@@ -1811,11 +1820,6 @@ strong {
     justify-content: flex-start;
     margin-left: 3rem;
     margin-bottom: 94px;
-  }
-}
-@media (max-width: 415px) {
-  .p-footer__inner__navigation__menu {
-    margin-left: 0;
   }
 }
 .p-footer__inner__navigation__menu li {

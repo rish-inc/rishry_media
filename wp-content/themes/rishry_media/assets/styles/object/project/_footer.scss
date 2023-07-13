@@ -6,6 +6,9 @@
 		margin: auto;
 		max-width: 320px;
 		padding-top: 20px;
+		@media ( max-width: 415px ) {
+			margin: 0;
+		}
 		@include g.breakpoint ( tablet ) {
 			min-width: 200px;
 			max-width: 1000px;
@@ -44,9 +47,6 @@
 					justify-content: flex-start;
 					margin-left: 3rem;
 					margin-bottom: 94px;
-				}
-				@media ( max-width: 415px ) {
-					margin-left: 0;
 				}
 				li {
 					text-align: center;
