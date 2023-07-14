@@ -48,6 +48,9 @@
 					margin-left: 3rem;
 					margin-bottom: 94px;
 				}
+				@media ( max-width: 414px ) {
+					margin-left: 2rem;
+				}
 				li {
 					text-align: center;
 					height: 20px;

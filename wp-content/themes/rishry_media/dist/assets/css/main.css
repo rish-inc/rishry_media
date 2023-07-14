@@ -1467,6 +1467,7 @@ strong {
 @media (min-width: 1025px) {
   .p-contents, .p-contents_404 {
     max-width: 70%;
+    width: 58vw;
   }
 }
 @media (min-width: 1025px) {
@@ -1820,6 +1821,11 @@ strong {
     justify-content: flex-start;
     margin-left: 3rem;
     margin-bottom: 94px;
+  }
+}
+@media (max-width: 414px) {
+  .p-footer__inner__navigation__menu {
+    margin-left: 2rem;
   }
 }
 .p-footer__inner__navigation__menu li {
