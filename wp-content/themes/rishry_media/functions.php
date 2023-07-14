@@ -260,3 +260,12 @@ function wpdocs_theme_add_editor_styles() {
 	add_editor_style( 'custom-editor-style.css' );
 }
 add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
+
+// 検索で投稿記事のみを対象にする
+function SearchFilter( $query ) {
+	if ( $query -> is_search ) {
+		$query -> set( 'post_type', 'post' );
+	}
+	return $query;
+}
+add_filter( 'pre_get_posts', 'SearchFilter' );
