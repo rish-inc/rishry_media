@@ -1456,23 +1456,18 @@ strong {
 /*
  * 角丸
  */
-.p-contents, .p-contents_404 {
+.p-contents {
   padding: 0 10px;
 }
 @media (min-width: 415px) {
-  .p-contents, .p-contents_404 {
+  .p-contents {
     padding: 0 20px;
   }
 }
 @media (min-width: 1025px) {
-  .p-contents, .p-contents_404 {
+  .p-contents {
     max-width: 70%;
     width: 58vw;
-  }
-}
-@media (min-width: 1025px) {
-  .p-contents_404 {
-    margin-right: 15%;
   }
 }
 /*
