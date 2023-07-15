@@ -1557,6 +1557,12 @@ strong {
     font-size: 1.5rem;
   }
 }
+@media (max-width: 599px) {
+  .p-detail .c-entry-title, .p-detail__about .c-entry-title, .p-detail__about--privacy .c-entry-title {
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+}
 .p-detail .p-entry-content h1, .p-detail__about .p-entry-content h1, .p-detail__about--privacy .p-entry-content h1, .p-detail .p-entry-content__about h1, .p-detail__about .p-entry-content__about h1, .p-detail__about--privacy .p-entry-content__about h1, .p-detail .p-entry-content h2, .p-detail__about .p-entry-content h2, .p-detail__about--privacy .p-entry-content h2, .p-detail .p-entry-content__about h2, .p-detail__about .p-entry-content__about h2, .p-detail__about--privacy .p-entry-content__about h2, .p-detail .p-entry-content h3, .p-detail__about .p-entry-content h3, .p-detail__about--privacy .p-entry-content h3, .p-detail .p-entry-content__about h3, .p-detail__about .p-entry-content__about h3, .p-detail__about--privacy .p-entry-content__about h3, .p-detail .p-entry-content h4, .p-detail__about .p-entry-content h4, .p-detail__about--privacy .p-entry-content h4, .p-detail .p-entry-content__about h4, .p-detail__about .p-entry-content__about h4, .p-detail__about--privacy .p-entry-content__about h4, .p-detail .p-entry-content h5, .p-detail__about .p-entry-content h5, .p-detail__about--privacy .p-entry-content h5, .p-detail .p-entry-content__about h5, .p-detail__about .p-entry-content__about h5, .p-detail__about--privacy .p-entry-content__about h5 {
   font-weight: bold;
 }

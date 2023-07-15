@@ -36,9 +36,13 @@
 		}
 	}
 	.c-entry-title {
-		@include g.font-rem($font-size--title--single--pc);
+		@include g.font-rem( $font-size--title--single--pc );
 		@media ( max-width: 782px ) {
-			@include g.font-rem($font-size--title--single--tab);
+			@include g.font-rem( $font-size--title--single--tab );
+		}
+		@include g.breakpoint ( sp ) {
+			@include g.font-rem( $font-size--title--single--sp );
+			margin-left: 10px;
 		}
 	}
 	.p-entry-content {
