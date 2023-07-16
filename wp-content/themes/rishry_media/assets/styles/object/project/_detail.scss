@@ -198,9 +198,14 @@
 .p-detail__about {
 	@extend .p-detail;
 		width: 58vw;
-		margin: 0 5%;
+		margin-right: 20px;
+		margin-left: 20px;
 		@media ( min-width: 1600px ) {
 			margin: 0;
+		}
+		@media ( max-width: 414px ) {
+			margin-right: 10px;
+			margin-left: 10px;
 		}
 	> img {
 		margin: 0;

@@ -1712,11 +1712,18 @@ strong {
 }
 .p-detail__about, .p-detail__about--privacy {
   width: 58vw;
-  margin: 0 5%;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 @media (min-width: 1600px) {
   .p-detail__about, .p-detail__about--privacy {
     margin: 0;
+  }
+}
+@media (max-width: 414px) {
+  .p-detail__about, .p-detail__about--privacy {
+    margin-right: 10px;
+    margin-left: 10px;
   }
 }
 .p-detail__about > img, .p-detail__about--privacy > img {
