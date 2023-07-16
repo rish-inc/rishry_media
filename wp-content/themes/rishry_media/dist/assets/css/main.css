@@ -409,6 +409,11 @@ strong {
     padding-top: 60px;
   }
 }
+@media (min-width: 1600px) {
+  .l-sidebar {
+    margin-left: 6%;
+  }
+}
 @media (max-width: 1024px) {
   .l-sidebar.c-boundary-line {
     margin-top: 30px;
