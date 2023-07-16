@@ -244,6 +244,7 @@ strong {
 @media (max-width: 414px) {
   .l-contents, .l-contents--privacy {
     max-width: 360px;
+    margin: 0 25px;
   }
 }
 @media (max-width: 385px) {
@@ -251,15 +252,10 @@ strong {
     max-width: 320px;
   }
 }
-@media (max-width: 340px) {
-  .l-contents, .l-contents--privacy {
-    margin: 0 10px;
-  }
-}
 @media (min-width: 415px) {
   .l-contents, .l-contents--privacy {
     max-width: 984px;
-    padding: 0 20px;
+    padding: 0 25px;
   }
 }
 @media (min-width: 1025px) {
