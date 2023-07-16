@@ -8,7 +8,10 @@
 		display: none;
 	}
 	@include g.breakpoint ( sp ) {
-		width: 80%;
+		width: 70%;
+	}
+	@media ( max-width: 414px ) {
+		width: 85%;
 	}
 	&__window {
 		width: 100%;
