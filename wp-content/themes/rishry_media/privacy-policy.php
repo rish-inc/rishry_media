@@ -11,7 +11,7 @@
 					<?php if ( has_post_thumbnail()) : ?>
 						<?php echo get_the_post_thumbnail('', 'medium_large', array( 'class' => 'p-eyecatch') ); ?>
 					<?php endif; ?>
-					<section class="p-entry-content__about">
+					<section class="p-entry-content__privacy">
 						<p class="c-barline-border">
 							<?php if (have_posts()) : ?>
 								<?php while (have_posts()) : the_post(); ?>
