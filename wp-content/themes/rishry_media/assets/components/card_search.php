@@ -4,7 +4,17 @@
 			<?php while (have_posts()) : the_post(); ?>
 				<figure class="p-card c-boundary-line">
 					<figcaption class="p-card__caption">
-						<h3 class="p-card__caption__title__search c-barline-border"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+						<h3 class="p-card__caption__title__search c-barline-border">
+							<a href="<?php the_permalink(); ?>">
+								<?php
+									$title = esc_html( get_the_title() );
+									if ( empty( $title ) ) {
+										$title = 'タイトルなし';
+									}
+									echo $title;
+								?>
+							</a>
+						</h3>
 						<ul class="data c-time-category-chunk">
 							<li class="time"><time><?php echo get_the_date( "Y年m月d日" ); ?></time></li>
 							<?php

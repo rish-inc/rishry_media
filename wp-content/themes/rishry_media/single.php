@@ -8,7 +8,15 @@
 			<main class="p-main">
 				<article class="p-detail">
 					<div class="p-entry-card">
-						<h2 class="c-entry-title p-card__caption__title c-barline-border"><?php echo esc_html( get_the_title() ); ?></h2>
+						<h2 class="c-entry-title p-card__caption__title c-barline-border">
+							<?php
+								$title = esc_html( get_the_title() );
+								if ( empty( $title ) ) {
+									$title = 'タイトルなし';
+								}
+								echo $title;
+							?>
+						</h2>
 						<ul class="data c-time-category-chunk">
 							<li class="time">
 								<time><?php echo esc_html( get_the_date( "Y年m月d日" ) ); ?></time>

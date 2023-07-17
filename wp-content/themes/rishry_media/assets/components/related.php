@@ -31,7 +31,15 @@
 						</li>
 							<?php endforeach; ?>
 						<h5 class="p-related-card__caption__title">
-							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+							<a href="<?php the_permalink(); ?>">
+								<?php
+									$title = esc_html( get_the_title() );
+									if ( empty( $title ) ) {
+										$title = 'タイトルなし';
+									}
+									echo $title;
+								?>
+							</a>
 						</h5>
 					</ul>
 					<a href="<?php the_permalink(); ?>">
