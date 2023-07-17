@@ -1682,8 +1682,13 @@ strong {
 }
 @media (max-width: 1024px) {
   .p-detail .p-related .p-related-card__caption a, .p-detail__about .p-related .p-related-card__caption a, .p-detail__about--privacy .p-related .p-related-card__caption a {
-    width: 40%;
+    width: 42%;
     min-width: 30%;
+  }
+}
+@media (max-width: 320px) {
+  .p-detail .p-related .p-related-card__caption a, .p-detail__about .p-related .p-related-card__caption a, .p-detail__about--privacy .p-related .p-related-card__caption a {
+    width: 35%;
   }
 }
 .p-detail .p-related .p-related-card__caption__title, .p-detail__about .p-related .p-related-card__caption__title, .p-detail__about--privacy .p-related .p-related-card__caption__title {
