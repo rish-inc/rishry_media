@@ -221,12 +221,15 @@ strong {
 }
 .gallery-caption {
   font-size: 90%;
+  text-align: left;
 }
 .bypostauthor {
   background: mediumslateblue;
 }
-.gallery-caption {
-  text-align: left;
+@media (max-width: 414px) {
+  .post #gallery-1 .gallery-item {
+    width: 100%;
+  }
 }
 /*
  * 配色
