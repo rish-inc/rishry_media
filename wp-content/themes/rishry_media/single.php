@@ -39,22 +39,22 @@
 						<img class="p-card__img--single" src="<?php echo esc_url( get_theme_file_uri('/assets/images/p-card/eye-catching.jpg') ); ?>" alt="アイキャッチ画像">
 					<?php endif; ?>
 					<section class="p-entry-content">
-						<p class="c-barline-border">
-							<?php if (have_posts()) : ?>
-								<?php while (have_posts()) : the_post(); ?>
-									<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-										<?php the_content(); ?>
-										<?php
-											$args = array(
-												'before'           => '<p>' . ( 'ページ：' ),
-												'separator'        => '&nbsp;&nbsp;&nbsp;',
-											);
-											wp_link_pages( $args );
-										?>
-									</article>
-								<?php endwhile; ?>
-							<?php endif; ?>
-						</p>
+						<?php if (have_posts()) : ?>
+							<?php while (have_posts()) : the_post(); ?>
+								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+									<?php the_content(); ?>
+									<?php
+										$args = array(
+											'before'           => '<p>' . ( 'ページ：' ),
+											'separator'        => '&nbsp;&nbsp;&nbsp;',
+										);
+										wp_link_pages( $args );
+									?>
+								</article>
+							<?php endwhile; ?>
+						<?php else: ?>
+							<p>表示するブログがありません</p>
+						<?php endif; ?>
 						<ul class="p-entry-tag">
 							<?php
 								$tags = get_the_tags();
