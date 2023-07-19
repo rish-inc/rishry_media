@@ -5,7 +5,7 @@ const detailSearch = document.querySelector( ".p-detail__search" );
 
 window.addEventListener('load', function() {
     document.body.style.visibility = 'visible';
-	if( document.getElementById( "search_result" ) != null ) {
-		sideNav.classList.add( "is-close" );
-	}
+	// if( document.getElementById( "search_result" ) != null ) {
+	// 	sideNav.classList.add( "is-close" );
+	// }
 });

@@ -13,7 +13,9 @@
 		width: 100%;
 		height: auto;
 		background: none;
-		margin-right: 5%;
+	}
+	@media ( min-width: 1100px ) {
+		margin-right: 8%;
 	}
 	&__navigation {
 		overflow: scroll;
@@ -41,10 +43,13 @@
 			li {
 				border-bottom: solid 1px #acacac;
 				padding: 20px 0;
+				margin: 0 1%;
 				@include g.breakpoint ( pc ) {
 					border-bottom: none;
 					padding: 10px 5px;
-					margin: 0 1%;
+				}
+				@media ( max-width: 1100px ) {
+					margin: 0;
 				}
 				&:first-child{
 					@media ( max-width: 1024px ) {

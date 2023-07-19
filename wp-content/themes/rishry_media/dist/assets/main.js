@@ -1,11 +1,8 @@
-const sideNav = document.querySelector(".p-side-navigation");
+document.querySelector(".p-side-navigation");
 document.querySelector(".c-pagination");
 document.querySelector(".p-detail__search");
 window.addEventListener("load", function() {
   document.body.style.visibility = "visible";
-  if (document.getElementById("search_result") != null) {
-    sideNav.classList.add("is-close");
-  }
 });
 const hamburger = document.querySelector(".js-hamburger");
 const headNav = document.querySelector(".p-head-nav");

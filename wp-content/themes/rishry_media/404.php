@@ -5,7 +5,7 @@
 				<?php get_search_form(); ?>
 			</div>
 		</div>
-		<article class="p-contents_404">
+		<article class="p-contents">
 			<section class="p-detail error">
 				<h2 class="error__title">404 File not found.</h2>
 				<h3>お探しのページはありません</h3>

@@ -1,6 +1,9 @@
 @use "../foundation/global" as g;
 
 .l-footer {
+	position: sticky;
+	top: 100vh;
+	width: 100%;
 	background: g.$bgcolor--pink;
 	small {
 		@include g.breakpoint ( tablet ) {

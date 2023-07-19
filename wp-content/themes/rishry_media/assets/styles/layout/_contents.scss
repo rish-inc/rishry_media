@@ -5,13 +5,16 @@
 	min-width: 261px;
 	@media ( max-width: 414px ) {
 		max-width: 360px;
+		margin: 0 25px;
 	}
 	@media ( max-width: 385px ) {
 		max-width: 320px;
 	}
+	// @media ( max-width: 340px ) {
+	// }
 	@include g.breakpoint ( tablet ) {
 		max-width: 984px;
-		padding: 0 20px;
+		padding: 0 25px;
 	}
 	@include g.breakpoint ( pc ) {
 		padding: 0 60px;
@@ -19,5 +22,17 @@
 		max-width: 1160px;
 		display: flex;
 		flex-wrap: wrap;
+		@media ( min-width: 1600px ) {
+			padding: 0;
+		}
+	}
+}
+.l-contents--privacy {
+	@extend .l-contents;
+	@include g.breakpoint ( pc ) {
+		justify-content: space-evenly;
+	}
+	@media ( min-width: 1600px ) {
+		justify-content: inherit;
 	}
 }

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html class="js-html_margin" lang="<?php language_attributes(); ?>">
+<html class="js-html_margin" <?php language_attributes(); ?>>
 	<head prefix="og:http://ogp.me/ns#">
 		<meta charset="utf-8">
 		<meta name="description" content="Rishry ファッション＆メイク初心者さんのための情報サイト">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="<?php echo esc_url( get_theme_file_uri( './assets/images/common/ico/favicon.ico' )); ?>">
-		<title><?php bloginfo( 'name' ); ?></title>
+		<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
 		<?php wp_head(); ?>
 	</head>
 
 	<body class="home" <?php body_class(); ?>>
+	<?php wp_body_open(); ?>
 		<header class="l-header">
 			<div class="l-header__catchphrase">
 				<p>私らしく生きるためのライフメディア</p>

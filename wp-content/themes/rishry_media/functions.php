@@ -1,6 +1,6 @@
 <?php
 //develop mode config
-define( "IS_VITE_DEVELOPMENT", true );
+define( "IS_VITE_DEVELOPMENT", false );
 
 //define
 define( 'DIST_DEF', 'dist' );
@@ -23,7 +23,14 @@ add_action( 'send_headers', 'cors_http_header' );
  */
 function custom_theme_support()
 {
-	add_theme_support( 'menus' );
+	add_theme_support( 'custom-background' );
+	add_theme_support( 'align-wide' );
+	add_theme_support( 'custom-logo' );
+	add_theme_support( 'html5', [ 'search-form' ] );
+	add_theme_support( 'responsive-embeds' );
+	add_theme_support( 'wp-block-styles' );
+	add_theme_support( 'custom-header' );
+	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
 	register_nav_menus( array (
@@ -78,19 +85,6 @@ add_action( 'wp_enqueue_scripts', function() {
 //	 return $title;
 // }
 // add_filter( 'pre_get_document_title', 'rishrymedia_title' );
-
-/*
- * SVG ファイルをメディアライブラリで表示
- */
-add_filter( 'upload_mimes', function ( $mimes ) {
-	$mimes['svg'] = 'image/svg+xml';
-	return $mimes;
-});
-
-add_filter( 'manage_media_columns', function ( $columns ) {
-	echo '<style>.media-icon img[src$=".svg"]{width:100%;}</style>';
-	return $columns;
-});
 
 /*
  * 「前へ」「次へ」に class 名を付与
@@ -227,3 +221,51 @@ add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
 function wpcf7_autop_return_false() {
   return false;
 }
+
+register_block_style(
+    'core/image', // ブロック名
+    [
+        'name'         => 'shadow', // スタイルで付けるクラスに使う名前
+        'label'        => '影付き',
+        'inline_style' => '.is-style-shadow {
+            box-shadow: 10px 5px 5px black;
+        }', // 追加するCSS
+    ]
+);
+
+add_action( 'init', function()  {
+	register_block_pattern(
+		'rishry_media/my-awesome-pattern',
+		array(
+			'title'    => __( 'Two buttons', 'rishry_media' ),
+			'content'  => "<!-- wp:buttons  -->
+					<div class=\"wp-block-buttons\">
+					<!-- wp:button -->
+					<div class=\"wp-block-button\">
+					<a class=\"wp-block-button__link\">" . esc_html__( 'Button One', 'rishry_media' ) . "</a>
+					</div>
+					<!-- /wp:button -->
+					<!-- wp:button -->
+					<div class=\"wp-block-button is-style-outline\">
+					<a class=\"wp-block-button__link has-text-color\">" . esc_html__( 'Button Two', 'rishry_media' ) . "</a>
+					</div>
+					<!-- /wp:button --></div>
+					<!-- /wp:buttons -->",
+			'categories' => array( 'my-cat' ),
+			)
+		);
+	});
+
+function wpdocs_theme_add_editor_styles() {
+	add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
+
+// 検索で投稿記事のみを対象にする
+function SearchFilter( $query ) {
+	if ( $query -> is_search ) {
+		$query -> set( 'post_type', 'post' );
+	}
+	return $query;
+}
+add_filter( 'pre_get_posts', 'SearchFilter' );
