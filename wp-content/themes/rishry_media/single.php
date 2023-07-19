@@ -19,7 +19,9 @@
 						</h2>
 						<ul class="data c-time-category-chunk">
 							<li class="time">
-								<time><?php echo esc_html( get_the_date( "Y年m月d日" ) ); ?></time>
+								<time datetime="<?php echo esc_attr( get_the_date() ); ?>">
+									<?php echo esc_html( get_the_date( 'Y年m月d日' ) ); ?>
+								</time>
 							</li>
 							<?php
 							  $categories = get_the_category();
