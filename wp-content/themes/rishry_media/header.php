@@ -40,9 +40,17 @@
 						</nav>
 						<nav class="p-head-nav__sns">
 							<ul class="p-head-nav__icon c-sns__icon">
-								<li class="twitter"><a href="#"><img src="<?php echo esc_url( get_theme_file_uri( '/dist/assets/images/t_logo.png' )); ?>" alt="twitter"></a></li>
+								<li class="twitter">
+									<a href="<?php echo esc_attr( ssam_url()['twitter'] ); ?>">
+										<img src="<?php echo esc_url( get_theme_file_uri( '/dist/assets/images/t_logo.png' )); ?>" 	alt="twitter">
+									</a>
+								</li>
+								<?php
+								/*
 								<li class="facebook"><a href="#"><img src="<?php echo esc_url( get_theme_file_uri( '/dist/assets/images/f_logo.png' )); ?>" alt="facebook"></a></li>
 								<li class="instagram"><a href="#"><img src="<?php echo esc_url( get_theme_file_uri( '/dist/assets/images/i_logo.png' )); ?>" alt="instagram"></a></li>
+								*/
+								?>
 							</ul>
 						</nav>
 					</div>
