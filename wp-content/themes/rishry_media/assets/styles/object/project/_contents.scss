@@ -7,12 +7,6 @@
 	}
 	@include g.breakpoint ( pc ) {
 		max-width: 70%;
-	}
-}
-
-.p-contents_404 {
-	@extend .p-contents;
-	@include g.breakpoint ( pc ) {
-		margin-right: 15%;
+		width: 58vw
 	}
 }

@@ -5,6 +5,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	@media ( ( min-width: 370px ) and ( max-width: 414px ) ) {
+		width: 60vw;
+	}
 	@include g.breakpoint ( tablet ) {
 		width: 85vw;
 		margin-left: 10px;

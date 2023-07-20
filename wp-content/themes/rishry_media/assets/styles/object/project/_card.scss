@@ -1,6 +1,7 @@
 @use "../../foundation/global" as g;
 
 .p-card {
+	overflow: hidden;
 	&__caption {
 		padding: 15px 10px 10px;
 		@include g.breakpoint ( tablet ) {
@@ -13,7 +14,6 @@
 			@include g.font-rem( $font-size--title--pc );
 			font-weight: normal;
 			position: relative;
-			max-width: 550px;
 			margin: 0;
 			word-wrap: break-word;
 			@media ( max-width: 782px ) {
@@ -58,17 +58,21 @@
 		}
 	}
 	&__img {
-		width: 100%;
+		width: 100vw;
 		height: auto;
+		transition: transform .6s ease;
+		&:hover {
+			transform: scale(1.1);
+		}
+		&--single {
+			width: 100%;
+			height: auto;
+		}
 	}
-}
-
-.p-card.c-boundary-line {
-	margin-top: 31px;
-	&:first-of-type {
-		border: 0;
-		margin: 0;
-		padding: 0;
+	&__mask {
+		display: block;
+		line-height: 0;
+		overflow: hidden;
 	}
 }
 
@@ -84,5 +88,8 @@
 	}
 	@include g.breakpoint ( sp ) {
 		font-size: 12px;
+	}
+	@media ( max-width: 385px ) {
+		margin-right: 5px;
 	}
 }

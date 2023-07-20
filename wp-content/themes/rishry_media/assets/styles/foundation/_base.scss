@@ -6,13 +6,9 @@ html {
 html.is-open {
 	margin-top: 0 !important;
 }
-#wpadminbar {
-	z-index: 10000000 !important;
-}
 
 body {
 	width: 100%;
-	min-width: 350px;
 	margin: 0;
 	overflow-x: hidden;
 	visibility: hidden;
@@ -102,6 +98,23 @@ kbd {
 	font-size: 12px;
 }
 
+pre {
+	/* Mozilla */
+	white-space: -moz-pre-wrap;
+
+	/* Opera 4-6 */
+	white-space: -pre-wrap;
+
+	/* Opera 7 */
+	white-space: -o-pre-wrap;
+
+	/* CSS3 */
+	white-space: pre-wrap;
+
+	/* IE 5.5+ */
+	word-wrap: break-word;
+}
+
 strong {
 	margin: 15px 0;
 }
@@ -122,4 +135,31 @@ strong {
     float: left;
     margin-right:20px;
 	margin-bottom: 20px;
+}
+
+.wp-caption-text {
+	font-size: 90%;
+}
+
+.sticky {
+	font-style: italic;
+}
+
+.gallery-caption {
+	font-size: 90%;
+	text-align: left;
+}
+
+.bypostauthor {
+    background: mediumslateblue;
+}
+
+.post {
+	#gallery-1 {
+		.gallery-item {
+			@media ( max-width: 414px ) {
+				width: 100%;
+			}
+		}
+	}
 }

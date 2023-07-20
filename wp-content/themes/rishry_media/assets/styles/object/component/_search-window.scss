@@ -5,7 +5,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0 2% 0 10%;
         height: -webkit-fill-available;
     }
 	@include g.breakpoint ( sp ) {
@@ -37,12 +36,12 @@
 		@include g.font-rem( 14 );
 		background: none;
 		border: none;
-		width: 90%;
+		width: 84%;
 		height: 100%;
 		padding-left: 16px;
 		outline: none;
 		&::placeholder{
-			color: g.$font-color--default;
+			color: #707070;
 		}
 		&:focus {
 			&::placeholder {

@@ -9,5 +9,11 @@
 			margin-top: 1rem;
 			margin-bottom: 15rem;
 		}
+		article:first-child > figure {
+			border: 0;
+		}
+		> figure:first-child {
+			border: 0;
+		}
 	}
 }
