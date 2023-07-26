@@ -2590,11 +2590,11 @@ body.is-open {
   bottom: 8px;
 }
 .p-share__title::before {
-  content: url(/wp-content/themes/rishry_media/dist/assets/images/border-left.svg);
+  content: url(/wp-content/themes/rishry_media/assets/images/common/border-left.svg);
   left: -10px;
 }
 .p-share__title::after {
-  content: url(/wp-content/themes/rishry_media/dist/assets/images/border-right.svg);
+  content: url(/wp-content/themes/rishry_media/assets/images/common/border-right.svg);
   right: -5px;
 }
 .p-share__sns {
