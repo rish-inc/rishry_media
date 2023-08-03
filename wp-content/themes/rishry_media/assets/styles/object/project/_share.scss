@@ -19,11 +19,11 @@
 			bottom: 8px;
 		}
 		&::before {
-			content: url( /wp-content/themes/rishry_media/assets/images/common/border-left.svg );
+			content: url( 'http://media.rishry.com/wp/wp-content/uploads/2023/07/border-left.svg' );
 			left: -10px;
 		}
 		&::after {
-			content: url( /wp-content/themes/rishry_media/assets/images/common/border-right.svg );
+			content: url( 'http://media.rishry.com/wp/wp-content/uploads/2023/07/border-right.svg' );
 			right: -5px;
 		}
 	}
