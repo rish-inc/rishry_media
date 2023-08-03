@@ -33,6 +33,7 @@ example
 background: url( $base-dir + 'assets/images/dummy.jpg' );
 ```
 
+Not use sub directory for css images.
 
 ### develop mode
 
