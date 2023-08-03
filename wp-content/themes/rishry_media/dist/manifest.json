@@ -1,11 +1,11 @@
 {
-  "assets/images/common/border-left.svg": {
+  "assets/images/border-left.svg": {
     "file": "assets/images/border-left.svg",
-    "src": "assets/images/common/border-left.svg"
+    "src": "assets/images/border-left.svg"
   },
-  "assets/images/common/border-right.svg": {
+  "assets/images/border-right.svg": {
     "file": "assets/images/border-right.svg",
-    "src": "assets/images/common/border-right.svg"
+    "src": "assets/images/border-right.svg"
   },
   "assets/images/dummy.jpg": {
     "file": "assets/images/dummy.jpg",
